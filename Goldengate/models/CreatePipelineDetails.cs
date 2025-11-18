@@ -102,6 +102,14 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "targetConnectionDetails")]
         public TargetPipelineConnectionDetails TargetConnectionDetails { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet of the pipeline's private endpoint.
+        /// The subnet must be a private subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
+        
     }
 
     public class CreatePipelineDetailsModelConverter : JsonConverter

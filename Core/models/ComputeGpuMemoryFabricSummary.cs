@@ -87,7 +87,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ComputeGpuMemoryFabric.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -99,7 +99,7 @@ namespace Oci.CoreService.Models
         /// </remarks>
         [Required(ErrorMessage = "FabricHealth is required.")]
         [JsonProperty(PropertyName = "fabricHealth")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ComputeGpuMemoryFabric.FabricHealthEnum> FabricHealth { get; set; }
         
         /// <value>
@@ -123,6 +123,62 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "healthyHostCount")]
         public System.Nullable<long> HealthyHostCount { get; set; }
+        
+        /// <value>
+        /// The host platform identifier used for bundle queries
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "hostPlatformName")]
+        public string HostPlatformName { get; set; }
+        
+        /// <value>
+        /// The switch platform identifier used for bundle queries
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "switchPlatformName")]
+        public string SwitchPlatformName { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for current firmware bundle
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "currentFirmwareBundleId")]
+        public string CurrentFirmwareBundleId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for targeted firmware bundle
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "targetFirmwareBundleId")]
+        public string TargetFirmwareBundleId { get; set; }
+                ///
+        /// <value>
+        /// The state of Memory Fabric Firmware update
+        /// 
+        /// </value>
+        ///
+        public enum FirmwareUpdateStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "WILL_UPDATE")]
+            WillUpdate,
+            [EnumMember(Value = "NO_UPDATE")]
+            NoUpdate,
+            [EnumMember(Value = "SKIP_RECYCLE_ENABLED")]
+            SkipRecycleEnabled
+        };
+
+        /// <value>
+        /// The state of Memory Fabric Firmware update
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "firmwareUpdateState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<FirmwareUpdateStateEnum> FirmwareUpdateState { get; set; }
+        
+        [JsonProperty(PropertyName = "memoryFabricPreferences")]
+        public MemoryFabricPreferencesDescriptor MemoryFabricPreferences { get; set; }
         
         /// <value>
         /// The date and time that the compute GPU memory fabric record was created, in the format defined by [RFC3339]

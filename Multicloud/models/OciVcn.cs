@@ -28,6 +28,12 @@ namespace Oci.MulticloudService.Models
         public string VcnId { get; set; }
         
         /// <value>
+        /// Name of the VCN associated to the Network Anchor.
+        /// </value>
+        [JsonProperty(PropertyName = "vcnName")]
+        public string VcnName { get; set; }
+        
+        /// <value>
         /// Oracle Cloud Infrastructure primary cidr block. CSP can set this property
         /// It's optional only if disconnect anchor is allowed
         /// IPv4 CIDR blocks for the VCN that meet the following criteria

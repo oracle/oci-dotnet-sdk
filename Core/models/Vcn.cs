@@ -217,7 +217,7 @@ namespace Oci.CoreService.Models
         public string VcnDomainName { get; set; }
         
         /// <value>
-        /// Indicates whether Zpr Only Mode is enforced.
+        /// Indicates whether ZPR Only mode is enforced.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isZprOnly")]

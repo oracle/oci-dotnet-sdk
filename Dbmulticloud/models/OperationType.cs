@@ -75,6 +75,8 @@ namespace Oci.DbmulticloudService.Models
       PatchDbResource,
       [EnumMember(Value = "CREATE_GCP_IDENTITY_CONFIGURATION")]
       CreateGcpIdentityConfiguration,
+      [EnumMember(Value = "DELETE_GCP_IDENTITY_CONFIGURATION")]
+      DeleteGcpIdentityConfiguration,
       [EnumMember(Value = "CREATE_GCP_CONNECTOR")]
       CreateGcpConnector,
       [EnumMember(Value = "DELETE_GCP_CONNECTOR")]
@@ -96,6 +98,26 @@ namespace Oci.DbmulticloudService.Models
       [EnumMember(Value = "MOVE_GCP_KEY_RING")]
       MoveGcpKeyRing,
       [EnumMember(Value = "REFRESH_GCP_KEY_RING")]
-      RefreshGcpKeyRing
+      RefreshGcpKeyRing,
+      [EnumMember(Value = "CREATE_AWS_CONNECTOR")]
+      CreateAwsConnector,
+      [EnumMember(Value = "DELETE_AWS_CONNECTOR")]
+      DeleteAwsConnector,
+      [EnumMember(Value = "UPDATE_AWS_CONNECTOR")]
+      UpdateAwsConnector,
+      [EnumMember(Value = "MOVE_AWS_CONNECTOR")]
+      MoveAwsConnector,
+      [EnumMember(Value = "REFRESH_AWS_CONNECTOR")]
+      RefreshAwsConnector,
+      [EnumMember(Value = "CREATE_AWS_KEY")]
+      CreateAwsKey,
+      [EnumMember(Value = "DELETE_AWS_KEY")]
+      DeleteAwsKey,
+      [EnumMember(Value = "UPDATE_AWS_KEY")]
+      UpdateAwsKey,
+      [EnumMember(Value = "MOVE_AWS_KEY")]
+      MoveAwsKey,
+      [EnumMember(Value = "REFRESH_AWS_KEY")]
+      RefreshAwsKey
   }
 }

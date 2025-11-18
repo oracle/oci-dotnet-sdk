@@ -26,6 +26,7 @@ namespace Oci.DatabaseService.Models
         /// Use 'EXTERNAL' for creating a new database or migrating a database key to an External HSM.
         /// Use 'AZURE' for creating a new database or migrating a database key to Azure.
         /// Use 'GCP' for creating a new database or migrating a database key to Google Cloud Provider.
+        /// Use 'AWS' for creating a new database or migrating a database key to Aws.
         /// 
         /// </value>
         ///
@@ -35,7 +36,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "AZURE")]
             Azure,
             [EnumMember(Value = "GCP")]
-            Gcp
+            Gcp,
+            [EnumMember(Value = "AWS")]
+            Aws
         };
 
         
@@ -70,6 +73,9 @@ namespace Oci.DatabaseService.Models
                     break;
                 case "AZURE":
                     obj = new AzureEncryptionKeyDetails();
+                    break;
+                case "AWS":
+                    obj = new AwsEncryptionKeyDetails();
                     break;
             }
             if (obj != null)

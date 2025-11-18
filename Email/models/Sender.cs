@@ -80,7 +80,9 @@ namespace Oci.EmailService.Models
             [EnumMember(Value = "DELETING")]
             Deleting,
             [EnumMember(Value = "DELETED")]
-            Deleted
+            Deleted,
+            [EnumMember(Value = "UPDATING")]
+            Updating
         };
 
         /// <value>
@@ -104,6 +106,12 @@ namespace Oci.EmailService.Models
         /// </value>
         [JsonProperty(PropertyName = "emailDomainId")]
         public string EmailDomainId { get; set; }
+        
+        /// <value>
+        /// The IpPool [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) used to submit an email by Email Delivery when sent from this sender.
+        /// </value>
+        [JsonProperty(PropertyName = "emailIpPoolId")]
+        public string EmailIpPoolId { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

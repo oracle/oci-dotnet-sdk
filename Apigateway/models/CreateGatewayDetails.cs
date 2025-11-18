@@ -118,5 +118,22 @@ namespace Oci.ApigatewayService.Models
         [JsonProperty(PropertyName = "caBundles")]
         public System.Collections.Generic.List<CaBundle> CaBundles { get; set; }
         
+        /// <value>
+        /// Determines whether the gateway has an IPv4 or IPv6 address assigned to it, or both.
+        /// `IPV4` means the gateway will only have an IPv4 address assigned to it, and `IPV6` means the gateway will
+        /// only have an `IPv6` address assigned to it. `DUAL_STACK` means the gateway will have both an IPv4 and IPv6
+        /// address assigned to it.
+        /// Example: IPV4 or IPV6 or DUAL_STACK
+        /// </value>
+        [JsonProperty(PropertyName = "ipMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Gateway.IpModeEnum> IpMode { get; set; }
+        
+        [JsonProperty(PropertyName = "ipv6AddressConfiguration")]
+        public Ipv6AddressConfiguration Ipv6AddressConfiguration { get; set; }
+        
+        [JsonProperty(PropertyName = "ipv4AddressConfiguration")]
+        public Ipv4AddressConfiguration Ipv4AddressConfiguration { get; set; }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace Oci.MulticloudService.Requests
         public string NetworkAnchorId { get; set; }
         
         /// <value>
-        /// The subscription service name values from [ORACLEDBATAZURE, ORACLEDBATGOOGLE, ORACLEDBATAWS]
+        /// The subscription service name of the Cloud Service Provider.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +40,7 @@ namespace Oci.MulticloudService.Requests
         public System.Nullable<SubscriptionType> SubscriptionServiceName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subscription in which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud subscription in which to list resources.
         /// </value>
         /// <remarks>
         /// Required
@@ -60,9 +60,15 @@ namespace Oci.MulticloudService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// OMHub Control Plane must know underlying CSP CP Region External Location Name.
+        /// The Cloud Service Provider region.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "externalLocation")]
         public string ExternalLocation { get; set; }
+        
+        /// <value>
+        /// Whether to fetch and include the vcn display name, which may introduce additional latency.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldFetchVcnName")]
+        public System.Nullable<bool> ShouldFetchVcnName { get; set; }
     }
 }

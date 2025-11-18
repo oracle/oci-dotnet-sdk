@@ -24,6 +24,10 @@ namespace Oci.ServicecatalogService.Models
         /// <value>
         /// Base-64 payload of the Terraform zip package.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ZipFileBase64Encoded is required.")]
         [JsonProperty(PropertyName = "zipFileBase64Encoded")]
         public string ZipFileBase64Encoded { get; set; }
         

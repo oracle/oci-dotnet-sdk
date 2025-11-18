@@ -151,6 +151,84 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "isActiveDataGuardEnabled")]
         public System.Nullable<bool> IsActiveDataGuardEnabled { get; set; }
+                ///
+        /// <value>
+        /// The switchover readiness status of the Data Guard member.
+        /// 
+        /// </value>
+        ///
+        public enum SwitchoverReadinessEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "HEALTHY")]
+            Healthy,
+            [EnumMember(Value = "WARNING")]
+            Warning,
+            [EnumMember(Value = "CRITICAL")]
+            Critical
+        };
+
+        /// <value>
+        /// The switchover readiness status of the Data Guard member.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "switchoverReadiness")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SwitchoverReadinessEnum> SwitchoverReadiness { get; set; }
+        
+        /// <value>
+        /// The message explaining switchover readiness status.
+        /// Example: Address failed checks to avoid extended downtime.
+        /// </value>
+        [JsonProperty(PropertyName = "switchoverReadinessMessage")]
+        public string SwitchoverReadinessMessage { get; set; }
+                ///
+        /// <value>
+        /// The failover readiness status of the Data Guard member.
+        /// 
+        /// </value>
+        ///
+        public enum FailoverReadinessEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "HEALTHY")]
+            Healthy,
+            [EnumMember(Value = "WARNING")]
+            Warning,
+            [EnumMember(Value = "CRITICAL")]
+            Critical
+        };
+
+        /// <value>
+        /// The failover readiness status of the Data Guard member.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "failoverReadiness")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<FailoverReadinessEnum> FailoverReadiness { get; set; }
+        
+        /// <value>
+        /// The message explaining failover readiness status.
+        /// Example: This standby database is not failover ready.
+        /// </value>
+        [JsonProperty(PropertyName = "failoverReadinessMessage")]
+        public string FailoverReadinessMessage { get; set; }
+        
+        /// <value>
+        /// The Data loss exposure is the redo transport lag between the primary and standby databases. 
+        /// <br/>
+        /// Example: 2 seconds
+        /// </value>
+        [JsonProperty(PropertyName = "dataLossExposure")]
+        public string DataLossExposure { get; set; }
+        
+        /// <value>
+        /// The date and time when the last successful Data Guard refresh occurred.
+        /// </value>
+        [JsonProperty(PropertyName = "timeUpdated")]
+        public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
     }
 }

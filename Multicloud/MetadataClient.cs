@@ -71,112 +71,6 @@ namespace Oci.MulticloudService
 
         /// <summary>
         /// List externalLocationDetail metadata from OCI to Cloud  Service Provider for regions, Availability Zones, and Cluster Placement Group ID.
-        /// examples:
-        ///   application-json: |
-        ///     [
-        ///       {
-        ///           \&quot;externalLocation\&quot;: {
-        ///             \&quot;cspRegion\&quot;: \&quot;East US\&quot;,
-        ///             \&quot;cspPhysicalAz\&quot;: \&quot;az1-xyz\&quot;,
-        ///             \&quot;cspPhysicalAzDisplayName\&quot;: \&quot;(US) East US 2\&quot;,
-        ///             \&quot;cspLogicalAz\&quot;: \&quot;az1\&quot;,
-        ///             \&quot;serviceName\&quot;: \&quot;ORACLEDBATAZURE\&quot;,
-        ///             \&quot;cspZoneKeyReferenceId\&quot;: {
-        ///               \&quot;keyName\&quot;: \&quot;AzureSubscriptionId or AwsAccountId, GcpProjectName\&quot;,
-        ///               \&quot;keyValue\&quot;: \&quot;azure-subscriptionId-1 or aws-account-id-1, gcp-project-id-1\&quot;
-        ///             }
-        ///           },
-        ///           \&quot;ociPhysicalAd\&quot;: \&quot;ad1-xyb\&quot;,
-        ///           \&quot;ociLogicalAd\&quot;: \&quot;ad2\&quot;,
-        ///           \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;,
-        ///           \&quot;cpgId\&quot;: \&quot;cpg-1\&quot;
-        ///       },
-        ///         {
-        ///           \&quot;externalLocation\&quot;: {
-        ///             \&quot;cspRegion\&quot;: \&quot;East US\&quot;,
-        ///             \&quot;cspPhysicalAz\&quot;: \&quot;az2-abc\&quot;,
-        ///             \&quot;cspPhysicalAzDisplayName\&quot;: \&quot;(US) East US 2\&quot;,
-        ///             \&quot;cspLogicalAz\&quot;: \&quot;az2\&quot;,
-        ///             \&quot;serviceName\&quot;: \&quot;ORACLEDBATAZURE\&quot;,
-        ///             \&quot;cspZoneKeyReferenceId\&quot;: {
-        ///               \&quot;keyName\&quot;: \&quot;AzureSubscriptionId or AwsAccountId, GcpProjectName\&quot;,
-        ///               \&quot;keyValue\&quot;: \&quot;azure-subscriptionId-2 or aws-account-id-2, gcp-project-id-2\&quot;
-        ///             }
-        ///           },
-        ///           \&quot;ociPhysicalAd\&quot;: \&quot;ad2-xby\&quot;,
-        ///           \&quot;ociLogicalAd\&quot;: \&quot;ad1\&quot;,
-        ///           \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;,
-        ///           \&quot;cpgId\&quot;: \&quot;cpg-2\&quot;
-        ///         },
-        ///         {
-        ///           \&quot;externalLocation\&quot;: {
-        ///             \&quot;cspRegion\&quot;: \&quot;East US\&quot;,
-        ///             \&quot;cspPhysicalAz\&quot;: \&quot;az3-abz\&quot;,
-        ///             \&quot;cspPhysicalAzDisplayName\&quot;: \&quot;(US) East US 2\&quot;, 
-        ///             \&quot;cspLogicalAz\&quot;: \&quot;az3\&quot;,
-        ///             \&quot;serviceName\&quot;: \&quot;ORACLEDBATAZURE\&quot;,
-        ///             \&quot;cspZoneKeyReferenceId\&quot;: {
-        ///               \&quot;keyName\&quot;: \&quot;AzureSubscriptionId or AwsAccountId, GcpProjectName\&quot;,
-        ///               \&quot;keyValue\&quot;: \&quot;azure-subscriptionId-3 or aws-account-id-3, gcp-project-id-3\&quot;
-        ///             }
-        ///           },
-        ///           \&quot;ociPhysicalAd\&quot;: \&quot;ad3-cde\&quot;,
-        ///           \&quot;ociLogicalAd\&quot;: \&quot;ad3\&quot;,
-        ///           \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;,
-        ///           \&quot;cpgId\&quot;: \&quot;cpg-3\&quot;
-        ///         },
-        ///         {
-        ///           \&quot;externalLocation\&quot;: {
-        ///             \&quot;cspRegion\&quot;: \&quot;East US 2\&quot;,
-        ///             \&quot;cspPhysicalAz\&quot;: \&quot;az1-def\&quot;,
-        ///             \&quot;cspPhysicalAzDisplayName\&quot;: \&quot;(US) East US 2\&quot;,
-        ///             \&quot;cspLogicalAz\&quot;: \&quot;az1\&quot;,
-        ///             \&quot;serviceName\&quot;: \&quot;ORACLEDBATAZURE\&quot;,
-        ///             \&quot;cspZoneKeyReferenceId\&quot;: {
-        ///               \&quot;keyName\&quot;: \&quot;AzureSubscriptionId or AwsAccountId, GcpProjectName\&quot;,
-        ///               \&quot;keyValue\&quot;: \&quot;azure-subscriptionId-4 or aws-account-id-4, gcp-project-id-4\&quot;
-        ///             }
-        ///           },
-        ///           \&quot;ociPhysicalAd\&quot;: \&quot;ad1-bce\&quot;,
-        ///           \&quot;ociLogicalAd\&quot;: \&quot;ad2\&quot;,
-        ///           \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;,
-        ///           \&quot;cpgId\&quot;: \&quot;cpg-4\&quot;
-        ///         },
-        ///         {
-        ///           \&quot;externalLocation\&quot;: {
-        ///             \&quot;cspRegion\&quot;: \&quot;East US 2\&quot;,
-        ///             \&quot;cspPhysicalAz\&quot;: \&quot;az2-uvw\&quot;,
-        ///             \&quot;cspPhysicalAzDisplayName\&quot;: \&quot;(US) East US 2\&quot;,
-        ///             \&quot;cspLogicalAz\&quot;: \&quot;az2\&quot;,
-        ///             \&quot;serviceName\&quot;: \&quot;ORACLEDBATAZURE\&quot;,
-        ///             \&quot;cspZoneKeyReferenceId\&quot;: {
-        ///               \&quot;keyName\&quot;: \&quot;AzureSubscriptionId or AwsAccountId, GcpProjectName\&quot;,
-        ///               \&quot;keyValue\&quot;: \&quot;azure-subscriptionId-3 or aws-account-id-3, gcp-project-id-3\&quot;
-        ///             }
-        ///           },
-        ///           \&quot;ociPhysicalAd\&quot;: \&quot;ad2-ftc\&quot;,
-        ///           \&quot;ociLogicalAd\&quot;: \&quot;ad1\&quot;,
-        ///           \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;,
-        ///           \&quot;cpgId\&quot;: \&quot;cpg-5\&quot;
-        ///         },
-        ///         {
-        ///           \&quot;externalLocation\&quot;: {
-        ///             \&quot;cspRegion\&quot;: \&quot;East US 2\&quot;,
-        ///             \&quot;cspPhysicalAz\&quot;: \&quot;az3-uvw\&quot;,
-        ///             \&quot;cspPhysicalAzDisplayName\&quot;: \&quot;(US) East US 2\&quot;,
-        ///             \&quot;cspLogicalAz\&quot;: \&quot;az3\&quot;,
-        ///             \&quot;serviceName\&quot;: \&quot;ORACLEDBATAZURE\&quot;,
-        ///             \&quot;cspZoneKeyReferenceId\&quot;: {
-        ///               \&quot;keyName\&quot;: \&quot;AzureSubscriptionId or AwsAccountId, GcpProjectName\&quot;,
-        ///               \&quot;keyValue\&quot;: \&quot;azure-subscriptionId-3 or aws-account-id-3, gcp-project-id-3\&quot;
-        ///             }
-        ///           },
-        ///           \&quot;ociPhysicalAd\&quot;: \&quot;ad3-stc\&quot;,
-        ///           \&quot;ociLogicalAd\&quot;: \&quot;ad3\&quot;,
-        ///           \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;,
-        ///           \&quot;cpgId\&quot;: \&quot;cpg-6\&quot;
-        ///         }
-        ///       ]
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -234,54 +128,6 @@ namespace Oci.MulticloudService
 
         /// <summary>
         /// List externalLocation metadata from OCI to the Cloud Service Provider for regions, Physical Availability Zones.
-        /// examples:
-        ///   application-json: |
-        ///     [
-        ///       {
-        ///         \&quot;externalLocation\&quot;: {
-        ///           \&quot;cspRegion\&quot;: \&quot;eastus\&quot;,
-        ///           \&quot;cspPhysicalAz\&quot;: \&quot;eastus-az1\&quot;,
-        ///           \&quot;cspPhysicalAzDisplayName\&quot;: \&quot;(US) East US 1\&quot;,
-        ///           \&quot;serviceName\&quot;: \&quot;ORACLEDBATAZURE\&quot;
-        ///         },
-        ///         \&quot;ociPhysicalAd\&quot;: \&quot;iad-ad-1\&quot;,
-        ///         \&quot;ociLogicalAd\&quot;: \&quot;ad1\&quot;,
-        ///         \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;
-        ///     },
-        ///       {
-        ///         \&quot;externalLocation\&quot;: {
-        ///           \&quot;cspRegion\&quot;: \&quot;eastus\&quot;,
-        ///           \&quot;cspPhysicalAz\&quot;: \&quot;eastus-az1\&quot;,
-        ///           \&quot;cspPhysicalAzDisplayName\&quot;: \&quot;(US) East US 1\&quot;,
-        ///           \&quot;serviceName\&quot;: \&quot;ORACLEDBATAZURE\&quot;
-        ///         },
-        ///         \&quot;ociPhysicalAd\&quot;: \&quot;iad-ad-1\&quot;,
-        ///         \&quot;ociLogicalAd\&quot;: \&quot;ad1\&quot;,
-        ///         \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;
-        ///       },
-        ///       {
-        ///         \&quot;externalLocation\&quot;: {
-        ///           \&quot;cspRegion\&quot;: \&quot;eastus2\&quot;,
-        ///           \&quot;cspPhysicalAz\&quot;: \&quot;eastus2-az3\&quot;,
-        ///           \&quot;cspPhysicalAzDisplayName\&quot;: \&quot;(US) East US 1\&quot;,
-        ///           \&quot;serviceName\&quot;: \&quot;ORACLEDBATAZURE\&quot;
-        ///         },
-        ///         \&quot;ociPhysicalAd\&quot;: \&quot;iad-ad-2\&quot;,
-        ///         \&quot;ociLogicalAd\&quot;: \&quot;ad1\&quot;,
-        ///         \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;
-        ///       },
-        ///       {
-        ///         \&quot;externalLocation\&quot;: {
-        ///           \&quot;cspRegion\&quot;: \&quot;eastus\&quot;,
-        ///           \&quot;cspPhysicalAz\&quot;: \&quot;eastus-az3\&quot;
-        ///           \&quot;cspPhysicalAzDisplayName\&quot;: \&quot;(US) East US 1\&quot;,
-        ///           \&quot;serviceName\&quot;: \&quot;ORACLEDBATAZURE\&quot;
-        ///         },
-        ///         \&quot;ociPhysicalAd\&quot;: \&quot;iad-ad-333\&quot;,
-        ///         \&quot;ociLogicalAd\&quot;: \&quot;ad1\&quot;,
-        ///         \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;
-        ///       }
-        ///     ]
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -339,28 +185,6 @@ namespace Oci.MulticloudService
 
         /// <summary>
         /// List externalLocationSummary metadata from OCI Region to the Cloud Service Provider region across all regions.
-        /// examples:
-        ///   application-json: |
-        ///     [
-        ///       {
-        ///           \&quot;externalLocation\&quot;: {
-        ///             \&quot;cspRegion\&quot;: \&quot;East US\&quot;
-        ///           },
-        ///           \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;
-        ///       },
-        ///         {
-        ///           \&quot;externalLocation\&quot;: {
-        ///             \&quot;cspRegion\&quot;: \&quot;East US 2\&quot;
-        ///           },
-        ///           \&quot;ociRegion\&quot;: \&quot;us-ashburn-1\&quot;
-        ///         },
-        ///         {
-        ///           \&quot;externalLocation\&quot;: {
-        ///             \&quot;cspRegion\&quot;: \&quot;Germany West Central\&quot;
-        ///           },
-        ///           \&quot;ociRegion\&quot;: \&quot;eu-frankfurt-1\&quot;,
-        ///         }
-        ///       ]
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

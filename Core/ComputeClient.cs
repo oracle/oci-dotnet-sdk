@@ -6807,7 +6807,8 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Customer can update displayName, tags and for compute GPU memory fabric record
+        /// Customer can update displayName, tags and  desired firmware bundle, recycle level for 
+        /// compute GPU memory fabric record
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
