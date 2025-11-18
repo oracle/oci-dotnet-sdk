@@ -32,7 +32,7 @@ namespace Oci.MulticloudService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// CSP resource anchor ID or name.
+        /// OCI resource anchor name.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,10 +42,28 @@ namespace Oci.MulticloudService.Models
         public string ResourceAnchorName { get; set; }
         
         /// <value>
+        /// CSP resource anchor ID.
+        /// </value>
+        [JsonProperty(PropertyName = "cspResourceAnchorId")]
+        public string CspResourceAnchorId { get; set; }
+        
+        /// <value>
+        /// CSP resource anchor name.
+        /// </value>
+        [JsonProperty(PropertyName = "cspResourceAnchorName")]
+        public string CspResourceAnchorName { get; set; }
+        
+        /// <value>
         /// CSP resource anchor Uri.
         /// </value>
         [JsonProperty(PropertyName = "resourceAnchorUri")]
         public string ResourceAnchorUri { get; set; }
+        
+        /// <value>
+        /// CSP Specific Additional Properties, AzureSubnetId for Azure
+        /// </value>
+        [JsonProperty(PropertyName = "cspAdditionalProperties")]
+        public System.Collections.Generic.Dictionary<string, string> CspAdditionalProperties { get; set; }
         
         
     }

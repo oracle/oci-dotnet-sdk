@@ -20,48 +20,32 @@ namespace Oci.MulticloudService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subscription in which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud base compartment or sub-compartment in which to list resources. 
+        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a Cloud Service Provider (such as Azure, AWS, or Google Cloud). 
+        /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SubscriptionId is required.")]
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud subscription in which to list resources.
+        /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionId")]
         public string SubscriptionId { get; set; }
         
         /// <value>
-        /// The subscription service name values from [ORACLEDBATAZURE, ORACLEDBATGOOGLE, ORACLEDBATAWS]
+        /// The subscription service name of the Cloud Service Provider.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SubscriptionServiceName is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionServiceName")]
         public System.Nullable<SubscriptionType> SubscriptionServiceName { get; set; }
-        
-        /// <value>
-        /// OMHub Control Plane must know underlying CSP CP Region External Location Name.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ExternalLocation is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "externalLocation")]
-        public string ExternalLocation { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
-        public string CompartmentId { get; set; }
         
         /// <value>
         /// A filter to return only resources that match the given lifecycle state. The
         /// state value is case-insensitive.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
-        public System.Nullable<NetworkAnchor.LifecycleStateEnum> LifecycleState { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "networkAnchorLifecycleState")]
+        public System.Nullable<NetworkAnchor.NetworkAnchorLifecycleStateEnum> NetworkAnchorLifecycleState { get; set; }
         
         /// <value>
         /// A filter to return only resources that match the given display name exactly.
@@ -70,10 +54,22 @@ namespace Oci.MulticloudService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// The Cloud Service Provider region.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "externalLocation")]
+        public string ExternalLocation { get; set; }
+        
+        /// <value>
         /// A filter to return only NetworkAnchor resources that match the given OCI subnet Id.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "networkAnchorOciSubnetId")]
         public string NetworkAnchorOciSubnetId { get; set; }
+        
+        /// <value>
+        /// If set to true, a list operation will return NetworkAnchors from all child compartments in the provided compartmentId parameter.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
+        public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
         
         /// <value>
         /// A filter to return only NetworkAnchor resources that match the given OCI Vcn Id.
@@ -104,6 +100,12 @@ namespace Oci.MulticloudService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "page")]
         public string Page { get; set; }
+        
+        /// <value>
+        /// Whether to fetch and include the vcn display name, which may introduce additional latency.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldFetchVcnName")]
+        public System.Nullable<bool> ShouldFetchVcnName { get; set; }
         
         /// <value>
         /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).

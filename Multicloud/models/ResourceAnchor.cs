@@ -63,6 +63,12 @@ namespace Oci.MulticloudService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// The name assigned to the compartment during creation.
+        /// </value>
+        [JsonProperty(PropertyName = "compartmentName")]
+        public string CompartmentName { get; set; }
+        
+        /// <value>
         /// The date and time the ResourceAnchor was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
@@ -195,6 +201,12 @@ namespace Oci.MulticloudService.Models
         /// </value>
         [JsonProperty(PropertyName = "linkedCompartmentId")]
         public string LinkedCompartmentId { get; set; }
+        
+        /// <value>
+        /// The name assigned to the compartment which was created or linked by customer with resource anchor. This compartment is different from where resource Anchor live.
+        /// </value>
+        [JsonProperty(PropertyName = "linkedCompartmentName")]
+        public string LinkedCompartmentName { get; set; }
         
         /// <value>
         /// subscription type

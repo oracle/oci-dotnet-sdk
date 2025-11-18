@@ -54,6 +54,12 @@ namespace Oci.EmailService.Requests
         public string EmailAddress { get; set; }
         
         /// <value>
+        /// A filter to only return resources that match the given IpPool resource exactly.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "emailIpPoolId")]
+        public string EmailIpPoolId { get; set; }
+        
+        /// <value>
         /// For list pagination. The value of the opc-next-page response header from the previous \"List\" call.
         /// For important details about how pagination works,
         /// see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).

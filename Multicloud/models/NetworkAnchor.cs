@@ -90,7 +90,7 @@ namespace Oci.MulticloudService.Models
         /// The current state of the NetworkAnchor.
         /// </value>
         ///
-        public enum LifecycleStateEnum {
+        public enum NetworkAnchorLifecycleStateEnum {
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
             [EnumMember(Value = null)]
             UnknownEnumValue,
@@ -114,10 +114,10 @@ namespace Oci.MulticloudService.Models
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "LifecycleState is required.")]
-        [JsonProperty(PropertyName = "lifecycleState")]
+        [Required(ErrorMessage = "NetworkAnchorLifecycleState is required.")]
+        [JsonProperty(PropertyName = "networkAnchorLifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
+        public System.Nullable<NetworkAnchorLifecycleStateEnum> NetworkAnchorLifecycleState { get; set; }
         
         /// <value>
         /// A message that describes the current state of the NetworkAnchor in more detail. For example,
@@ -199,6 +199,13 @@ namespace Oci.MulticloudService.Models
         
         [JsonProperty(PropertyName = "cloudServiceProviderMetadataItem")]
         public CloudServiceProviderNetworkMetadataItem CloudServiceProviderMetadataItem { get; set; }
+        
+        /// <value>
+        /// Oracle Cloud Infrastructure Subscription Type.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SubscriptionType> SubscriptionType { get; set; }
         
     }
 }

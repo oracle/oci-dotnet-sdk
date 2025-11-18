@@ -57,6 +57,18 @@ namespace Oci.IotService.Models
         public string DigitalTwinAdapterId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the digital twin model.
+        /// </value>
+        [JsonProperty(PropertyName = "digitalTwinModelId")]
+        public string DigitalTwinModelId { get; set; }
+        
+        /// <value>
+        /// The URI of the digital twin model specification.
+        /// </value>
+        [JsonProperty(PropertyName = "digitalTwinModelSpecUri")]
+        public string DigitalTwinModelSpecUri { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>

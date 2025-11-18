@@ -96,7 +96,9 @@ namespace Oci.DbmulticloudService.Models
             [EnumMember(Value = "STORAGE")]
             Storage,
             [EnumMember(Value = "GCP_KEY_RINGS")]
-            GcpKeyRings
+            GcpKeyRings,
+            [EnumMember(Value = "AWS_KEYS")]
+            AwsKeys
         };
 
         /// <value>

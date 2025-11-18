@@ -40,6 +40,14 @@ namespace Oci.EmailService.Models
       [EnumMember(Value = "DELETE_RETURN_PATH")]
       DeleteReturnPath,
       [EnumMember(Value = "UPDATE_RETURN_PATH")]
-      UpdateReturnPath
+      UpdateReturnPath,
+      [EnumMember(Value = "CREATE_IP_POOL")]
+      CreateIpPool,
+      [EnumMember(Value = "UPDATE_IP_POOL")]
+      UpdateIpPool,
+      [EnumMember(Value = "DELETE_IP_POOL")]
+      DeleteIpPool,
+      [EnumMember(Value = "MOVE_IP_POOL")]
+      MoveIpPool
   }
 }

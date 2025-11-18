@@ -36,6 +36,12 @@ namespace Oci.ServicecatalogService.Requests
         public string ServiceCatalogId { get; set; }
         
         /// <value>
+        /// Status of the service catalog, use as a filter to filter out all active catalogs.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
+        public System.Nullable<ServiceCatalogStatusEnum> Status { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
         /// please provide the request ID.
         /// 

@@ -30,8 +30,6 @@ namespace Oci.MulticloudService
 
         public OmhubNetworkAnchorPaginators Paginators { get; }
 
-        public OmhubNetworkAnchorWaiters Waiters { get; }
-
         /// <summary>
         /// Creates a new service instance using the given authentication provider and/or client configuration and/or endpoint.
         /// A client configuration can also be provided optionally to adjust REST client behaviors.
@@ -69,7 +67,6 @@ namespace Oci.MulticloudService
 
             this.retryConfiguration = clientConfigurationToUse.RetryConfiguration;
             Paginators = new OmhubNetworkAnchorPaginators(this);
-            Waiters = new OmhubNetworkAnchorWaiters(this);
         }
 
         /// <summary>

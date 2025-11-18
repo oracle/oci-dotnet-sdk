@@ -20,6 +20,8 @@ namespace Oci.ServicecatalogService.Models
       [EnumMember(Value = null)]
       UnknownEnumValue,
       [EnumMember(Value = "STACK")]
-      Stack
+      Stack,
+      [EnumMember(Value = "IMAGE")]
+      Image
   }
 }

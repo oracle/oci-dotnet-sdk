@@ -20,61 +20,9 @@ namespace Oci.MulticloudService.Models
     /// </summary>
     public class OciNetworkMetadata 
     {
-                ///
+        
         /// <value>
-        /// This can be merge to lifecycleState
-        /// CONNECTED - Partner and CSI information is assigned and MulticloudLink provisioned.
-        /// DISCONNECTED - Only partner cloud information is assigned.
-        /// CONNECTING - Oracle Cloud Infrastructure information is assigned and the control plane is provisioning resources.
-        /// ACTIVE - Network anchor is connected and resources (VNICs) exist within a subnet.
-        /// ERROR - DRG attach fails during connection.
-        /// FAILED - Network anchor creation failed
-        /// NEEDS_ATTENTION - Network anchor is in temporary bad state
-        /// UPDATING - Network anchor is getting updated.
-        /// DELETING - Network anchor is getting deleted
-        /// DELETED - A connected network anchor is deleted.
-        /// 
-        /// </value>
-        ///
-        public enum NetworkAnchorConnectionStatusEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "CONNECTED")]
-            Connected,
-            [EnumMember(Value = "DISCONNECTED")]
-            Disconnected,
-            [EnumMember(Value = "CONNECTING")]
-            Connecting,
-            [EnumMember(Value = "ACTIVE")]
-            Active,
-            [EnumMember(Value = "ERROR")]
-            Error,
-            [EnumMember(Value = "UPDATING")]
-            Updating,
-            [EnumMember(Value = "NEEDS_ATTENTION")]
-            NeedsAttention,
-            [EnumMember(Value = "FAILED")]
-            Failed,
-            [EnumMember(Value = "DELETING")]
-            Deleting,
-            [EnumMember(Value = "DELETED")]
-            Deleted
-        };
-
-        /// <value>
-        /// This can be merge to lifecycleState
-        /// CONNECTED - Partner and CSI information is assigned and MulticloudLink provisioned.
-        /// DISCONNECTED - Only partner cloud information is assigned.
-        /// CONNECTING - Oracle Cloud Infrastructure information is assigned and the control plane is provisioning resources.
-        /// ACTIVE - Network anchor is connected and resources (VNICs) exist within a subnet.
-        /// ERROR - DRG attach fails during connection.
-        /// FAILED - Network anchor creation failed
-        /// NEEDS_ATTENTION - Network anchor is in temporary bad state
-        /// UPDATING - Network anchor is getting updated.
-        /// DELETING - Network anchor is getting deleted
-        /// DELETED - A connected network anchor is deleted.
-        /// 
+        /// Defines status of the Network Anchor.
         /// </value>
         /// <remarks>
         /// Required
@@ -82,7 +30,7 @@ namespace Oci.MulticloudService.Models
         [Required(ErrorMessage = "NetworkAnchorConnectionStatus is required.")]
         [JsonProperty(PropertyName = "networkAnchorConnectionStatus")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<NetworkAnchorConnectionStatusEnum> NetworkAnchorConnectionStatus { get; set; }
+        public System.Nullable<NetworkAnchorConnectionStatus> NetworkAnchorConnectionStatus { get; set; }
         
         [JsonProperty(PropertyName = "vcn")]
         public OciVcn Vcn { get; set; }

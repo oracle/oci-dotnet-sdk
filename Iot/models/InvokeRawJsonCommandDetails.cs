@@ -28,7 +28,7 @@ namespace Oci.IotService.Models
         public string RequestDataContentType { get; set; }
         
         /// <value>
-        /// request data
+        /// request data, maximum 256k
         /// </value>
         [JsonProperty(PropertyName = "requestData")]
         public System.Collections.Generic.Dictionary<string, System.Object> RequestData { get; set; }

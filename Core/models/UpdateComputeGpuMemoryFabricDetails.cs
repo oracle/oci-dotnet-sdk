@@ -48,5 +48,8 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
+        [JsonProperty(PropertyName = "memoryFabricPreferences")]
+        public MemoryFabricPreferencesDescriptor MemoryFabricPreferences { get; set; }
+        
     }
 }
