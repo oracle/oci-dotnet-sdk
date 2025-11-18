@@ -57,6 +57,12 @@ namespace Oci.MulticloudService.Models
         public string NetworkAnchorUri { get; set; }
         
         /// <value>
+        /// CSP Specific Additional Properties, AzureSubnetId for Azure
+        /// </value>
+        [JsonProperty(PropertyName = "cspAdditionalProperties")]
+        public System.Collections.Generic.Dictionary<string, string> CspAdditionalProperties { get; set; }
+        
+        /// <value>
         /// DNS domain ip mapping forwarding configuration
         /// </value>
         [JsonProperty(PropertyName = "dnsForwardingConfig")]

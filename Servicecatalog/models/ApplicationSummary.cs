@@ -83,5 +83,18 @@ namespace Oci.ServicecatalogService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PackageTypeEnum> PackageType { get; set; }
         
+        /// <value>
+        /// Product categories that the application belongs to.
+        /// </value>
+        [JsonProperty(PropertyName = "categories")]
+        public System.Collections.Generic.List<string> Categories { get; set; }
+        
+        /// <value>
+        /// Usage of system tag keys. These predefined keys are scoped to namespaces.
+        /// Example: {&quot;orcl-cloud&quot;: {&quot;free-tier-retained&quot;: &quot;true&quot;}}
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
     }
 }

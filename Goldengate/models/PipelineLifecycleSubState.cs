@@ -29,6 +29,16 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "MOVING")]
       Moving,
       [EnumMember(Value = "RUNNING")]
-      Running
+      Running,
+      [EnumMember(Value = "PAUSING")]
+      Pausing,
+      [EnumMember(Value = "PAUSED")]
+      Paused,
+      [EnumMember(Value = "START_FAILED")]
+      StartFailed,
+      [EnumMember(Value = "STOP_FAILED")]
+      StopFailed,
+      [EnumMember(Value = "PAUSE_FAILED")]
+      PauseFailed
   }
 }

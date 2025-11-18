@@ -197,6 +197,14 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet of the pipeline's private endpoint.
+        /// The subnet must be a private subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
+        
     }
 
     public class PipelineSummaryModelConverter : JsonConverter

@@ -89,7 +89,7 @@ namespace Oci.MulticloudService.Models
         public string OciRegion { get; set; }
         
         /// <value>
-        /// Cluster Placement Group OCID
+        /// Cluster Placement Group OCID (deprecated representation)
         /// </value>
         /// <remarks>
         /// Required
@@ -97,6 +97,34 @@ namespace Oci.MulticloudService.Models
         [Required(ErrorMessage = "CpgId is required.")]
         [JsonProperty(PropertyName = "cpgId")]
         public string CpgId { get; set; }
+        
+        /// <value>
+        /// Cluster Placement Group OCID
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ClusterPlacementGroupId is required.")]
+        [JsonProperty(PropertyName = "clusterPlacementGroupId")]
+        public string ClusterPlacementGroupId { get; set; }
+        
+        /// <value>
+        /// Partner Cloud Name based on service name
+        /// </value>
+        [JsonProperty(PropertyName = "partnerCloudName")]
+        public string PartnerCloudName { get; set; }
+        
+        /// <value>
+        /// User friendly name of account name for customer's subscription
+        /// </value>
+        [JsonProperty(PropertyName = "partnerCloudAccountName")]
+        public string PartnerCloudAccountName { get; set; }
+        
+        /// <value>
+        /// Direct URL to partner cloud for customer's account
+        /// </value>
+        [JsonProperty(PropertyName = "partnerCloudAccountUrl")]
+        public string PartnerCloudAccountUrl { get; set; }
         
     }
 }

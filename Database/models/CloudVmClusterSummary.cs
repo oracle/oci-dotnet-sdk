@@ -587,7 +587,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "OCI")]
             Oci,
             [EnumMember(Value = "GCP")]
-            Gcp
+            Gcp,
+            [EnumMember(Value = "AWS")]
+            Aws
         };
 
         /// <value>

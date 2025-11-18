@@ -20,7 +20,7 @@ namespace Oci.MulticloudService.Requests
     {
         
         /// <value>
-        /// The subscription service name values from [ORACLEDBATAZURE, ORACLEDBATGOOGLE, ORACLEDBATAWS]
+        /// The subscription service name of the Cloud Service Provider.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,9 @@ namespace Oci.MulticloudService.Requests
         public System.Nullable<SubscriptionType> SubscriptionServiceName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud base compartment in which to list resources. 
+        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a Cloud Service Provider (such as Azure, AWS, or Google Cloud). 
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -40,7 +42,7 @@ namespace Oci.MulticloudService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subscription in which to list resources.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud subscription in which to list resources.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionId")]
         public string SubscriptionId { get; set; }

@@ -27,8 +27,8 @@ namespace Oci.IotService.Responses
         /// <value>
         /// URL where the status of command invocation could be retrieved
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "Content-Location")]
-        public string ContentLocation { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "Location")]
+        public string Location { get; set; }
 
 
 

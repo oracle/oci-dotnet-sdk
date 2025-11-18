@@ -167,7 +167,9 @@ namespace Oci.GoldengateService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "FAILED")]
-            Failed
+            Failed,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive
         };
 
         /// <value>
@@ -221,6 +223,22 @@ namespace Oci.GoldengateService.Models
         [Required(ErrorMessage = "TimeUpdated is required.")]
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the subnet of the pipeline's private endpoint.
+        /// The subnet must be a private subnet.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "subnetId")]
+        public string SubnetId { get; set; }
+        
+        /// <value>
+        /// List of ingress IP addresses from where the GoldenGate deployment connects to this connection's privateIp. 
+        /// Customers may optionally set up ingress security rules to restrict traffic from these IP addresses.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ingressIps")]
+        public System.Collections.Generic.List<IngressIpDetails> IngressIps { get; set; }
         
     }
 

@@ -68,6 +68,23 @@ namespace Oci.MulticloudService.Models
         public string VcnId { get; set; }
         
         /// <value>
+        /// Name of the VCN associated to the Network Anchor.
+        /// </value>
+        [JsonProperty(PropertyName = "vcnName")]
+        public string VcnName { get; set; }
+        
+        /// <value>
+        /// Defines status of the Network Anchor.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "NetworkAnchorConnectionStatus is required.")]
+        [JsonProperty(PropertyName = "networkAnchorConnectionStatus")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<NetworkAnchorConnectionStatus> NetworkAnchorConnectionStatus { get; set; }
+        
+        /// <value>
         /// The CPG ID in which Network Anchor will be created.
         /// </value>
         [JsonProperty(PropertyName = "clusterPlacementGroupId")]
@@ -94,15 +111,33 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// CSP Specific Additional Properties, AzureSubnetId for Azure
+        /// </value>
+        [JsonProperty(PropertyName = "cspAdditionalProperties")]
+        public System.Collections.Generic.Dictionary<string, string> CspAdditionalProperties { get; set; }
+        
+        /// <value>
+        /// Network Anchor Id in the Cloud Service Provider.
+        /// </value>
+        [JsonProperty(PropertyName = "cspNetworkAnchorId")]
+        public string CspNetworkAnchorId { get; set; }
+        
+        /// <value>
+        /// CSP network anchor Uri
+        /// </value>
+        [JsonProperty(PropertyName = "networkAnchorUri")]
+        public string NetworkAnchorUri { get; set; }
+        
+        /// <value>
         /// The current state of the NetworkAnchor.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "LifecycleState is required.")]
-        [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public System.Nullable<NetworkAnchor.LifecycleStateEnum> LifecycleState { get; set; }
+        [Required(ErrorMessage = "NetworkAnchorLifecycleState is required.")]
+        [JsonProperty(PropertyName = "networkAnchorLifecycleState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<NetworkAnchor.NetworkAnchorLifecycleStateEnum> NetworkAnchorLifecycleState { get; set; }
         
         /// <value>
         /// A message that describes the current state of the NetworkAnchor in more detail. For example,
@@ -145,6 +180,13 @@ namespace Oci.MulticloudService.Models
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
+        /// <value>
+        /// Oracle Cloud Infrastructure Subscription Type.
+        /// </value>
+        [JsonProperty(PropertyName = "subscriptionType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SubscriptionType> SubscriptionType { get; set; }
         
     }
 }

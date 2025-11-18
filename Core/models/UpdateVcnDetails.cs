@@ -56,7 +56,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SecurityAttributes { get; set; }
         
         /// <value>
-        /// Indicates whether Zpr Only Mode is enforced.
+        /// Indicates whether ZPR Only mode is enforced.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isZprOnly")]

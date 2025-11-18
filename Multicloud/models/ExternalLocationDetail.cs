@@ -61,6 +61,12 @@ namespace Oci.MulticloudService.Models
         [JsonProperty(PropertyName = "cspPhysicalAzDisplayName")]
         public string CspPhysicalAzDisplayName { get; set; }
         
+        /// <value>
+        /// User friendly display name for cspLogicalAZ
+        /// </value>
+        [JsonProperty(PropertyName = "cspLogicalAzDisplayName")]
+        public string CspLogicalAzDisplayName { get; set; }
+        
         [JsonProperty(PropertyName = "cspZoneKeyReferenceId")]
         public CspZoneKeyReferenceId CspZoneKeyReferenceId { get; set; }
         

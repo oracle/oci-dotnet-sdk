@@ -44,6 +44,12 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "usage")]
         public Usage Usage { get; set; }
         
+        /// <value>
+        /// Specifies the processing type used for serving the request.
+        /// </value>
+        [JsonProperty(PropertyName = "serviceTier")]
+        public string ServiceTier { get; set; }
+        
         [JsonProperty(PropertyName = "apiFormat")]
         private readonly string apiFormat = "GENERIC";
     }

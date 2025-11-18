@@ -212,6 +212,26 @@ namespace Oci.GenerativeaiinferenceService.Models
         
         [JsonProperty(PropertyName = "webSearchOptions")]
         public WebSearchOptions WebSearchOptions { get; set; }
+                ///
+        /// <value>
+        /// Specifies the processing type used for serving the request.
+        /// </value>
+        ///
+        public enum ServiceTierEnum {
+            [EnumMember(Value = "AUTO")]
+            Auto,
+            [EnumMember(Value = "DEFAULT")]
+            Default,
+            [EnumMember(Value = "PRIORITY")]
+            Priority
+        };
+
+        /// <value>
+        /// Specifies the processing type used for serving the request.
+        /// </value>
+        [JsonProperty(PropertyName = "serviceTier")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ServiceTierEnum> ServiceTier { get; set; }
         
         [JsonProperty(PropertyName = "apiFormat")]
         private readonly string apiFormat = "GENERIC";

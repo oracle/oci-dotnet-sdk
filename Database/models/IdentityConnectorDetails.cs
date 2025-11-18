@@ -38,7 +38,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "AZURE")]
             Azure,
             [EnumMember(Value = "GCP")]
-            Gcp
+            Gcp,
+            [EnumMember(Value = "AWS")]
+            Aws
         };
 
         /// <value>

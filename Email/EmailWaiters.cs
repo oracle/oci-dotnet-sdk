@@ -88,6 +88,34 @@ namespace Oci.EmailService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetEmailIpPoolRequest, GetEmailIpPoolResponse> ForEmailIpPool(GetEmailIpPoolRequest request, params EmailIpPool.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForEmailIpPool(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetEmailIpPoolRequest, GetEmailIpPoolResponse> ForEmailIpPool(GetEmailIpPoolRequest request, WaiterConfiguration config, params EmailIpPool.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetEmailIpPoolRequest, GetEmailIpPoolResponse>(
+                request,
+                request => client.GetEmailIpPool(request),
+                response => targetStates.Contains(response.EmailIpPool.LifecycleState.Value),
+                targetStates.Contains(EmailIpPool.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetEmailIpPoolRequest, GetEmailIpPoolResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetEmailReturnPathRequest, GetEmailReturnPathResponse> ForEmailReturnPath(GetEmailReturnPathRequest request, params EmailReturnPath.LifecycleStateEnum[] targetStates)
         {
             return this.ForEmailReturnPath(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

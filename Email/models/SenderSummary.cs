@@ -52,6 +52,12 @@ namespace Oci.EmailService.Models
         public string Id { get; set; }
         
         /// <value>
+        /// The IpPool [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) used to submit an email by Email Delivery when sent from this sender.
+        /// </value>
+        [JsonProperty(PropertyName = "emailIpPoolId")]
+        public string EmailIpPoolId { get; set; }
+        
+        /// <value>
         /// The current status of the approved sender.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
