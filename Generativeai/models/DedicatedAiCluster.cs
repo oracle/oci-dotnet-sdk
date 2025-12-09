@@ -230,7 +230,23 @@ namespace Oci.GenerativeaiService.Models
             [EnumMember(Value = "H200_X4")]
             H200X4,
             [EnumMember(Value = "H200_X8")]
-            H200X8
+            H200X8,
+            [EnumMember(Value = "OAI_A10_X2")]
+            OaiA10X2,
+            [EnumMember(Value = "OAI_H100_X1")]
+            OaiH100X1,
+            [EnumMember(Value = "OAI_H100_X2")]
+            OaiH100X2,
+            [EnumMember(Value = "OAI_H200_X1")]
+            OaiH200X1,
+            [EnumMember(Value = "OAI_A100_80G_X1")]
+            OaiA10080GX1,
+            [EnumMember(Value = "OAI_A100_80G_X2")]
+            OaiA10080GX2,
+            [EnumMember(Value = "OAI_A100_40G_X1")]
+            OaiA10040GX1,
+            [EnumMember(Value = "OAI_A100_40G_X4")]
+            OaiA10040GX4
         };
 
         /// <value>
