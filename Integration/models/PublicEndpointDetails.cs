@@ -37,6 +37,12 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "allowlistedHttpVcns")]
         public System.Collections.Generic.List<VirtualCloudNetwork> AllowlistedHttpVcns { get; set; }
         
+        [JsonProperty(PropertyName = "runtime")]
+        public ComponentAllowListDetails Runtime { get; set; }
+        
+        [JsonProperty(PropertyName = "designTime")]
+        public ComponentAllowListDetails DesignTime { get; set; }
+        
         /// <value>
         /// The Integration service's VCN is allow-listed to allow integrations to call back into other integrations
         /// </value>

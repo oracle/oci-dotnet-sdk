@@ -18,6 +18,7 @@ namespace Oci.DisasterrecoveryService.Models
     /// - DISABLED - DR plan step execution has been disabled.
     /// - IN_PROGRESS - DR plan step execution is in progress.
     /// - SUCCEEDED - DR plan step execution has succeeded.
+    /// - SUCCEEDED_WITH_WARNING - DR plan step execution has succeeded, but with warnings.
     /// - FAILED - DR plan step execution has failed.
     /// - FAILED_IGNORED - DR plan step execution has failed, but was ignored.
     /// - TIMED_OUT - DR plan step execution has timed out.
@@ -38,6 +39,8 @@ namespace Oci.DisasterrecoveryService.Models
       InProgress,
       [EnumMember(Value = "SUCCEEDED")]
       Succeeded,
+      [EnumMember(Value = "SUCCEEDED_WITH_WARNING")]
+      SucceededWithWarning,
       [EnumMember(Value = "FAILED")]
       Failed,
       [EnumMember(Value = "FAILED_IGNORED")]

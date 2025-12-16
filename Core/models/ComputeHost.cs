@@ -111,6 +111,20 @@ namespace Oci.CoreService.Models
         public RecycleDetails RecycleDetails { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Customer-unique firmware bundle associated with the Host.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "firmwareBundleId")]
+        public string FirmwareBundleId { get; set; }
+        
+        /// <value>
+        /// The platform of the host
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "platform")]
+        public string Platform { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for Customer-unique Network Block
         /// 
         /// </value>

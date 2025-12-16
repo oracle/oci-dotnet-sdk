@@ -61,5 +61,11 @@ namespace Oci.CoreService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "imageId")]
         public string ImageId { get; set; }
+        
+        /// <value>
+        /// Shape name.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shape")]
+        public string Shape { get; set; }
     }
 }

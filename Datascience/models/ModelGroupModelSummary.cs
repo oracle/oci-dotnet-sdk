@@ -42,6 +42,12 @@ namespace Oci.DatascienceService.Models
         public string ModelId { get; set; }
         
         /// <value>
+        /// SaaS friendly name of the model.
+        /// </value>
+        [JsonProperty(PropertyName = "inferenceKey")]
+        public string InferenceKey { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the model's compartment.
         /// </value>
         /// <remarks>

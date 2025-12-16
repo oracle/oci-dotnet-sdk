@@ -57,6 +57,20 @@ namespace Oci.DisasterrecoveryService.Models
         [JsonProperty(PropertyName = "objectStorageScriptLocation")]
         public ObjectStorageScriptLocation ObjectStorageScriptLocation { get; set; }
         
+        /// <value>
+        /// The entire path and arguments for the script that is stored in object store, or inside a compressed archive in object store.
+        /// Example: /usr/bin/python3.7 scripts/start_server.py --port 8080 --env &quot;production&quot; --max-connections 200 --log-level &quot;INFO&quot;
+        /// </value>
+        [JsonProperty(PropertyName = "scriptCommand")]
+        public string ScriptCommand { get; set; }
+        
+        /// <value>
+        /// The user ID on the instance that will be used to execute the script specified in 'scriptCommand'.
+        /// Example: opc
+        /// </value>
+        [JsonProperty(PropertyName = "runAsUser")]
+        public string RunAsUser { get; set; }
+        
         [JsonProperty(PropertyName = "stepType")]
         private readonly string stepType = "RUN_OBJECTSTORE_SCRIPT";
     }

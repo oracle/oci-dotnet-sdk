@@ -48,6 +48,12 @@ namespace Oci.DatascienceService.Requests
         public string MlApplicationImplementationId { get; set; }
         
         /// <value>
+        /// unique MlApplicationInstance identifier
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "mlApplicationInstanceId")]
+        public string MlApplicationInstanceId { get; set; }
+        
+        /// <value>
         /// A filter to return only resources matching the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

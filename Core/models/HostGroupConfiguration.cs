@@ -59,6 +59,27 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "recycleLevel")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<RecycleLevelEnum> RecycleLevel { get; set; }
+                ///
+        /// <value>
+        /// The state of the host group configuration.
+        /// </value>
+        ///
+        public enum StateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "VALID")]
+            Valid,
+            [EnumMember(Value = "INVALID")]
+            Invalid
+        };
+
+        /// <value>
+        /// The state of the host group configuration.
+        /// </value>
+        [JsonProperty(PropertyName = "state")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<StateEnum> State { get; set; }
         
     }
 }
