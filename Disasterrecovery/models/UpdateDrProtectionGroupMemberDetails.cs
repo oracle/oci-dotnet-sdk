@@ -69,6 +69,9 @@ namespace Oci.DisasterrecoveryService.Models
                 case "AUTONOMOUS_DATABASE":
                     obj = new UpdateDrProtectionGroupMemberAutonomousDatabaseDetails();
                     break;
+                case "INTEGRATION_INSTANCE":
+                    obj = new UpdateDrProtectionGroupMemberIntegrationInstanceDetails();
+                    break;
                 case "FILE_SYSTEM":
                     obj = new UpdateDrProtectionGroupMemberFileSystemDetails();
                     break;

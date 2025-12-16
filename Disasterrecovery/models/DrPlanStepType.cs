@@ -136,6 +136,10 @@ namespace Oci.DisasterrecoveryService.Models
     /// - MYSQL_DB_SYSTEM_START_DRILL - A DR plan step to perform a HeatWave MySQL DB System start drill.
     /// - MYSQL_DB_SYSTEM_STOP_DRILL_PRECHECK - A precheck step for validating HeatWave MySQL DB System stop drill.
     /// - MYSQL_DB_SYSTEM_STOP_DRILL - A DR plan step to perform a HeatWave MySQL DB System stop drill.
+    /// - INTEGRATION_INSTANCE_SWITCHOVER_PRECHECK - A precheck step for validating an integration instance (OIC) for switchover.
+    /// - INTEGRATION_INSTANCE_SWITCHOVER - A DR plan step to perform a switchover operation for an integration instance (OIC).
+    /// - INTEGRATION_INSTANCE_FAILOVER_PRECHECK -A precheck step for validating an integration instance (OIC) for failover.
+    /// - INTEGRATION_INSTANCE_FAILOVER - A DR plan step to perform a failover operation for an integration instance (OIC).
     /// 
   /// </summary>
   public enum DrPlanStepType {
@@ -385,6 +389,14 @@ namespace Oci.DisasterrecoveryService.Models
       [EnumMember(Value = "MYSQL_DB_SYSTEM_STOP_DRILL_PRECHECK")]
       MysqlDbSystemStopDrillPrecheck,
       [EnumMember(Value = "MYSQL_DB_SYSTEM_STOP_DRILL")]
-      MysqlDbSystemStopDrill
+      MysqlDbSystemStopDrill,
+      [EnumMember(Value = "INTEGRATION_INSTANCE_SWITCHOVER_PRECHECK")]
+      IntegrationInstanceSwitchoverPrecheck,
+      [EnumMember(Value = "INTEGRATION_INSTANCE_SWITCHOVER")]
+      IntegrationInstanceSwitchover,
+      [EnumMember(Value = "INTEGRATION_INSTANCE_FAILOVER_PRECHECK")]
+      IntegrationInstanceFailoverPrecheck,
+      [EnumMember(Value = "INTEGRATION_INSTANCE_FAILOVER")]
+      IntegrationInstanceFailover
   }
 }

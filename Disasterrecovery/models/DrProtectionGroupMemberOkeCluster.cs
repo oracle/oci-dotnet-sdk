@@ -85,6 +85,14 @@ namespace Oci.DisasterrecoveryService.Models
         [JsonProperty(PropertyName = "virtualNodePoolConfigs")]
         public System.Collections.Generic.List<OkeClusterVirtualNodePoolConfiguration> VirtualNodePoolConfigs { get; set; }
         
+        /// <value>
+        /// The list of config maps along with their corresponding namespaces.
+        /// This property applies to the OKE cluster member in primary region.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceModifierMappings")]
+        public System.Collections.Generic.List<OkeClusterResourceModifierMapping> ResourceModifierMappings { get; set; }
+        
         [JsonProperty(PropertyName = "memberType")]
         private readonly string memberType = "OKE_CLUSTER";
     }

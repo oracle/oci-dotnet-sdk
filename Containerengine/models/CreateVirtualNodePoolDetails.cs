@@ -92,6 +92,10 @@ namespace Oci.ContainerengineService.Models
         /// <value>
         /// The pod configuration for pods run on virtual nodes of this virtual node pool.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "PodConfiguration is required.")]
         [JsonProperty(PropertyName = "podConfiguration")]
         public PodConfiguration PodConfiguration { get; set; }
         

@@ -22,7 +22,9 @@ namespace Oci.DatascienceService.Models
     {
         
         /// <value>
-        /// The shape used to launch the model deployment instances.
+        /// The shape used to launch the model deployment instances. 
+        /// When using service managed open source foundation model, the supported shapes can be retrieved using get model api /models/{modelId}/definedMetadata/deploymentConfiguration/artifact/content.
+        /// 
         /// </value>
         /// <remarks>
         /// Required

@@ -37,5 +37,12 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// A list of the OCIDs of the network security groups (NSGs) associated to backends to LBs (pods/nodes/virtual pods, etc.). Rules necessary for LB to backend communication would be added when rule management mode is set to NSG via annotations. see {@link NetworkSecurityGroup}.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "backendNsgIds")]
+        public System.Collections.Generic.List<string> BackendNsgIds { get; set; }
+        
     }
 }

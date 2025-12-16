@@ -52,6 +52,14 @@ namespace Oci.CoreService.Models
         public string Ipv4 { get; set; }
         
         /// <value>
+        /// The volume's iSCSI IPv6 address.
+        /// <br/>
+        /// Example: 2001:db8::1/64
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6")]
+        public string Ipv6 { get; set; }
+        
+        /// <value>
         /// The target volume's iSCSI Qualified Name in the format defined
         /// by [RFC 3720](https://tools.ietf.org/html/rfc3720#page-32).
         /// <br/>

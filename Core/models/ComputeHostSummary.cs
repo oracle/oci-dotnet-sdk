@@ -131,6 +131,13 @@ namespace Oci.CoreService.Models
         public string Shape { get; set; }
         
         /// <value>
+        /// The platform of the host
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "platform")]
+        public string Platform { get; set; }
+        
+        /// <value>
         /// The heathy state of the host
         /// 
         /// </value>

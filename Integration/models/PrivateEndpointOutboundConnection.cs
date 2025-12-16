@@ -38,6 +38,12 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "nsgIds")]
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
+        /// <value>
+        /// Indicates if all traffic should go through configured outbound connection
+        /// </value>
+        [JsonProperty(PropertyName = "isAllOutboundTrafficPrivate")]
+        public System.Nullable<bool> IsAllOutboundTrafficPrivate { get; set; }
+        
         [JsonProperty(PropertyName = "outboundConnectionType")]
         private readonly string outboundConnectionType = "PRIVATE_ENDPOINT";
     }

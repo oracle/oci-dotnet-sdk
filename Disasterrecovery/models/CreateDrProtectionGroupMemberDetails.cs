@@ -57,6 +57,9 @@ namespace Oci.DisasterrecoveryService.Models
             var discriminator = jsonObject["memberType"].Value<string>();
             switch (discriminator)
             {
+                case "INTEGRATION_INSTANCE":
+                    obj = new CreateDrProtectionGroupMemberIntegrationInstanceDetails();
+                    break;
                 case "DATABASE":
                     obj = new CreateDrProtectionGroupMemberDatabaseDetails();
                     break;
