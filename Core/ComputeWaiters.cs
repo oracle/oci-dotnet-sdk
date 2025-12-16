@@ -34,6 +34,42 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ApplyHostConfigurationRequest, ApplyHostConfigurationResponse> ForApplyHostConfiguration(ApplyHostConfigurationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForApplyHostConfiguration(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ApplyHostConfigurationRequest, ApplyHostConfigurationResponse> ForApplyHostConfiguration(ApplyHostConfigurationRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ApplyHostConfigurationRequest, ApplyHostConfigurationResponse>(() =>
+            {
+                var response = client.ApplyHostConfiguration(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<AttachComputeHostGroupHostRequest, AttachComputeHostGroupHostResponse> ForAttachComputeHostGroupHost(AttachComputeHostGroupHostRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForAttachComputeHostGroupHost(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1015,6 +1051,33 @@ namespace Oci.CoreService
                 targetStates.Contains(DedicatedVmHost.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetDedicatedVmHostRequest, GetDedicatedVmHostResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetFirmwareBundleRequest, GetFirmwareBundleResponse> ForFirmwareBundle(GetFirmwareBundleRequest request, params FirmwareBundle.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForFirmwareBundle(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetFirmwareBundleRequest, GetFirmwareBundleResponse> ForFirmwareBundle(GetFirmwareBundleRequest request, WaiterConfiguration config, params FirmwareBundle.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetFirmwareBundleRequest, GetFirmwareBundleResponse>(
+                request,
+                request => client.GetFirmwareBundle(request),
+                response => targetStates.Contains(response.FirmwareBundle.LifecycleState.Value)
+            );
+            return new Waiter<GetFirmwareBundleRequest, GetFirmwareBundleResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

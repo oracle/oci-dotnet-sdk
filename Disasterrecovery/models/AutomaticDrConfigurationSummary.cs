@@ -121,6 +121,14 @@ namespace Oci.DisasterrecoveryService.Models
         public System.Nullable<AutomaticDrConfigurationLifecycleState> LifecycleState { get; set; }
         
         /// <value>
+        /// The current sub-state of the Automatic DR configuration.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lifecycleSubState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AutomaticDrConfigurationLifecycleSubState> LifecycleSubState { get; set; }
+        
+        /// <value>
         /// A message describing the Automatic DR configuration's current state in more detail.
         /// 
         /// </value>

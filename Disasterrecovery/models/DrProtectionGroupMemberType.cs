@@ -26,6 +26,7 @@ namespace Oci.DisasterrecoveryService.Models
     /// - NETWORK_LOAD_BALANCER - A network load balancer.
     /// - FILE_SYSTEM - A file system.
     /// - MYSQL_DB_SYSTEM - A HeatWave MySQL DB system.
+    /// - INTEGRATION_INSTANCE - An integration instance (OIC).
     /// 
   /// </summary>
   public enum DrProtectionGroupMemberType {
@@ -57,6 +58,8 @@ namespace Oci.DisasterrecoveryService.Models
       [EnumMember(Value = "OBJECT_STORAGE_BUCKET")]
       ObjectStorageBucket,
       [EnumMember(Value = "MYSQL_DB_SYSTEM")]
-      MysqlDbSystem
+      MysqlDbSystem,
+      [EnumMember(Value = "INTEGRATION_INSTANCE")]
+      IntegrationInstance
   }
 }

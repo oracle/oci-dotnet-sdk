@@ -23,15 +23,12 @@ namespace Oci.DatascienceService.Models
         
         /// <value>
         /// The full path to the Oracle Container Repository (OCIR) registry, image, and tag in a canonical format.
+        /// The container image is optional while using service managed open source foundation model.
         /// Acceptable format:
         /// `<region>.ocir.io/<registry>/<image>:<tag>`
         /// `<region>.ocir.io/<registry>/<image>:<tag>@digest`
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Image is required.")]
         [JsonProperty(PropertyName = "image")]
         public string Image { get; set; }
         
@@ -93,6 +90,13 @@ namespace Oci.DatascienceService.Models
         /// </value>
         [JsonProperty(PropertyName = "environmentVariables")]
         public System.Collections.Generic.Dictionary<string, string> EnvironmentVariables { get; set; }
+        
+        /// <value>
+        /// Service injected Environment variables set for the web server container and can not be set or modified by user.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "defaultEnvironmentVariables")]
+        public System.Collections.Generic.Dictionary<string, string> DefaultEnvironmentVariables { get; set; }
         
         [JsonProperty(PropertyName = "environmentConfigurationType")]
         private readonly string environmentConfigurationType = "OCIR_CONTAINER";

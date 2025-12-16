@@ -32,6 +32,13 @@ namespace Oci.DatascienceService.Models
         };
 
         
+        /// <value>
+        /// The type of the deployed model.
+        /// </value>
+        [JsonProperty(PropertyName = "modelType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ModelDeploymentModelType> ModelType { get; set; }
+        
     }
 
     public class ModelDeploymentSystemDataModelConverter : JsonConverter

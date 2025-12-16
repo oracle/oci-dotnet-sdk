@@ -257,5 +257,12 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "recommendedAlternatives")]
         public System.Collections.Generic.List<ShapeAlternativeObject> RecommendedAlternatives { get; set; }
         
+        /// <value>
+        /// The list of platform names that can be used for this shapes
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "platformNames")]
+        public System.Collections.Generic.List<string> PlatformNames { get; set; }
+        
     }
 }

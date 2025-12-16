@@ -193,6 +193,13 @@ namespace Oci.DisasterrecoveryService.Models
         [JsonProperty(PropertyName = "groupExecutions")]
         public System.Collections.Generic.List<DrPlanGroupExecution> GroupExecutions { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "StepStatusCounts is required.")]
+        [JsonProperty(PropertyName = "stepStatusCounts")]
+        public DrPlanExecutionStepStatusCounts StepStatusCounts { get; set; }
+        
         /// <value>
         /// The current state of the DR plan execution.
         /// 

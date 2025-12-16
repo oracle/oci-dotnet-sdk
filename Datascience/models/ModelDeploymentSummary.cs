@@ -116,6 +116,9 @@ namespace Oci.DatascienceService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ModelDeploymentLifecycleState> LifecycleState { get; set; }
         
+        [JsonProperty(PropertyName = "modelDeploymentSystemData")]
+        public ModelDeploymentSystemData ModelDeploymentSystemData { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. See [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

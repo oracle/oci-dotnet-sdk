@@ -43,6 +43,14 @@ namespace Oci.IntegrationService.Models
             ChangePrivateEndpointOutboundConnection,
             [EnumMember(Value = "ENABLE_PROCESS_AUTOMATION")]
             EnableProcessAutomation,
+            [EnumMember(Value = "DISABLE_PROCESS_AUTOMATION")]
+            DisableProcessAutomation,
+            [EnumMember(Value = "ADD_LOG_ANALYTICS_LOG_GROUP")]
+            AddLogAnalyticsLogGroup,
+            [EnumMember(Value = "DELETE_LOG_ANALYTICS_LOG_GROUP")]
+            DeleteLogAnalyticsLogGroup,
+            [EnumMember(Value = "CONVERT_INSTANCE")]
+            ConvertInstance,
             [EnumMember(Value = "EXTEND_DATA_RETENTION")]
             ExtendDataRetention,
             [EnumMember(Value = "DISASTER_RECOVERY_FAILOVER")]

@@ -312,5 +312,11 @@ namespace Oci.IntegrationService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<DataRetentionPeriodEnum> DataRetentionPeriod { get; set; }
         
+        /// <value>
+        /// OCID of LogAnalytics LogGroup, enabled for given integration instance
+        /// </value>
+        [JsonProperty(PropertyName = "logGroupId")]
+        public string LogGroupId { get; set; }
+        
     }
 }

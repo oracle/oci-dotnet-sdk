@@ -85,6 +85,9 @@ namespace Oci.DisasterrecoveryService.Models
                 case "OBJECT_STORAGE_BUCKET":
                     obj = new DrProtectionGroupMemberObjectStorageBucket();
                     break;
+                case "INTEGRATION_INSTANCE":
+                    obj = new DrProtectionGroupMemberIntegrationInstance();
+                    break;
                 case "COMPUTE_INSTANCE_MOVABLE":
                     obj = new DrProtectionGroupMemberComputeInstanceMovable();
                     break;
