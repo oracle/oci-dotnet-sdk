@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -24,19 +24,16 @@ namespace Oci.FleetappsmanagementService.Models
     {
         
         /// <value>
-        /// Versions associated with the PRODUCT . 
+        /// Versions associated with the PRODUCT. Mandatory if product is not softlink product.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Versions is required.")]
         [JsonProperty(PropertyName = "versions")]
         public System.Collections.Generic.List<string> Versions { get; set; }
         
         /// <value>
         /// OCID for the Credential name to be associated with the Product.
         /// These are useful for target discovery or lifecycle management activities, for example, Oracle WebLogic admin credentials for Oracle WebLogic Application server.
+        /// This property is not applicable if isSoftlink is set to true.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "credentials")]
@@ -44,14 +41,15 @@ namespace Oci.FleetappsmanagementService.Models
         
         /// <value>
         /// Various components of the Product.
-        /// For Example: The administration server or node manager can be the components of the Oracle WebLogic Application server.Forms server or concurrent manager can be the components of the Oracle E-Business Suite.
+        /// For Example: The administration server or node manager can be the components of the Oracle WebLogic Application server.Forms server or concurrent manager can be the components of the Oracle E-Business Suite.This property is not applicable if isSoftlink is set to true.
         /// </value>
         [JsonProperty(PropertyName = "components")]
         public System.Collections.Generic.List<string> Components { get; set; }
         
         /// <value>
         /// Products compatible with this Product.
-        /// Provide products from the list of other products you have created that are compatible with the present one
+        /// Provide products from the list of other products you have created that are compatible with the present one.
+        /// This property is not applicable if isSoftlink is set to true.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "compatibleProducts")]
@@ -59,10 +57,34 @@ namespace Oci.FleetappsmanagementService.Models
         
         /// <value>
         /// Patch Types associated with this Product.
+        /// This property is not applicable if isSoftlink is set to true.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "patchTypes")]
         public System.Collections.Generic.List<ConfigAssociationDetails> PatchTypes { get; set; }
+        
+        /// <value>
+        /// Specify if the product is softlink product or not
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isSoftlink")]
+        public System.Nullable<bool> IsSoftlink { get; set; }
+        
+        /// <value>
+        /// The OCID of the product that would be the target for the softlink.
+        /// This property is applicable only if isSoftlink is set to true
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "linkProductId")]
+        public string LinkProductId { get; set; }
+        
+        /// <value>
+        /// If set true ,compliance policies will be created for softlink product. This property is
+        /// applicable only if isSoftlink is set to true
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isCompliancePolicyRequiredForSoftlink")]
+        public System.Nullable<bool> IsCompliancePolicyRequiredForSoftlink { get; set; }
         
         [JsonProperty(PropertyName = "configCategory")]
         private readonly string configCategory = "PRODUCT";

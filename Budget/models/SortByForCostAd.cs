@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -13,15 +13,16 @@ using System.Runtime.Serialization;
 namespace Oci.BudgetService.Models
 {
   /// <summary>
-  /// The field to sort by. If not specified, the default is timeCreated.
-    /// The default sort order for timeCreated is DESC.
-    /// The default sort order for displayName is ASC in alphanumeric order.
+  /// The field to sort costAd by.
+    /// Default is timeCreated (DESC).
     /// 
   /// </summary>
-  public enum SortBy {
+  public enum SortByForCostAd {
       [EnumMember(Value = "timeCreated")]
       TimeCreated,
-      [EnumMember(Value = "displayName")]
-      DisplayName
+      [EnumMember(Value = "name")]
+      Name,
+      [EnumMember(Value = "id")]
+      Id
   }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -30,6 +30,24 @@ namespace Oci.DevopsService.Models
         [Required(ErrorMessage = "CommitId is required.")]
         [JsonProperty(PropertyName = "commitId")]
         public string CommitId { get; set; }
+        
+        /// <value>
+        /// The author of latest commit
+        /// </value>
+        [JsonProperty(PropertyName = "latestCommitAuthorName")]
+        public string LatestCommitAuthorName { get; set; }
+        
+        /// <value>
+        /// Up to 5 pull requests associated with this branch.
+        /// </value>
+        [JsonProperty(PropertyName = "topNPullRequests")]
+        public System.Collections.Generic.List<PullRequestSummary> TopNPullRequests { get; set; }
+        
+        /// <value>
+        /// Counts of pull requests for this branch grouped by their state.
+        /// </value>
+        [JsonProperty(PropertyName = "pullRequestStateCounts")]
+        public System.Collections.Generic.Dictionary<string, int> PullRequestStateCounts { get; set; }
         
         [JsonProperty(PropertyName = "refType")]
         private readonly string refType = "BRANCH";

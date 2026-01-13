@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -48,6 +48,10 @@ namespace Oci.FleetsoftwareupdateService.Models
       [EnumMember(Value = "EXA_OL_8_23_1")]
       ExaOl8231,
       [EnumMember(Value = "EXA_OL_8_24_1")]
-      ExaOl8241
+      ExaOl8241,
+      [EnumMember(Value = "EXA_OL_8_25_1")]
+      ExaOl8251,
+      [EnumMember(Value = "EXA_OL_8_25_2")]
+      ExaOl8252
   }
 }
