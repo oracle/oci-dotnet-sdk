@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -64,12 +64,6 @@ namespace Oci.DevopsService.Models
         /// </value>
         [JsonProperty(PropertyName = "committerEmail")]
         public string CommitterEmail { get; set; }
-        
-        /// <value>
-        /// Id of the PullRequest that this commit was merged with.
-        /// </value>
-        [JsonProperty(PropertyName = "mergedPullRequestId")]
-        public string MergedPullRequestId { get; set; }
         
         /// <value>
         /// An array of parent commit IDs of created commit.

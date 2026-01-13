@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -1182,6 +1182,15 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AutonomousMaintenanceScheduleTypeEnum> AutonomousMaintenanceScheduleType { get; set; }
         
+        [JsonProperty(PropertyName = "autonomousDatabaseMaintenanceWindow")]
+        public AutonomousDatabaseMaintenanceWindowSummary AutonomousDatabaseMaintenanceWindow { get; set; }
+        
+        /// <value>
+        /// The date until which maintenance of Autonomous AI Database is temporarily paused.
+        /// </value>
+        [JsonProperty(PropertyName = "timeMaintenancePauseUntil")]
+        public System.Nullable<System.DateTime> TimeMaintenancePauseUntil { get; set; }
+        
         /// <value>
         /// The list of scheduled operations. Consists of values such as dayOfWeek, scheduledStartTime, scheduledStopTime.
         /// <br/>
@@ -1361,6 +1370,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "additionalAttributes")]
         public System.Collections.Generic.Dictionary<string, string> AdditionalAttributes { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the dedicated resource pool leader Autonomous AI Database in the same region, associated with local Autonomous Data Guard for a dedicated resource pool member.
+        /// </value>
+        [JsonProperty(PropertyName = "localAdgResourcePoolLeaderId")]
+        public string LocalAdgResourcePoolLeaderId { get; set; }
         
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -82,7 +82,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "VM_CLUSTER_BACKUP")]
             VmClusterBackup,
             [EnumMember(Value = "VM_CLUSTER_NEW")]
-            VmClusterNew
+            VmClusterNew,
+            [EnumMember(Value = "VM_CLUSTER_DATABASE")]
+            VmClusterDatabase
         };
 
         
@@ -125,6 +127,9 @@ namespace Oci.DatabaseService.Models
                     break;
                 case "DB_BACKUP":
                     obj = new CreateDbHomeWithDbSystemIdFromBackupDetails();
+                    break;
+                case "VM_CLUSTER_DATABASE":
+                    obj = new CreateDbHomeWithVmClusterIdFromDatabaseDetails();
                     break;
                 case "VM_CLUSTER_BACKUP":
                     obj = new CreateDbHomeWithVmClusterIdFromBackupDetails();
