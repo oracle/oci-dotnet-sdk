@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -13,23 +13,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.DevopsService.Models
+namespace Oci.BudgetService.Models
 {
     /// <summary>
-    /// Result of Pull Request difference.
+    /// Results of a costAnomalyEvent search. Contains both CostAnomalyEventSummary items and other data.
     /// </summary>
-    public class PullRequestFileChangeCollection 
+    public class CostAnomalyEventCollection 
     {
         
         /// <value>
-        /// List of objects describing Pull Request differences for changed files.
+        /// A page of CostAnomalyMonitorSummary objects.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "Items is required.")]
         [JsonProperty(PropertyName = "items")]
-        public System.Collections.Generic.List<PullRequestFileChangeSummary> Items { get; set; }
+        public System.Collections.Generic.List<CostAnomalyEventSummary> Items { get; set; }
         
     }
 }

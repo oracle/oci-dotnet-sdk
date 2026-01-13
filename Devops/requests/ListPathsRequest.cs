@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -38,7 +38,7 @@ namespace Oci.DevopsService.Requests
         public string Ref { get; set; }
         
         /// <value>
-        /// Flag to determine if files must be retrived recursively. Flag is False by default.
+        /// Flag to determine if files must be retrieved recursively. Flag is False by default.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "pathsInSubtree")]
         public System.Nullable<bool> PathsInSubtree { get; set; }

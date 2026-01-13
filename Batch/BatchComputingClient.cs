@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -109,7 +109,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "CancelBatchJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJob/CancelBatchJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -165,7 +165,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ChangeBatchContextCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchContext/ChangeBatchContextCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -221,7 +221,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ChangeBatchJobCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJob/ChangeBatchJobCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -277,7 +277,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ChangeBatchJobPoolCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJobPool/ChangeBatchJobPoolCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -333,7 +333,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ChangeBatchTaskEnvironmentCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskEnvironment/ChangeBatchTaskEnvironmentCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -389,7 +389,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ChangeBatchTaskProfileCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskProfile/ChangeBatchTaskProfileCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -445,7 +445,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "CreateBatchContext",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchContext/CreateBatchContext",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -501,7 +501,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "CreateBatchJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJob/CreateBatchJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -557,7 +557,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "CreateBatchJobPool",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJobPool/CreateBatchJobPool",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -613,7 +613,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "CreateBatchTaskEnvironment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskEnvironment/CreateBatchTaskEnvironment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -669,7 +669,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "CreateBatchTaskProfile",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskProfile/CreateBatchTaskProfile",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -725,7 +725,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "DeleteBatchContext",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchContext/DeleteBatchContext",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -781,7 +781,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "DeleteBatchJobPool",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJobPool/DeleteBatchJobPool",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -837,7 +837,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "DeleteBatchTaskEnvironment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskEnvironment/DeleteBatchTaskEnvironment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -893,7 +893,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "DeleteBatchTaskProfile",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskProfile/DeleteBatchTaskProfile",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -949,7 +949,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "GetBatchContext",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchContext/GetBatchContext",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1005,7 +1005,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "GetBatchJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJob/GetBatchJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1061,7 +1061,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "GetBatchJobPool",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJobPool/GetBatchJobPool",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1117,7 +1117,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "GetBatchTask",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTask/GetBatchTask",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1173,7 +1173,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "GetBatchTaskEnvironment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskEnvironment/GetBatchTaskEnvironment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1229,7 +1229,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "GetBatchTaskProfile",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskProfile/GetBatchTaskProfile",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1285,7 +1285,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "GetWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/WorkRequest/GetWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1341,7 +1341,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ListBatchContextShapes",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchContextShapeCollection/ListBatchContextShapes",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1397,7 +1397,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ListBatchContexts",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchContextCollection/ListBatchContexts",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1453,7 +1453,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ListBatchJobPools",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJobPoolCollection/ListBatchJobPools",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1510,7 +1510,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ListBatchJobTasks",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskCollection/ListBatchJobTasks",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1566,7 +1566,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ListBatchJobs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJobCollection/ListBatchJobs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1622,7 +1622,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ListBatchTaskEnvironments",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskEnvironmentCollection/ListBatchTaskEnvironments",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1678,7 +1678,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ListBatchTaskProfiles",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskProfileCollection/ListBatchTaskProfiles",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1734,7 +1734,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ListBatchTasks",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskCollection/ListBatchTasks",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1790,7 +1790,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ListWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/WorkRequestError/ListWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1846,7 +1846,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ListWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/WorkRequestLogEntry/ListWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1902,7 +1902,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "ListWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/WorkRequest/ListWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1958,7 +1958,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "PauseBatchJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJob/PauseBatchJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2014,7 +2014,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "StartBatchContext",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchContext/StartBatchContext",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2070,7 +2070,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "StartBatchJobPool",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJobPool/StartBatchJobPool",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2126,7 +2126,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "StopBatchContext",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchContext/StopBatchContext",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2182,7 +2182,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "StopBatchJobPool",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJobPool/StopBatchJobPool",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2238,7 +2238,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "UnpauseBatchJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJob/UnpauseBatchJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2294,7 +2294,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "UpdateBatchContext",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchContext/UpdateBatchContext",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2350,7 +2350,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "UpdateBatchJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJob/UpdateBatchJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2406,7 +2406,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "UpdateBatchJobPool",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchJobPool/UpdateBatchJobPool",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2462,7 +2462,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "UpdateBatchTaskEnvironment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskEnvironment/UpdateBatchTaskEnvironment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -2518,7 +2518,7 @@ namespace Oci.BatchService
                     ServiceName = "BatchComputing",
                     OperationName = "UpdateBatchTaskProfile",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/batch/20251031/BatchTaskProfile/UpdateBatchTaskProfile",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

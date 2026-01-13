@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -8,15 +8,17 @@
 
 
 using System.Runtime.Serialization;
-using Oci.DevopsService.Models;
+using Oci.BudgetService.Models;
 
-namespace Oci.DevopsService.Responses
+namespace Oci.BudgetService.Responses
 {
-    public class ReopenPullRequestCommentResponse : Oci.Common.OciResponse
+    public class GetCostAnomalyEventResponse : Oci.Common.OciResponse
     {
 
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request, provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. If you need to contact
+        /// Oracle about a particular request, please provide the request ID.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
@@ -24,15 +26,16 @@ namespace Oci.DevopsService.Responses
 
         /// <value>
         /// For optimistic concurrency control. See `if-match`.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
         public string Etag { get; set; }
 
         /// <value>
-        /// The returned PullRequestComment instance.
+        /// The returned CostAnomalyEvent instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public PullRequestComment PullRequestComment { get; set; }
+        public CostAnomalyEvent CostAnomalyEvent { get; set; }
 
     }
 }

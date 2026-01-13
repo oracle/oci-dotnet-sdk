@@ -185,7 +185,7 @@ Please consult the [security guide](./SECURITY.md) for our responsible security 
 
 ## License
 
-Copyright (c) 2020, 2021 Oracle and/or its affiliates. All rights reserved.
+Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
 
 This SDK is dual licensed under the Universal Permissive License 1.0 and the Apache License 2.0.
 

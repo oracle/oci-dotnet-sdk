@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, 2025, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2026, Oracle and/or its affiliates. All rights reserved.
  * This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
  */
 
@@ -1124,104 +1124,6 @@ namespace Oci.DevopsService
                 },
                 request => client.ListPullRequestComments(request, retryConfiguration, cancellationToken),
                 response => response.PullRequestCommentCollection.Items
-            );
-        }
-
-        /// <summary>
-        /// Creates a new enumerable which will iterate over the responses received from the ListPullRequestCommits operation. This enumerable
-        /// will fetch more data from the server as needed.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send</param>
-        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
-        /// <param name="cancellationToken">The cancellation token object</param>
-        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
-        public IEnumerable<ListPullRequestCommitsResponse> ListPullRequestCommitsResponseEnumerator(ListPullRequestCommitsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
-        {
-            return new Common.Utils.ResponseEnumerable<ListPullRequestCommitsRequest, ListPullRequestCommitsResponse>(
-                response => response.OpcNextPage,
-                input =>
-                {
-                    if (!string.IsNullOrEmpty(input))
-                    {
-                        request.Page = input;
-                    }
-                    return request;
-                },
-                request => client.ListPullRequestCommits(request, retryConfiguration, cancellationToken)
-            );
-        }
-
-        /// <summary>
-        /// Creates a new enumerable which will iterate over the RepositoryCommitSummary objects
-        /// contained in responses from the ListPullRequestCommits operation. This enumerable will fetch more data from the server as needed.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send</param>
-        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
-        /// <param name="cancellationToken">The cancellation token object</param>
-        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
-        public IEnumerable<RepositoryCommitSummary> ListPullRequestCommitsRecordEnumerator(ListPullRequestCommitsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
-        {
-            return new Common.Utils.ResponseRecordEnumerable<ListPullRequestCommitsRequest, ListPullRequestCommitsResponse, RepositoryCommitSummary>(
-                response => response.OpcNextPage,
-                input =>
-                {
-                    if (!string.IsNullOrEmpty(input))
-                    {
-                        request.Page = input;
-                    }
-                    return request;
-                },
-                request => client.ListPullRequestCommits(request, retryConfiguration, cancellationToken),
-                response => response.RepositoryCommitCollection.Items
-            );
-        }
-
-        /// <summary>
-        /// Creates a new enumerable which will iterate over the responses received from the ListPullRequestFileChanges operation. This enumerable
-        /// will fetch more data from the server as needed.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send</param>
-        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
-        /// <param name="cancellationToken">The cancellation token object</param>
-        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
-        public IEnumerable<ListPullRequestFileChangesResponse> ListPullRequestFileChangesResponseEnumerator(ListPullRequestFileChangesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
-        {
-            return new Common.Utils.ResponseEnumerable<ListPullRequestFileChangesRequest, ListPullRequestFileChangesResponse>(
-                response => response.OpcNextPage,
-                input =>
-                {
-                    if (!string.IsNullOrEmpty(input))
-                    {
-                        request.Page = input;
-                    }
-                    return request;
-                },
-                request => client.ListPullRequestFileChanges(request, retryConfiguration, cancellationToken)
-            );
-        }
-
-        /// <summary>
-        /// Creates a new enumerable which will iterate over the PullRequestFileChangeSummary objects
-        /// contained in responses from the ListPullRequestFileChanges operation. This enumerable will fetch more data from the server as needed.
-        /// </summary>
-        /// <param name="request">The request object containing the details to send</param>
-        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
-        /// <param name="cancellationToken">The cancellation token object</param>
-        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
-        public IEnumerable<PullRequestFileChangeSummary> ListPullRequestFileChangesRecordEnumerator(ListPullRequestFileChangesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
-        {
-            return new Common.Utils.ResponseRecordEnumerable<ListPullRequestFileChangesRequest, ListPullRequestFileChangesResponse, PullRequestFileChangeSummary>(
-                response => response.OpcNextPage,
-                input =>
-                {
-                    if (!string.IsNullOrEmpty(input))
-                    {
-                        request.Page = input;
-                    }
-                    return request;
-                },
-                request => client.ListPullRequestFileChanges(request, retryConfiguration, cancellationToken),
-                response => response.PullRequestFileChangeCollection.Items
             );
         }
 
