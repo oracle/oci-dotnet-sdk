@@ -167,6 +167,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "keyHistoryEntry")]
         public System.Collections.Generic.List<AutonomousDatabaseKeyHistoryEntry> KeyHistoryEntry { get; set; }
+        
+        [JsonProperty(PropertyName = "encryptionKeyLocationDetails")]
+        public EncryptionKeyLocationDetails EncryptionKeyLocationDetails { get; set; }
                 ///
         /// <value>
         /// The current state of the Autonomous Container Database.

@@ -1149,7 +1149,8 @@ namespace Oci.IotService
         }
 
         /// <summary>
-        /// Retrieves the latest snapshot data of digital twin instance identified by the specified OCID.
+        /// Retrieves the content associated with a digital twin instance identified by the specified OCID.
+        /// The content can be retrieved only when a model is associated with the digital twin instance.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

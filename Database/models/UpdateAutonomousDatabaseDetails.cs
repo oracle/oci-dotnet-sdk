@@ -395,6 +395,10 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// A valid Oracle AI Database version for Autonomous AI Database.
+        /// When you specify 23ai for dbversion, the system will provision a 23ai database, but the UI will display it as 26ai.
+        /// When you specify 26ai for dbversion, the system will provision and display a 26ai database as expected.
+        /// For new databases, it is recommended to use either 19c or 26ai.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
@@ -569,7 +573,7 @@ namespace Oci.DatabaseService.Models
         public AutonomousDatabaseMaintenanceWindowSummary AutonomousDatabaseMaintenanceWindow { get; set; }
         
         /// <value>
-        /// The date until which maintenance of Autonomous AI Database is temporarily paused.
+        /// The date until which Autonomous AI Database maintenance is temporarily paused.
         /// </value>
         [JsonProperty(PropertyName = "timeMaintenancePauseUntil")]
         public System.Nullable<System.DateTime> TimeMaintenancePauseUntil { get; set; }

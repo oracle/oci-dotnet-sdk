@@ -30,7 +30,9 @@ namespace Oci.GenerativeaiinferenceService.Models
             [EnumMember(Value = "COHERE")]
             Cohere,
             [EnumMember(Value = "GENERIC")]
-            Generic
+            Generic,
+            [EnumMember(Value = "COHEREV2")]
+            Coherev2
         };
 
         
@@ -59,6 +61,9 @@ namespace Oci.GenerativeaiinferenceService.Models
             {
                 case "GENERIC":
                     obj = new GenericChatResponse();
+                    break;
+                case "COHEREV2":
+                    obj = new CohereChatResponseV2();
                     break;
                 case "COHERE":
                     obj = new CohereChatResponse();

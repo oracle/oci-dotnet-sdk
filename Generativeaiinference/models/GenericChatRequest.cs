@@ -33,6 +33,8 @@ namespace Oci.GenerativeaiinferenceService.Models
         /// </value>
         ///
         public enum ReasoningEffortEnum {
+            [EnumMember(Value = "NONE")]
+            None,
             [EnumMember(Value = "MINIMAL")]
             Minimal,
             [EnumMember(Value = "LOW")]

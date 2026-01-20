@@ -71,5 +71,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        [JsonProperty(PropertyName = "patchOptions")]
+        public PatchOptions PatchOptions { get; set; }
+        
     }
 }

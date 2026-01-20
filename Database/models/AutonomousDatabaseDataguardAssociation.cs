@@ -211,7 +211,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "INACCESSIBLE")]
             Inaccessible,
             [EnumMember(Value = "STANDBY")]
-            Standby
+            Standby,
+            [EnumMember(Value = "TRANSPORTING")]
+            Transporting
         };
 
         /// <value>

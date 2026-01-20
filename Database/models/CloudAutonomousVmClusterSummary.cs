@@ -507,5 +507,36 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "subscriptionId")]
         public string SubscriptionId { get; set; }
         
+        /// <value>
+        /// Details of the multi cloud identity connectors of the VM cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "multiCloudIdentityConnectorConfigs")]
+        public System.Collections.Generic.List<IdentityConnectorDetails> MultiCloudIdentityConnectorConfigs { get; set; }
+                ///
+        /// <value>
+        /// TDE keystore type
+        /// </value>
+        ///
+        public enum TdeKeyStoreTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "AZURE")]
+            Azure,
+            [EnumMember(Value = "OCI")]
+            Oci,
+            [EnumMember(Value = "GCP")]
+            Gcp,
+            [EnumMember(Value = "AWS")]
+            Aws
+        };
+
+        /// <value>
+        /// TDE keystore type
+        /// </value>
+        [JsonProperty(PropertyName = "tdeKeyStoreType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<TdeKeyStoreTypeEnum> TdeKeyStoreType { get; set; }
+        
     }
 }

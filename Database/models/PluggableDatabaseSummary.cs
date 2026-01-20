@@ -223,5 +223,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "pdbNodeLevelDetails")]
         public System.Collections.Generic.List<PluggableDatabaseNodeLevelDetails> PdbNodeLevelDetails { get; set; }
         
+        /// <value>
+        /// The patch version of the pluggable database.
+        /// </value>
+        [JsonProperty(PropertyName = "patchVersion")]
+        public string PatchVersion { get; set; }
+        
     }
 }
