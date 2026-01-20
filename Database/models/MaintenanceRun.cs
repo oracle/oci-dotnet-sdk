@@ -84,7 +84,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "DELETED")]
             Deleted,
             [EnumMember(Value = "CANCELED")]
-            Canceled
+            Canceled,
+            [EnumMember(Value = "PARTIAL_SUCCESS")]
+            PartialSuccess
         };
 
         /// <value>
@@ -324,7 +326,11 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "WAITING")]
             Waiting,
             [EnumMember(Value = "SCHEDULED")]
-            Scheduled
+            Scheduled,
+            [EnumMember(Value = "COMPLETE")]
+            Complete,
+            [EnumMember(Value = "FAILED")]
+            Failed
         };
 
         /// <value>

@@ -63,6 +63,9 @@ namespace Oci.GenerativeaiinferenceService.Models
                 case "IMAGE":
                     obj = new ImageContent();
                     break;
+                case "DOCUMENT":
+                    obj = new DocumentContent();
+                    break;
                 case "AUDIO":
                     obj = new AudioContent();
                     break;

@@ -125,7 +125,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "WAITING")]
             Waiting,
             [EnumMember(Value = "RESCHEDULED")]
-            Rescheduled
+            Rescheduled,
+            [EnumMember(Value = "CANCELED_BY_OPS")]
+            CanceledByOps
         };
 
         /// <value>

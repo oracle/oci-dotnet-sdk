@@ -136,5 +136,8 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<PatchTypeEnum> PatchType { get; set; }
         
+        [JsonProperty(PropertyName = "patchOptions")]
+        public PatchOptions PatchOptions { get; set; }
+        
     }
 }

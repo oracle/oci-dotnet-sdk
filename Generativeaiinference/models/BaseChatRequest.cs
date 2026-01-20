@@ -32,6 +32,8 @@ namespace Oci.GenerativeaiinferenceService.Models
         public enum ApiFormatEnum {
             [EnumMember(Value = "COHERE")]
             Cohere,
+            [EnumMember(Value = "COHEREV2")]
+            Coherev2,
             [EnumMember(Value = "GENERIC")]
             Generic
         };
@@ -59,6 +61,9 @@ namespace Oci.GenerativeaiinferenceService.Models
             var discriminator = jsonObject["apiFormat"].Value<string>();
             switch (discriminator)
             {
+                case "COHEREV2":
+                    obj = new CohereChatRequestV2();
+                    break;
                 case "GENERIC":
                     obj = new GenericChatRequest();
                     break;

@@ -50,6 +50,12 @@ namespace Oci.IotService.Requests
         public System.Nullable<IotDomainGroup.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
+        /// Filter resources by type. Valid values are LIGHTWEIGHT or STANDARD.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "type")]
+        public System.Nullable<IotDomainGroup.TypeEnum> Type { get; set; }
+        
+        /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a
         /// paginated \"List\" call. For important details about how pagination works, see
         /// [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).

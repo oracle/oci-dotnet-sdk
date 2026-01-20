@@ -436,6 +436,10 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// A valid Oracle AI Database version for Autonomous AI Database.
+        /// When you specify 23ai for dbversion, the system will provision a 23ai database, but the UI will display it as 26ai.
+        /// When you specify 26ai for dbversion, the system will provision and display a 26ai database as expected.
+        /// For new databases, it is recommended to use either 19c or 26ai.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "dbVersion")]
         public string DbVersion { get; set; }
@@ -577,6 +581,9 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "secretVersionNumber")]
         public System.Nullable<int> SecretVersionNumber { get; set; }
+        
+        [JsonProperty(PropertyName = "transportableTablespace")]
+        public ImportTransportableTablespaceDetails TransportableTablespace { get; set; }
         
     }
 

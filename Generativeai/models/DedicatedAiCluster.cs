@@ -183,6 +183,8 @@ namespace Oci.GenerativeaiService.Models
             LargeGeneric2,
             [EnumMember(Value = "LARGE_GENERIC_V2")]
             LargeGenericV2,
+            [EnumMember(Value = "LARGE_GENERIC_V3")]
+            LargeGenericV3,
             [EnumMember(Value = "LARGE_COHERE_V3")]
             LargeCohereV3,
             [EnumMember(Value = "RERANK_COHERE")]

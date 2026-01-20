@@ -54,6 +54,34 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "isEcho")]
         public System.Nullable<bool> IsEcho { get; set; }
                 ///
+        ///
+        public enum EmbeddingTypesEnum {
+            [EnumMember(Value = "float")]
+            Float,
+            [EnumMember(Value = "int8")]
+            Int8,
+            [EnumMember(Value = "uint8")]
+            Uint8,
+            [EnumMember(Value = "binary")]
+            Binary,
+            [EnumMember(Value = "ubinary")]
+            Ubinary,
+            [EnumMember(Value = "base64")]
+            Base64
+        };
+
+        /// <value>
+        /// Specifies the types of embeddings you want to get back. Supports list of enums. Supported values :float, int8, uint8, binary, ubinary, base64. If nothing is passed default will be considered as float.
+        /// </value>
+        [JsonProperty(PropertyName = "embeddingTypes", ItemConverterType = typeof(StringEnumConverter))]
+        public System.Collections.Generic.List<EmbeddingTypesEnum> EmbeddingTypes { get; set; }
+        
+        /// <value>
+        /// The number of dimensions of the output embedding. This is only available for embed-v4 and newer models. Possible values are 256, 512, 1024, and 1536.
+        /// </value>
+        [JsonProperty(PropertyName = "outputDimensions")]
+        public System.Nullable<int> OutputDimensions { get; set; }
+                ///
         /// <value>
         /// For an input that's longer than the maximum token length, specifies which part of the input text will be truncated.
         /// </value>

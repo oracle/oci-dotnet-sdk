@@ -313,6 +313,9 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "keyStoreId")]
         public string KeyStoreId { get; set; }
         
+        [JsonProperty(PropertyName = "encryptionKeyLocationDetails")]
+        public EncryptionKeyLocationDetails EncryptionKeyLocationDetails { get; set; }
+        
         /// <value>
         /// The CPU value beyond which an Autonomous AI Database will be opened across multiple nodes. The default value of this attribute is 16 for OCPUs and 64 for ECPUs.
         /// </value>

@@ -68,7 +68,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsAutoscaleEnabled { get; set; }
         
         /// <value>
-        /// Maximum limit storage size in gigabytes, that is applicable for the Database Storage Vault.
+        /// The maximum limit, in gigabytes, to which the Vault storage size can automatically scale when auto scaling is enabled for the Database Storage Vault
         /// </value>
         [JsonProperty(PropertyName = "autoscaleLimitInGBs")]
         public System.Nullable<int> AutoscaleLimitInGBs { get; set; }
