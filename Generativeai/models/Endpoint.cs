@@ -141,6 +141,12 @@ namespace Oci.GenerativeaiService.Models
         [JsonProperty(PropertyName = "contentModerationConfig")]
         public ContentModerationConfig ContentModerationConfig { get; set; }
         
+        [JsonProperty(PropertyName = "promptInjectionConfig")]
+        public PromptInjectionConfig PromptInjectionConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "piiDetectionConfig")]
+        public PiiDetectionConfig PiiDetectionConfig { get; set; }
+        
         [JsonProperty(PropertyName = "previousState")]
         public Endpoint PreviousState { get; set; }
         

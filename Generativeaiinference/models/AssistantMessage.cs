@@ -49,6 +49,12 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "annotations")]
         public System.Collections.Generic.List<Annotation> Annotations { get; set; }
         
+        /// <value>
+        /// Internal reasoning trace generated during response computation.
+        /// </value>
+        [JsonProperty(PropertyName = "reasoningContent")]
+        public string ReasoningContent { get; set; }
+        
         [JsonProperty(PropertyName = "role")]
         private readonly string role = "ASSISTANT";
     }

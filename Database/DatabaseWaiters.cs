@@ -6219,6 +6219,34 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDbConnectionBundleRequest, GetDbConnectionBundleResponse> ForDbConnectionBundle(GetDbConnectionBundleRequest request, params DbConnectionBundle.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForDbConnectionBundle(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDbConnectionBundleRequest, GetDbConnectionBundleResponse> ForDbConnectionBundle(GetDbConnectionBundleRequest request, WaiterConfiguration config, params DbConnectionBundle.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetDbConnectionBundleRequest, GetDbConnectionBundleResponse>(
+                request,
+                request => client.GetDbConnectionBundle(request),
+                response => targetStates.Contains(response.DbConnectionBundle.LifecycleState.Value),
+                targetStates.Contains(DbConnectionBundle.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetDbConnectionBundleRequest, GetDbConnectionBundleResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDbHomeRequest, GetDbHomeResponse> ForDbHome(GetDbHomeRequest request, params DbHome.LifecycleStateEnum[] targetStates)
         {
             return this.ForDbHome(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -7108,6 +7136,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ImportTransportableTablespaceRequest, ImportTransportableTablespaceResponse> ForImportTransportableTablespace(ImportTransportableTablespaceRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForImportTransportableTablespace(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ImportTransportableTablespaceRequest, ImportTransportableTablespaceResponse> ForImportTransportableTablespace(ImportTransportableTablespaceRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ImportTransportableTablespaceRequest, ImportTransportableTablespaceResponse>(() =>
+            {
+                var response = client.ImportTransportableTablespace(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<LaunchAutonomousExadataInfrastructureRequest, LaunchAutonomousExadataInfrastructureResponse> ForLaunchAutonomousExadataInfrastructure(LaunchAutonomousExadataInfrastructureRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForLaunchAutonomousExadataInfrastructure(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -7593,6 +7657,42 @@ namespace Oci.DatabaseService
             return new Waiter<RegisterAutonomousDatabaseDataSafeRequest, RegisterAutonomousDatabaseDataSafeResponse>(() =>
             {
                 var response = client.RegisterAutonomousDatabaseDataSafe(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RegisterCloudAutonomousVmClusterPkcsRequest, RegisterCloudAutonomousVmClusterPkcsResponse> ForRegisterCloudAutonomousVmClusterPkcs(RegisterCloudAutonomousVmClusterPkcsRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForRegisterCloudAutonomousVmClusterPkcs(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RegisterCloudAutonomousVmClusterPkcsRequest, RegisterCloudAutonomousVmClusterPkcsResponse> ForRegisterCloudAutonomousVmClusterPkcs(RegisterCloudAutonomousVmClusterPkcsRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<RegisterCloudAutonomousVmClusterPkcsRequest, RegisterCloudAutonomousVmClusterPkcsResponse>(() =>
+            {
+                var response = client.RegisterCloudAutonomousVmClusterPkcs(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;
@@ -8548,6 +8648,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RunDataPatchRequest, RunDataPatchResponse> ForRunDataPatch(RunDataPatchRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForRunDataPatch(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RunDataPatchRequest, RunDataPatchResponse> ForRunDataPatch(RunDataPatchRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<RunDataPatchRequest, RunDataPatchResponse>(() =>
+            {
+                var response = client.RunDataPatch(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<ScanExternalContainerDatabasePluggableDatabasesRequest, ScanExternalContainerDatabasePluggableDatabasesResponse> ForScanExternalContainerDatabasePluggableDatabases(ScanExternalContainerDatabasePluggableDatabasesRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForScanExternalContainerDatabasePluggableDatabases(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -9141,6 +9277,42 @@ namespace Oci.DatabaseService
             return new Waiter<UnmountDbnodeSnapshotRequest, UnmountDbnodeSnapshotResponse>(() =>
             {
                 var response = client.UnmountDbnodeSnapshot(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UnregisterCloudAutonomousVmClusterPkcsRequest, UnregisterCloudAutonomousVmClusterPkcsResponse> ForUnregisterCloudAutonomousVmClusterPkcs(UnregisterCloudAutonomousVmClusterPkcsRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForUnregisterCloudAutonomousVmClusterPkcs(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<UnregisterCloudAutonomousVmClusterPkcsRequest, UnregisterCloudAutonomousVmClusterPkcsResponse> ForUnregisterCloudAutonomousVmClusterPkcs(UnregisterCloudAutonomousVmClusterPkcsRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<UnregisterCloudAutonomousVmClusterPkcsRequest, UnregisterCloudAutonomousVmClusterPkcsResponse>(() =>
+            {
+                var response = client.UnregisterCloudAutonomousVmClusterPkcs(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;

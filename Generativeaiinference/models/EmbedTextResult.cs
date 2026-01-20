@@ -38,7 +38,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Collections.Generic.List<string> Inputs { get; set; }
         
         /// <value>
-        /// The embeddings corresponding to inputs.
+        /// The embeddings corresponding to float.
         /// </value>
         /// <remarks>
         /// Required
@@ -46,6 +46,12 @@ namespace Oci.GenerativeaiinferenceService.Models
         [Required(ErrorMessage = "Embeddings is required.")]
         [JsonProperty(PropertyName = "embeddings")]
         public System.Collections.Generic.List<System.Collections.Generic.List<float>> Embeddings { get; set; }
+        
+        /// <value>
+        /// The embeddings corresponding to embedding types input.
+        /// </value>
+        [JsonProperty(PropertyName = "embeddingsByType")]
+        public System.Object EmbeddingsByType { get; set; }
         
         /// <value>
         /// The OCID of the model used in this inference request.

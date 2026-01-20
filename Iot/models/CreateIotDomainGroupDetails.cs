@@ -30,6 +30,28 @@ namespace Oci.IotService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+                ///
+        /// <value>
+        /// Type of the domain group. LIGHTWEIGHT uses fewer resources and has a higher Recovery Time Objective (RTO), 
+        /// making it suitable for development and testing. STANDARD is recommended for production.
+        /// 
+        /// </value>
+        ///
+        public enum TypeEnum {
+            [EnumMember(Value = "STANDARD")]
+            Standard,
+            [EnumMember(Value = "LIGHTWEIGHT")]
+            Lightweight
+        };
+
+        /// <value>
+        /// Type of the domain group. LIGHTWEIGHT uses fewer resources and has a higher Recovery Time Objective (RTO), 
+        /// making it suitable for development and testing. STANDARD is recommended for production.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "type")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.

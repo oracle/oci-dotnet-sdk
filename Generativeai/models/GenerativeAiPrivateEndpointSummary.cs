@@ -99,6 +99,13 @@ namespace Oci.GenerativeaiService.Models
         public string Fqdn { get; set; }
         
         /// <value>
+        /// Flag that allows access to on-demand models using this private endpoint.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isAllowOnDemand")]
+        public System.Nullable<bool> IsAllowOnDemand { get; set; }
+        
+        /// <value>
         /// The private IP address (in the customer's VCN) that represents the access point for the associated endpoint service.
         /// 
         /// </value>

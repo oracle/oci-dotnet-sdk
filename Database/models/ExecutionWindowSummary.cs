@@ -43,6 +43,12 @@ namespace Oci.DatabaseService.Models
         public string ExecutionResourceId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the new execution window created as part of reschedule for the execution window failure.
+        /// </value>
+        [JsonProperty(PropertyName = "deferredExecutionWindowId")]
+        public string DeferredExecutionWindowId { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the compartment.
         /// </value>
         /// <remarks>
@@ -131,7 +137,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "WAITING")]
             Waiting,
             [EnumMember(Value = "RESCHEDULED")]
-            Rescheduled
+            Rescheduled,
+            [EnumMember(Value = "CANCELED_BY_OPS")]
+            CanceledByOps
         };
 
         /// <value>

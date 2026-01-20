@@ -40,6 +40,35 @@ namespace Oci.IotService.Models
         [Required(ErrorMessage = "CompartmentId is required.")]
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
+                ///
+        /// <value>
+        /// Type of the domain group. LIGHTWEIGHT uses fewer resources and has a higher Recovery Time Objective (RTO), 
+        /// making it suitable for development and testing. STANDARD is recommended for production.
+        /// 
+        /// </value>
+        ///
+        public enum TypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "STANDARD")]
+            Standard,
+            [EnumMember(Value = "LIGHTWEIGHT")]
+            Lightweight
+        };
+
+        /// <value>
+        /// Type of the domain group. LIGHTWEIGHT uses fewer resources and has a higher Recovery Time Objective (RTO), 
+        /// making it suitable for development and testing. STANDARD is recommended for production.
+        /// 
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "Type is required.")]
+        [JsonProperty(PropertyName = "type")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable. Avoid entering confidential information.
@@ -66,7 +95,7 @@ namespace Oci.IotService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<IotDomainGroup.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>

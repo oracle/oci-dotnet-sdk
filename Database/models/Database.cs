@@ -279,5 +279,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "storageSizeDetails")]
         public DatabaseStorageSizeResponseDetails StorageSizeDetails { get; set; }
         
+        /// <value>
+        /// The patch version of the database.
+        /// </value>
+        [JsonProperty(PropertyName = "patchVersion")]
+        public string PatchVersion { get; set; }
+        
     }
 }

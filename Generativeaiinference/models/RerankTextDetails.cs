@@ -76,5 +76,11 @@ namespace Oci.GenerativeaiinferenceService.Models
         [JsonProperty(PropertyName = "maxChunksPerDocument")]
         public System.Nullable<int> MaxChunksPerDocument { get; set; }
         
+        /// <value>
+        /// Used to truncate the long documents with the specified no of tokens.
+        /// </value>
+        [JsonProperty(PropertyName = "maxTokensPerDocument")]
+        public System.Nullable<int> MaxTokensPerDocument { get; set; }
+        
     }
 }

@@ -45,7 +45,13 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "STORAGE_SERVER_FULL_SOFTWARE_UPDATE")]
             StorageServerFullSoftwareUpdate,
             [EnumMember(Value = "NETWORK_SWITCH_FULL_SOFTWARE_UPDATE")]
-            NetworkSwitchFullSoftwareUpdate
+            NetworkSwitchFullSoftwareUpdate,
+            [EnumMember(Value = "FSU_VM_CLUSTER_OS_SOFTWARE_UPDATE")]
+            FsuVmClusterOsSoftwareUpdate,
+            [EnumMember(Value = "FSU_VM_CLUSTER_GI_SOFTWARE_UPDATE")]
+            FsuVmClusterGiSoftwareUpdate,
+            [EnumMember(Value = "FSU_VM_CLUSTER_GI_OS_SOFTWARE_UPDATE")]
+            FsuVmClusterGiOsSoftwareUpdate
         };
 
         /// <value>
