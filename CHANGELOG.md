@@ -944,8 +944,7 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 - Support for baseline metric for imported resources and metric extensions in the Stack Monitoring service 
 - Support for implicit JIT and group membership provisioning during OpenID connect flow in the Identity Domains service 
 - Support for realtime speech and customizations in the AI Speech service 
-- Support for self
--service instance maintenance API in the Compute service 
+- Support for self-service instance maintenance API in the Compute service 
 - Support for GoldenGate suspend phase in the Database Migration service 
 - Support for creating custom alert policies in the Data Safe service 
 - Support for tunnel inspection in the Network firewall service 
@@ -1199,7 +1198,7 @@ The format is based on Keep a [Changelog](http://keepachangelog.com/).
 - Support for launching virtual machines with multiple volumes in the Compute service
  
 ### Changed
-- The 3P library `System.IdentityModel.Tokens.Jwt` was upgraded from version `6.7.1` to `6.35.0` to address CVE-2024-21319 and Microsoft Identity Denial of service vulnerability
+- The 3P library `System.IdentityModel.Tokens.Jwt` was upgraded from version `6.7.1` to `6.35.0` to address CVE-2024-21319 and Microsoft Identity Denial-of-service vulnerability
   
 ### Breaking Changes
 - The property `CapacityPlanningResources` was made optional in the model `NewsContentTypes` in the Operations Insights service
@@ -1367,7 +1366,7 @@ Support for named credentials in the Database Management service
 - Support for Java Management Service Downloads
 - Support for creating autonomous dataguard associations in the Database service
 - Support for SaaS administrative user configurations for autonomous database in the Database service
-- Support for macOS in the the Java Management service
+- Support for macOS in the Java Management service
 - Support for distribution and management of deployment rule sets in the Java Management service
 - Support for new download location of Oracle Java runtime binaries in the Java Management service
 - Support for exporting data across regions in the Java Management service
@@ -1415,7 +1414,7 @@ Support for named credentials in the Database Management service
 
 ### Breaking Changes
 - The properties `DisplayName` and `RqsType` were removed in the `Parameter` model in the Logging Management service
-- The enum members `EnumString` and `RqsFilter` were remoeved from the enum `TypeEnum` in the `Parameter` model in the Logging Management service
+- The enum members `EnumString` and `RqsFilter` were removed from the enum `TypeEnum` in the `Parameter` model in the Logging Management service
 - The property `ServiceStage` was removed in the `ListServicesRequest` model in the Logging Management service
 - The models `TcpApplication` and `UdpApplication` were removed in the Network Firewall service
 - The enum `TypeEnum` was removed in the model `DecryptionProfile` in the Network Firewall service
@@ -2301,7 +2300,7 @@ Support for named credentials in the Database Management service
 - Support for punctuation and the SRT transcription format in the AI Speech service
 
 ### Breaking Changes
-- The deprecated property `RiskScore` was removed from Sighting model in in the Cloud Guard service.
+- The deprecated property `RiskScore` was removed from Sighting model in the Cloud Guard service.
 - The property `SubscriptionId` was made a required parameter for `ListSubscriptionMappingsRequest` in the Tenant Manager Control Plane service
 
 ## 36.0.0 - 2022-04-19
@@ -2977,7 +2976,7 @@ Support for named credentials in the Database Management service
 
 ### Breaking Changes
 - Header Parameter `Etag` in Operation `ListAppCatalogListingResourceVersions` response was removed from the Core service.
-- Property `vnicId` in model `Ipv6` was removed as required parameter from from the Core service.
+- Property `vnicId` in model `Ipv6` was removed as required parameter from the Core service.
 - `ArchivalStateEnum` enum was replaced by `ArchivalState` in `GetObjectResponse` in Object Storage Service.
 
 ## 12.0.0 - 2021-01-26
@@ -3028,7 +3027,7 @@ Support for named credentials in the Database Management service
 - Support for listing flex components in Database service
 - Support for APEX service for ADBS on OCI console for Database service
 - Support for Customer-Managed Key features as a part of the Database service
-- Support for Github configuration source provider as part of the Resource Manager service
+- Support for GitHub configuration source provider as part of the Resource Manager service
 
 ### Breaking Changes
 - Removing deprecated CreateAutonomousDataWarehouse API from Database service
