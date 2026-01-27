@@ -95,6 +95,12 @@ namespace Oci.GenerativeaiagentService.Models
         [JsonProperty(PropertyName = "databaseConnection")]
         public DatabaseConnection DatabaseConnection { get; set; }
         
+        /// <value>
+        /// The runtimeVersion of the system prompt.
+        /// </value>
+        [JsonProperty(PropertyName = "runtimeVersion")]
+        public string RuntimeVersion { get; set; }
+        
         [JsonProperty(PropertyName = "toolConfigType")]
         private readonly string toolConfigType = "SQL_TOOL_CONFIG";
     }

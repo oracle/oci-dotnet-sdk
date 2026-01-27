@@ -25,5 +25,11 @@ namespace Oci.GenerativeaiagentService.Models
         [JsonProperty(PropertyName = "routingLlmCustomization")]
         public LlmCustomization RoutingLlmCustomization { get; set; }
         
+        /// <value>
+        /// The runtimeVersion of the system prompt.
+        /// </value>
+        [JsonProperty(PropertyName = "runtimeVersion")]
+        public string RuntimeVersion { get; set; }
+        
     }
 }

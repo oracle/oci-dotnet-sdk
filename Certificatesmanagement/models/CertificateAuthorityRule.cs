@@ -29,7 +29,9 @@ namespace Oci.CertificatesmanagementService.Models
         ///
         public enum RuleTypeEnum {
             [EnumMember(Value = "CERTIFICATE_AUTHORITY_ISSUANCE_EXPIRY_RULE")]
-            CertificateAuthorityIssuanceExpiryRule
+            CertificateAuthorityIssuanceExpiryRule,
+            [EnumMember(Value = "CERTIFICATE_AUTHORITY_ISSUANCE_RULE")]
+            CertificateAuthorityIssuanceRule
         };
 
         
@@ -58,6 +60,9 @@ namespace Oci.CertificatesmanagementService.Models
             {
                 case "CERTIFICATE_AUTHORITY_ISSUANCE_EXPIRY_RULE":
                     obj = new CertificateAuthorityIssuanceExpiryRule();
+                    break;
+                case "CERTIFICATE_AUTHORITY_ISSUANCE_RULE":
+                    obj = new CertificateAuthorityIssuanceRule();
                     break;
             }
             if (obj != null)

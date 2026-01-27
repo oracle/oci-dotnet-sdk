@@ -22,13 +22,13 @@ namespace Oci.CertificatesmanagementService.Models
     {
         
         /// <value>
-        /// A brief description of the CA.
+        /// A brief description of the CA. Avoid entering confidential information.
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Makes this version the current version. This property cannot be updated in combination with any other properties.
+        /// Makes this version the current version. This property can't be updated in combination with any other properties.
         /// </value>
         [JsonProperty(PropertyName = "currentVersionNumber")]
         public System.Nullable<long> CurrentVersionNumber { get; set; }
@@ -38,6 +38,12 @@ namespace Oci.CertificatesmanagementService.Models
         
         [JsonProperty(PropertyName = "certificateRevocationListDetails")]
         public CertificateRevocationListDetails CertificateRevocationListDetails { get; set; }
+        
+        /// <value>
+        /// For externally managed CAs, a description of the externally managed key. Avoid entering confidential information.
+        /// </value>
+        [JsonProperty(PropertyName = "externalKeyDescription")]
+        public string ExternalKeyDescription { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

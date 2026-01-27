@@ -26,6 +26,8 @@ namespace Oci.DifService.Models
       [EnumMember(Value = "AISERVICES")]
       Aiservices,
       [EnumMember(Value = "DATATRANSFORMATION")]
-      Datatransformation
+      Datatransformation,
+      [EnumMember(Value = "DEVOPSTOOLKIT")]
+      Devopstoolkit
   }
 }

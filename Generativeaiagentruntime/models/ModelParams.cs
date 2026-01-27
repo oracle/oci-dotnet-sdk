@@ -57,5 +57,23 @@ namespace Oci.GenerativeaiagentruntimeService.Models
         [JsonProperty(PropertyName = "presencePenalty")]
         public System.Nullable<float> PresencePenalty { get; set; }
         
+        /// <value>
+        /// Seed makes best effort to sample tokens deterministically.
+        /// </value>
+        [JsonProperty(PropertyName = "seed")]
+        public System.Nullable<int> Seed { get; set; }
+        
+        /// <value>
+        /// Constrains effort on reasoning for reasoning models.
+        /// </value>
+        [JsonProperty(PropertyName = "reasoningEffort")]
+        public string ReasoningEffort { get; set; }
+        
+        /// <value>
+        /// Constrains the verbosity of the model's response.
+        /// </value>
+        [JsonProperty(PropertyName = "verbosity")]
+        public string Verbosity { get; set; }
+        
     }
 }

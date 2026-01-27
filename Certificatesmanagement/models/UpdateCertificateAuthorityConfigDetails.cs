@@ -76,11 +76,17 @@ namespace Oci.CertificatesmanagementService.Models
             var discriminator = jsonObject["configType"].Value<string>();
             switch (discriminator)
             {
+                case "ROOT_CA_MANAGED_EXTERNALLY":
+                    obj = new UpdateRootCaManagedExternallyConfigDetails();
+                    break;
                 case "SUBORDINATE_CA_ISSUED_BY_INTERNAL_CA":
                     obj = new UpdateSubordinateCaIssuedByInternalCaConfigDetails();
                     break;
                 case "ROOT_CA_GENERATED_INTERNALLY":
                     obj = new UpdateRootCaByGeneratingInternallyConfigDetails();
+                    break;
+                case "SUBORDINATE_CA_MANAGED_INTERNALLY_ISSUED_BY_EXTERNAL_CA":
+                    obj = new UpdateSubordinateCaManagedInternallyIssuedByExternalCaConfigDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

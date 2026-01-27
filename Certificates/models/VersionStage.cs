@@ -19,6 +19,7 @@ namespace Oci.CertificatesService.Models
     /// (The first version of a certificate is always marked as both `CURRENT` and `LATEST`.)
     /// A certificate version marked `PREVIOUS` is the certificate version that was most recently marked `CURRENT`, before the last certificate version rotation.
     /// A certificate version marked `DEPRECATED` is neither current, pending, nor the previous one in use. Only certificate versions marked `DEPRECATED` can be scheduled for deletion.
+    /// A certificate version marked `PENDING_ACTIVATION` applies to certificates issued by an externally managed CA and stays in that rotation state until you successfully sign the certificate signing request (CSR) externally and then import the signed certificate to the Certificates service.
     /// 
   /// </summary>
   public enum VersionStage {
@@ -29,6 +30,8 @@ namespace Oci.CertificatesService.Models
       Current,
       [EnumMember(Value = "PENDING")]
       Pending,
+      [EnumMember(Value = "PENDING_ACTIVATION")]
+      PendingActivation,
       [EnumMember(Value = "LATEST")]
       Latest,
       [EnumMember(Value = "PREVIOUS")]

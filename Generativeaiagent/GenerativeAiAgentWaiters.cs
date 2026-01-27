@@ -172,6 +172,34 @@ namespace Oci.GenerativeaiagentService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetProvisionedCapacityRequest, GetProvisionedCapacityResponse> ForProvisionedCapacity(GetProvisionedCapacityRequest request, params ProvisionedCapacity.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForProvisionedCapacity(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetProvisionedCapacityRequest, GetProvisionedCapacityResponse> ForProvisionedCapacity(GetProvisionedCapacityRequest request, WaiterConfiguration config, params ProvisionedCapacity.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetProvisionedCapacityRequest, GetProvisionedCapacityResponse>(
+                request,
+                request => client.GetProvisionedCapacity(request),
+                response => targetStates.Contains(response.ProvisionedCapacity.LifecycleState.Value),
+                targetStates.Contains(ProvisionedCapacity.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetProvisionedCapacityRequest, GetProvisionedCapacityResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetToolRequest, GetToolResponse> ForTool(GetToolRequest request, params Tool.LifecycleStateEnum[] targetStates)
         {
             return this.ForTool(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

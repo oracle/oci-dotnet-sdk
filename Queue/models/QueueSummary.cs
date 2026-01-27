@@ -79,7 +79,7 @@ namespace Oci.QueueService.Models
         /// </remarks>
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<Queue.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
@@ -118,6 +118,12 @@ namespace Oci.QueueService.Models
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
+        /// <value>
+        /// The list of capabilities enabled on the queue
+        /// </value>
+        [JsonProperty(PropertyName = "capabilities", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<QueueCapability> Capabilities { get; set; }
         
     }
 }

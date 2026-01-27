@@ -39,6 +39,12 @@ namespace Oci.DatabaseService.Requests
         public string IfMatch { get; set; }
         
         /// <value>
+        /// If provided, an online restart will be triggered.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isOnlineRestart")]
+        public System.Nullable<bool> IsOnlineRestart { get; set; }
+        
+        /// <value>
         /// Indicates that the request is a dry run, if set to \"true\". A dry run request does not actually 
         /// creating or updating a resource and is used only to perform validation on the submitted data.
         /// 

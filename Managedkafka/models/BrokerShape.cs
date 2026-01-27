@@ -47,5 +47,11 @@ namespace Oci.ManagedkafkaService.Models
         [JsonProperty(PropertyName = "storageSizeInGbs")]
         public System.Nullable<int> StorageSizeInGbs { get; set; }
         
+        /// <value>
+        /// Node shape for broker is passed as part of cluster creation, similar to VM.Standard.A1.Flex
+        /// </value>
+        [JsonProperty(PropertyName = "nodeShape")]
+        public string NodeShape { get; set; }
+        
     }
 }
