@@ -99,6 +99,24 @@ namespace Oci.DifService.Models
         public System.Collections.Generic.List<GenAiDetail> Genai { get; set; }
         
         /// <value>
+        /// AI Data Platform Details if aidataplatform is included in services.
+        /// </value>
+        [JsonProperty(PropertyName = "aidataplatform")]
+        public System.Collections.Generic.List<AiDataPlatformDetail> Aidataplatform { get; set; }
+        
+        /// <value>
+        /// OMK Details if omk is included in services.
+        /// </value>
+        [JsonProperty(PropertyName = "omk")]
+        public System.Collections.Generic.List<OmkDetail> Omk { get; set; }
+        
+        /// <value>
+        /// OKE Details if oke is included in services.
+        /// </value>
+        [JsonProperty(PropertyName = "oke")]
+        public System.Collections.Generic.List<OkeDetail> Oke { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>

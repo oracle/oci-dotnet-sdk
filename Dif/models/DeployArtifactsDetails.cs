@@ -65,5 +65,17 @@ namespace Oci.DifService.Models
         [JsonProperty(PropertyName = "dataflow")]
         public System.Collections.Generic.List<DataflowArtifactsDetail> Dataflow { get; set; }
         
+        /// <value>
+        /// Omk artifact details if omk is included in the services.
+        /// </value>
+        [JsonProperty(PropertyName = "omk")]
+        public System.Collections.Generic.List<OmkArtifactsDetail> Omk { get; set; }
+        
+        /// <value>
+        /// Oke artifact details if oke is included in the services.
+        /// </value>
+        [JsonProperty(PropertyName = "oke")]
+        public System.Collections.Generic.List<OkeArtifactsDetail> Oke { get; set; }
+        
     }
 }

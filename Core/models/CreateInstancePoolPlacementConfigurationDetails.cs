@@ -34,6 +34,17 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the
+        /// [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) that the instance will be created in.
+        /// <br/>
+        /// Make sure the compute cluster belongs to the same availability domain as specified in placement configuration otherwise the request will be rejected with 400.
+        /// Once this field is set, it cannot be updated. Also any update to the availability domain in placement configuration will be blocked.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "computeClusterId")]
+        public string ComputeClusterId { get; set; }
+        
+        /// <value>
         /// The fault domains to place instances.
         /// <br/>
         /// If you don't provide any values, the system makes a best effort to distribute

@@ -44,5 +44,11 @@ namespace Oci.QueueService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// Optional parameter to specify a consumer group.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "consumerGroupId")]
+        public string ConsumerGroupId { get; set; }
     }
 }

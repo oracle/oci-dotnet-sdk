@@ -145,5 +145,8 @@ namespace Oci.OpensearchService.Models
         [JsonProperty(PropertyName = "outboundClusterConfig")]
         public OutboundClusterConfig OutboundClusterConfig { get; set; }
         
+        [JsonProperty(PropertyName = "loadBalancerConfig")]
+        public LoadBalancerConfig LoadBalancerConfig { get; set; }
+        
     }
 }

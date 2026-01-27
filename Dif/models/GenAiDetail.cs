@@ -22,7 +22,7 @@ namespace Oci.DifService.Models
     {
         
         /// <value>
-        /// Id for the GGCS instance to be provisioned.
+        /// Id for the GenAi instance to be provisioned.
         /// </value>
         /// <remarks>
         /// Required

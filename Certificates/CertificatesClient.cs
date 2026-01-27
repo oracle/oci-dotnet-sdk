@@ -67,7 +67,7 @@ namespace Oci.CertificatesService
         }
 
         /// <summary>
-        /// Gets a ca-bundle bundle.
+        /// Gets the bundle for the specified CA bundle.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -124,8 +124,8 @@ namespace Oci.CertificatesService
         }
 
         /// <summary>
-        /// Gets a certificate authority bundle that matches either the specified &#x60;stage&#x60;, &#x60;name&#x60;, or &#x60;versionNumber&#x60; parameter.
-        /// If none of these parameters are provided, the bundle for the certificate authority version marked as &#x60;CURRENT&#x60; will be returned.
+        /// Gets a bundle for a certificate authority (CA) that matches either the specified &#x60;stage&#x60;, &#x60;name&#x60;, or &#x60;versionNumber&#x60; parameter.
+        /// If none of these parameters are provided, the bundle for the CA version marked as &#x60;CURRENT&#x60; is returned.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -183,10 +183,10 @@ namespace Oci.CertificatesService
 
         /// <summary>
         /// Gets a certificate bundle that matches either the specified &#x60;stage&#x60;, &#x60;versionName&#x60;, or &#x60;versionNumber&#x60; parameter.
-        /// If none of these parameters are provided, the bundle for the certificate version marked as &#x60;CURRENT&#x60; will be returned.
+        /// If none of these parameters are provided, the bundle for the certificate version marked as &#x60;CURRENT&#x60; is returned.
         /// &lt;br/&gt;
-        /// By default, the private key is not included in the query result, and a CertificateBundlePublicOnly is returned.
-        /// If the private key is needed, use the CertificateBundleTypeQueryParam parameter to get a CertificateBundleWithPrivateKey response.
+        /// By default, the private key is not included in the query result, and only the certificate bundle is returned.
+        /// If you also need the private key, you can use the parameter &#x60;CertificateBundleTypeQueryParam&#x60; to indicate that you want a certificate bundle along with its private key as a response to your request.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -243,7 +243,7 @@ namespace Oci.CertificatesService
         }
 
         /// <summary>
-        /// Lists all certificate authority bundle versions for the specified certificate authority.
+        /// Lists all versions of bundles for a given certificate authority (CA).
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

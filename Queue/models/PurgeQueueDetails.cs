@@ -62,5 +62,14 @@ namespace Oci.QueueService.Models
         [JsonProperty(PropertyName = "channelIds")]
         public System.Collections.Generic.List<string> ChannelIds { get; set; }
         
+        /// <value>
+        /// The consumer group ID to purge. If the CONSUMER_GROUPS capability is enabled on the queue, omitting that field
+        /// will purge the \"Primary Consumer Group\", otherwise it will purge the queue. 
+        /// If you wish to purge all consumer groups in the queue, you can pass the special value 'all'.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "consumerGroupId")]
+        public string ConsumerGroupId { get; set; }
+        
     }
 }

@@ -19,7 +19,7 @@ namespace Oci.CoreService.Models
     /// The details for updating the compute host.
     /// 
     /// </summary>
-    public class UpdateComputeHostDetails 
+    public class UpdateComputeHostsDetails 
     {
         
         /// <value>

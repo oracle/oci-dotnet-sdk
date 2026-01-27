@@ -61,6 +61,12 @@ namespace Oci.QueueService.Models
         public string CustomEncryptionKeyId { get; set; }
         
         /// <value>
+        /// The list of capabilities enabled on the queue
+        /// </value>
+        [JsonProperty(PropertyName = "capabilities")]
+        public System.Collections.Generic.List<CapabilityDetails> Capabilities { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

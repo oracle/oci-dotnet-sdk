@@ -66,12 +66,14 @@ namespace Oci.CertificatesmanagementService.Models
         /// <value>
         /// The OCID of the Oracle Cloud Infrastructure Vault key used to encrypt the CA.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "KmsKeyId is required.")]
         [JsonProperty(PropertyName = "kmsKeyId")]
         public string KmsKeyId { get; set; }
+        
+        /// <value>
+        /// For externally managed CAs, a description of the externally managed private key. Avoid entering confidential information.
+        /// </value>
+        [JsonProperty(PropertyName = "externalKeyDescription")]
+        public string ExternalKeyDescription { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.

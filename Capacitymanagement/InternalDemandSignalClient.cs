@@ -113,7 +113,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "CreateInternalOccmDemandSignalDelivery",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/InternalOccmDemandSignalDelivery/CreateInternalOccmDemandSignalDelivery",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/InternalOccmDemandSignalDelivery/CreateInternalOccmDemandSignalDelivery",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -170,7 +170,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "DeleteInternalOccmDemandSignalDelivery",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/InternalOccmDemandSignalDelivery/DeleteInternalOccmDemandSignalDelivery",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/InternalOccmDemandSignalDelivery/DeleteInternalOccmDemandSignalDelivery",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -227,7 +227,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "GetInternalOccmDemandSignal",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/InternalOccmDemandSignal/GetInternalOccmDemandSignal",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/InternalOccmDemandSignal/GetInternalOccmDemandSignal",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -284,7 +284,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "GetInternalOccmDemandSignalCatalog",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccmDemandSignalCatalogResource/GetInternalOccmDemandSignalCatalog",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccmDemandSignalCatalogResource/GetInternalOccmDemandSignalCatalog",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -341,7 +341,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "GetInternalOccmDemandSignalDelivery",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/InternalOccmDemandSignalDelivery/GetInternalOccmDemandSignalDelivery",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/InternalOccmDemandSignalDelivery/GetInternalOccmDemandSignalDelivery",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -398,7 +398,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "ListInternalOccmDemandSignalCatalogResources",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/InternalOccmDemandSignalCatalogResource/ListInternalOccmDemandSignalCatalogResources",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/InternalOccmDemandSignalCatalogResource/ListInternalOccmDemandSignalCatalogResources",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -455,7 +455,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "ListInternalOccmDemandSignalCatalogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccmDemandSignalCatalog/ListInternalOccmDemandSignalCatalogs",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccmDemandSignalCatalog/ListInternalOccmDemandSignalCatalogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -512,7 +512,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "ListInternalOccmDemandSignalDeliveries",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/InternalOccmDemandSignalDelivery/ListInternalOccmDemandSignalDeliveries",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/InternalOccmDemandSignalDelivery/ListInternalOccmDemandSignalDeliveries",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -569,7 +569,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "ListInternalOccmDemandSignalItems",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/InternalOccmDemandSignalItemCollection/ListInternalOccmDemandSignalItems",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/InternalOccmDemandSignalItemCollection/ListInternalOccmDemandSignalItems",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -626,7 +626,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "ListInternalOccmDemandSignals",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/InternalOccmDemandSignal/ListInternalOccmDemandSignals",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/InternalOccmDemandSignal/ListInternalOccmDemandSignals",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -683,7 +683,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "UpdateInternalOccmDemandSignal",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/InternalOccmDemandSignal/UpdateInternalOccmDemandSignal",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/InternalOccmDemandSignal/UpdateInternalOccmDemandSignal",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -740,7 +740,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "InternalDemandSignal",
                     OperationName = "UpdateInternalOccmDemandSignalDelivery",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/InternalOccmDemandSignalDelivery/UpdateInternalOccmDemandSignalDelivery",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/InternalOccmDemandSignalDelivery/UpdateInternalOccmDemandSignalDelivery",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

@@ -195,5 +195,11 @@ namespace Oci.QueueService.Models
         [JsonProperty(PropertyName = "channelConsumptionLimit")]
         public System.Nullable<int> ChannelConsumptionLimit { get; set; }
         
+        /// <value>
+        /// The list of capabilities enabled on the queue
+        /// </value>
+        [JsonProperty(PropertyName = "capabilities")]
+        public System.Collections.Generic.List<CapabilityDetails> Capabilities { get; set; }
+        
     }
 }

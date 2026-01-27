@@ -57,5 +57,17 @@ namespace Oci.DifService.Models
         [JsonProperty(PropertyName = "privateEndpointId")]
         public string PrivateEndpointId { get; set; }
         
+        /// <value>
+        /// OCID of cluster assigned to OMK cluster-namespace.
+        /// </value>
+        [JsonProperty(PropertyName = "clusterId")]
+        public string ClusterId { get; set; }
+        
+        /// <value>
+        /// Kubernetes namespace-name of omk cluster-namespace.
+        /// </value>
+        [JsonProperty(PropertyName = "namespaceName")]
+        public string NamespaceName { get; set; }
+        
     }
 }

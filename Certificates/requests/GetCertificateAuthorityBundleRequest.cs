@@ -60,6 +60,8 @@ namespace Oci.CertificatesService.Requests
             Current,
             [EnumMember(Value = "PENDING")]
             Pending,
+            [EnumMember(Value = "PENDING_ACTIVATION")]
+            PendingActivation,
             [EnumMember(Value = "LATEST")]
             Latest,
             [EnumMember(Value = "PREVIOUS")]

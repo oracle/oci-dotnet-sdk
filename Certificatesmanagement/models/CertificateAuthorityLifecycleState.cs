@@ -36,6 +36,8 @@ namespace Oci.CertificatesmanagementService.Models
       [EnumMember(Value = "CANCELLING_DELETION")]
       CancellingDeletion,
       [EnumMember(Value = "FAILED")]
-      Failed
+      Failed,
+      [EnumMember(Value = "PENDING_ACTIVATION")]
+      PendingActivation
   }
 }

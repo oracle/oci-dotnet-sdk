@@ -58,6 +58,12 @@ namespace Oci.CertificatesmanagementService.Models
                 case "SUBORDINATE_CA_ISSUED_BY_INTERNAL_CA":
                     obj = new CreateSubordinateCaIssuedByInternalCaConfigDetails();
                     break;
+                case "ROOT_CA_MANAGED_EXTERNALLY":
+                    obj = new CreateRootCaManagedExternallyConfigDetails();
+                    break;
+                case "SUBORDINATE_CA_MANAGED_INTERNALLY_ISSUED_BY_EXTERNAL_CA":
+                    obj = new CreateSubordinateCaManagedInternallyIssuedByExternalCaConfigDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

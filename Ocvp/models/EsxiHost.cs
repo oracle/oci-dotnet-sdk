@@ -324,5 +324,12 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "datastoreAttachments")]
         public System.Collections.Generic.List<DatastoreAttachment> DatastoreAttachments { get; set; }
         
+        /// <value>
+        /// MAC address of ESXi host's compute instance primary VNIC.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "primaryVnicMacAddress")]
+        public string PrimaryVnicMacAddress { get; set; }
+        
     }
 }

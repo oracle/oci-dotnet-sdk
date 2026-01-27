@@ -110,7 +110,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "CreateOccAvailabilityCatalog",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccAvailabilityCatalog/CreateOccAvailabilityCatalog",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccAvailabilityCatalog/CreateOccAvailabilityCatalog",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -166,7 +166,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "CreateOccCapacityRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCapacityRequest/CreateOccCapacityRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCapacityRequest/CreateOccCapacityRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -222,7 +222,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "CreateOccCustomer",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCustomer/CreateOccCustomer",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCustomer/CreateOccCustomer",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -278,7 +278,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "CreateOccCustomerGroup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCustomerGroup/CreateOccCustomerGroup",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCustomerGroup/CreateOccCustomerGroup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -334,7 +334,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "DeleteOccAvailabilityCatalog",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccAvailabilityCatalog/DeleteOccAvailabilityCatalog",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccAvailabilityCatalog/DeleteOccAvailabilityCatalog",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -390,7 +390,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "DeleteOccCapacityRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCapacityRequest/DeleteOccCapacityRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCapacityRequest/DeleteOccCapacityRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -446,7 +446,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "DeleteOccCustomer",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCustomer/DeleteOccCustomer",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCustomer/DeleteOccCustomer",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -502,7 +502,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "DeleteOccCustomerGroup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCustomerGroup/DeleteOccCustomerGroup",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCustomerGroup/DeleteOccCustomerGroup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -558,7 +558,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "GetOccAvailabilityCatalog",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccAvailabilityCatalog/GetOccAvailabilityCatalog",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccAvailabilityCatalog/GetOccAvailabilityCatalog",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -615,7 +615,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "GetOccAvailabilityCatalogContent",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccAvailabilityCatalog/GetOccAvailabilityCatalogContent",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccAvailabilityCatalog/GetOccAvailabilityCatalogContent",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -671,7 +671,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "GetOccCapacityRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCapacityRequest/GetOccCapacityRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCapacityRequest/GetOccCapacityRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -728,7 +728,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "GetOccCustomerGroup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCustomerGroup/GetOccCustomerGroup",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCustomerGroup/GetOccCustomerGroup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -785,7 +785,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListInternalNamespaceOccOverviews",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccOverviewCollection/ListInternalNamespaceOccOverviews",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccOverviewCollection/ListInternalNamespaceOccOverviews",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -842,7 +842,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListInternalOccHandoverResourceBlockDetails",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccHandoverResourceBlockDetailCollection/ListInternalOccHandoverResourceBlockDetails",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccHandoverResourceBlockDetailCollection/ListInternalOccHandoverResourceBlockDetails",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -899,7 +899,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListInternalOccHandoverResourceBlocks",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccHandoverResourceBlockCollection/ListInternalOccHandoverResourceBlocks",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccHandoverResourceBlockCollection/ListInternalOccHandoverResourceBlocks",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -955,7 +955,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListOccAvailabilities",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccAvailabilityCollection/ListOccAvailabilities",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccAvailabilityCollection/ListOccAvailabilities",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1011,7 +1011,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListOccAvailabilityCatalogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccAvailabilityCatalogCollection/ListOccAvailabilityCatalogs",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccAvailabilityCatalogCollection/ListOccAvailabilityCatalogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1067,7 +1067,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListOccAvailabilityCatalogsInternal",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccAvailabilityCatalogCollection/ListOccAvailabilityCatalogsInternal",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccAvailabilityCatalogCollection/ListOccAvailabilityCatalogsInternal",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1123,7 +1123,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListOccCapacityRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCapacityRequestCollection/ListOccCapacityRequests",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCapacityRequestCollection/ListOccCapacityRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1179,7 +1179,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListOccCapacityRequestsInternal",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCapacityRequestCollection/ListOccCapacityRequestsInternal",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCapacityRequestCollection/ListOccCapacityRequestsInternal",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1236,7 +1236,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListOccCustomerGroups",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCustomerGroupCollection/ListOccCustomerGroups",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCustomerGroupCollection/ListOccCustomerGroups",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1293,7 +1293,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListOccHandoverResourceBlockDetails",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccHandoverResourceBlockDetailCollection/ListOccHandoverResourceBlockDetails",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccHandoverResourceBlockDetailCollection/ListOccHandoverResourceBlockDetails",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1350,7 +1350,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListOccHandoverResourceBlocks",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccHandoverResourceBlockCollection/ListOccHandoverResourceBlocks",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccHandoverResourceBlockCollection/ListOccHandoverResourceBlocks",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1407,7 +1407,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "ListOccOverviews",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccOverviewCollection/ListOccOverviews",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccOverviewCollection/ListOccOverviews",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1463,7 +1463,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "PatchInternalOccCapacityRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCapacityRequest/PatchInternalOccCapacityRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCapacityRequest/PatchInternalOccCapacityRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1519,7 +1519,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "PatchOccCapacityRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCapacityRequest/PatchOccCapacityRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCapacityRequest/PatchOccCapacityRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1576,7 +1576,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "PublishOccAvailabilityCatalog",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccAvailabilityCatalog/PublishOccAvailabilityCatalog",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccAvailabilityCatalog/PublishOccAvailabilityCatalog",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1632,7 +1632,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "UpdateInternalOccCapacityRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCapacityRequest/UpdateInternalOccCapacityRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCapacityRequest/UpdateInternalOccCapacityRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1688,7 +1688,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "UpdateOccAvailabilityCatalog",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccAvailabilityCatalog/UpdateOccAvailabilityCatalog",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccAvailabilityCatalog/UpdateOccAvailabilityCatalog",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1744,7 +1744,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "UpdateOccCapacityRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCapacityRequest/UpdateOccCapacityRequest",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCapacityRequest/UpdateOccCapacityRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1800,7 +1800,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "UpdateOccCustomer",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCustomer/UpdateOccCustomer",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCustomer/UpdateOccCustomer",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -1856,7 +1856,7 @@ namespace Oci.CapacitymanagementService
                     ServiceName = "CapacityManagement",
                     OperationName = "UpdateOccCustomerGroup",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occcm/20231107/OccCustomerGroup/UpdateOccCustomerGroup",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/occm/20231107/OccCustomerGroup/UpdateOccCustomerGroup",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
