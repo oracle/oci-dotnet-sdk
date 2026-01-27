@@ -35,6 +35,21 @@ namespace Oci.GenerativeaiagentService.Models
         [JsonProperty(PropertyName = "generationLlmCustomization")]
         public LlmCustomization GenerationLlmCustomization { get; set; }
         
+        /// <value>
+        /// The runtimeVersion of the system prompt.
+        /// </value>
+        [JsonProperty(PropertyName = "runtimeVersion")]
+        public string RuntimeVersion { get; set; }
+        
+        [JsonProperty(PropertyName = "embeddingLlmCustomization")]
+        public LlmCustomization EmbeddingLlmCustomization { get; set; }
+        
+        [JsonProperty(PropertyName = "rerankingLlmCustomization")]
+        public LlmCustomization RerankingLlmCustomization { get; set; }
+        
+        [JsonProperty(PropertyName = "reasoningLlmCustomization")]
+        public LlmCustomization ReasoningLlmCustomization { get; set; }
+        
         [JsonProperty(PropertyName = "toolConfigType")]
         private readonly string toolConfigType = "RAG_TOOL_CONFIG";
     }

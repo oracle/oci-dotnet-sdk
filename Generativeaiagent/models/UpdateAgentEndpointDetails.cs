@@ -73,6 +73,9 @@ namespace Oci.GenerativeaiagentService.Models
         [JsonProperty(PropertyName = "sessionConfig")]
         public SessionConfig SessionConfig { get; set; }
         
+        [JsonProperty(PropertyName = "provisionedCapacityConfig")]
+        public ProvisionedCapacityConfig ProvisionedCapacityConfig { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).

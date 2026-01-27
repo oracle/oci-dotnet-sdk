@@ -22,6 +22,17 @@ namespace Oci.GenerativeaiagentService.Models
     public class LlmCustomization 
     {
         
+        [JsonProperty(PropertyName = "llmSelection")]
+        public LlmSelection LlmSelection { get; set; }
+        
+        /// <value>
+        /// Hyper parameters for LLM configuration. Accepts Key-value pairs to configure various hyper parameters. 
+        /// Refer to the guide for examples and the JSON Schema documentation for details on the format.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "llmHyperParameters")]
+        public System.Collections.Generic.Dictionary<string, System.Object> LlmHyperParameters { get; set; }
+        
         /// <value>
         /// If specified, the default instruction is replaced with provided instruction.
         /// </value>

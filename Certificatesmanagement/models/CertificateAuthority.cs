@@ -55,6 +55,12 @@ namespace Oci.CertificatesmanagementService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// For externally managed CAs, a description of the externally managed key. Avoid entering confidential information.
+        /// </value>
+        [JsonProperty(PropertyName = "externalKeyDescription")]
+        public string ExternalKeyDescription { get; set; }
+        
+        /// <value>
         /// A property indicating when the CA was created, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
         /// Example: 2019-04-03T21:10:29.600Z
         /// </value>

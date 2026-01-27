@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CertificatesmanagementService.Models
 {
     /// <summary>
-    /// The details for updating a private subordinate certificate authority (CA) which is issued by a private CA.
+    /// The configuration details for updating a private subordinate certificate authority (CA) which is issued by a private, internal CA.
     /// Note: This operation automatically rotates the private key.
     /// 
     /// </summary>

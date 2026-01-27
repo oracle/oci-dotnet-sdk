@@ -101,5 +101,11 @@ namespace Oci.CertificatesmanagementService.Models
         [JsonProperty(PropertyName = "revocationStatus")]
         public RevocationStatus RevocationStatus { get; set; }
         
+        /// <value>
+        /// The certificate signing request (in PEM format).
+        /// </value>
+        [JsonProperty(PropertyName = "csrPem")]
+        public string CsrPem { get; set; }
+        
     }
 }

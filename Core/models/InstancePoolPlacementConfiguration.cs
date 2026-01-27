@@ -34,6 +34,14 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the
+        /// [compute cluster](https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm) that the instance will be created in.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "computeClusterId")]
+        public string ComputeClusterId { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the primary subnet in which to place instances. This field is deprecated.
         /// Use `primaryVnicSubnets` instead to set VNIC data for instances in the pool.
         /// 

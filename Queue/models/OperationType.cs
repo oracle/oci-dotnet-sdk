@@ -28,6 +28,12 @@ namespace Oci.QueueService.Models
       [EnumMember(Value = "MOVE_QUEUE")]
       MoveQueue,
       [EnumMember(Value = "PURGE_QUEUE")]
-      PurgeQueue
+      PurgeQueue,
+      [EnumMember(Value = "CREATE_CONSUMER_GROUP")]
+      CreateConsumerGroup,
+      [EnumMember(Value = "UPDATE_CONSUMER_GROUP")]
+      UpdateConsumerGroup,
+      [EnumMember(Value = "DELETE_CONSUMER_GROUP")]
+      DeleteConsumerGroup
   }
 }

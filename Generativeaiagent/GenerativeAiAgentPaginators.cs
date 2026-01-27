@@ -295,6 +295,55 @@ namespace Oci.GenerativeaiagentService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListProvisionedCapacities operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListProvisionedCapacitiesResponse> ListProvisionedCapacitiesResponseEnumerator(ListProvisionedCapacitiesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListProvisionedCapacitiesRequest, ListProvisionedCapacitiesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListProvisionedCapacities(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ProvisionedCapacitySummary objects
+        /// contained in responses from the ListProvisionedCapacities operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ProvisionedCapacitySummary> ListProvisionedCapacitiesRecordEnumerator(ListProvisionedCapacitiesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListProvisionedCapacitiesRequest, ListProvisionedCapacitiesResponse, ProvisionedCapacitySummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListProvisionedCapacities(request, retryConfiguration, cancellationToken),
+                response => response.ProvisionedCapacityCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListTools operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

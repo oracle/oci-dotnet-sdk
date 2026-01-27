@@ -8,20 +8,12 @@
 
 
 using System.Runtime.Serialization;
-using Oci.CoreService.Models;
+using Oci.QueueService.Models;
 
-namespace Oci.CoreService.Responses
+namespace Oci.QueueService.Responses
 {
-    public class UpdateComputeHostResponse : Oci.Common.OciResponse
+    public class ListConsumerGroupsResponse : Oci.Common.OciResponse
     {
-
-        /// <value>
-        /// For optimistic concurrency control. See `if-match`.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
-        public string Etag { get; set; }
-
 
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
@@ -33,15 +25,19 @@ namespace Oci.CoreService.Responses
 
 
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the work request.
-        /// Use [GetWorkRequest](https://docs.cloud.oracle.com/api/#/en/workrequests/latest/WorkRequest/GetWorkRequest)
-        /// with this ID to track the status of the request.
+        /// For pagination of a list of items. When paging through a list, if this header appears in the response,
+        /// then a partial list might have been returned. Include this value as the `page` parameter for the
+        /// subsequent GET request to get the next batch of items.
         /// 
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
-        public string OpcWorkRequestId { get; set; }
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-next-page")]
+        public string OpcNextPage { get; set; }
 
-
+        /// <value>
+        /// The returned ConsumerGroupCollection instance.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public ConsumerGroupCollection ConsumerGroupCollection { get; set; }
 
     }
 }

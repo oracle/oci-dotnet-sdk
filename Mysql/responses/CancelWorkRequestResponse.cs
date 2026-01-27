@@ -8,20 +8,12 @@
 
 
 using System.Runtime.Serialization;
-using Oci.CoreService.Models;
+using Oci.MysqlService.Models;
 
-namespace Oci.CoreService.Responses
+namespace Oci.MysqlService.Responses
 {
-    public class GetComputeHostResponse : Oci.Common.OciResponse
+    public class CancelWorkRequestResponse : Oci.Common.OciResponse
     {
-
-        /// <value>
-        /// For optimistic concurrency control. See `if-match`.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
-        public string Etag { get; set; }
-
 
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
@@ -31,11 +23,7 @@ namespace Oci.CoreService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
-        /// <value>
-        /// The returned ComputeHost instance.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public ComputeHost ComputeHost { get; set; }
+
 
     }
 }

@@ -41,5 +41,11 @@ namespace Oci.QueueService.Models
         [JsonProperty(PropertyName = "channelId")]
         public string ChannelId { get; set; }
         
+        /// <value>
+        /// If consumerGroupId is present in GetStats call, the consumer group id will be returned in the GetStats response.
+        /// </value>
+        [JsonProperty(PropertyName = "consumerGroupId")]
+        public string ConsumerGroupId { get; set; }
+        
     }
 }

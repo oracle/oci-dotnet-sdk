@@ -28,6 +28,12 @@ namespace Oci.DifService.Models
       [EnumMember(Value = "GENAI")]
       Genai,
       [EnumMember(Value = "DATAFLOW")]
-      Dataflow
+      Dataflow,
+      [EnumMember(Value = "AIDATAPLATFORM")]
+      Aidataplatform,
+      [EnumMember(Value = "OMK")]
+      Omk,
+      [EnumMember(Value = "OKE")]
+      Oke
   }
 }

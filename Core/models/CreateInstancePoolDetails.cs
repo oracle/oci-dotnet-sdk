@@ -77,6 +77,7 @@ namespace Oci.CoreService.Models
         /// To use the instance pool with a regional subnet, provide a placement configuration for
         /// each availability domain, and include the regional subnet in each placement
         /// configuration.
+        /// To use compute cluster with instance pool, provide a single placement configuration.
         /// 
         /// </value>
         /// <remarks>

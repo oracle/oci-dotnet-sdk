@@ -504,6 +504,9 @@ namespace Oci.OpensearchService.Models
         [JsonProperty(PropertyName = "maintenanceDetails")]
         public MaintenanceDetails MaintenanceDetails { get; set; }
         
+        [JsonProperty(PropertyName = "loadBalancerConfig")]
+        public LoadBalancerConfig LoadBalancerConfig { get; set; }
+        
         [JsonProperty(PropertyName = "certificateConfig")]
         public CertificateConfig CertificateConfig { get; set; }
         

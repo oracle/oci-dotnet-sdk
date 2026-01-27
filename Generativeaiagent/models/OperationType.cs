@@ -66,6 +66,12 @@ namespace Oci.GenerativeaiagentService.Models
       [EnumMember(Value = "DELETE_PROVISIONED_CAPACITY")]
       DeleteProvisionedCapacity,
       [EnumMember(Value = "MOVE_PROVISIONED_CAPACITY")]
-      MoveProvisionedCapacity
+      MoveProvisionedCapacity,
+      [EnumMember(Value = "CREATE_FLOW")]
+      CreateFlow,
+      [EnumMember(Value = "UPDATE_FLOW")]
+      UpdateFlow,
+      [EnumMember(Value = "DELETE_FLOW")]
+      DeleteFlow
   }
 }

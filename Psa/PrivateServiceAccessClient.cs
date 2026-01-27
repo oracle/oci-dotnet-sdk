@@ -110,7 +110,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "CancelPsaWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/WorkRequest/CancelPsaWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -168,7 +168,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "ChangePrivateServiceAccessCompartment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccess/ChangePrivateServiceAccessCompartment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -226,7 +226,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "CreatePrivateServiceAccess",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccess/CreatePrivateServiceAccess",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -282,7 +282,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "DeletePrivateServiceAccess",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccess/DeletePrivateServiceAccess",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -338,7 +338,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "GetPrivateServiceAccess",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccess/GetPrivateServiceAccess",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -394,7 +394,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "GetPsaWorkRequest",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/WorkRequest/GetPsaWorkRequest",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -452,7 +452,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "ListPrivateServiceAccesses",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccessCollection/ListPrivateServiceAccesses",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -509,7 +509,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "ListPsaServices",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PsaServiceCollection/ListPsaServices",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -566,7 +566,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "ListPsaWorkRequestErrors",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/WorkRequestError/ListPsaWorkRequestErrors",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -623,7 +623,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "ListPsaWorkRequestLogs",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/WorkRequestLogEntry/ListPsaWorkRequestLogs",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -680,7 +680,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "ListPsaWorkRequests",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/WorkRequest/ListPsaWorkRequests",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -736,7 +736,7 @@ namespace Oci.PsaService
                     ServiceName = "PrivateServiceAccess",
                     OperationName = "UpdatePrivateServiceAccess",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/psasvc/20240301/PrivateServiceAccess/UpdatePrivateServiceAccess",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
