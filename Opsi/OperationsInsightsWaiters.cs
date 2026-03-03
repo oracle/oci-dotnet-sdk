@@ -88,6 +88,34 @@ namespace Oci.OpsiService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetChargebackPlanRequest, GetChargebackPlanResponse> ForChargebackPlan(GetChargebackPlanRequest request, params LifecycleState[] targetStates)
+        {
+            return this.ForChargebackPlan(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetChargebackPlanRequest, GetChargebackPlanResponse> ForChargebackPlan(GetChargebackPlanRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetChargebackPlanRequest, GetChargebackPlanResponse>(
+                request,
+                request => client.GetChargebackPlan(request),
+                response => targetStates.Contains(response.ChargebackPlan.LifecycleState.Value),
+                targetStates.Contains(LifecycleState.Deleted)
+            );
+            return new Waiter<GetChargebackPlanRequest, GetChargebackPlanResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetDatabaseInsightRequest, GetDatabaseInsightResponse> ForDatabaseInsight(GetDatabaseInsightRequest request, params LifecycleState[] targetStates)
         {
             return this.ForDatabaseInsight(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

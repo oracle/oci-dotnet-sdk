@@ -308,7 +308,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "DATABASE")]
             Database,
             [EnumMember(Value = "DB_SYSTEM")]
-            DbSystem
+            DbSystem,
+            [EnumMember(Value = "DATAGUARD")]
+            Dataguard
         };
 
         
@@ -391,6 +393,9 @@ namespace Oci.DatabaseService.Models
             {
                 case "NONE":
                     obj = new LaunchDbSystemDetails();
+                    break;
+                case "DATAGUARD":
+                    obj = new LaunchStandbyDbSystemDetails();
                     break;
                 case "DB_SYSTEM":
                     obj = new LaunchDbSystemFromDbSystemDetails();

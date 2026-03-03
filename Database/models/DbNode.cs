@@ -310,5 +310,13 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "computeCount")]
         public System.Nullable<int> ComputeCount { get; set; }
         
+        /// <value>
+        /// Indicates whether the database node must be rebooted after applying Operating System patches.
+        /// This flag becomes true after operations such as OS/kernel updates to indicate that a reboot of the node is required. After a successful reboot, this value is expected to return to false.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isOsPatchRebootRequired")]
+        public System.Nullable<bool> IsOsPatchRebootRequired { get; set; }
+        
     }
 }

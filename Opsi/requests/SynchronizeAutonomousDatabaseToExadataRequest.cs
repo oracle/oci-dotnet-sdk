@@ -20,16 +20,6 @@ namespace Oci.OpsiService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
-        public string CompartmentId { get; set; }
-        
-        /// <value>
         /// The information to be updated.
         /// </value>
         /// <remarks>
@@ -38,6 +28,12 @@ namespace Oci.OpsiService.Requests
         [Required(ErrorMessage = "SynchronizeAutonomousDatabaseToExadataDetails is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
         public SynchronizeAutonomousDatabaseToExadataDetails SynchronizeAutonomousDatabaseToExadataDetails { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
         
         /// <value>
         /// Optional [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the associated DBaaS entity.
