@@ -77,5 +77,8 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        [JsonProperty(PropertyName = "targetCredentials")]
+        public Credentials TargetCredentials { get; set; }
+        
     }
 }

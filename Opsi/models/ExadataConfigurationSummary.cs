@@ -113,6 +113,23 @@ namespace Oci.OpsiService.Models
         [JsonProperty(PropertyName = "vmclusterDetails")]
         public System.Collections.Generic.List<VmClusterSummary> VmclusterDetails { get; set; }
         
+        /// <value>
+        /// The shape of the Exadata Infrastructure.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ExadataShape is required.")]
+        [JsonProperty(PropertyName = "exadataShape")]
+        public string ExadataShape { get; set; }
+        
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ChargebackPlanDetails is required.")]
+        [JsonProperty(PropertyName = "chargebackPlanDetails")]
+        public ChargebackPlanDetails ChargebackPlanDetails { get; set; }
+        
     }
 
     public class ExadataConfigurationSummaryModelConverter : JsonConverter

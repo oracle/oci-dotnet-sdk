@@ -175,5 +175,8 @@ namespace Oci.DatasafeService.Models
         [JsonProperty(PropertyName = "recompile")]
         public string Recompile { get; set; }
         
+        [JsonProperty(PropertyName = "targetCredentials")]
+        public Credentials TargetCredentials { get; set; }
+        
     }
 }

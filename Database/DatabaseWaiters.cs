@@ -5470,6 +5470,42 @@ namespace Oci.DatabaseService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ExecuteDbSystemOsPatchRequest, ExecuteDbSystemOsPatchResponse> ForExecuteDbSystemOsPatch(ExecuteDbSystemOsPatchRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForExecuteDbSystemOsPatch(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<ExecuteDbSystemOsPatchRequest, ExecuteDbSystemOsPatchResponse> ForExecuteDbSystemOsPatch(ExecuteDbSystemOsPatchRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<ExecuteDbSystemOsPatchRequest, ExecuteDbSystemOsPatchResponse>(() =>
+            {
+                var response = client.ExecuteDbSystemOsPatch(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<FailOverAutonomousDatabaseRequest, FailOverAutonomousDatabaseResponse> ForFailOverAutonomousDatabase(FailOverAutonomousDatabaseRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForFailOverAutonomousDatabase(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -6452,6 +6488,33 @@ namespace Oci.DatabaseService
                 targetStates.Contains(DbSystem.LifecycleStateEnum.Terminated)
             );
             return new Waiter<GetDbSystemRequest, GetDbSystemResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDbSystemOsPatchHistoryEntryRequest, GetDbSystemOsPatchHistoryEntryResponse> ForDbSystemOsPatchHistoryEntry(GetDbSystemOsPatchHistoryEntryRequest request, params DbSystemOsPatchHistoryEntry.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForDbSystemOsPatchHistoryEntry(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetDbSystemOsPatchHistoryEntryRequest, GetDbSystemOsPatchHistoryEntryResponse> ForDbSystemOsPatchHistoryEntry(GetDbSystemOsPatchHistoryEntryRequest request, WaiterConfiguration config, params DbSystemOsPatchHistoryEntry.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetDbSystemOsPatchHistoryEntryRequest, GetDbSystemOsPatchHistoryEntryResponse>(
+                request,
+                request => client.GetDbSystemOsPatchHistoryEntry(request),
+                response => targetStates.Contains(response.DbSystemOsPatchHistoryEntry.LifecycleState.Value)
+            );
+            return new Waiter<GetDbSystemOsPatchHistoryEntryRequest, GetDbSystemOsPatchHistoryEntryResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

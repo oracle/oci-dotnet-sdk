@@ -101,7 +101,10 @@ namespace Oci.DatasafeService.Models
         /// DETERMINISTIC_ENCRYPTION_FORMAT_CHECK checks if any masking column has deterministic encryption masking format.
         /// COLUMN_EXIST_CHECK checks if the masking columns are available in the target database.
         /// TIME_TRAVEL_CHECK checks if the masking tables have Time Travel enabled.
+        /// SYSTEM_OBJECTS_CHECK checks if the masking tables have dependent objects present in SYS schema.
         /// INVALID_PACKAGE_CHECK checks if any of the required packages are in invalid state.
+        /// AUDIT_POLICY_CHECK checks if the masking tables have Audit policies enabled.
+        /// USER_CREDENTIALS_CHECK checks if target database user credentials are required to run masking using the policy
         /// 
         /// </value>
         ///
@@ -141,8 +144,14 @@ namespace Oci.DatasafeService.Models
             ColumnExistCheck,
             [EnumMember(Value = "TIME_TRAVEL_CHECK")]
             TimeTravelCheck,
+            [EnumMember(Value = "SYSTEM_OBJECTS_CHECK")]
+            SystemObjectsCheck,
             [EnumMember(Value = "INVALID_PACKAGE_CHECK")]
-            InvalidPackageCheck
+            InvalidPackageCheck,
+            [EnumMember(Value = "AUDIT_POLICY_CHECK")]
+            AuditPolicyCheck,
+            [EnumMember(Value = "USER_CREDENTIALS_CHECK")]
+            UserCredentialsCheck
         };
 
         /// <value>
@@ -161,7 +170,10 @@ namespace Oci.DatasafeService.Models
         /// DETERMINISTIC_ENCRYPTION_FORMAT_CHECK checks if any masking column has deterministic encryption masking format.
         /// COLUMN_EXIST_CHECK checks if the masking columns are available in the target database.
         /// TIME_TRAVEL_CHECK checks if the masking tables have Time Travel enabled.
+        /// SYSTEM_OBJECTS_CHECK checks if the masking tables have dependent objects present in SYS schema.
         /// INVALID_PACKAGE_CHECK checks if any of the required packages are in invalid state.
+        /// AUDIT_POLICY_CHECK checks if the masking tables have Audit policies enabled.
+        /// USER_CREDENTIALS_CHECK checks if target database user credentials are required to run masking using the policy
         /// 
         /// </value>
         [JsonProperty(PropertyName = "healthCheckType")]

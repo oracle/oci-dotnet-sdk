@@ -113,6 +113,9 @@ namespace Oci.OpsiService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ResourceStatus> Status { get; set; }
         
+        [JsonProperty(PropertyName = "chargebackPlanDetails")]
+        public ChargebackPlanDetails ChargebackPlanDetails { get; set; }
+        
         /// <value>
         /// The time the the Exadata insight was first enabled. An RFC3339 formatted datetime string
         /// </value>
@@ -145,6 +148,12 @@ namespace Oci.OpsiService.Models
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]
         public string LifecycleDetails { get; set; }
+        
+        /// <value>
+        /// A message describing the status of the Exadata Resource. For example, it can be used to provide actionable information about the policies needed to access the Exadata Resource.
+        /// </value>
+        [JsonProperty(PropertyName = "statusDetails")]
+        public string StatusDetails { get; set; }
         
     }
 
