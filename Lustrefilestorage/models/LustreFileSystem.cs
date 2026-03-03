@@ -326,6 +326,9 @@ namespace Oci.LustrefilestorageService.Models
         [JsonProperty(PropertyName = "maintenanceWindow")]
         public MaintenanceWindow MaintenanceWindow { get; set; }
         
+        [JsonProperty(PropertyName = "maintenanceWindowMetadata")]
+        public MaintenanceWindowMetadataDetails MaintenanceWindowMetadata { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

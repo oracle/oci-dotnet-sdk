@@ -60,6 +60,10 @@ namespace Oci.RedisService.Models
       [EnumMember(Value = "CHANGE_OCI_CACHE_CONFIG_SET_COMPARTMENT")]
       ChangeOciCacheConfigSetCompartment,
       [EnumMember(Value = "CHANGE_OCI_CACHE_USER_COMPARTMENT")]
-      ChangeOciCacheUserCompartment
+      ChangeOciCacheUserCompartment,
+      [EnumMember(Value = "PATCH_OCI_CACHE_CLUSTER")]
+      PatchOciCacheCluster,
+      [EnumMember(Value = "REPLACE_OCI_CACHE_NODE")]
+      ReplaceOciCacheNode
   }
 }

@@ -32,12 +32,6 @@ namespace Oci.FusionappsService.Models
         public string Username { get; set; }
         
         /// <value>
-        /// The password for the administrator.
-        /// </value>
-        [JsonProperty(PropertyName = "password")]
-        public string Password { get; set; }
-        
-        /// <value>
         /// The email address for the administrator.
         /// </value>
         /// <remarks>

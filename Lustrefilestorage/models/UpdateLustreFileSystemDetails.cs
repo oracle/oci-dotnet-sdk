@@ -82,5 +82,8 @@ namespace Oci.LustrefilestorageService.Models
         [JsonProperty(PropertyName = "rootSquashConfiguration")]
         public RootSquashConfiguration RootSquashConfiguration { get; set; }
         
+        [JsonProperty(PropertyName = "maintenanceWindow")]
+        public MaintenanceWindow MaintenanceWindow { get; set; }
+        
     }
 }

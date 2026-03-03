@@ -152,6 +152,18 @@ namespace Oci.OpsiService.Models
       [EnumMember(Value = "TEST_MACS_MANAGED_ADB_CONNECTION_DETAILS")]
       TestMacsManagedAdbConnectionDetails,
       [EnumMember(Value = "SYNCHRONIZE_AUTONOMOUS_DATABASE_TO_EXADATA")]
-      SynchronizeAutonomousDatabaseToExadata
+      SynchronizeAutonomousDatabaseToExadata,
+      [EnumMember(Value = "CREATE_CHARGE_BACK")]
+      CreateChargeBack,
+      [EnumMember(Value = "ENABLE_CHARGE_BACK")]
+      EnableChargeBack,
+      [EnumMember(Value = "DISABLE_CHARGE_BACK")]
+      DisableChargeBack,
+      [EnumMember(Value = "UPDATE_CHARGE_BACK")]
+      UpdateChargeBack,
+      [EnumMember(Value = "MOVE_CHARGE_BACK")]
+      MoveChargeBack,
+      [EnumMember(Value = "DELETE_CHARGE_BACK")]
+      DeleteChargeBack
   }
 }

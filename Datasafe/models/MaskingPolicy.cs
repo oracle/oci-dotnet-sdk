@@ -206,6 +206,12 @@ namespace Oci.DatasafeService.Models
         public ColumnSourceDetails ColumnSource { get; set; }
         
         /// <value>
+        /// Specifies whether target database credentials are required to perform masking with this policy
+        /// </value>
+        [JsonProperty(PropertyName = "areTargetCredentialsRequired")]
+        public System.Nullable<bool> AreTargetCredentialsRequired { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

@@ -84,6 +84,16 @@ namespace Oci.OpsiService.Models
         public string DatabaseVersion { get; set; }
         
         /// <value>
+        /// Flag is to identify if advanced features for autonomous database is enabled or not
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "IsAdvancedFeaturesEnabled is required.")]
+        [JsonProperty(PropertyName = "isAdvancedFeaturesEnabled")]
+        public System.Nullable<bool> IsAdvancedFeaturesEnabled { get; set; }
+        
+        /// <value>
         /// Name of the CDB.Only applies to PDB.
         /// </value>
         /// <remarks>

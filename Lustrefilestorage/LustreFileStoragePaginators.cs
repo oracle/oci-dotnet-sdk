@@ -50,6 +50,104 @@ namespace Oci.LustrefilestorageService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAvailableMaintenanceScheduleStartTimes operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAvailableMaintenanceScheduleStartTimesResponse> ListAvailableMaintenanceScheduleStartTimesResponseEnumerator(ListAvailableMaintenanceScheduleStartTimesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAvailableMaintenanceScheduleStartTimesRequest, ListAvailableMaintenanceScheduleStartTimesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAvailableMaintenanceScheduleStartTimes(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AvailableMaintenanceScheduleStartTimeSummary objects
+        /// contained in responses from the ListAvailableMaintenanceScheduleStartTimes operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AvailableMaintenanceScheduleStartTimeSummary> ListAvailableMaintenanceScheduleStartTimesRecordEnumerator(ListAvailableMaintenanceScheduleStartTimesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAvailableMaintenanceScheduleStartTimesRequest, ListAvailableMaintenanceScheduleStartTimesResponse, AvailableMaintenanceScheduleStartTimeSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAvailableMaintenanceScheduleStartTimes(request, retryConfiguration, cancellationToken),
+                response => response.AvailableMaintenanceScheduleStartTimeCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAvailableOverrideMaintenanceStartTimes operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAvailableOverrideMaintenanceStartTimesResponse> ListAvailableOverrideMaintenanceStartTimesResponseEnumerator(ListAvailableOverrideMaintenanceStartTimesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAvailableOverrideMaintenanceStartTimesRequest, ListAvailableOverrideMaintenanceStartTimesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAvailableOverrideMaintenanceStartTimes(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AvailableOverrideMaintenanceStartTimeSummary objects
+        /// contained in responses from the ListAvailableOverrideMaintenanceStartTimes operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AvailableOverrideMaintenanceStartTimeSummary> ListAvailableOverrideMaintenanceStartTimesRecordEnumerator(ListAvailableOverrideMaintenanceStartTimesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAvailableOverrideMaintenanceStartTimesRequest, ListAvailableOverrideMaintenanceStartTimesResponse, AvailableOverrideMaintenanceStartTimeSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAvailableOverrideMaintenanceStartTimes(request, retryConfiguration, cancellationToken),
+                response => response.AvailableOverrideMaintenanceStartTimeCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListLustreFileSystems operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

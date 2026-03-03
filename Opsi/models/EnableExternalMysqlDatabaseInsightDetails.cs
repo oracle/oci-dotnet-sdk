@@ -16,7 +16,9 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpsiService.Models
 {
     /// <summary>
+    /// MySQL support within the OCI Ops Insights service has been deprecated as of January 29, 2026.
     /// The information about database to be analyzed.
+    /// 
     /// </summary>
     public class EnableExternalMysqlDatabaseInsightDetails : EnableDatabaseInsightDetails
     {
