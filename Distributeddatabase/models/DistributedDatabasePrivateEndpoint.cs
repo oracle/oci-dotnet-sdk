@@ -91,13 +91,15 @@ namespace Oci.DistributeddatabaseService.Models
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
         /// <value>
-        /// The details of the non-deleted Globally distributed databases that consumes the given private endpoint.
+        /// This field is deprecated. Support for this field will be removed after Mon, 1 Mar 2027 00:00:00 GMT.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "globallyDistributedDatabases")]
         public System.Collections.Generic.List<DistributedDatabaseAssociatedWithPrivateEndpoint> GloballyDistributedDatabases { get; set; }
         
         /// <value>
-        /// The details of the non-deleted Globally distributed autonomous databases that consumes the given private endpoint.
+        /// This field is deprecated. Support for this field will be removed after Mon, 1 Mar 2027 00:00:00 GMT.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "globallyDistributedAutonomousDatabases")]
         public System.Collections.Generic.List<DistributedAutonomousDatabaseAssociatedWithPrivateEndpoint> GloballyDistributedAutonomousDatabases { get; set; }

@@ -79,9 +79,27 @@ namespace Oci.OcvpService.Models
       DeleteManagementAppliance,
       [EnumMember(Value = "ABANDON_MANAGEMENT_APPLIANCE_JOBS")]
       AbandonManagementApplianceJobs,
+      [EnumMember(Value = "BATCH_DELETE_MANAGEMENT_APPLIANCE_JOBS")]
+      BatchDeleteManagementApplianceJobs,
       [EnumMember(Value = "MANAGEMENT_APPLIANCE_ESXI_HOST_PROVISIONING")]
       ManagementApplianceEsxiHostProvisioning,
+      [EnumMember(Value = "MANAGEMENT_APPLIANCE_ESXI_HOST_DELETION")]
+      ManagementApplianceEsxiHostDeletion,
       [EnumMember(Value = "MANAGEMENT_APPLIANCE_DATASTORE_PROVISIONING")]
-      ManagementApplianceDatastoreProvisioning
+      ManagementApplianceDatastoreProvisioning,
+      [EnumMember(Value = "MANAGEMENT_APPLIANCE_DATASTORE_DELETE")]
+      ManagementApplianceDatastoreDelete,
+      [EnumMember(Value = "CREATE_BYOL")]
+      CreateByol,
+      [EnumMember(Value = "UPDATE_BYOL")]
+      UpdateByol,
+      [EnumMember(Value = "DELETE_BYOL")]
+      DeleteByol,
+      [EnumMember(Value = "CREATE_BYOL_ALLOCATION")]
+      CreateByolAllocation,
+      [EnumMember(Value = "UPDATE_BYOL_ALLOCATION")]
+      UpdateByolAllocation,
+      [EnumMember(Value = "DELETE_BYOL_ALLOCATION")]
+      DeleteByolAllocation
   }
 }

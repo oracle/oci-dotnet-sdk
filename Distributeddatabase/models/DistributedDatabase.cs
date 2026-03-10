@@ -244,6 +244,12 @@ namespace Oci.DistributeddatabaseService.Models
         [Required(ErrorMessage = "OnsPortRemote is required.")]
         [JsonProperty(PropertyName = "onsPortRemote")]
         public System.Nullable<int> OnsPortRemote { get; set; }
+        
+        /// <value>
+        /// The TCP Single Client Access Name (SCAN) port for Globally distributed database clusters.
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPort")]
+        public System.Nullable<int> ScanListenerPort { get; set; }
                 ///
         /// <value>
         /// The Replication method for Globally distributed database. Use RAFT for Raft replication, and DG for

@@ -148,6 +148,16 @@ namespace Oci.OcvpService.Models
         public System.Collections.Generic.List<ManagementApplianceConnectionStatus> HeartbeatConnectionStates { get; set; }
         
         /// <value>
+        /// Current version of OCVS management plugin installed by Management Agent. 
+        /// As soon as OCVS service team publishes a new version OCVS management plugin (ocvs-ma-plugin-<version>.zip) to Management Agent service, 
+        /// the service distributes it to Management Appliances owned by customers. 
+        /// This field shows which version of the OCVS management plugin is currently installed and running for this customer.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "pluginVersion")]
+        public string PluginVersion { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

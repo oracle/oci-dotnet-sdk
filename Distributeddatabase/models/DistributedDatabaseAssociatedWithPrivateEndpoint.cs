@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DistributeddatabaseService.Models
 {
     /// <summary>
-    /// The details of distributed database associated with the private endpoint.
+    /// This field is deprecated. Support for this field will be removed after Mon, 1 Mar 2027 00:00:00 GMT.
+    /// 
     /// </summary>
     public class DistributedDatabaseAssociatedWithPrivateEndpoint 
     {

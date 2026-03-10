@@ -331,5 +331,19 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "primaryVnicMacAddress")]
         public string PrimaryVnicMacAddress { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Byol Allocation for VCF (VMware Cloud Foundation) deployment.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "vcfByolAllocationId")]
+        public string VcfByolAllocationId { get; set; }
+        
+        /// <value>
+        /// Indicates whether this host embedded VMware vSAN with BYOL Allocation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isVsanByolEnabled")]
+        public System.Nullable<bool> IsVsanByolEnabled { get; set; }
+        
     }
 }

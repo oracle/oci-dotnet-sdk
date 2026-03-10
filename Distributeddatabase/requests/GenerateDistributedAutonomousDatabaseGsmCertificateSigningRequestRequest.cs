@@ -30,16 +30,6 @@ namespace Oci.DistributeddatabaseService.Requests
         public string DistributedAutonomousDatabaseId { get; set; }
         
         /// <value>
-        /// The ID of the Ca Bundle.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CaBundleId is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "caBundleId")]
-        public string CaBundleId { get; set; }
-        
-        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
@@ -66,5 +56,11 @@ namespace Oci.DistributeddatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-retry-token")]
         public string OpcRetryToken { get; set; }
+        
+        /// <value>
+        /// The ID of the Ca Bundle.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "caBundleId")]
+        public string CaBundleId { get; set; }
     }
 }

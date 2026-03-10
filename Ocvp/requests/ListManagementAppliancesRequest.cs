@@ -36,6 +36,13 @@ namespace Oci.OcvpService.Requests
         public string ManagementApplianceId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the SDDC.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sddcId")]
+        public string SddcId { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that match the given display name exactly.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]

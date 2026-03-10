@@ -113,6 +113,18 @@ namespace Oci.DistributeddatabaseService.Models
         [JsonProperty(PropertyName = "kmsKeyVersionId")]
         public string KmsKeyVersionId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the key store used to create the shard.
+        /// </value>
+        [JsonProperty(PropertyName = "okvKeyStoreId")]
+        public string OkvKeyStoreId { get; set; }
+        
+        /// <value>
+        /// The OKV endpoint name.
+        /// </value>
+        [JsonProperty(PropertyName = "okvEndPointGroup")]
+        public string OkvEndPointGroup { get; set; }
+        
         [JsonProperty(PropertyName = "source")]
         private readonly string source = "ADB_D";
     }
