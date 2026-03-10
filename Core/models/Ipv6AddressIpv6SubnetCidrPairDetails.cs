@@ -23,6 +23,13 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
+        /// An [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that specifies a previously-reserved ipv6 to use.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "ipv6Id")]
+        public string Ipv6Id { get; set; }
+        
+        /// <value>
         /// The IPv6 prefix allocated to the subnet.
         /// 
         /// </value>

@@ -26,6 +26,8 @@ namespace Oci.OcvpService.Models
       [EnumMember(Value = "UI_PLUGIN_REGISTRATION")]
       UiPluginRegistration,
       [EnumMember(Value = "NSX")]
-      Nsx
+      Nsx,
+      [EnumMember(Value = "EXPORT_METRICS")]
+      ExportMetrics
   }
 }

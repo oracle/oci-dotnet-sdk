@@ -281,6 +281,16 @@ namespace Oci.OcvpService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<VsphereTypes> VsphereType { get; set; }
         
+        [JsonProperty(PropertyName = "clusterByolAllocationDetails")]
+        public ClusterByolAllocationDetails ClusterByolAllocationDetails { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the initial VMware BYOL Allocation used to deploy VMware Cloud Foundation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "initialVcfByolAllocationId")]
+        public string InitialVcfByolAllocationId { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).

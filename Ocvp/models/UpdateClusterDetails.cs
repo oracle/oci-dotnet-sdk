@@ -58,6 +58,9 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "esxiSoftwareVersion")]
         public string EsxiSoftwareVersion { get; set; }
         
+        [JsonProperty(PropertyName = "clusterByolAllocationDetails")]
+        public ClusterByolAllocationDetails ClusterByolAllocationDetails { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).

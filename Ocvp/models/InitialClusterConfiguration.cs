@@ -150,5 +150,15 @@ namespace Oci.OcvpService.Models
         [JsonProperty(PropertyName = "datastoreClusterIds")]
         public System.Collections.Generic.List<string> DatastoreClusterIds { get; set; }
         
+        [JsonProperty(PropertyName = "clusterByolAllocationDetails")]
+        public ClusterByolAllocationDetails ClusterByolAllocationDetails { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the initial VMware BYOL Allocation used to deploy VMware Cloud Foundation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "initialVcfByolAllocationId")]
+        public string InitialVcfByolAllocationId { get; set; }
+        
     }
 }

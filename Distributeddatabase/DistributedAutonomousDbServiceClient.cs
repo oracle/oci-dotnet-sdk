@@ -244,6 +244,63 @@ namespace Oci.DistributeddatabaseService
         }
 
         /// <summary>
+        /// Configure wallets on Global Service Manager(GSM) instances for a Globally distributed autonomous database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/distributeddatabase/ConfigureDistributedAutonomousDatabaseGsmWallet.cs.html">here</a> to see an example of how to use ConfigureDistributedAutonomousDatabaseGsmWallet API.</example>
+        public async Task<ConfigureDistributedAutonomousDatabaseGsmWalletResponse> ConfigureDistributedAutonomousDatabaseGsmWallet(ConfigureDistributedAutonomousDatabaseGsmWalletRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called configureDistributedAutonomousDatabaseGsmWallet");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/distributedAutonomousDatabases/{distributedAutonomousDatabaseId}/actions/configureGsmWallet".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DistributedAutonomousDbService",
+                    OperationName = "ConfigureDistributedAutonomousDatabaseGsmWallet",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20250101/DistributedAutonomousDatabase/ConfigureDistributedAutonomousDatabaseGsmWallet",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ConfigureDistributedAutonomousDatabaseGsmWalletResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ConfigureDistributedAutonomousDatabaseGsmWallet failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Configure new Global Service Manager(GSM aka shard manager) instances for the Globally distributed autonomous database.
         /// 
         /// </summary>
@@ -301,7 +358,7 @@ namespace Oci.DistributeddatabaseService
         }
 
         /// <summary>
-        /// Once all components of Globally distributed autonomous database are provisioned, and signed GSM certificates are successfully uploaded, this
+        /// Once all components of Globally distributed autonomous database are provisioned, this
         /// api shall be invoked to configure sharding on the Globally distributed autonomous database. Note that this &#39;ConfigureSharding&#39; API also needs to be
         /// invoked after successfully adding a new shard to the Globally distributed autonomous database using PATCH api. If this API is not
         /// invoked after successfully adding a new shard, then that new shard will not be a participant in sharding topology of
@@ -709,6 +766,64 @@ namespace Oci.DistributeddatabaseService
         }
 
         /// <summary>
+        /// Operation to retrieve RAFT metrics for the Globally distributed autonomous database. If the Globally distributed
+        /// autonomous database is not RAFT based then empty response is returned from the API.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/distributeddatabase/GetDistributedAutonomousDatabaseRaftMetric.cs.html">here</a> to see an example of how to use GetDistributedAutonomousDatabaseRaftMetric API.</example>
+        public async Task<GetDistributedAutonomousDatabaseRaftMetricResponse> GetDistributedAutonomousDatabaseRaftMetric(GetDistributedAutonomousDatabaseRaftMetricRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getDistributedAutonomousDatabaseRaftMetric");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/distributedAutonomousDatabases/{distributedAutonomousDatabaseId}/raftMetrics".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DistributedAutonomousDbService",
+                    OperationName = "GetDistributedAutonomousDatabaseRaftMetric",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20250101/DistributedDatabase/GetDistributedAutonomousDatabaseRaftMetric",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetDistributedAutonomousDatabaseRaftMetricResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetDistributedAutonomousDatabaseRaftMetric failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// List of Globally distributed autonomous databases.
         /// 
         /// </summary>
@@ -761,6 +876,63 @@ namespace Oci.DistributeddatabaseService
             catch (Exception e)
             {
                 logger.Error($"ListDistributedAutonomousDatabases failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Move the replication units for RAFT based globally distributed autonomous database from source shard to destination shard.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/distributeddatabase/MoveDistributedAutonomousDatabaseReplicationUnit.cs.html">here</a> to see an example of how to use MoveDistributedAutonomousDatabaseReplicationUnit API.</example>
+        public async Task<MoveDistributedAutonomousDatabaseReplicationUnitResponse> MoveDistributedAutonomousDatabaseReplicationUnit(MoveDistributedAutonomousDatabaseReplicationUnitRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called moveDistributedAutonomousDatabaseReplicationUnit");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/distributedAutonomousDatabases/{distributedAutonomousDatabaseId}/actions/moveReplicationUnit".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DistributedAutonomousDbService",
+                    OperationName = "MoveDistributedAutonomousDatabaseReplicationUnit",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20250101/DistributedAutonomousDatabase/MoveDistributedAutonomousDatabaseReplicationUnit",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<MoveDistributedAutonomousDatabaseReplicationUnitResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"MoveDistributedAutonomousDatabaseReplicationUnit failed with error: {e.Message}");
                 throw;
             }
         }
@@ -820,6 +992,63 @@ namespace Oci.DistributeddatabaseService
             catch (Exception e)
             {
                 logger.Error($"PatchDistributedAutonomousDatabase failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Recreate the failed resource for the Globally Distributed Autonomous Database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/distributeddatabase/RecreateFailedDistributedAutonomousDatabaseResource.cs.html">here</a> to see an example of how to use RecreateFailedDistributedAutonomousDatabaseResource API.</example>
+        public async Task<RecreateFailedDistributedAutonomousDatabaseResourceResponse> RecreateFailedDistributedAutonomousDatabaseResource(RecreateFailedDistributedAutonomousDatabaseResourceRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called recreateFailedDistributedAutonomousDatabaseResource");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/distributedAutonomousDatabases/{distributedAutonomousDatabaseId}/actions/recreateFailedResource".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DistributedAutonomousDbService",
+                    OperationName = "RecreateFailedDistributedAutonomousDatabaseResource",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20250101/DistributedAutonomousDatabase/RecreateFailedDistributedAutonomousDatabaseResource",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<RecreateFailedDistributedAutonomousDatabaseResourceResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"RecreateFailedDistributedAutonomousDatabaseResource failed with error: {e.Message}");
                 throw;
             }
         }
@@ -1104,6 +1333,63 @@ namespace Oci.DistributeddatabaseService
             catch (Exception e)
             {
                 logger.Error($"UploadDistributedAutonomousDatabaseSignedCertificateAndGenerateWallet failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Validate the CA Bundles consistency of the globally distributed autonomous database.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/distributeddatabase/ValidateDistributedAutonomousDatabaseCaBundle.cs.html">here</a> to see an example of how to use ValidateDistributedAutonomousDatabaseCaBundle API.</example>
+        public async Task<ValidateDistributedAutonomousDatabaseCaBundleResponse> ValidateDistributedAutonomousDatabaseCaBundle(ValidateDistributedAutonomousDatabaseCaBundleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called validateDistributedAutonomousDatabaseCaBundle");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/distributedAutonomousDatabases/{distributedAutonomousDatabaseId}/actions/validateCaBundle".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DistributedAutonomousDbService",
+                    OperationName = "ValidateDistributedAutonomousDatabaseCaBundle",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/globally-distributed-database/20250101/DistributedAutonomousDatabase/ValidateDistributedAutonomousDatabaseCaBundle",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ValidateDistributedAutonomousDatabaseCaBundleResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ValidateDistributedAutonomousDatabaseCaBundle failed with error: {e.Message}");
                 throw;
             }
         }

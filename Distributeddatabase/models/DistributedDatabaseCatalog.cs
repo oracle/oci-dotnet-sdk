@@ -23,13 +23,20 @@ namespace Oci.DistributeddatabaseService.Models
     {
                 ///
         /// <value>
-        /// The source of Globally distributed database type: Use EXADB_XS for the Globally distributed database with Exascale based distributed database.
+        /// Type of Globally distributed database Shard or Catalog.
+        /// Use NEW_VAULT_AND_CLUSTER for a Globally distributed database on Exascale with new vaults and clusters created from scratch.
+        /// Use EXISTING_CLUSTER for a Globally distributed database on Exascale based on pre-existing clusters.
+        /// EXADB_XS is currently the same as EXISTING_CLUSTER and will be deprecated after the deprecation cycle.
         /// 
         /// </value>
         ///
         public enum SourceEnum {
             [EnumMember(Value = "EXADB_XS")]
-            ExadbXs
+            ExadbXs,
+            [EnumMember(Value = "NEW_VAULT_AND_CLUSTER")]
+            NewVaultAndCluster,
+            [EnumMember(Value = "EXISTING_CLUSTER")]
+            ExistingCluster
         };
 
         
@@ -88,6 +95,9 @@ namespace Oci.DistributeddatabaseService.Models
             {
                 case "EXADB_XS":
                     obj = new DistributedDatabaseCatalogWithExadbXs();
+                    break;
+                case "NEW_VAULT_AND_CLUSTER":
+                    obj = new DistributedDatabaseCatalogWithExadbXsNewVaultAndCluster();
                     break;
             }
             if (obj != null)

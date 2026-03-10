@@ -43,7 +43,7 @@ namespace Oci.DistributeddatabaseService.Requests
         public string ResourceName { get; set; }
         
         /// <value>
-        /// The shardGroup name example ShardGroupA, ShardGroupB.
+        /// The shardGroup name example Shardgroupa, Shardgroupb.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shardGroup")]

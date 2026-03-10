@@ -52,6 +52,20 @@ namespace Oci.OcvpService.Models
         public string BillingDonorHostId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Byol Allocation for VCF (VMware Cloud Foundation) deployment.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "vcfByolAllocationId")]
+        public string VcfByolAllocationId { get; set; }
+        
+        /// <value>
+        /// Indicates whether this host embedded VMware vSAN with BYOL Allocation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isVsanByolEnabled")]
+        public System.Nullable<bool> IsVsanByolEnabled { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no
         /// predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

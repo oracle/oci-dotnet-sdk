@@ -28,6 +28,13 @@ namespace Oci.EmailService.Models
         public string Description { get; set; }
         
         /// <value>
+        /// Last IP will be unassigned from the IP Pool after the period of time (in hours) specified by this parameter. Default is 24 hours.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "lastIpDrainPeriodInHours")]
+        public System.Nullable<int> LastIpDrainPeriodInHours { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm).
         /// <br/>

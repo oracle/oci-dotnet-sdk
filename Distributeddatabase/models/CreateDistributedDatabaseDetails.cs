@@ -173,6 +173,16 @@ namespace Oci.DistributeddatabaseService.Models
         [Required(ErrorMessage = "OnsPortRemote is required.")]
         [JsonProperty(PropertyName = "onsPortRemote")]
         public System.Nullable<int> OnsPortRemote { get; set; }
+        
+        /// <value>
+        /// The TCP Single Client Access Name (SCAN) port for clusters created for Globally distributed database.
+        /// The scanListenerPort number should only be provided if shard and catalog have source type NEW_VAULT_AND_CLUSTER.
+        /// If shard and catalog have source type NEW_VAULT_AND_CLUSTER and scanListenerPort is not provided then the
+        /// scanListenerPort will default to value 1521.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "scanListenerPort")]
+        public System.Nullable<int> ScanListenerPort { get; set; }
                 ///
         /// <value>
         /// The Replication method for Globally distributed database. Use RAFT for Raft based replication.
