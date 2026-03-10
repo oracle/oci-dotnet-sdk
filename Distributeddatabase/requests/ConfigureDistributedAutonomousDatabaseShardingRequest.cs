@@ -38,6 +38,18 @@ namespace Oci.DistributeddatabaseService.Requests
         public System.Nullable<bool> IsRebalanceRequired { get; set; }
         
         /// <value>
+        /// The ID of the cluster certificate.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "certificateId")]
+        public string CertificateId { get; set; }
+        
+        /// <value>
+        /// The ID of the Ca Bundle.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "caBundleId")]
+        public string CaBundleId { get; set; }
+        
+        /// <value>
         /// A token that uniquely identifies a request so it can be retried in case of a timeout or
         /// server error without risk of executing that same action again. Retry tokens expire after 24
         /// hours, but can be invalidated before then due to conflicting operations. For example, if a resource

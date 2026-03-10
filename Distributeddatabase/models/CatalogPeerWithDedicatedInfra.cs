@@ -126,7 +126,7 @@ namespace Oci.DistributeddatabaseService.Models
         public System.Nullable<int> FastStartFailOverLagLimitInSeconds { get; set; }
         
         /// <value>
-        /// Indicates whether Automatic Failover is enabled for Autonomous Container Database Dataguard Association
+        /// This field is deprecated. Support for this field will be removed after one year of deprecation cycle.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutomaticFailoverEnabled")]

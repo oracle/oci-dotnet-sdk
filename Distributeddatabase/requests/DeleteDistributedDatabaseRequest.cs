@@ -30,6 +30,12 @@ namespace Oci.DistributeddatabaseService.Requests
         public string DistributedDatabaseId { get; set; }
         
         /// <value>
+        /// The flag to indicate if infra like VmCluster & DbStorageVault associated with the resource should be deleted.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "mustDeleteInfra")]
+        public System.Nullable<bool> MustDeleteInfra { get; set; }
+        
+        /// <value>
         /// The client request ID for tracing.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]

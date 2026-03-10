@@ -161,6 +161,18 @@ namespace Oci.DistributeddatabaseService.Models
         [JsonProperty(PropertyName = "peerDetails")]
         public System.Collections.Generic.List<ShardPeerWithDedicatedInfra> PeerDetails { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the key store used to create the shard.
+        /// </value>
+        [JsonProperty(PropertyName = "okvKeyStoreId")]
+        public string OkvKeyStoreId { get; set; }
+        
+        /// <value>
+        /// The OKV endpoint name.
+        /// </value>
+        [JsonProperty(PropertyName = "okvEndPointGroup")]
+        public string OkvEndPointGroup { get; set; }
+        
         [JsonProperty(PropertyName = "metadata")]
         public DistributedAutonomousDbMetadata Metadata { get; set; }
         

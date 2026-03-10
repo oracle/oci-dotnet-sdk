@@ -30,6 +30,12 @@ namespace Oci.DistributeddatabaseService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// A filter to return only resources that are associated with the given privateEndpointId.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "privateEndpointId")]
+        public string PrivateEndpointId { get; set; }
+        
+        /// <value>
         /// A filter to return only resources their lifecycleState matches the given lifecycleState.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]

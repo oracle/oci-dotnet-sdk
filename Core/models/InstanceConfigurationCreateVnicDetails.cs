@@ -133,6 +133,14 @@ namespace Oci.CoreService.Models
         public string PrivateIp { get; set; }
         
         /// <value>
+        /// An [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that specifies a previously-reserved IP address to use for this VNIC.
+        /// See the `privateIpId` attribute of {@link CreateVnicDetails} for more information.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateIpId")]
+        public string PrivateIpId { get; set; }
+        
+        /// <value>
         /// Whether the source/destination check is disabled on the VNIC.
         /// See the `skipSourceDestCheck` attribute of {@link CreateVnicDetails} for more information.
         /// 

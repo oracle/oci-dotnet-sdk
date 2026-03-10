@@ -58,5 +58,42 @@ namespace Oci.EmailService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources their lifecycleState matches the given OperationStatus.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]
+        public System.Nullable<OperationStatus> Status { get; set; }
+        
+        ///
+        /// <value>
+        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// 
+        /// </value>
+        ///
+        public enum SortByEnum {
+            [EnumMember(Value = "timeAccepted")]
+            TimeAccepted
+        };
+
+        /// <value>
+        /// The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
+        public System.Nullable<SortByEnum> SortBy { get; set; }
+        
+        /// <value>
+        /// The sort order to use, either ascending or descending order.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
+        public System.Nullable<SortOrder> SortOrder { get; set; }
+        
+        /// <value>
+        /// A filter to return only resources matching the given operation type.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "operationType")]
+        public System.Nullable<OperationType> OperationType { get; set; }
     }
 }

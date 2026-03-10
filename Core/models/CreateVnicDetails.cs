@@ -182,10 +182,19 @@ namespace Oci.CoreService.Models
         /// If you specify a `vlanId`, the `privateIp` cannot be specified.
         /// See {@link Vlan}.
         /// <br/>
+        /// If you specify a 'privateIpId', the 'privateIp' cannot be specified.
+        /// <br/>
         /// Example: 10.0.3.3
         /// </value>
         [JsonProperty(PropertyName = "privateIp")]
         public string PrivateIp { get; set; }
+        
+        /// <value>
+        /// An [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that specifies a previously-reserved IP address to use for this VNIC.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateIpId")]
+        public string PrivateIpId { get; set; }
         
         /// <value>
         /// Whether the source/destination check is disabled on the VNIC.

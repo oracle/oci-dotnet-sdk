@@ -86,6 +86,14 @@ namespace Oci.DistributeddatabaseService.Models
       [EnumMember(Value = "ADD_DISTRIBUTED_DB_DG")]
       AddDistributedDbDg,
       [EnumMember(Value = "REMOVE_DISTRIBUTED_DB_DG")]
-      RemoveDistributedDbDg
+      RemoveDistributedDbDg,
+      [EnumMember(Value = "CONFIGURE_DISTRIBUTED_DB_GSMS_WALLET")]
+      ConfigureDistributedDbGsmsWallet,
+      [EnumMember(Value = "VALIDATE_CA_BUNDLE")]
+      ValidateCaBundle,
+      [EnumMember(Value = "RECREATE_FAILED_RESOURCE")]
+      RecreateFailedResource,
+      [EnumMember(Value = "MOVE_REPLICATION_UNITS")]
+      MoveReplicationUnits
   }
 }
