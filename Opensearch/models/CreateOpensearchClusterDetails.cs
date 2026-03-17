@@ -241,6 +241,43 @@ namespace Oci.OpensearchService.Models
         public System.Nullable<int> SearchNodeStorageGB { get; set; }
         
         /// <value>
+        /// The number of ML nodes configured for the cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "mlNodeCount")]
+        public System.Nullable<int> MlNodeCount { get; set; }
+        
+        /// <value>
+        /// The instance type for the cluster's ML nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "mlNodeHostType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<MlNodeHostType> MlNodeHostType { get; set; }
+        
+        /// <value>
+        /// The node shape for the cluster's ML nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "mlNodeHostShape")]
+        public string MlNodeHostShape { get; set; }
+        
+        /// <value>
+        /// The number of OCPUs configured for the cluster's ML nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "mlNodeHostOcpuCount")]
+        public System.Nullable<int> MlNodeHostOcpuCount { get; set; }
+        
+        /// <value>
+        /// The amount of memory in GB, for the cluster's ML nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "mlNodeHostMemoryGB")]
+        public System.Nullable<int> MlNodeHostMemoryGB { get; set; }
+        
+        /// <value>
+        /// The amount of storage in GB, to configure per node for the cluster's ML nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "mlNodeStorageGB")]
+        public System.Nullable<int> MlNodeStorageGB { get; set; }
+        
+        /// <value>
         /// The OCID of the cluster's VCN.
         /// </value>
         /// <remarks>

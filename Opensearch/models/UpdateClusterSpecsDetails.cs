@@ -86,6 +86,24 @@ namespace Oci.OpensearchService.Models
         public System.Nullable<int> SearchNodeHostMemoryGB { get; set; }
         
         /// <value>
+        /// The node shape for the cluster's ML nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "mlNodeHostShape")]
+        public string MlNodeHostShape { get; set; }
+        
+        /// <value>
+        /// The number of OCPUs configured for the cluster's ML nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "mlNodeHostOcpuCount")]
+        public System.Nullable<int> MlNodeHostOcpuCount { get; set; }
+        
+        /// <value>
+        /// The amount of memory in GB, for the cluster's ML nodes.
+        /// </value>
+        [JsonProperty(PropertyName = "mlNodeHostMemoryGB")]
+        public System.Nullable<int> MlNodeHostMemoryGB { get; set; }
+        
+        /// <value>
         /// Updated version of the software the cluster is currently running.
         /// </value>
         [JsonProperty(PropertyName = "softwareVersion")]
