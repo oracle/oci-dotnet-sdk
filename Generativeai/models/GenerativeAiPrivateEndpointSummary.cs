@@ -133,6 +133,14 @@ namespace Oci.GenerativeaiService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// The resource type that Generative AI private endpoint can be used for.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<GenerativeAiPrivateEndpoint.ResourceTypeEnum> ResourceType { get; set; }
+        
+        /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>

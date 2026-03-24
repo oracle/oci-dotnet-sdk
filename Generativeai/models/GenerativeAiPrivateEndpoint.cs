@@ -165,6 +165,29 @@ namespace Oci.GenerativeaiService.Models
         
         [JsonProperty(PropertyName = "previousState")]
         public GenerativeAiPrivateEndpoint PreviousState { get; set; }
+                ///
+        /// <value>
+        /// The resource type that Generative AI private endpoint can be used for.
+        /// 
+        /// </value>
+        ///
+        public enum ResourceTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "APPLICATION")]
+            Application,
+            [EnumMember(Value = "ENDPOINT")]
+            Endpoint
+        };
+
+        /// <value>
+        /// The resource type that Generative AI private endpoint can be used for.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "resourceType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ResourceTypeEnum> ResourceType { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.

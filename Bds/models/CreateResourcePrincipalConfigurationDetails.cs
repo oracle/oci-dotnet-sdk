@@ -34,12 +34,14 @@ namespace Oci.BdsService.Models
         /// <value>
         /// Base-64 encoded Cluster Admin Password for cluster admin user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
+        
+        /// <value>
+        /// The secretId for the clusterAdminPassword.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
         
         /// <value>
         /// Life span in hours for the resource principal session token.

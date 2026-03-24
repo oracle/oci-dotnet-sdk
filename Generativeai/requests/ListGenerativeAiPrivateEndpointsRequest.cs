@@ -62,6 +62,13 @@ namespace Oci.GenerativeaiService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
+        /// Query by the resource type of Generative AI private endpoints.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]
+        public System.Nullable<GenerativeAiPrivateEndpoint.ResourceTypeEnum> ResourceType { get; set; }
+        
+        /// <value>
         /// A filter to return only resources that match the given display name exactly.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "displayName")]

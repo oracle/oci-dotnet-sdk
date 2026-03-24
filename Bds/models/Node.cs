@@ -273,5 +273,11 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "nodeBackupId")]
         public string NodeBackupId { get; set; }
         
+        /// <value>
+        /// ID of the certificate configuration which is used to generate the certificate for the node.
+        /// </value>
+        [JsonProperty(PropertyName = "certificateConfigurationId")]
+        public string CertificateConfigurationId { get; set; }
+        
     }
 }

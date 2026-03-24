@@ -22,7 +22,7 @@ namespace Oci.BdsService.Models
     {
         
         /// <value>
-        /// The id of the NodeReplaceConfiguration.
+        /// The id of the NodeReplaceConfiguration defined under BDS resources, not OCID.
         /// </value>
         /// <remarks>
         /// Required

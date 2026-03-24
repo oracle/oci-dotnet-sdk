@@ -24,12 +24,14 @@ namespace Oci.BdsService.Models
         /// <value>
         /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
+        
+        /// <value>
+        /// The secretId for the clusterAdminPassword.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
         
         /// <value>
         /// Number of additional worker nodes for the cluster.
@@ -74,7 +76,8 @@ namespace Oci.BdsService.Models
         public string Shape { get; set; }
         
         /// <value>
-        /// The size of block volume in GB to be attached to the given node. This has to be specified when adding compute only worker node at the first time. Otherwise, it's a read-only property.
+        /// The size of block volume in GB to be attached to the given node. This has to be specified when adding compute only worker or edge node at the first time.
+        /// For EDGE nodes. Each node can have a different block storage size within the valid range (50GB-10TB) and the value must be specified.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "blockVolumeSizeInGBs")]

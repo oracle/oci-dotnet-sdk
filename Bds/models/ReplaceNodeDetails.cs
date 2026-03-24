@@ -44,12 +44,14 @@ namespace Oci.BdsService.Models
         /// <value>
         /// Base-64 encoded password for the cluster admin user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
+        
+        /// <value>
+        /// The secretId for the clusterAdminPassword.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
         
         /// <value>
         /// Shape of the new vm when replacing the node. If not provided, BDS will attempt to replace the node with the shape of current node.

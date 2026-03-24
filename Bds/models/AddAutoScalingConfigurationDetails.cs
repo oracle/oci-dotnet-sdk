@@ -51,12 +51,14 @@ namespace Oci.BdsService.Models
         /// <value>
         /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
+        
+        /// <value>
+        /// The secretId for the clusterAdminPassword.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
         
         [JsonProperty(PropertyName = "policy")]
         public AutoScalePolicy Policy { get; set; }
