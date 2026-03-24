@@ -42,6 +42,12 @@ namespace Oci.BdsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// The secretId for the clusterAdminPassword.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
+        
+        /// <value>
         /// Identity domain to use for identity config
         /// </value>
         /// <remarks>

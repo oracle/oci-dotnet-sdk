@@ -63,14 +63,22 @@ namespace Oci.BdsService.Models
         public string ClusterPublicKey { get; set; }
         
         /// <value>
-        /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
+        /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user. Not required if the secretId is specified.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
+        
+        /// <value>
+        /// The secretId for the clusterAdminPassword.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
+        
+        /// <value>
+        /// Boolean flag specifying whether or not to persist the provided secret OCID and reuse it for future operations.
+        /// </value>
+        [JsonProperty(PropertyName = "isSecretReused")]
+        public System.Nullable<bool> IsSecretReused { get; set; }
         
         /// <value>
         /// Boolean flag specifying whether or not the cluster is highly available (HA).

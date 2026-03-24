@@ -22,7 +22,7 @@ namespace Oci.BdsService.Models
     {
         
         /// <value>
-        /// The id of the NodeBackupConfiguration.
+        /// The id of the NodeBackupConfiguration defined under BDS resources, not OCID.
         /// </value>
         /// <remarks>
         /// Required

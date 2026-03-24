@@ -22,6 +22,18 @@ namespace Oci.BdsService.Models
     {
         
         /// <value>
+        /// The secretId for the clusterAdminPassword.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
+        
+        /// <value>
+        /// Boolean flag specifying whether or not to persist the provided secret OCID and reuse it for future operations.
+        /// </value>
+        [JsonProperty(PropertyName = "isSecretReused")]
+        public System.Nullable<bool> IsSecretReused { get; set; }
+        
+        /// <value>
         /// Name of the cluster.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]

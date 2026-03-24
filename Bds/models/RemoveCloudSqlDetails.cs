@@ -24,10 +24,6 @@ namespace Oci.BdsService.Models
         /// <value>
         /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
         

@@ -22,7 +22,7 @@ namespace Oci.BdsService.Models
     {
         
         /// <value>
-        /// The id of the ResourcePrincipalConfiguration.
+        /// The id of the ResourcePrincipalConfiguration defined under BDS resources, not OCID.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,6 +50,12 @@ namespace Oci.BdsService.Models
         [Required(ErrorMessage = "DisplayName is required.")]
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
+        
+        /// <value>
+        /// The secretId for the clusterAdminPassword.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
         
         /// <value>
         /// Life span in hours of each resource principal session token.

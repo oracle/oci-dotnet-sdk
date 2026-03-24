@@ -24,16 +24,20 @@ namespace Oci.BdsService.Models
         /// <value>
         /// Base-64 encoded password for the cluster (and Cloudera Manager) admin user.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ClusterAdminPassword is required.")]
         [JsonProperty(PropertyName = "clusterAdminPassword")]
         public string ClusterAdminPassword { get; set; }
         
         /// <value>
-        /// The size of block volume in GB to be added to each worker node. All the
-        /// details needed for attaching the block volume are managed by service itself.
+        /// The secretId for the clusterAdminPassword.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
+        
+        /// <value>
+        /// The size of block volume in GB to be added. For WORKER, COMPUTE_ONLY_WORKER, and KAFKA_BROKER nodes,
+        /// the same size will be added to all nodes of that type. For EDGE nodes, this size can be different
+        /// per node when nodeId is specified. All the details needed for attaching the block volume are managed
+        /// by service itself.
         /// 
         /// </value>
         /// <remarks>
@@ -53,7 +57,9 @@ namespace Oci.BdsService.Models
             [EnumMember(Value = "COMPUTE_ONLY_WORKER")]
             ComputeOnlyWorker,
             [EnumMember(Value = "KAFKA_BROKER")]
-            KafkaBroker
+            KafkaBroker,
+            [EnumMember(Value = "EDGE")]
+            Edge
         };
 
         /// <value>
@@ -66,6 +72,15 @@ namespace Oci.BdsService.Models
         [JsonProperty(PropertyName = "nodeType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<NodeTypeEnum> NodeType { get; set; }
+        
+        /// <value>
+        /// Optional. List of OCIDs of specific nodes to add storage to.
+        /// Only supported for EDGE nodes.
+        /// When omitted, storage is added to all nodes of the specified type.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "nodeIds")]
+        public System.Collections.Generic.List<string> NodeIds { get; set; }
         
     }
 }

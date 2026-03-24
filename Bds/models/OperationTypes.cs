@@ -53,6 +53,8 @@ namespace Oci.BdsService.Models
       UpdateAutoscaleConfig,
       [EnumMember(Value = "DELETE_AUTOSCALE_CONFIG")]
       DeleteAutoscaleConfig,
+      [EnumMember(Value = "REMOVE_NODES")]
+      RemoveNodes,
       [EnumMember(Value = "AUTOSCALE_CONFIG")]
       AutoscaleConfig,
       [EnumMember(Value = "AUTOSCALE_RUN")]
@@ -136,6 +138,18 @@ namespace Oci.BdsService.Models
       [EnumMember(Value = "DEACTIVATE_IAM_USER_SYNC_CONFIG")]
       DeactivateIamUserSyncConfig,
       [EnumMember(Value = "INSTALL_SOFTWARE_UPDATES")]
-      InstallSoftwareUpdates
+      InstallSoftwareUpdates,
+      [EnumMember(Value = "RESET_PASSWORD")]
+      ResetPassword,
+      [EnumMember(Value = "GENERATE_CERTIFICATE")]
+      GenerateCertificate,
+      [EnumMember(Value = "RENEW_CERTIFICATE")]
+      RenewCertificate,
+      [EnumMember(Value = "CREATE_CERT_CONFIG")]
+      CreateCertConfig,
+      [EnumMember(Value = "SET_DEFAULT_CERT_CONFIG")]
+      SetDefaultCertConfig,
+      [EnumMember(Value = "DELETE_CERT_CONFIG")]
+      DeleteCertConfig
   }
 }
