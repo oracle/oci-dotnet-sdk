@@ -88,6 +88,34 @@ namespace Oci.BdsService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetBdsCertificateConfigurationRequest, GetBdsCertificateConfigurationResponse> ForBdsCertificateConfiguration(GetBdsCertificateConfigurationRequest request, params BdsCertificateConfiguration.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForBdsCertificateConfiguration(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetBdsCertificateConfigurationRequest, GetBdsCertificateConfigurationResponse> ForBdsCertificateConfiguration(GetBdsCertificateConfigurationRequest request, WaiterConfiguration config, params BdsCertificateConfiguration.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetBdsCertificateConfigurationRequest, GetBdsCertificateConfigurationResponse>(
+                request,
+                request => client.GetBdsCertificateConfiguration(request),
+                response => targetStates.Contains(response.BdsCertificateConfiguration.LifecycleState.Value),
+                targetStates.Contains(BdsCertificateConfiguration.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetBdsCertificateConfigurationRequest, GetBdsCertificateConfigurationResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetBdsInstanceRequest, GetBdsInstanceResponse> ForBdsInstance(GetBdsInstanceRequest request, params BdsInstance.LifecycleStateEnum[] targetStates)
         {
             return this.ForBdsInstance(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

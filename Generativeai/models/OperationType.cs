@@ -54,6 +54,50 @@ namespace Oci.GenerativeaiService.Models
       [EnumMember(Value = "UPDATE_PRIVATE_ENDPOINT")]
       UpdatePrivateEndpoint,
       [EnumMember(Value = "MOVE_PRIVATE_ENDPOINT")]
-      MovePrivateEndpoint
+      MovePrivateEndpoint,
+      [EnumMember(Value = "CREATE_VECTOR_STORE_CONNECTOR")]
+      CreateVectorStoreConnector,
+      [EnumMember(Value = "UPDATE_VECTOR_STORE_CONNECTOR")]
+      UpdateVectorStoreConnector,
+      [EnumMember(Value = "DELETE_VECTOR_STORE_CONNECTOR")]
+      DeleteVectorStoreConnector,
+      [EnumMember(Value = "SCHEDULE_FILE_SYNC")]
+      ScheduleFileSync,
+      [EnumMember(Value = "TRIGGER_FILE_SYNC")]
+      TriggerFileSync,
+      [EnumMember(Value = "CREATE_SEMANTIC_STORE")]
+      CreateSemanticStore,
+      [EnumMember(Value = "DELETE_SEMANTIC_STORE")]
+      DeleteSemanticStore,
+      [EnumMember(Value = "MOVE_SEMANTIC_STORE")]
+      MoveSemanticStore,
+      [EnumMember(Value = "CREATE_APPLICATION_DEPLOYMENT")]
+      CreateApplicationDeployment,
+      [EnumMember(Value = "UPDATE_APPLICATION_DEPLOYMENT")]
+      UpdateApplicationDeployment,
+      [EnumMember(Value = "DELETE_APPLICATION_DEPLOYMENT")]
+      DeleteApplicationDeployment,
+      [EnumMember(Value = "MOVE_APPLICATION_DEPLOYMENT")]
+      MoveApplicationDeployment,
+      [EnumMember(Value = "CREATE_HOSTED_DEPLOYMENT")]
+      CreateHostedDeployment,
+      [EnumMember(Value = "UPDATE_HOSTED_DEPLOYMENT")]
+      UpdateHostedDeployment,
+      [EnumMember(Value = "MOVE_HOSTED_DEPLOYMENT")]
+      MoveHostedDeployment,
+      [EnumMember(Value = "DELETE_HOSTED_DEPLOYMENT")]
+      DeleteHostedDeployment,
+      [EnumMember(Value = "START_LOGGING")]
+      StartLogging,
+      [EnumMember(Value = "STOP_LOGGING")]
+      StopLogging,
+      [EnumMember(Value = "CREATE_APPLICATION_STORAGE")]
+      CreateApplicationStorage,
+      [EnumMember(Value = "UPDATE_APPLICATION_STORAGE")]
+      UpdateApplicationStorage,
+      [EnumMember(Value = "MOVE_APPLICATION_STORAGE")]
+      MoveApplicationStorage,
+      [EnumMember(Value = "DELETE_APPLICATION_STORAGE")]
+      DeleteApplicationStorage
   }
 }

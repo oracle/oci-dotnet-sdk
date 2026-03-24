@@ -42,6 +42,12 @@ namespace Oci.BdsService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// The secretId for the clusterAdminPassword.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
+        
+        /// <value>
         /// A node type that is managed by an autoscale configuration. The only supported types are WORKER and COMPUTE_ONLY_WORKER.
         /// </value>
         /// <remarks>

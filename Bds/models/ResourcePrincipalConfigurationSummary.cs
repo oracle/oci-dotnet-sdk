@@ -22,7 +22,7 @@ namespace Oci.BdsService.Models
     {
         
         /// <value>
-        /// the ID of the ResourcePrincipalConfiguration.
+        /// the ID of the ResourcePrincipalConfiguration defined under BDS resources, not OCID.
         /// </value>
         /// <remarks>
         /// Required

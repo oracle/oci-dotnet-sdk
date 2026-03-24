@@ -98,6 +98,8 @@ namespace Oci.GenerativeaiService.Models
             Creating,
             [EnumMember(Value = "ACTIVE")]
             Active,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
             [EnumMember(Value = "UPDATING")]
             Updating,
             [EnumMember(Value = "DELETING")]

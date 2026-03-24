@@ -143,6 +143,12 @@ namespace Oci.BdsService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
+        /// The earliest time of certificate expiration date across the certificates of all current nodes under this cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "timeEarliestCertificateExpiration")]
+        public System.Nullable<System.DateTime> TimeEarliestCertificateExpiration { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type, or scope.
         /// Exists for cross-compatibility only. For example, `{\"bar-key\": \"value\"}`
         /// 

@@ -22,7 +22,7 @@ namespace Oci.BdsService.Models
     {
         
         /// <value>
-        /// The OCID of the autoscale configuration.
+        /// The ID of the autoscale configuration defined under BDS resources, not OCID.
         /// </value>
         /// <remarks>
         /// Required

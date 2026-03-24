@@ -88,6 +88,7 @@ namespace Oci.GenerativeaiService.Models
         /// <br/>
         /// Allowed values are:
         /// - ACTIVE
+        /// - INACTIVE
         /// - CREATING
         /// - UPDATING
         /// - DELETING

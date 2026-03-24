@@ -144,6 +144,118 @@ namespace Oci.GenerativeaiService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetGenerativeAiProjectRequest, GetGenerativeAiProjectResponse> ForGenerativeAiProject(GetGenerativeAiProjectRequest request, params GenerativeAiProject.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForGenerativeAiProject(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetGenerativeAiProjectRequest, GetGenerativeAiProjectResponse> ForGenerativeAiProject(GetGenerativeAiProjectRequest request, WaiterConfiguration config, params GenerativeAiProject.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetGenerativeAiProjectRequest, GetGenerativeAiProjectResponse>(
+                request,
+                request => client.GetGenerativeAiProject(request),
+                response => targetStates.Contains(response.GenerativeAiProject.LifecycleState.Value),
+                targetStates.Contains(GenerativeAiProject.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetGenerativeAiProjectRequest, GetGenerativeAiProjectResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetHostedApplicationRequest, GetHostedApplicationResponse> ForHostedApplication(GetHostedApplicationRequest request, params HostedApplication.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForHostedApplication(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetHostedApplicationRequest, GetHostedApplicationResponse> ForHostedApplication(GetHostedApplicationRequest request, WaiterConfiguration config, params HostedApplication.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetHostedApplicationRequest, GetHostedApplicationResponse>(
+                request,
+                request => client.GetHostedApplication(request),
+                response => targetStates.Contains(response.HostedApplication.LifecycleState.Value),
+                targetStates.Contains(HostedApplication.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetHostedApplicationRequest, GetHostedApplicationResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetHostedApplicationStorageRequest, GetHostedApplicationStorageResponse> ForHostedApplicationStorage(GetHostedApplicationStorageRequest request, params HostedApplicationStorage.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForHostedApplicationStorage(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetHostedApplicationStorageRequest, GetHostedApplicationStorageResponse> ForHostedApplicationStorage(GetHostedApplicationStorageRequest request, WaiterConfiguration config, params HostedApplicationStorage.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetHostedApplicationStorageRequest, GetHostedApplicationStorageResponse>(
+                request,
+                request => client.GetHostedApplicationStorage(request),
+                response => targetStates.Contains(response.HostedApplicationStorage.LifecycleState.Value),
+                targetStates.Contains(HostedApplicationStorage.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetHostedApplicationStorageRequest, GetHostedApplicationStorageResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetHostedDeploymentRequest, GetHostedDeploymentResponse> ForHostedDeployment(GetHostedDeploymentRequest request, params HostedDeployment.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForHostedDeployment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetHostedDeploymentRequest, GetHostedDeploymentResponse> ForHostedDeployment(GetHostedDeploymentRequest request, WaiterConfiguration config, params HostedDeployment.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetHostedDeploymentRequest, GetHostedDeploymentResponse>(
+                request,
+                request => client.GetHostedDeployment(request),
+                response => targetStates.Contains(response.HostedDeployment.LifecycleState.Value),
+                targetStates.Contains(HostedDeployment.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetHostedDeploymentRequest, GetHostedDeploymentResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetImportedModelRequest, GetImportedModelResponse> ForImportedModel(GetImportedModelRequest request, params ImportedModel.LifecycleStateEnum[] targetStates)
         {
             return this.ForImportedModel(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -193,6 +305,89 @@ namespace Oci.GenerativeaiService
                 targetStates.Contains(Model.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetModelRequest, GetModelResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSemanticStoreRequest, GetSemanticStoreResponse> ForSemanticStore(GetSemanticStoreRequest request, params SemanticStore.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSemanticStore(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSemanticStoreRequest, GetSemanticStoreResponse> ForSemanticStore(GetSemanticStoreRequest request, WaiterConfiguration config, params SemanticStore.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSemanticStoreRequest, GetSemanticStoreResponse>(
+                request,
+                request => client.GetSemanticStore(request),
+                response => targetStates.Contains(response.SemanticStore.LifecycleState.Value),
+                targetStates.Contains(SemanticStore.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetSemanticStoreRequest, GetSemanticStoreResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetVectorStoreConnectorRequest, GetVectorStoreConnectorResponse> ForVectorStoreConnector(GetVectorStoreConnectorRequest request, params VectorStoreConnector.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForVectorStoreConnector(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetVectorStoreConnectorRequest, GetVectorStoreConnectorResponse> ForVectorStoreConnector(GetVectorStoreConnectorRequest request, WaiterConfiguration config, params VectorStoreConnector.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetVectorStoreConnectorRequest, GetVectorStoreConnectorResponse>(
+                request,
+                request => client.GetVectorStoreConnector(request),
+                response => targetStates.Contains(response.VectorStoreConnector.LifecycleState.Value),
+                targetStates.Contains(VectorStoreConnector.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetVectorStoreConnectorRequest, GetVectorStoreConnectorResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetVectorStoreConnectorFileSyncRequest, GetVectorStoreConnectorFileSyncResponse> ForVectorStoreConnectorFileSync(GetVectorStoreConnectorFileSyncRequest request, params VectorStoreConnectorFileSync.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForVectorStoreConnectorFileSync(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetVectorStoreConnectorFileSyncRequest, GetVectorStoreConnectorFileSyncResponse> ForVectorStoreConnectorFileSync(GetVectorStoreConnectorFileSyncRequest request, WaiterConfiguration config, params VectorStoreConnectorFileSync.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetVectorStoreConnectorFileSyncRequest, GetVectorStoreConnectorFileSyncResponse>(
+                request,
+                request => client.GetVectorStoreConnectorFileSync(request),
+                response => targetStates.Contains(response.VectorStoreConnectorFileSync.LifecycleState.Value)
+            );
+            return new Waiter<GetVectorStoreConnectorFileSyncRequest, GetVectorStoreConnectorFileSyncResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

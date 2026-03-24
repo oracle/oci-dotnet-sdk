@@ -120,6 +120,18 @@ namespace Oci.BdsService.Models
         public System.Nullable<ClusterVersionEnum> ClusterVersion { get; set; }
         
         /// <value>
+        /// The secretId for the clusterAdminPassword.
+        /// </value>
+        [JsonProperty(PropertyName = "secretId")]
+        public string SecretId { get; set; }
+        
+        /// <value>
+        /// Boolean flag specifying whether or not to persist the provided secret OCID and reuse it for future operations.
+        /// </value>
+        [JsonProperty(PropertyName = "isSecretReused")]
+        public System.Nullable<bool> IsSecretReused { get; set; }
+        
+        /// <value>
         /// Boolean flag specifying whether or not the cluster is highly available (HA)
         /// </value>
         /// <remarks>
@@ -273,6 +285,12 @@ namespace Oci.BdsService.Models
         
         [JsonProperty(PropertyName = "bdsClusterVersionSummary")]
         public BdsClusterVersionSummary BdsClusterVersionSummary { get; set; }
+        
+        /// <value>
+        /// The earliest time of certificate expiration date across the certificates of all current nodes under this cluster.
+        /// </value>
+        [JsonProperty(PropertyName = "timeEarliestCertificateExpiration")]
+        public System.Nullable<System.DateTime> TimeEarliestCertificateExpiration { get; set; }
         
     }
 }
