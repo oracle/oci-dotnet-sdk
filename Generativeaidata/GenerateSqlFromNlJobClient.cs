@@ -79,7 +79,7 @@ namespace Oci.GenerativeaidataService
         public async Task<GenerateSqlFromNlResponse> GenerateSqlFromNl(GenerateSqlFromNlRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called generateSqlFromNl");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/20260325/semanticStores/{semanticStoreId}/actions/generateSqlFromNl".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/semanticStores/{semanticStoreId}/actions/generateSqlFromNl".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");

@@ -153,6 +153,13 @@ namespace Oci.CloudmigrationsService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        /// <value>
+        /// Specifies if this is the Source or Destination point for migration - different assets may be discovered depending on setting.
+        /// </value>
+        [JsonProperty(PropertyName = "environmentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<EnvironmentType> EnvironmentType { get; set; }
+        
     }
 
     public class AssetSourceModelConverter : JsonConverter
@@ -177,6 +184,12 @@ namespace Oci.CloudmigrationsService.Models
             {
                 case "VMWARE":
                     obj = new VmWareAssetSource();
+                    break;
+                case "OLVM":
+                    obj = new OlvmAssetSource();
+                    break;
+                case "AWS":
+                    obj = new AwsAssetSource();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

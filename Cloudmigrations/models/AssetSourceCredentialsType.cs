@@ -17,6 +17,8 @@ namespace Oci.CloudmigrationsService.Models
   /// </summary>
   public enum AssetSourceCredentialsType {
       [EnumMember(Value = "BASIC")]
-      Basic
+      Basic,
+      [EnumMember(Value = "API_KEY")]
+      ApiKey
   }
 }

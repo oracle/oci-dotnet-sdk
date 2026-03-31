@@ -79,7 +79,7 @@ namespace Oci.GenerativeaidataService
         public async Task<CancelEnrichmentJobResponse> CancelEnrichmentJob(CancelEnrichmentJobRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called cancelEnrichmentJob");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/20260325/semanticStores/{semanticStoreId}/enrichmentJobs/{enrichmentJobId}/actions/cancel".Trim('/')));
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/semanticStores/{semanticStoreId}/enrichmentJobs/{enrichmentJobId}/actions/cancel".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");

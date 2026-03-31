@@ -51,6 +51,12 @@ namespace Oci.IntegrationService.Models
             DeleteLogAnalyticsLogGroup,
             [EnumMember(Value = "CONVERT_INSTANCE")]
             ConvertInstance,
+            [EnumMember(Value = "BEGIN_MIGRATION")]
+            BeginMigration,
+            [EnumMember(Value = "COMPLETE_MIGRATION")]
+            CompleteMigration,
+            [EnumMember(Value = "ROLLBACK_MIGRATION")]
+            RollbackMigration,
             [EnumMember(Value = "EXTEND_DATA_RETENTION")]
             ExtendDataRetention,
             [EnumMember(Value = "DISASTER_RECOVERY_FAILOVER")]

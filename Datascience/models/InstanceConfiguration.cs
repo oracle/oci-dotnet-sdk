@@ -49,6 +49,29 @@ namespace Oci.DatascienceService.Models
         /// </value>
         [JsonProperty(PropertyName = "privateEndpointId")]
         public string PrivateEndpointId { get; set; }
+                ///
+        /// <value>
+        /// Network Access type of model deployment.
+        /// </value>
+        ///
+        public enum NetworkAccessTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "MANAGED_NETWORKING_NO_INTERNET_ACCESS")]
+            ManagedNetworkingNoInternetAccess,
+            [EnumMember(Value = "MANAGED_NETWORKING_INTERNET_ACCESS")]
+            ManagedNetworkingInternetAccess,
+            [EnumMember(Value = "CUSTOM_NETWORKING")]
+            CustomNetworking
+        };
+
+        /// <value>
+        /// Network Access type of model deployment.
+        /// </value>
+        [JsonProperty(PropertyName = "networkAccessType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<NetworkAccessTypeEnum> NetworkAccessType { get; set; }
         
     }
 }

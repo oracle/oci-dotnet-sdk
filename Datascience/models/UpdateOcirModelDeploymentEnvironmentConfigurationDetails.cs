@@ -40,6 +40,12 @@ namespace Oci.DatascienceService.Models
         public string ImageDigest { get; set; }
         
         /// <value>
+        /// OCID of the container image signature
+        /// </value>
+        [JsonProperty(PropertyName = "imageSignatureId")]
+        public string ImageSignatureId { get; set; }
+        
+        /// <value>
         /// The container image run [CMD](https://docs.docker.com/engine/reference/builder/#cmd) as a list of strings.
         /// Use `CMD` as arguments to the `ENTRYPOINT` or the only command to run in the absence of an `ENTRYPOINT`.
         /// The combined size of `CMD` and `ENTRYPOINT` must be less than 2048 bytes.

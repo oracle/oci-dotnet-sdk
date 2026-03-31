@@ -22,6 +22,13 @@ namespace Oci.CloudmigrationsService.Models
     {
         
         /// <value>
+        /// Type of migration project (OCI/OLVM). This determines the target environment for the migration.
+        /// </value>
+        [JsonProperty(PropertyName = "migrationType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Migration.MigrationTypeEnum> MigrationType { get; set; }
+        
+        /// <value>
         /// Migration identifier
         /// </value>
         /// <remarks>
@@ -52,6 +59,9 @@ namespace Oci.CloudmigrationsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isCompleted")]
         public System.Nullable<bool> IsCompleted { get; set; }
+        
+        [JsonProperty(PropertyName = "migrationConfig")]
+        public MigrationConfig MigrationConfig { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. It exists only for cross-compatibility.

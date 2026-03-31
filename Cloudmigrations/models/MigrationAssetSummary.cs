@@ -169,5 +169,14 @@ namespace Oci.CloudmigrationsService.Models
         [JsonProperty(PropertyName = "tenancyId")]
         public string TenancyId { get; set; }
         
+        [JsonProperty(PropertyName = "replicationLocationDetail")]
+        public ReplicationLocationDetail ReplicationLocationDetail { get; set; }
+        
+        /// <value>
+        /// Mapping of source disk id to destination disk details
+        /// </value>
+        [JsonProperty(PropertyName = "destinationDisks")]
+        public System.Collections.Generic.Dictionary<string, DestinationDisk> DestinationDisks { get; set; }
+        
     }
 }

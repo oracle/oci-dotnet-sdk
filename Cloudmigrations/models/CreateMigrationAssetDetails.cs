@@ -83,6 +83,9 @@ namespace Oci.CloudmigrationsService.Models
         [JsonProperty(PropertyName = "snapShotBucketName")]
         public string SnapShotBucketName { get; set; }
         
+        [JsonProperty(PropertyName = "replicationLocationDetail")]
+        public ReplicationLocationDetail ReplicationLocationDetail { get; set; }
+        
         /// <value>
         /// List of migration assets that depends on this asset.
         /// </value>

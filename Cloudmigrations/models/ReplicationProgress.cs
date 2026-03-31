@@ -100,6 +100,12 @@ namespace Oci.CloudmigrationsService.Models
         public System.Nullable<LastReplicationStatusEnum> LastReplicationStatus { get; set; }
         
         /// <value>
+        /// The child status of the last replication task.
+        /// </value>
+        [JsonProperty(PropertyName = "lastReplicationSubStatus")]
+        public string LastReplicationSubStatus { get; set; }
+        
+        /// <value>
         /// Error message if the last finished replication failed.
         /// </value>
         [JsonProperty(PropertyName = "lastReplicationError")]

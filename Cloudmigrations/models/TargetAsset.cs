@@ -104,7 +104,9 @@ namespace Oci.CloudmigrationsService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "INSTANCE")]
-            Instance
+            Instance,
+            [EnumMember(Value = "OLVM_INSTANCE")]
+            OlvmInstance
         };
 
         
@@ -189,6 +191,9 @@ namespace Oci.CloudmigrationsService.Models
             {
                 case "INSTANCE":
                     obj = new VmTargetAsset();
+                    break;
+                case "OLVM_INSTANCE":
+                    obj = new OlvmTargetAsset();
                     break;
             }
             if (obj != null)

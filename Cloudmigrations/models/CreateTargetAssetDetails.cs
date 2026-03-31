@@ -38,7 +38,9 @@ namespace Oci.CloudmigrationsService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "INSTANCE")]
-            Instance
+            Instance,
+            [EnumMember(Value = "OLVM_INSTANCE")]
+            OlvmInstance
         };
 
         
@@ -74,6 +76,9 @@ namespace Oci.CloudmigrationsService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "OLVM_INSTANCE":
+                    obj = new CreateOlvmTargetAssetDetails();
+                    break;
                 case "INSTANCE":
                     obj = new CreateVmTargetAssetDetails();
                     break;
