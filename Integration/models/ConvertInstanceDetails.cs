@@ -27,7 +27,11 @@ namespace Oci.IntegrationService.Models
         ///
         public enum ConversionTypeEnum {
             [EnumMember(Value = "DISASTER_RECOVERY")]
-            DisasterRecovery
+            DisasterRecovery,
+            [EnumMember(Value = "DEVELOPMENT_SHAPE")]
+            DevelopmentShape,
+            [EnumMember(Value = "PRODUCTION_SHAPE")]
+            ProductionShape
         };
 
         /// <value>
@@ -40,6 +44,26 @@ namespace Oci.IntegrationService.Models
         [JsonProperty(PropertyName = "conversionType")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<ConversionTypeEnum> ConversionType { get; set; }
+                ///
+        /// <value>
+        /// Conversion phase for convert instance operation.
+        /// </value>
+        ///
+        public enum ConversionPhaseEnum {
+            [EnumMember(Value = "BEGIN_MIGRATION")]
+            BeginMigration,
+            [EnumMember(Value = "COMPLETE_MIGRATION")]
+            CompleteMigration,
+            [EnumMember(Value = "ROLLBACK_MIGRATION")]
+            RollbackMigration
+        };
+
+        /// <value>
+        /// Conversion phase for convert instance operation.
+        /// </value>
+        [JsonProperty(PropertyName = "conversionPhase")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ConversionPhaseEnum> ConversionPhase { get; set; }
         
     }
 }

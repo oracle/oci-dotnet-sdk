@@ -40,6 +40,16 @@ namespace Oci.CloudmigrationsService.Models
         public System.Nullable<bool> IsCompleted { get; set; }
         
         /// <value>
+        /// Type of migration project (OCI/OLVM). This determines the target environment for the migration.
+        /// </value>
+        [JsonProperty(PropertyName = "migrationType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Migration.MigrationTypeEnum> MigrationType { get; set; }
+        
+        [JsonProperty(PropertyName = "migrationConfig")]
+        public MigrationConfig MigrationConfig { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. It exists only for cross-compatibility.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

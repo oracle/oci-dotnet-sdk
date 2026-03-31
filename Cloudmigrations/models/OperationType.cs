@@ -64,6 +64,8 @@ namespace Oci.CloudmigrationsService.Models
       [EnumMember(Value = "UPDATE_TARGET_ASSET")]
       UpdateTargetAsset,
       [EnumMember(Value = "DELETE_TARGET_ASSET")]
-      DeleteTargetAsset
+      DeleteTargetAsset,
+      [EnumMember(Value = "PREPARE_TARGET_ASSET")]
+      PrepareTargetAsset
   }
 }

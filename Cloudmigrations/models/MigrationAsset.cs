@@ -217,5 +217,14 @@ namespace Oci.CloudmigrationsService.Models
         [JsonProperty(PropertyName = "dependsOn")]
         public System.Collections.Generic.List<string> DependsOn { get; set; }
         
+        [JsonProperty(PropertyName = "replicationLocationDetail")]
+        public ReplicationLocationDetail ReplicationLocationDetail { get; set; }
+        
+        /// <value>
+        /// Mapping of source disk id to destination disk details
+        /// </value>
+        [JsonProperty(PropertyName = "destinationDisks")]
+        public System.Collections.Generic.Dictionary<string, DestinationDisk> DestinationDisks { get; set; }
+        
     }
 }

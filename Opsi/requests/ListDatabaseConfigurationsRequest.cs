@@ -114,7 +114,31 @@ namespace Oci.OpsiService.Requests
             [EnumMember(Value = "EXTERNAL-ADW")]
             ExternalAdw,
             [EnumMember(Value = "EXTERNAL-ATP")]
-            ExternalAtp
+            ExternalAtp,
+            [EnumMember(Value = "LH-D")]
+            LhD,
+            [EnumMember(Value = "APEX-D")]
+            ApexD,
+            [EnumMember(Value = "AJD-D")]
+            AjdD,
+            [EnumMember(Value = "AVD-D")]
+            AvdD,
+            [EnumMember(Value = "LH-S")]
+            LhS,
+            [EnumMember(Value = "APEX-S")]
+            ApexS,
+            [EnumMember(Value = "AJD-S")]
+            AjdS,
+            [EnumMember(Value = "AVD-S")]
+            AvdS,
+            [EnumMember(Value = "LH-EXACC")]
+            LhExacc,
+            [EnumMember(Value = "APEX-EXACC")]
+            ApexExacc,
+            [EnumMember(Value = "AJD-EXACC")]
+            AjdExacc,
+            [EnumMember(Value = "AVD-EXACC")]
+            AvdExacc
         };
 
         /// <value>

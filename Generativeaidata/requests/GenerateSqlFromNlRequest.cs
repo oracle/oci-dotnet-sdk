@@ -57,12 +57,6 @@ namespace Oci.GenerativeaidataService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The ID of the compartment.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-compartment-id")]
-        public string OpcCompartmentId { get; set; }
-        
-        /// <value>
         /// For optimistic concurrency control. In the PUT or DELETE call
         /// for a resource, set the `if-match` parameter to the value of the
         /// etag from a previous GET or POST response for that resource.

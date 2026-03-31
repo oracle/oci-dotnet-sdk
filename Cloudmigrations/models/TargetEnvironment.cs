@@ -34,7 +34,9 @@ namespace Oci.CloudmigrationsService.Models
         ///
         public enum TargetEnvironmentTypeEnum {
             [EnumMember(Value = "VM_TARGET_ENV")]
-            VmTargetEnv
+            VmTargetEnv,
+            [EnumMember(Value = "OLVM_TARGET_ENV")]
+            OlvmTargetEnv
         };
 
         
@@ -61,6 +63,9 @@ namespace Oci.CloudmigrationsService.Models
             var discriminator = jsonObject["targetEnvironmentType"].Value<string>();
             switch (discriminator)
             {
+                case "OLVM_TARGET_ENV":
+                    obj = new OlvmTargetEnvironment();
+                    break;
                 case "VM_TARGET_ENV":
                     obj = new VmTargetEnvironment();
                     break;

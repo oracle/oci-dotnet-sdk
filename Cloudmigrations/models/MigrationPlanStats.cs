@@ -36,5 +36,11 @@ namespace Oci.CloudmigrationsService.Models
         [JsonProperty(PropertyName = "vmCount")]
         public System.Nullable<int> VmCount { get; set; }
         
+        [JsonProperty(PropertyName = "currentMonthlyCost")]
+        public CurrentMonthlyCost CurrentMonthlyCost { get; set; }
+        
+        [JsonProperty(PropertyName = "costToMigrate")]
+        public CostToMigrate CostToMigrate { get; set; }
+        
     }
 }
