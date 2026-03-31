@@ -56,6 +56,18 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "passwordSecretVersion")]
         public System.Nullable<int> PasswordSecretVersion { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the trusted certificate for the LDAP server in the Vault.
+        /// </value>
+        [JsonProperty(PropertyName = "trustedCertificateSecretId")]
+        public string TrustedCertificateSecretId { get; set; }
+        
+        /// <value>
+        /// Version of the trusted certificate secret in the Vault to use.
+        /// </value>
+        [JsonProperty(PropertyName = "trustedCertificateSecretVersion")]
+        public System.Nullable<int> TrustedCertificateSecretVersion { get; set; }
+        
         [JsonProperty(PropertyName = "connectorType")]
         private readonly string connectorType = "LDAPBIND";
     }

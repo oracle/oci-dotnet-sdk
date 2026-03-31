@@ -156,6 +156,9 @@ namespace Oci.MysqlService.Models
         [JsonProperty(PropertyName = "mysqlVersion")]
         public string MysqlVersion { get; set; }
         
+        [JsonProperty(PropertyName = "controlledUpdate")]
+        public ControlledUpdate ControlledUpdate { get; set; }
+        
         [JsonProperty(PropertyName = "backupPolicy")]
         public BackupPolicy BackupPolicy { get; set; }
         

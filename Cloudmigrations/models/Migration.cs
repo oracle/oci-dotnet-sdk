@@ -115,6 +115,30 @@ namespace Oci.CloudmigrationsService.Models
         /// </value>
         [JsonProperty(PropertyName = "isCompleted")]
         public System.Nullable<bool> IsCompleted { get; set; }
+                ///
+        /// <value>
+        /// Type of migration project (OCI/OLVM). This determines the target environment for the migration.
+        /// </value>
+        ///
+        public enum MigrationTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "OCI")]
+            Oci,
+            [EnumMember(Value = "OLVM")]
+            Olvm
+        };
+
+        /// <value>
+        /// Type of migration project (OCI/OLVM). This determines the target environment for the migration.
+        /// </value>
+        [JsonProperty(PropertyName = "migrationType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<MigrationTypeEnum> MigrationType { get; set; }
+        
+        [JsonProperty(PropertyName = "migrationConfig")]
+        public MigrationConfig MigrationConfig { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. It exists only for cross-compatibility.

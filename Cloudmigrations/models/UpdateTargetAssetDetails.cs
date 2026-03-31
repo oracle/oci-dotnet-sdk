@@ -28,7 +28,9 @@ namespace Oci.CloudmigrationsService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "INSTANCE")]
-            Instance
+            Instance,
+            [EnumMember(Value = "OLVM_INSTANCE")]
+            OlvmInstance
         };
 
         
@@ -62,6 +64,9 @@ namespace Oci.CloudmigrationsService.Models
             {
                 case "INSTANCE":
                     obj = new UpdateVmTargetAssetDetails();
+                    break;
+                case "OLVM_INSTANCE":
+                    obj = new UpdateOlvmTargetAssetDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

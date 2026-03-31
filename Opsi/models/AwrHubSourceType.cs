@@ -49,6 +49,22 @@ namespace Oci.OpsiService.Models
       ComanagedExacsPdb,
       [EnumMember(Value = "COMANAGED_EXACS_NONCDB")]
       ComanagedExacsNoncdb,
+      [EnumMember(Value = "LH_S")]
+      LhS,
+      [EnumMember(Value = "APEX_S")]
+      ApexS,
+      [EnumMember(Value = "AJD_S")]
+      AjdS,
+      [EnumMember(Value = "AVD_S")]
+      AvdS,
+      [EnumMember(Value = "LH_D")]
+      LhD,
+      [EnumMember(Value = "APEX_D")]
+      ApexD,
+      [EnumMember(Value = "AJD_D")]
+      AjdD,
+      [EnumMember(Value = "AVD_D")]
+      AvdD,
       [EnumMember(Value = "UNDEFINED")]
       Undefined
   }

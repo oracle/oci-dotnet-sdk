@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CloudmigrationsService.Models
 {
     /// <summary>
-    /// The information about the new asset source.
+    /// Asset source update request.
     /// </summary>
     [JsonConverter(typeof(UpdateAssetSourceDetailsModelConverter))]
     public class UpdateAssetSourceDetails 
@@ -38,6 +38,12 @@ namespace Oci.CloudmigrationsService.Models
         public string AssetsCompartmentId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the discovery schedule that is going to be assigned to an asset source.
+        /// </value>
+        [JsonProperty(PropertyName = "discoveryScheduleId")]
+        public string DiscoveryScheduleId { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. It exists only for cross-compatibility.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>
@@ -57,6 +63,13 @@ namespace Oci.CloudmigrationsService.Models
         /// </value>
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
+        
+        /// <value>
+        /// Specifies if this is the Source or Destination point for migration - different assets may be discovered depending on setting.
+        /// </value>
+        [JsonProperty(PropertyName = "environmentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<EnvironmentType> EnvironmentType { get; set; }
         
     }
 
@@ -82,6 +95,12 @@ namespace Oci.CloudmigrationsService.Models
             {
                 case "VMWARE":
                     obj = new UpdateVmWareAssetSourceDetails();
+                    break;
+                case "OLVM":
+                    obj = new UpdateOlvmAssetSourceDetails();
+                    break;
+                case "AWS":
+                    obj = new UpdateAwsAssetSourceDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

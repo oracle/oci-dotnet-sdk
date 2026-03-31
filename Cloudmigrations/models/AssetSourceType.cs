@@ -17,6 +17,10 @@ namespace Oci.CloudmigrationsService.Models
   /// </summary>
   public enum AssetSourceType {
       [EnumMember(Value = "VMWARE")]
-      Vmware
+      Vmware,
+      [EnumMember(Value = "AWS")]
+      Aws,
+      [EnumMember(Value = "OLVM")]
+      Olvm
   }
 }

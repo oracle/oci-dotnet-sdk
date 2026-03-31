@@ -91,6 +91,12 @@ namespace Oci.DatabaseService.Models
         public string VpcPassword { get; set; }
         
         /// <value>
+        /// Indicates whether Zero Data Loss functionality is enabled for a Recovery Appliance backup destination in an Autonomous Container Database. When enabled, the database automatically ships all redo logs in real-time to the Recovery Appliance for a Zero Data Loss recovery setup (sub-second RPO). Defaults to `TRUE` if no value is given.
+        /// </value>
+        [JsonProperty(PropertyName = "isZeroDataLossEnabled")]
+        public System.Nullable<bool> IsZeroDataLossEnabled { get; set; }
+        
+        /// <value>
         /// Proxy URL to connect to object store.
         /// </value>
         [JsonProperty(PropertyName = "internetProxy")]

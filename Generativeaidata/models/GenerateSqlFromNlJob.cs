@@ -35,12 +35,6 @@ namespace Oci.GenerativeaidataService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Owning compartmentId [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for a GenerateSqlFromNlJob.
-        /// </value>
-        [JsonProperty(PropertyName = "compartmentId")]
-        public string CompartmentId { get; set; }
-        
-        /// <value>
         /// An optional description of the GenerateSqlFromNlJob.
         /// </value>
         [JsonProperty(PropertyName = "description")]

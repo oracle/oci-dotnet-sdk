@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudmigrationsService.Models
 {
     /// <summary>
-    /// Sumarized information about a discovery schedule.
+    /// Summarized information about a discovery schedule.
     /// </summary>
     public class DiscoveryScheduleSummary 
     {
