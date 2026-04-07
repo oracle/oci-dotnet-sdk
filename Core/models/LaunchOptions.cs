@@ -103,6 +103,7 @@ namespace Oci.CoreService.Models
         /// * `VFIO` - Direct attached Virtual Function network controller. This is the networking type
         /// when you launch an instance using hardware-assisted (SR-IOV) networking.
         /// * `PARAVIRTUALIZED` - VM instances launch with paravirtualized devices using VirtIO drivers.
+        /// * `ACCELERATEDPV` - VM instances launch with accelerated paravirtualized networking type.
         /// 
         /// </value>
         ///
@@ -115,7 +116,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "VFIO")]
             Vfio,
             [EnumMember(Value = "PARAVIRTUALIZED")]
-            Paravirtualized
+            Paravirtualized,
+            [EnumMember(Value = "ACCELERATEDPV")]
+            Acceleratedpv
         };
 
         /// <value>
@@ -124,6 +127,7 @@ namespace Oci.CoreService.Models
         /// * `VFIO` - Direct attached Virtual Function network controller. This is the networking type
         /// when you launch an instance using hardware-assisted (SR-IOV) networking.
         /// * `PARAVIRTUALIZED` - VM instances launch with paravirtualized devices using VirtIO drivers.
+        /// * `ACCELERATEDPV` - VM instances launch with accelerated paravirtualized networking type.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "networkType")]

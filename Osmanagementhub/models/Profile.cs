@@ -231,6 +231,9 @@ namespace Oci.OsmanagementhubService.Models
                 case "WINDOWS_STANDALONE":
                     obj = new WindowsStandaloneProfile();
                     break;
+                case "UBUNTU_STANDALONE":
+                    obj = new UbuntuStandaloneProfile();
+                    break;
                 case "LIFECYCLE":
                     obj = new LifecycleProfile();
                     break;

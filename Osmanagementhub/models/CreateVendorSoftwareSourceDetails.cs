@@ -24,12 +24,14 @@ namespace Oci.OsmanagementhubService.Models
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the vendor software source in the root compartment that is being replicated.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "OriginSoftwareSourceId is required.")]
         [JsonProperty(PropertyName = "originSoftwareSourceId")]
         public string OriginSoftwareSourceId { get; set; }
+        
+        /// <value>
+        /// The display name of the software source to be replicated
+        /// </value>
+        [JsonProperty(PropertyName = "originDisplayName")]
+        public string OriginDisplayName { get; set; }
         
         [JsonProperty(PropertyName = "softwareSourceType")]
         private readonly string softwareSourceType = "VENDOR";

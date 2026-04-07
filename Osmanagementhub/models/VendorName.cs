@@ -22,6 +22,8 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "ORACLE")]
       Oracle,
       [EnumMember(Value = "MICROSOFT")]
-      Microsoft
+      Microsoft,
+      [EnumMember(Value = "CANONICAL")]
+      Canonical
   }
 }

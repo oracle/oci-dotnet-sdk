@@ -28,6 +28,8 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "LIFECYCLE_ENVIRONMENT")]
       LifecycleEnvironment,
       [EnumMember(Value = "SOFTWARE_SOURCE")]
-      SoftwareSource
+      SoftwareSource,
+      [EnumMember(Value = "DYNAMIC_SET")]
+      DynamicSet
   }
 }

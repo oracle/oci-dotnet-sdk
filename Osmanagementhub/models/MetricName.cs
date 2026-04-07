@@ -35,6 +35,8 @@ namespace Oci.OsmanagementhubService.Models
       UnreachableInstanceCount,
       [EnumMember(Value = "REGISTRATION_FAILED_INSTANCE_COUNT")]
       RegistrationFailedInstanceCount,
+      [EnumMember(Value = "INSTANCE_WITH_AVAILABLE_OTHER_UPDATES_COUNT")]
+      InstanceWithAvailableOtherUpdatesCount,
       [EnumMember(Value = "DELETING_INSTANCE_COUNT")]
       DeletingInstanceCount,
       [EnumMember(Value = "ONBOARDING_INSTANCE_COUNT")]
@@ -47,6 +49,8 @@ namespace Oci.OsmanagementhubService.Models
       InstanceSecurityAdvisoryCount,
       [EnumMember(Value = "INSTANCE_BUGFIX_ADVISORY_COUNT")]
       InstanceBugfixAdvisoryCount,
+      [EnumMember(Value = "INSTANCE_OTHER_UPDATES_COUNT")]
+      InstanceOtherUpdatesCount,
       [EnumMember(Value = "REBOOTING_INSTANCE_COUNT")]
       RebootingInstanceCount,
       [EnumMember(Value = "NEEDS_REBOOTING_INSTANCE_COUNT")]

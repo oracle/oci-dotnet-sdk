@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OsmanagementhubService.Models
 {
     /// <summary>
-    /// PProvides the information used for the reboot job.
+    /// Provides the information used for the reboot job.
     /// </summary>
     public class RebootLifecycleStageDetails 
     {

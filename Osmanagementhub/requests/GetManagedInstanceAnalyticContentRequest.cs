@@ -28,10 +28,22 @@ namespace Oci.OsmanagementhubService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
+        /// Indicates whether to include subcompartments in the returned results. Default is false.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
+        public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance group. This filter returns resources associated with this group.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "managedInstanceGroupId")]
         public string ManagedInstanceGroupId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the dynamic set. This filter returns resources associated with this dynamic set.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dynamicSetId")]
+        public string DynamicSetId { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the lifecycle environment. This filter returns only resource contained with the specified lifecycle environment.
@@ -76,6 +88,12 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Nullable<int> BugUpdatesAvailableEqualsTo { get; set; }
         
         /// <value>
+        /// A filter to return instances that have the specified number of available other updates.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "otherUpdatesAvailableEqualsTo")]
+        public System.Nullable<int> OtherUpdatesAvailableEqualsTo { get; set; }
+        
+        /// <value>
         /// A filter to return instances that have more available security updates than the number specified.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "securityUpdatesAvailableGreaterThan")]
@@ -86,6 +104,12 @@ namespace Oci.OsmanagementhubService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "bugUpdatesAvailableGreaterThan")]
         public System.Nullable<int> BugUpdatesAvailableGreaterThan { get; set; }
+        
+        /// <value>
+        /// A filter to return instances that have more available other updates than the number specified.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "otherUpdatesAvailableGreaterThan")]
+        public System.Nullable<int> OtherUpdatesAvailableGreaterThan { get; set; }
         
         /// <value>
         /// A filter to return only resources whose location matches the given value.
@@ -144,6 +168,8 @@ namespace Oci.OsmanagementhubService.Requests
             Bugfix,
             [EnumMember(Value = "ACTIVITY")]
             Activity,
+            [EnumMember(Value = "OTHER")]
+            Other,
             [EnumMember(Value = "ALL")]
             All
         };
