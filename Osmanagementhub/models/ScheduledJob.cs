@@ -91,7 +91,10 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<System.DateTime> TimeLastExecution { get; set; }
         
         /// <value>
-        /// The frequency schedule for a recurring scheduled job.
+        /// The frequency schedule for a recurring scheduled job in the [RFC5535](https://www.rfc-editor.org/rfc/rfc5535) format.
+        /// Currently, only FREQ/INTERVAL/BYMONTHDAY/BYDAY/BYSETPOS/BYMONTH/BYHOUR/BYMINUTE/BYSECOND rules are supported.
+        /// In FREQ, only YEARLY, MONTHLY, WEEKLY, DAILY\", HOURLY are supported.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "recurringRule")]
         public string RecurringRule { get; set; }
@@ -120,11 +123,20 @@ namespace Oci.OsmanagementhubService.Models
         /// <value>
         /// The lifecycle stage [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that this scheduled job operates on. 
         /// A scheduled job can only operate on one type of target, therefore this parameter is mutually exclusive with 
-        /// managedInstanceIds, managedInstanceGroupIds, and managedCompartmentIds.
+        /// managedInstanceIds, managedInstanceGroupIds, managedCompartmentIds, and dynamicSetIds.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleStageIds")]
         public System.Collections.Generic.List<string> LifecycleStageIds { get; set; }
+        
+        /// <value>
+        /// The dynamic set [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that this scheduled job operates on.
+        /// A scheduled job can only operate on one type of target. therefore this parameter is mutually exclusive with 
+        /// managedInstanceIds, managedInstanceGroupIds, and managedCompartmentIds.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dynamicSetIds")]
+        public System.Collections.Generic.List<string> DynamicSetIds { get; set; }
         
         /// <value>
         /// Indicates whether to apply the scheduled job to all compartments in the tenancy when managedCompartmentIds specifies the tenancy [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) (root compartment).

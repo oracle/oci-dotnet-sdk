@@ -69,6 +69,12 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<SoftwarePackageArchitecture> Architecture { get; set; }
         
         /// <value>
+        /// The date and time the package was last modified (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// </value>
+        [JsonProperty(PropertyName = "lastModifiedDate")]
+        public string LastModifiedDate { get; set; }
+        
+        /// <value>
         /// Checksum of the package.
         /// </value>
         [JsonProperty(PropertyName = "checksum")]

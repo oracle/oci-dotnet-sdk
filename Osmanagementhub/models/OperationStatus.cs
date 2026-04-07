@@ -32,6 +32,8 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "CANCELING")]
       Canceling,
       [EnumMember(Value = "CANCELED")]
-      Canceled
+      Canceled,
+      [EnumMember(Value = "SKIPPED")]
+      Skipped
   }
 }

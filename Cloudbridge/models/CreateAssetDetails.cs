@@ -119,6 +119,9 @@ namespace Oci.CloudbridgeService.Models
                 case "VMWARE_VM":
                     obj = new CreateVmwareVmAssetDetails();
                     break;
+                case "INVENTORY_ASSET":
+                    obj = new CreateInventoryAssetDetails();
+                    break;
                 case "AWS_EC2":
                     obj = new CreateAwsEc2AssetDetails();
                     break;

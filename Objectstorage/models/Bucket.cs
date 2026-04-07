@@ -292,6 +292,37 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "autoTiering")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<AutoTieringEnum> AutoTiering { get; set; }
+                ///
+        /// <value>
+        /// Scope in which the bucket is unique. Default value is NAMESPACE.
+        /// Bucket scope as NAMESPACE means that the bucket is unique only in the owning namespace/tenancy. Other 
+        /// tenancies can have a bucket with same name in their namespace.
+        /// Bucket scope as REGION means that the bucket is regionally unique. No other tenancy can have a bucket with
+        /// same name and scope REGION.
+        /// 
+        /// </value>
+        ///
+        public enum BucketScopeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "NAMESPACE")]
+            Namespace,
+            [EnumMember(Value = "REGION")]
+            Region
+        };
+
+        /// <value>
+        /// Scope in which the bucket is unique. Default value is NAMESPACE.
+        /// Bucket scope as NAMESPACE means that the bucket is unique only in the owning namespace/tenancy. Other 
+        /// tenancies can have a bucket with same name in their namespace.
+        /// Bucket scope as REGION means that the bucket is regionally unique. No other tenancy can have a bucket with
+        /// same name and scope REGION.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "bucketScope")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<BucketScopeEnum> BucketScope { get; set; }
         
     }
 }

@@ -178,5 +178,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleManagement")]
         public InstancePoolLifecycleManagementDetails LifecycleManagement { get; set; }
         
+        /// <value>
+        /// Count of instance in running state associated to the Instance Pool.
+        /// </value>
+        [JsonProperty(PropertyName = "currentSize")]
+        public System.Nullable<int> CurrentSize { get; set; }
+        
     }
 }

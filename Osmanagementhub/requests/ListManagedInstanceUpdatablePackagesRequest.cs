@@ -56,6 +56,13 @@ namespace Oci.OsmanagementhubService.Requests
         public System.Collections.Generic.List<string> AdvisoryName { get; set; }
         
         /// <value>
+        /// The advisory severity.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "advisorySeverity", Oci.Common.Http.CollectionFormatType.Multi)]
+        public System.Collections.Generic.List<AdvisorySeverity> AdvisorySeverity { get; set; }
+        
+        /// <value>
         /// The OCID of the compartment that contains the resources to list. This filter returns only resources contained within the specified compartment.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]

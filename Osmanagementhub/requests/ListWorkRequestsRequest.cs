@@ -158,5 +158,11 @@ namespace Oci.OsmanagementhubService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isManagedByAutonomousLinux")]
         public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
+        
+        /// <value>
+        /// Indicates whether to include subcompartments in the returned results. Default is false.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
+        public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
     }
 }

@@ -57,6 +57,10 @@ namespace Oci.OsmanagementhubService.Models
         /// <value>
         /// The list of software source [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that the registration profile will use.
         /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SoftwareSourceIds is required.")]
         [JsonProperty(PropertyName = "softwareSourceIds")]
         public System.Collections.Generic.List<string> SoftwareSourceIds { get; set; }
         

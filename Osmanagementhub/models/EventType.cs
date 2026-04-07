@@ -38,6 +38,8 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "SYSADMIN")]
       Sysadmin,
       [EnumMember(Value = "REBOOT")]
-      Reboot
+      Reboot,
+      [EnumMember(Value = "SNAP_UPDATE")]
+      SnapUpdate
   }
 }

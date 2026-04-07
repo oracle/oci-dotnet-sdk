@@ -54,5 +54,22 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
+        /// <value>
+        /// Type of the software source.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "SoftwareSourceType is required.")]
+        [JsonProperty(PropertyName = "softwareSourceType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<SoftwareSourceType> SoftwareSourceType { get; set; }
+        
+        /// <value>
+        /// Software source description.
+        /// </value>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+        
     }
 }

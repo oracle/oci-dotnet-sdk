@@ -66,6 +66,12 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "REBOOT")]
       Reboot,
       [EnumMember(Value = "RERUN_WORK_REQUEST")]
-      RerunWorkRequest
+      RerunWorkRequest,
+      [EnumMember(Value = "INSTALL_SNAPS")]
+      InstallSnaps,
+      [EnumMember(Value = "REMOVE_SNAPS")]
+      RemoveSnaps,
+      [EnumMember(Value = "SWITCH_SNAP_CHANNEL")]
+      SwitchSnapChannel
   }
 }

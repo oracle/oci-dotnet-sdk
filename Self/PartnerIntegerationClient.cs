@@ -107,7 +107,7 @@ namespace Oci.SelfService
                     ServiceName = "PartnerIntegeration",
                     OperationName = "ActivateSubscription",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/self/20260129/PartnerSubscription/ActivateSubscription",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -163,7 +163,7 @@ namespace Oci.SelfService
                     ServiceName = "PartnerIntegeration",
                     OperationName = "ListingSubscriptions",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/self/20260129/ListingSubscriptionsCollection/ListingSubscriptions",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -220,7 +220,7 @@ namespace Oci.SelfService
                     ServiceName = "PartnerIntegeration",
                     OperationName = "ResolveSubscription",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/self/20260129/PartnerSubscription/ResolveSubscription",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

@@ -47,7 +47,10 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<System.DateTime> TimeNextExecution { get; set; }
         
         /// <value>
-        /// The frequency schedule for a recurring scheduled job.
+        /// The frequency schedule for a recurring scheduled job in the [RFC5535](https://www.rfc-editor.org/rfc/rfc5535) format.
+        /// Currently, only FREQ/INTERVAL/BYMONTHDAY/BYDAY/BYSETPOS/BYMONTH/BYHOUR/BYMINUTE/BYSECOND rules are supported.
+        /// In FREQ, only YEARLY, MONTHLY, WEEKLY, DAILY\", HOURLY are supported.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "recurringRule")]
         public string RecurringRule { get; set; }

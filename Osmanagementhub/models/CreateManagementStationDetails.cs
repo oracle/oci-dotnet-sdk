@@ -63,6 +63,20 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "isAutoConfigEnabled")]
         public System.Nullable<bool> IsAutoConfigEnabled { get; set; }
         
+        /// <value>
+        /// The operating system family.
+        /// </value>
+        [JsonProperty(PropertyName = "osFamily")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<OsFamily> OsFamily { get; set; }
+        
+        /// <value>
+        /// The architecture type.
+        /// </value>
+        [JsonProperty(PropertyName = "archType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ArchType> ArchType { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>
