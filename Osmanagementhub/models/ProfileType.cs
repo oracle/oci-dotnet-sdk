@@ -28,6 +28,8 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "STATION")]
       Station,
       [EnumMember(Value = "WINDOWS_STANDALONE")]
-      WindowsStandalone
+      WindowsStandalone,
+      [EnumMember(Value = "UBUNTU_STANDALONE")]
+      UbuntuStandalone
   }
 }

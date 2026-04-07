@@ -181,5 +181,11 @@ namespace Oci.OsmanagementhubService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isManagedByAutonomousLinux")]
         public System.Nullable<bool> IsManagedByAutonomousLinux { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the dynamic set. This filter returns resources associated with this dynamic set.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "dynamicSetId")]
+        public string DynamicSetId { get; set; }
     }
 }

@@ -132,5 +132,12 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "rebootTimeoutInMins")]
         public System.Nullable<int> RebootTimeoutInMins { get; set; }
         
+        /// <value>
+        /// The date and time the work request completed (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeFinished")]
+        public System.Nullable<System.DateTime> TimeFinished { get; set; }
+        
     }
 }

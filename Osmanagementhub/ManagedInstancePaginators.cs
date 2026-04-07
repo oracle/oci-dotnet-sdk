@@ -393,6 +393,55 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListManagedInstanceSnaps operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListManagedInstanceSnapsResponse> ListManagedInstanceSnapsResponseEnumerator(ListManagedInstanceSnapsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListManagedInstanceSnapsRequest, ListManagedInstanceSnapsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListManagedInstanceSnaps(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the SnapSummary objects
+        /// contained in responses from the ListManagedInstanceSnaps operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<SnapSummary> ListManagedInstanceSnapsRecordEnumerator(ListManagedInstanceSnapsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListManagedInstanceSnapsRequest, ListManagedInstanceSnapsResponse, SnapSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListManagedInstanceSnaps(request, retryConfiguration, cancellationToken),
+                response => response.SnapCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListManagedInstanceUpdatablePackages operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

@@ -213,6 +213,20 @@ namespace Oci.OsmanagementhubService.Models
         public System.Nullable<int> MirrorPackageCount { get; set; }
         
         /// <value>
+        /// The operating system family.
+        /// </value>
+        [JsonProperty(PropertyName = "osFamily")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<OsFamily> OsFamily { get; set; }
+        
+        /// <value>
+        /// The architecture type.
+        /// </value>
+        [JsonProperty(PropertyName = "archType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<ArchType> ArchType { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

@@ -23,6 +23,8 @@ namespace Oci.CloudbridgeService.Models
       VmwareVm,
       [EnumMember(Value = "VM")]
       Vm,
+      [EnumMember(Value = "INVENTORY_ASSET")]
+      InventoryAsset,
       [EnumMember(Value = "AWS_EC2")]
       AwsEc2,
       [EnumMember(Value = "AWS_EBS")]

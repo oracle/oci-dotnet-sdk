@@ -68,5 +68,14 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "rebootTimeoutInMins")]
         public System.Nullable<int> RebootTimeoutInMins { get; set; }
         
+        [JsonProperty(PropertyName = "installSnapDetails")]
+        public InstallSnapDetails InstallSnapDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "removeSnapDetails")]
+        public RemoveSnapDetails RemoveSnapDetails { get; set; }
+        
+        [JsonProperty(PropertyName = "switchSnapChannelDetails")]
+        public SwitchSnapChannelDetails SwitchSnapChannelDetails { get; set; }
+        
     }
 }

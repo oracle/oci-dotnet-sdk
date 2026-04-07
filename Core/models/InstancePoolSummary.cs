@@ -145,5 +145,11 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
+        /// <value>
+        /// Count of instance in running state associated to the Instance Pool.
+        /// </value>
+        [JsonProperty(PropertyName = "currentSize")]
+        public System.Nullable<int> CurrentSize { get; set; }
+        
     }
 }

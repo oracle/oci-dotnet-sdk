@@ -30,6 +30,12 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "SRC")]
       Src,
       [EnumMember(Value = "I386")]
-      I386
+      I386,
+      [EnumMember(Value = "AMD64")]
+      Amd64,
+      [EnumMember(Value = "ARM64")]
+      Arm64,
+      [EnumMember(Value = "ALL")]
+      All
   }
 }

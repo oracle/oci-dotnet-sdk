@@ -98,5 +98,17 @@ namespace Oci.CloudbridgeService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "inventoryId")]
         public string InventoryId { get; set; }
+        
+        /// <value>
+        /// The name of the asset class.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "assetClassName")]
+        public string AssetClassName { get; set; }
+        
+        /// <value>
+        /// The version of the asset class.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "assetClassVersion")]
+        public string AssetClassVersion { get; set; }
     }
 }

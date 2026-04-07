@@ -50,6 +50,13 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "relatedCves")]
         public System.Collections.Generic.List<string> RelatedCves { get; set; }
         
+        /// <value>
+        /// The severity level of the security update. Only applicable when updateType is SECURITY.
+        /// </value>
+        [JsonProperty(PropertyName = "advisorySeverity")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<AdvisorySeverity> AdvisorySeverity { get; set; }
+        
         [JsonProperty(PropertyName = "packageClassification")]
         private readonly string packageClassification = "UPDATABLE";
     }

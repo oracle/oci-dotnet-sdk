@@ -67,6 +67,13 @@ namespace Oci.CloudbridgeService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        /// <value>
+        /// Specifies if this is the Source or Destination point for migration - different assets may be discovered depending on setting.
+        /// </value>
+        [JsonProperty(PropertyName = "environmentType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<EnvironmentType> EnvironmentType { get; set; }
+        
     }
 
     public class UpdateAssetSourceDetailsModelConverter : JsonConverter
@@ -91,6 +98,9 @@ namespace Oci.CloudbridgeService.Models
             {
                 case "VMWARE":
                     obj = new UpdateVmWareAssetSourceDetails();
+                    break;
+                case "OLVM":
+                    obj = new UpdateOlvmAssetSourceDetails();
                     break;
                 case "AWS":
                     obj = new UpdateAwsAssetSourceDetails();
