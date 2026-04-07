@@ -107,7 +107,7 @@ namespace Oci.OsmanagementhubService.Models
         /// <value>
         /// The managed instance [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that this scheduled job operates on. 
         /// A scheduled job can only operate on one type of target, therefore this parameter is mutually exclusive with 
-        /// managedInstanceGroupIds, managedCompartmentIds, and lifecycleStageIds.
+        /// managedInstanceGroupIds, managedCompartmentIds, lifecycleStageIds, and dynamicSetIds.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceIds")]
@@ -116,7 +116,7 @@ namespace Oci.OsmanagementhubService.Models
         /// <value>
         /// The managed instance group [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that this scheduled job operates on. 
         /// A scheduled job can only operate on one type of target, therefore this parameter is mutually exclusive with 
-        /// managedInstanceIds, managedCompartmentIds, and lifecycleStageIds.
+        /// managedInstanceIds, managedCompartmentIds, lifecycleStageIds, and dynamicSetIds.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "managedInstanceGroupIds")]
@@ -125,7 +125,7 @@ namespace Oci.OsmanagementhubService.Models
         /// <value>
         /// The compartment [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that this scheduled job operates on. 
         /// A scheduled job can only operate on one type of target, therefore this parameter is mutually exclusive with 
-        /// managedInstanceIds, managedInstanceGroupIds, and lifecycleStageIds.
+        /// managedInstanceIds, managedInstanceGroupIds, lifecycleStageIds, and dynamicSetIds.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "managedCompartmentIds")]
@@ -134,11 +134,20 @@ namespace Oci.OsmanagementhubService.Models
         /// <value>
         /// The lifecycle stage [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that this scheduled job operates on. 
         /// A scheduled job can only operate on one type of target, therefore this parameter is mutually exclusive with 
-        /// managedInstanceIds, managedInstanceGroupIds, and managedCompartmentIds.
+        /// managedInstanceIds, managedInstanceGroupIds, managedCompartmentIds, and dynamicSetIds.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleStageIds")]
         public System.Collections.Generic.List<string> LifecycleStageIds { get; set; }
+        
+        /// <value>
+        /// The dynamic set [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) that this scheduled job operates on.
+        /// A scheduled job can only operate on one type of target. therefore this parameter is mutually exclusive with 
+        /// managedInstanceIds, managedInstanceGroupIds, managedCompartmentIds.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "dynamicSetIds")]
+        public System.Collections.Generic.List<string> DynamicSetIds { get; set; }
         
         /// <value>
         /// The list of operations this scheduled job needs to perform.

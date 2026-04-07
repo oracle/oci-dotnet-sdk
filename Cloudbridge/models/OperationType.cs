@@ -64,6 +64,8 @@ namespace Oci.CloudbridgeService.Models
       [EnumMember(Value = "COLLECT_AWS_REALTIME_METRICS")]
       CollectAwsRealtimeMetrics,
       [EnumMember(Value = "COLLECT_AWS_HISTORICAL_METRICS")]
-      CollectAwsHistoricalMetrics
+      CollectAwsHistoricalMetrics,
+      [EnumMember(Value = "OLVM_DISCOVERY")]
+      OlvmDiscovery
   }
 }

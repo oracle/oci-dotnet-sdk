@@ -212,6 +212,9 @@ namespace Oci.OsmanagementhubService.Models
                 case "SYSADMIN":
                     obj = new SysadminEvent();
                     break;
+                case "SNAP_UPDATE":
+                    obj = new SnapUpdateEvent();
+                    break;
                 case "REBOOT":
                     obj = new RebootEvent();
                     break;

@@ -23,7 +23,7 @@ namespace Oci.OsmanagementhubService.Models
     {
         
         /// <value>
-        /// A user-friendly name. Does not have to be unique and you can change the name later. Avoid entering 
+        /// A user-friendly name. Must be unique and you can change the name later. Avoid entering 
         /// confidential information.
         /// 
         /// </value>
@@ -52,7 +52,7 @@ namespace Oci.OsmanagementhubService.Models
         
         /// <value>
         /// description: The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the management station to associate 
-        /// with an instance once registered. This is required when creating a profile for non-OCI instances.
+        /// with an instance once registered. This is used when creating a profile for non-OCI instances.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "managementStationId")]
@@ -111,6 +111,9 @@ namespace Oci.OsmanagementhubService.Models
             var discriminator = jsonObject["profileType"].Value<string>();
             switch (discriminator)
             {
+                case "UBUNTU_STANDALONE":
+                    obj = new CreateUbuntuStandAloneProfileDetails();
+                    break;
                 case "GROUP":
                     obj = new CreateGroupProfileDetails();
                     break;

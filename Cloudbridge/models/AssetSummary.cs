@@ -149,5 +149,24 @@ namespace Oci.CloudbridgeService.Models
         [JsonProperty(PropertyName = "systemTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
+        /// <value>
+        /// The name of the asset class.
+        /// </value>
+        [JsonProperty(PropertyName = "assetClassName")]
+        public string AssetClassName { get; set; }
+        
+        /// <value>
+        /// The version of the asset class.
+        /// </value>
+        [JsonProperty(PropertyName = "assetClassVersion")]
+        public string AssetClassVersion { get; set; }
+        
+        /// <value>
+        /// Specifies if this is the Source or Destination point for migration - different assets may be discovered depending on setting.
+        /// </value>
+        [JsonProperty(PropertyName = "environmentType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<EnvironmentType> EnvironmentType { get; set; }
+        
     }
 }

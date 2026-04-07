@@ -238,5 +238,11 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "rebootTimeoutInMins")]
         public System.Nullable<int> RebootTimeoutInMins { get; set; }
         
+        /// <value>
+        /// The details about the snap.
+        /// </value>
+        [JsonProperty(PropertyName = "snapSpecs")]
+        public System.Collections.Generic.List<SnapSpecDetails> SnapSpecs { get; set; }
+        
     }
 }

@@ -148,6 +148,55 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListAvailableSoftwareSourcesToAdd operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListAvailableSoftwareSourcesToAddResponse> ListAvailableSoftwareSourcesToAddResponseEnumerator(ListAvailableSoftwareSourcesToAddRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListAvailableSoftwareSourcesToAddRequest, ListAvailableSoftwareSourcesToAddResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAvailableSoftwareSourcesToAdd(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the SoftwareSourceRepoSummary objects
+        /// contained in responses from the ListAvailableSoftwareSourcesToAdd operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<SoftwareSourceRepoSummary> ListAvailableSoftwareSourcesToAddRecordEnumerator(ListAvailableSoftwareSourcesToAddRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListAvailableSoftwareSourcesToAddRequest, ListAvailableSoftwareSourcesToAddResponse, SoftwareSourceRepoSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListAvailableSoftwareSourcesToAdd(request, retryConfiguration, cancellationToken),
+                response => response.SoftwareSourceRepoCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListEntitlements operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

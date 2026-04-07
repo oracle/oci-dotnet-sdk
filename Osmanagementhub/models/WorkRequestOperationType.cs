@@ -94,6 +94,16 @@ namespace Oci.OsmanagementhubService.Models
       [EnumMember(Value = "UNREGISTER_MANAGED_INSTANCE")]
       UnregisterManagedInstance,
       [EnumMember(Value = "REBOOT")]
-      Reboot
+      Reboot,
+      [EnumMember(Value = "REGISTER_MANAGED_INSTANCE")]
+      RegisterManagedInstance,
+      [EnumMember(Value = "LIST_SNAPS")]
+      ListSnaps,
+      [EnumMember(Value = "INSTALL_SNAPS")]
+      InstallSnaps,
+      [EnumMember(Value = "REMOVE_SNAPS")]
+      RemoveSnaps,
+      [EnumMember(Value = "SWITCH_SNAP_CHANNEL")]
+      SwitchSnapChannel
   }
 }

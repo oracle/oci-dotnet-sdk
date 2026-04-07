@@ -50,8 +50,7 @@ namespace Oci.OsmanagementhubService.Requests
         /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a paginated \"List\" call.
         /// For important details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine).
-        /// <br/>
-        /// Example: 50
+        /// Example: 700
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }

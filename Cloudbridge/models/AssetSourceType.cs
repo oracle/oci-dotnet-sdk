@@ -22,6 +22,8 @@ namespace Oci.CloudbridgeService.Models
       [EnumMember(Value = "VMWARE")]
       Vmware,
       [EnumMember(Value = "AWS")]
-      Aws
+      Aws,
+      [EnumMember(Value = "OLVM")]
+      Olvm
   }
 }

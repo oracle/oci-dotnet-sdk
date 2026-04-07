@@ -246,6 +246,55 @@ namespace Oci.OsmanagementhubService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListManagedInstanceGroupManagedInstances operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListManagedInstanceGroupManagedInstancesResponse> ListManagedInstanceGroupManagedInstancesResponseEnumerator(ListManagedInstanceGroupManagedInstancesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListManagedInstanceGroupManagedInstancesRequest, ListManagedInstanceGroupManagedInstancesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListManagedInstanceGroupManagedInstances(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ManagedInstanceSummary objects
+        /// contained in responses from the ListManagedInstanceGroupManagedInstances operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ManagedInstanceSummary> ListManagedInstanceGroupManagedInstancesRecordEnumerator(ListManagedInstanceGroupManagedInstancesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListManagedInstanceGroupManagedInstancesRequest, ListManagedInstanceGroupManagedInstancesResponse, ManagedInstanceSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListManagedInstanceGroupManagedInstances(request, retryConfiguration, cancellationToken),
+                response => response.ManagedInstanceCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListManagedInstanceGroupModules operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

@@ -283,5 +283,19 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "agentVersion")]
         public string AgentVersion { get; set; }
         
+        /// <value>
+        /// Controls whether OSMH manages software sources for this instance. This defaults to false for Ubuntu and Windows instances.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "areSourcesManaged")]
+        public System.Nullable<bool> AreSourcesManaged { get; set; }
+        
+        /// <value>
+        /// The date and time the instance's software information was last refreshed (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastSoftwareRefresh")]
+        public System.Nullable<System.DateTime> TimeLastSoftwareRefresh { get; set; }
+        
     }
 }

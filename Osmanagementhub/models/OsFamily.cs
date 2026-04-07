@@ -19,6 +19,8 @@ namespace Oci.OsmanagementhubService.Models
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
       [EnumMember(Value = null)]
       UnknownEnumValue,
+      [EnumMember(Value = "ORACLE_LINUX_10")]
+      OracleLinux10,
       [EnumMember(Value = "ORACLE_LINUX_9")]
       OracleLinux9,
       [EnumMember(Value = "ORACLE_LINUX_8")]
@@ -33,7 +35,17 @@ namespace Oci.OsmanagementhubService.Models
       WindowsServer2019,
       [EnumMember(Value = "WINDOWS_SERVER_2022")]
       WindowsServer2022,
+      [EnumMember(Value = "WINDOWS_SERVER_2025")]
+      WindowsServer2025,
+      [EnumMember(Value = "WINDOWS_11")]
+      Windows11,
       [EnumMember(Value = "ALL")]
-      All
+      All,
+      [EnumMember(Value = "UBUNTU_20_04")]
+      Ubuntu2004,
+      [EnumMember(Value = "UBUNTU_22_04")]
+      Ubuntu2204,
+      [EnumMember(Value = "UBUNTU_24_04")]
+      Ubuntu2404
   }
 }

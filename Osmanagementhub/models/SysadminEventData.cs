@@ -22,6 +22,12 @@ namespace Oci.OsmanagementhubService.Models
     {
         
         /// <value>
+        /// Brief description on how this error is categorized.
+        /// </value>
+        [JsonProperty(PropertyName = "errorSummary")]
+        public string ErrorSummary { get; set; }
+        
+        /// <value>
         /// The commands executed by the agent that caused the error.
         /// </value>
         /// <remarks>

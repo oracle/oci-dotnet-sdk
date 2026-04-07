@@ -79,6 +79,9 @@ namespace Oci.CloudbridgeService.Models
                 case "AWS_EBS":
                     obj = new UpdateAwsEbsAssetDetails();
                     break;
+                case "INVENTORY_ASSET":
+                    obj = new UpdateInventoryAssetDetails();
+                    break;
                 case "VMWARE_VM":
                     obj = new UpdateVmwareVmAssetDetails();
                     break;

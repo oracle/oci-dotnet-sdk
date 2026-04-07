@@ -151,5 +151,12 @@ namespace Oci.OsmanagementhubService.Models
         [JsonProperty(PropertyName = "agentVersion")]
         public string AgentVersion { get; set; }
         
+        /// <value>
+        /// Time that the instance last booted (in [RFC 3339](https://tools.ietf.org/rfc/rfc3339) format).
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLastBoot")]
+        public System.Nullable<System.DateTime> TimeLastBoot { get; set; }
+        
     }
 }

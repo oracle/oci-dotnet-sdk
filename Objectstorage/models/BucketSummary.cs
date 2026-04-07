@@ -101,5 +101,17 @@ namespace Oci.ObjectstorageService.Models
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
         
+        /// <value>
+        /// Scope in which the bucket is unique. Default value is NAMESPACE.
+        /// Bucket scope as NAMESPACE means that the bucket is unique only in the owning namespace/tenancy. Other 
+        /// tenancies can have a bucket with same name in their namespace.
+        /// Bucket scope as REGION means that the bucket is regionally unique. No other tenancy can have a bucket with
+        /// same name and scope REGION.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "bucketScope")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<Bucket.BucketScopeEnum> BucketScope { get; set; }
+        
     }
 }

@@ -116,5 +116,11 @@ namespace Oci.OsmanagementhubService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
+        
+        /// <value>
+        /// A filter that returns information for management stations in the specified health state.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "healthState")]
+        public System.Nullable<HealthState> HealthState { get; set; }
     }
 }

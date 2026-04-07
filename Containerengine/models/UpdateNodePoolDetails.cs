@@ -123,5 +123,18 @@ namespace Oci.ContainerengineService.Models
         [JsonProperty(PropertyName = "nodePoolCyclingDetails")]
         public NodePoolCyclingDetails NodePoolCyclingDetails { get; set; }
         
+        /// <value>
+        /// A list of secondary vnics to attach to nodes
+        /// </value>
+        [JsonProperty(PropertyName = "secondaryVnics")]
+        public System.Collections.Generic.List<NodePoolSecondaryVnicDetails> SecondaryVnics { get; set; }
+        
+        /// <value>
+        /// Emulation type for the physical network interface card (NIC) for nodes
+        /// </value>
+        [JsonProperty(PropertyName = "networkLaunchType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<NetworkLaunchType> NetworkLaunchType { get; set; }
+        
     }
 }
