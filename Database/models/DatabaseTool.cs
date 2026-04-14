@@ -42,7 +42,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "ORDS")]
             Ords,
             [EnumMember(Value = "MONGODB_API")]
-            MongodbApi
+            MongodbApi,
+            [EnumMember(Value = "SPATIAL_STUDIO")]
+            SpatialStudio
         };
 
         /// <value>

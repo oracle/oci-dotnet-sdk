@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// A ResourceAnchor is a description of a ResourceAnchor.
+    /// A resource anchor.
     /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized, talk to
     /// an administrator. If you're an administrator who needs to write policies to give users access, see
@@ -27,7 +27,7 @@ namespace Oci.MulticloudService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the ResourceAnchor.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the resource anchor.
         /// </value>
         /// <remarks>
         /// Required
@@ -69,7 +69,7 @@ namespace Oci.MulticloudService.Models
         public string CompartmentName { get; set; }
         
         /// <value>
-        /// The date and time the ResourceAnchor was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the resource anchor was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
@@ -81,7 +81,7 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the ResourceAnchor was updated, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the resource anchor was updated, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
@@ -89,7 +89,7 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// The current state of the ResourceAnchor.
+        /// The current state of the resource anchor.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -111,7 +111,7 @@ namespace Oci.MulticloudService.Models
         };
 
         /// <value>
-        /// The current state of the ResourceAnchor.
+        /// The current state of the resource anchor.
         /// </value>
         /// <remarks>
         /// Required
@@ -122,7 +122,7 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A message that describes the current state of the ResourceAnchor in more detail. For example,
+        /// A message that describes the current state of the resource anchor in more detail. For example,
         /// can be used to provide actionable information for a resource in the Failed state.
         /// 
         /// </value>

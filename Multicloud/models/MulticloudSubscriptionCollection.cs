@@ -16,13 +16,16 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Results of a multicloud subscription. Contains both MulticloudSubscription information.
+    /// Properties that define activated Multicloud subscriptions in the indicated compartment.
+    /// For more information, see
+    /// [Listing Multicloud Subscriptions](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/list-subscriptions.htm).
+    /// 
     /// </summary>
     public class MulticloudSubscriptionCollection 
     {
         
         /// <value>
-        /// List of MulticloudSubscriptions.
+        /// List of Multicloud subscriptions.
         /// </value>
         /// <remarks>
         /// Required

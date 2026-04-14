@@ -70,7 +70,10 @@ namespace Oci.MulticloudService
         }
 
         /// <summary>
-        /// Gets a list of multicloud resources with multicloud base compartment and subscription across Cloud Service Providers.
+        /// Lists Multicloud resources in the specified Multicloud subscription.
+        /// Details for each resource include Multicloud base compartment, name, state, resource type, and network anchor.
+        /// For more information, see
+        /// [Multicloud Resources](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/list-resources.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

@@ -104,6 +104,9 @@ namespace Oci.FilestorageService.Models
         /// </value>
         [JsonProperty(PropertyName = "locks")]
         public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
+        
+        [JsonProperty(PropertyName = "lockDurationDetails")]
+        public LockDurationDetails LockDurationDetails { get; set; }
                 ///
         /// <value>
         /// Specifies the generation type of the snapshot.

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FusionappsService.Models
 {
     /// <summary>
-    /// Vertex update action
+    /// Vertex update action.
     /// </summary>
     public class VertexAction : Action
     {
         
         /// <value>
-        /// patch that delivered the vertex update prerequisite
+        /// Patch that delivered the Vertex update prerequisite.
         /// </value>
         [JsonProperty(PropertyName = "artifact")]
         public string Artifact { get; set; }

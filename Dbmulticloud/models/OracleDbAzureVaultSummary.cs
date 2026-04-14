@@ -76,6 +76,9 @@ namespace Oci.DbmulticloudService.Models
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, string> Properties { get; set; }
         
+        [JsonProperty(PropertyName = "replicationMetadata")]
+        public ReplicationMetadata ReplicationMetadata { get; set; }
+        
         /// <value>
         /// The current lifecycle state of the Azure Arc Agent resource.
         /// </value>

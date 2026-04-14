@@ -30,7 +30,7 @@ namespace Oci.MulticloudService.Requests
         public string NetworkAnchorId { get; set; }
         
         /// <value>
-        /// The subscription service name of the Cloud Service Provider.
+        /// The cloud service provider.
         /// </value>
         /// <remarks>
         /// Required
@@ -60,7 +60,7 @@ namespace Oci.MulticloudService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The Cloud Service Provider region.
+        /// The cloud service provider region.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "externalLocation")]
         public string ExternalLocation { get; set; }

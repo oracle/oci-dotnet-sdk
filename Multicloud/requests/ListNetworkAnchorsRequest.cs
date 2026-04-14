@@ -20,8 +20,8 @@ namespace Oci.MulticloudService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud base compartment or sub-compartment in which to list resources. 
-        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a Cloud Service Provider (such as Azure, AWS, or Google Cloud). 
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud base compartment or sub-compartment in which to list resources.
+        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a cloud service provider (such as Azure or AWS).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
@@ -34,7 +34,7 @@ namespace Oci.MulticloudService.Requests
         public string SubscriptionId { get; set; }
         
         /// <value>
-        /// The subscription service name of the Cloud Service Provider.
+        /// The cloud service provider.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionServiceName")]
         public System.Nullable<SubscriptionType> SubscriptionServiceName { get; set; }
@@ -54,7 +54,7 @@ namespace Oci.MulticloudService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The Cloud Service Provider region.
+        /// The cloud service provider region.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "externalLocation")]
         public string ExternalLocation { get; set; }
@@ -64,12 +64,6 @@ namespace Oci.MulticloudService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "networkAnchorOciSubnetId")]
         public string NetworkAnchorOciSubnetId { get; set; }
-        
-        /// <value>
-        /// If set to true, a list operation will return NetworkAnchors from all child compartments in the provided compartmentId parameter.
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentIdInSubtree")]
-        public System.Nullable<bool> CompartmentIdInSubtree { get; set; }
         
         /// <value>
         /// A filter to return only NetworkAnchor resources that match the given OCI Vcn Id.
@@ -109,6 +103,8 @@ namespace Oci.MulticloudService.Requests
         
         /// <value>
         /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).
+        /// In general, the sort order is `DESC` when sorting by time and `ASC` otherwise.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }

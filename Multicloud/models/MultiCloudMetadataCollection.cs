@@ -16,7 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Multicloud metadata information across clouds.
+    /// Multicloud metadata for Multicloud subscriptions in the indicated compartment.
+    /// For more information, see
+    /// [Listing Multicloud Metadata for a Subscription](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/list-subscription-metadata.htm).
+    /// 
     /// </summary>
     public class MultiCloudMetadataCollection 
     {

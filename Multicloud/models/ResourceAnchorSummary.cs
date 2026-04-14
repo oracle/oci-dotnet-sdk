@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Summary information about a ResourceAnchor.
+    /// The properties that define a resource anchor.
     /// </summary>
     public class ResourceAnchorSummary 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the ResourceAnchor.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the resource anchor.
         /// </value>
         /// <remarks>
         /// Required
@@ -58,31 +58,31 @@ namespace Oci.MulticloudService.Models
         public string CompartmentName { get; set; }
         
         /// <value>
-        /// Partner Cloud Account Identifier of the Cloud Service Provider.
+        /// Partner cloud account identifier of the cloud service provider.
         /// </value>
         [JsonProperty(PropertyName = "partnerCloudAccountIdentifier")]
         public string PartnerCloudAccountIdentifier { get; set; }
         
         /// <value>
-        /// Resource Anchor Id in the Cloud Service Provider.
+        /// Resource anchor ID in the cloud service provider.
         /// </value>
         [JsonProperty(PropertyName = "cspResourceAnchorId")]
         public string CspResourceAnchorId { get; set; }
         
         /// <value>
-        /// Resource Anchor Name in the Cloud Service Provider.
+        /// Resource anchor name in the cloud service provider.
         /// </value>
         [JsonProperty(PropertyName = "cspResourceAnchorName")]
         public string CspResourceAnchorName { get; set; }
         
         /// <value>
-        /// CSP Specific Additional Properties, AzureSubnetId for Azure
+        /// Cloud service provider-specific properties, such as AzureSubnetId for Azure.
         /// </value>
         [JsonProperty(PropertyName = "cspAdditionalProperties")]
         public System.Collections.Generic.Dictionary<string, string> CspAdditionalProperties { get; set; }
         
         /// <value>
-        /// The date and time the ResourceAnchor was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the resource anchor was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
@@ -94,7 +94,7 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the ResourceAnchor was updated, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time the resource anchor was updated, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
@@ -102,7 +102,7 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// The current state of the ResourceAnchor.
+        /// The current state of the resource anchor.
         /// </value>
         /// <remarks>
         /// Required
@@ -113,7 +113,7 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<ResourceAnchor.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A message that describes the current state of the ResourceAnchor in more detail. For example,
+        /// A message that describes the current state of the resource anchor in more detail. For example,
         /// can be used to provide actionable information for a resource in the Failed state.
         /// 
         /// </value>
@@ -165,18 +165,26 @@ namespace Oci.MulticloudService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
         /// <value>
-        /// Optional - Oracle Cloud Infrastructure compartment Id (OCID) which was created or linked by customer with resource anchor. 
-        /// This compartmentId is different from where resource Anchor live.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the optional OCI compartment that was created or linked with the resource anchor.
+        /// This compartment is different from the compartment that contains the resource anchor.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "linkedCompartmentId")]
         public string LinkedCompartmentId { get; set; }
         
         /// <value>
-        /// The name assigned to the compartment which was created or linked by customer with resource anchor. This compartment is different from where resource Anchor live.
+        /// The name of the optional OCI compartment that was created or linked with the resource anchor.
+        /// This compartment is different from the compartment that contains the resource anchor.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "linkedCompartmentName")]
         public string LinkedCompartmentName { get; set; }
+        
+        /// <value>
+        /// URI for the cloud service provider's resource anchor.
+        /// </value>
+        [JsonProperty(PropertyName = "resourceAnchorUri")]
+        public string ResourceAnchorUri { get; set; }
         
     }
 }

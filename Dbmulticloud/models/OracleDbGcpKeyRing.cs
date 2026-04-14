@@ -77,6 +77,9 @@ namespace Oci.DbmulticloudService.Models
         /// </value>
         [JsonProperty(PropertyName = "properties")]
         public System.Collections.Generic.Dictionary<string, string> Properties { get; set; }
+        
+        [JsonProperty(PropertyName = "replicationMetadata")]
+        public ReplicationMetadata ReplicationMetadata { get; set; }
                 ///
         /// <value>
         /// The lifecycle state of the Oracle DB GCP Key Ring resource.
