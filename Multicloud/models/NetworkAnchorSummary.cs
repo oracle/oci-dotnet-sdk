@@ -188,5 +188,11 @@ namespace Oci.MulticloudService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SubscriptionType> SubscriptionType { get; set; }
         
+        /// <value>
+        /// An Azure/GCP/AWS cidrBlocks
+        /// </value>
+        [JsonProperty(PropertyName = "cidrBlocks")]
+        public System.Collections.Generic.List<string> CidrBlocks { get; set; }
+        
     }
 }

@@ -118,6 +118,18 @@ namespace Oci.DbmulticloudService.Models
       [EnumMember(Value = "MOVE_AWS_KEY")]
       MoveAwsKey,
       [EnumMember(Value = "REFRESH_AWS_KEY")]
-      RefreshAwsKey
+      RefreshAwsKey,
+      [EnumMember(Value = "CREATE_REPLICATE_RESOURCE")]
+      CreateReplicateResource,
+      [EnumMember(Value = "UPDATE_REPLICATE_RESOURCE")]
+      UpdateReplicateResource,
+      [EnumMember(Value = "DELETE_REPLICATE_RESOURCE")]
+      DeleteReplicateResource,
+      [EnumMember(Value = "MOVE_REPLICATE_RESOURCE")]
+      MoveReplicateResource,
+      [EnumMember(Value = "REFRESH_REPLICATE_RESOURCE")]
+      RefreshReplicateResource,
+      [EnumMember(Value = "REPLICATE")]
+      Replicate
   }
 }

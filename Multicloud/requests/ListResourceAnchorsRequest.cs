@@ -20,8 +20,8 @@ namespace Oci.MulticloudService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud base compartment or sub-compartment in which to list resources. 
-        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a Cloud Service Provider (such as Azure, AWS, or Google Cloud). 
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud base compartment or sub-compartment in which to list resources.
+        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a cloud service provider (such as Azure or AWS).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
@@ -48,7 +48,7 @@ namespace Oci.MulticloudService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the ResourceAnchor.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the resource anchor.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "id")]
         public string Id { get; set; }
@@ -73,6 +73,8 @@ namespace Oci.MulticloudService.Requests
         
         /// <value>
         /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).
+        /// In general, the sort order is `DESC` when sorting by time and `ASC` otherwise.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }
@@ -100,19 +102,21 @@ namespace Oci.MulticloudService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// Check the sub-compartments of a given compartmentId
+        /// Check the sub-compartments of a given `compartmentId`.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isCompartmentIdInSubtree")]
         public System.Nullable<bool> IsCompartmentIdInSubtree { get; set; }
         
         /// <value>
-        /// Whether to fetch and include the compartment name, setting this field to yes may introduce additional latency.
+        /// Whether to fetch and include the compartment name.
+        /// Setting this field to `true` might introduce additional latency.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldFetchCompartmentName")]
         public System.Nullable<bool> ShouldFetchCompartmentName { get; set; }
         
         /// <value>
-        /// The subscription service name of the Cloud Service Provider.
+        /// The cloud service provider.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionServiceName")]
         public System.Nullable<SubscriptionType> SubscriptionServiceName { get; set; }

@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Results of a resourceAnchor search. Contains both ResourceAnchorSummary items and other information, such as metadata.
+    /// List of resource anchors in the indicated Multicloud subscription.
     /// </summary>
     public class ResourceAnchorCollection 
     {
         
         /// <value>
-        /// List of resourceAnchors.
+        /// List of resource anchors.
         /// </value>
         /// <remarks>
         /// Required

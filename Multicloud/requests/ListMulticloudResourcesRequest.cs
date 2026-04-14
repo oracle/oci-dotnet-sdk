@@ -20,27 +20,7 @@ namespace Oci.MulticloudService.Requests
     {
         
         /// <value>
-        /// The subscription service name of the Cloud Service Provider.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SubscriptionServiceName is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionServiceName")]
-        public System.Nullable<SubscriptionType> SubscriptionServiceName { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud subscription in which to list resources.
-        /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SubscriptionId is required.")]
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionId")]
-        public string SubscriptionId { get; set; }
-        
-        /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the ResourceAnchor.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the resource anchor.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceAnchorId")]
         public string ResourceAnchorId { get; set; }
@@ -71,6 +51,8 @@ namespace Oci.MulticloudService.Requests
         
         /// <value>
         /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).
+        /// In general, the sort order is `DESC` when sorting by time and `ASC` otherwise.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }
@@ -98,10 +80,28 @@ namespace Oci.MulticloudService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
-        /// The Cloud Service Provider region.
+        /// The cloud service provider.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionServiceName")]
+        public System.Nullable<SubscriptionType> SubscriptionServiceName { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud subscription in which to list resources.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionId")]
+        public string SubscriptionId { get; set; }
+        
+        /// <value>
+        /// The cloud service provider region.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "externalLocation")]
         public string ExternalLocation { get; set; }
+        
+        /// <value>
+        /// Filter alerts by resource type (e.g. ADBD, VMCluster).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "resourceType")]
+        public string ResourceType { get; set; }
         
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact

@@ -73,7 +73,10 @@ namespace Oci.MulticloudService
         }
 
         /// <summary>
-        /// Gets information about a ResourceAnchor.
+        /// Gets details for the specified resource anchor. The subscription OCID and service name are required.
+        /// For more information, see
+        /// [Getting a Resource Anchor&#39;s Details (OCI)](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/get-resource-anchor.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -129,7 +132,10 @@ namespace Oci.MulticloudService
         }
 
         /// <summary>
-        /// Gets a list of ResourceAnchors.
+        /// Lists resource anchors in the specified Multicloud subscription.
+        /// Details listed for each resource anchor include name, state, and the related Multicloud compartment.
+        /// For more information, see
+        /// [Listing Resource Anchors](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/list-resource-anchors.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

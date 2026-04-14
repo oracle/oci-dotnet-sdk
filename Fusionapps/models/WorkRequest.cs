@@ -71,6 +71,10 @@ namespace Oci.FusionappsService.Models
             ExecuteColdPatch,
             [EnumMember(Value = "DATA_MASK_FUSION_ENVIRONMENT")]
             DataMaskFusionEnvironment,
+            [EnumMember(Value = "ENABLE_VANITY_DOMAIN")]
+            EnableVanityDomain,
+            [EnumMember(Value = "DELETE_VANITY_DOMAIN")]
+            DeleteVanityDomain,
             [EnumMember(Value = "INITIATE_EXTRACT")]
             InitiateExtract,
             [EnumMember(Value = "SUBSCRIPTION_SUSPEND")]

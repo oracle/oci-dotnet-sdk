@@ -16,20 +16,20 @@ using Newtonsoft.Json.Linq;
 namespace Oci.FusionappsService.Models
 {
     /// <summary>
-    /// Action details
+    /// Action details.
     /// </summary>
     [JsonConverter(typeof(ActionModelConverter))]
     public class Action 
     {
         
         /// <value>
-        /// Unique identifier of the object that represents the action
+        /// Unique identifier of the object that represents the action.
         /// </value>
         [JsonProperty(PropertyName = "referenceKey")]
         public string ReferenceKey { get; set; }
                 ///
         /// <value>
-        /// Type of action
+        /// Type of action.
         /// </value>
         ///
         public enum ActionTypeEnum {
@@ -43,7 +43,7 @@ namespace Oci.FusionappsService.Models
 
                 ///
         /// <value>
-        /// A string that describes whether the change is applied hot or cold
+        /// A string that describes whether the change is applied hot or cold.
         /// </value>
         ///
         public enum StateEnum {
@@ -60,7 +60,7 @@ namespace Oci.FusionappsService.Models
         };
 
         /// <value>
-        /// A string that describes whether the change is applied hot or cold
+        /// A string that describes whether the change is applied hot or cold.
         /// </value>
         [JsonProperty(PropertyName = "state")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

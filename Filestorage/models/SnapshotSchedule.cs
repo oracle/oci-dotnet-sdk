@@ -206,5 +206,8 @@ namespace Oci.FilestorageService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<MonthEnum> Month { get; set; }
         
+        [JsonProperty(PropertyName = "lockDurationDetails")]
+        public LockDurationDetails LockDurationDetails { get; set; }
+        
     }
 }

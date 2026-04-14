@@ -16,14 +16,17 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Multicloud metadata information including base multicloud compartments information.
+    /// The Multicloud metadata for the indicated subscription.
+    /// Multicloud metadata for a subscription includes the Multicloud base compartment (top-level OCI compartment).
+    /// For more information, see
+    /// [Getting Details for Multicloud Metadata](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/get-subscription-metadata.htm).
     /// 
     /// </summary>
     public class MultiCloudMetadataSummary 
     {
         
         /// <value>
-        /// MultiCloud base compartment OCID associated with subscriptionId.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Multicloud base compartment associated with the indicated subscription (`subscriptionId`).
         /// </value>
         /// <remarks>
         /// Required
@@ -33,7 +36,7 @@ namespace Oci.MulticloudService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The date and time the multicloud compartment was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
+        /// The date and time that the Multicloud base compartment was created, in the format defined by [RFC 3339](https://tools.ietf.org/html/rfc3339).
         /// <br/>
         /// Example: 2016-08-25T21:10:29.600Z
         /// </value>
@@ -45,7 +48,7 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Oracle Cloud Infrastructure subscriptionId.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the OCI subscription.
         /// </value>
         /// <remarks>
         /// Required

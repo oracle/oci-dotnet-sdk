@@ -22,13 +22,13 @@ namespace Oci.FusionappsService.Models
     {
         
         /// <value>
-        /// name of the repo
+        /// Name of the repo.
         /// </value>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
         
         /// <value>
-        /// month qualifier
+        /// Month qualifier.
         /// </value>
         [JsonProperty(PropertyName = "qualifier")]
         public string Qualifier { get; set; }

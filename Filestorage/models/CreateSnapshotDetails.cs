@@ -53,6 +53,9 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "expirationTime")]
         public System.Nullable<System.DateTime> ExpirationTime { get; set; }
         
+        [JsonProperty(PropertyName = "lockDurationDetails")]
+        public LockDurationDetails LockDurationDetails { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
         ///  with no predefined name, type, or namespace.

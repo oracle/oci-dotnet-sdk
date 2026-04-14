@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Multicloud subscription object
+    /// A Multicloud subscription.
     /// </summary>
     public class MulticloudSubscriptionSummary 
     {
         
         /// <value>
-        /// Subscription ID for OCI and Partner cloud in classic format.
+        /// Subscription ID for OCI and partner cloud in classic format.
         /// </value>
         /// <remarks>
         /// Required
@@ -32,7 +32,8 @@ namespace Oci.MulticloudService.Models
         public string ClassicSubscriptionId { get; set; }
         
         /// <value>
-        /// URL to the subscription page https://{console-url}/org-mgmt/subscription/ocid1.organizationssubscription.oc1.iad.amaaaaaapf266qyaqohz27zvh45jzaielgwojo53bh24s7cy5q5g7fiknpxa?region=us-ashburn-1.
+        /// URL to the subscription details page.
+        /// Example: https://{console-url}/org-mgmt/subscription/ocid1.organizationssubscription.oc1.iad.exampleuniqueid?region=us-ashburn-1.
         /// </value>
         [JsonProperty(PropertyName = "subscriptionId")]
         public string SubscriptionId { get; set; }
@@ -48,14 +49,20 @@ namespace Oci.MulticloudService.Models
         public string PartnerCloudAccountIdentifier { get; set; }
         
         /// <value>
-        /// The serviceName that externalLocation map object belongs to.
+        /// The partner cloud tenant ID.
+        /// </value>
+        [JsonProperty(PropertyName = "partnerCloudTenantIdentifier")]
+        public string PartnerCloudTenantIdentifier { get; set; }
+        
+        /// <value>
+        /// The cloud service provider.
         /// </value>
         [JsonProperty(PropertyName = "serviceName")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<SubscriptionType> ServiceName { get; set; }
         
         /// <value>
-        /// The date and time for when the multicloud was created, in the format defined by
+        /// The date and time that the Multicloud base compartment was created, in the format defined by
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// 
         /// </value>
@@ -75,7 +82,7 @@ namespace Oci.MulticloudService.Models
         public string ActiveCommitment { get; set; }
         
         /// <value>
-        /// The date and time for when the subscription is finishing, in the format defined by
+        /// The end date and time for the subscription, in the format defined by
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// 
         /// </value>
@@ -104,13 +111,14 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// CSP Specific Additional Properties, AzureSubnetId for Azure
+        /// Properties specific to the cloud service provider. For example, AzureSubnetId for Azure.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "cspAdditionalProperties")]
         public System.Collections.Generic.Dictionary<string, string> CspAdditionalProperties { get; set; }
         
         /// <value>
-        /// The date and time the subscription was created, in the format defined by
+        /// The date and time that the subscription was created, in the format defined by
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// 
         /// </value>
@@ -122,7 +130,7 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// The date and time the subscription was updated, in the format defined by
+        /// The date and time that the subscription was updated, in the format defined by
         /// [RFC 3339](https://tools.ietf.org/rfc/rfc3339).
         /// 
         /// </value>

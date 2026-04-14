@@ -30,7 +30,7 @@ namespace Oci.MulticloudService.Requests
         public string SubscriptionId { get; set; }
         
         /// <value>
-        /// The subscription service name of the Cloud Service Provider.
+        /// The cloud service provider.
         /// </value>
         /// <remarks>
         /// Required
@@ -41,7 +41,7 @@ namespace Oci.MulticloudService.Requests
         
         ///
         /// <value>
-        /// The resource type query (i.e. dbsystem, instance etc.)
+        /// The resource type query (for example, dbsystem or instance).
         /// </value>
         ///
         public enum EntityTypeEnum {
@@ -50,14 +50,14 @@ namespace Oci.MulticloudService.Requests
         };
 
         /// <value>
-        /// The resource type query (i.e. dbsystem, instance etc.)
+        /// The resource type query (for example, dbsystem or instance).
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "entityType")]
         public System.Nullable<EntityTypeEnum> EntityType { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud base compartment in which to list resources. 
-        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a Cloud Service Provider (such as Azure, AWS, or Google Cloud). 
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud base compartment in which to list resources.
+        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a cloud service provider (such as Azure or AWS).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
@@ -70,19 +70,19 @@ namespace Oci.MulticloudService.Requests
         public string LinkedCompartmentId { get; set; }
         
         /// <value>
-        /// The Cloud Service Provider region.
+        /// The cloud service provider region.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "externalLocation")]
         public string ExternalLocation { get; set; }
         
         /// <value>
-        /// OCI Logical AD to filter the response.
+        /// OCI logical availability domain (AD) to filter the response.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "logicalZone")]
         public string LogicalZone { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Cluster Placement Group.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the cluster placement group.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "clusterPlacementGroupId")]
         public string ClusterPlacementGroupId { get; set; }
@@ -107,6 +107,8 @@ namespace Oci.MulticloudService.Requests
         
         /// <value>
         /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).
+        /// In general, the sort order is `DESC` when sorting by time and `ASC` otherwise.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }

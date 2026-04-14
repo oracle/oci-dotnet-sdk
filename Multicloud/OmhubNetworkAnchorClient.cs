@@ -70,7 +70,10 @@ namespace Oci.MulticloudService
         }
 
         /// <summary>
-        /// Gets information about a NetworkAnchor.
+        /// Gets details for the specified network anchor. The subscription OCID and service name are required.
+        /// For more information, see
+        /// [Getting a Network Anchor&#39;s Details](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/get-network-anchor.htm).
+        /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
@@ -126,7 +129,10 @@ namespace Oci.MulticloudService
         }
 
         /// <summary>
-        /// Gets a list of NetworkAnchors.
+        /// Lists network anchors in the specified Multicloud subscription, Multicloud compartment, and partner cloud region.
+        /// Details listed for each resource include name, state, VCN, and ODB network ID.
+        /// For more information, see
+        /// [Listing Network Anchors](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/list-network-anchors.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

@@ -32,12 +32,18 @@ namespace Oci.IotService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Type of the domain group. LIGHTWEIGHT uses fewer resources and has a higher Recovery Time Objective (RTO), 
-        /// making it suitable for development and testing. STANDARD is recommended for production.
+        /// Type of domain group. DEVELOPMENT uses fewer resources and has a higher Recovery Time Objective (RTO),
+        /// making it suitable for development and testing. PRODUCTION is recommended for production workloads. 
+        /// LIGHTWEIGHT and STANDARD are deprecated aliases for DEVELOPMENT and PRODUCTION respectively and will be removed 
+        /// in a future release.
         /// 
         /// </value>
         ///
         public enum TypeEnum {
+            [EnumMember(Value = "PRODUCTION")]
+            Production,
+            [EnumMember(Value = "DEVELOPMENT")]
+            Development,
             [EnumMember(Value = "STANDARD")]
             Standard,
             [EnumMember(Value = "LIGHTWEIGHT")]
@@ -45,8 +51,10 @@ namespace Oci.IotService.Models
         };
 
         /// <value>
-        /// Type of the domain group. LIGHTWEIGHT uses fewer resources and has a higher Recovery Time Objective (RTO), 
-        /// making it suitable for development and testing. STANDARD is recommended for production.
+        /// Type of domain group. DEVELOPMENT uses fewer resources and has a higher Recovery Time Objective (RTO),
+        /// making it suitable for development and testing. PRODUCTION is recommended for production workloads. 
+        /// LIGHTWEIGHT and STANDARD are deprecated aliases for DEVELOPMENT and PRODUCTION respectively and will be removed 
+        /// in a future release.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "type")]

@@ -104,7 +104,7 @@ namespace Oci.GenerativeaidataService
                     ServiceName = "GenerateSqlFromNlJob",
                     OperationName = "GenerateSqlFromNl",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/generative-ai-nl2sql/20260325/GenerateSqlFromNlJob/GenerateSqlFromNl",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

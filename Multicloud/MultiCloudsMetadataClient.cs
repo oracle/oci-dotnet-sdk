@@ -70,8 +70,10 @@ namespace Oci.MulticloudService
         }
 
         /// <summary>
-        /// Gets information about the Multicloud base compartment for a given tenancy Id.
-        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a Cloud Service Provider (such as Azure, AWS, or Google Cloud).
+        /// Gets details for Multicloud metadata for the specified Multicloud subscription.
+        /// Multicloud metadata for a subscription includes the Multicloud base compartment (top-level OCI compartment).
+        /// For more information, see
+        /// [Getting Details for Multicloud Metadata](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/get-subscription-metadata.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -128,8 +130,10 @@ namespace Oci.MulticloudService
         }
 
         /// <summary>
-        /// Gets a list of multicloud metadata with pairs of Multicloud base compartment and subscription across Cloud Service Providers from a tenancy Id.
-        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a Cloud Service Provider (such as Azure, AWS, or Google Cloud).
+        /// Lists Multicloud metadata for Multicloud subscriptions in the specified compartment.
+        /// Multicloud metadata for a subscription includes the Multicloud base compartment (top-level OCI compartment).
+        /// For more information, see
+        /// [Listing Multicloud Metadata for a Subscription](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/list-subscription-metadata.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

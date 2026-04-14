@@ -16,7 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// The multicloud resource, for eg. VMCluster, ExaInfra, and its attributes. The resource and network anchor that represents
+    /// The properties that define the Multicloud resource.
+    /// Details for each resource include Multicloud base compartment, name, state, resource type, and network anchor.
+    /// For more information, see
+    /// [Multicloud Resources](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/list-resources.htm).
     /// 
     /// </summary>
     public class MulticloudResourceSummary 
@@ -33,55 +36,55 @@ namespace Oci.MulticloudService.Models
         public string ResourceId { get; set; }
         
         /// <value>
-        /// Endpoint used to retrieve displayName and lifeCycleState of the resource.
+        /// Endpoint used to retrieve the resource's display name and lifecycle state.
         /// </value>
         [JsonProperty(PropertyName = "resourceDisplayName")]
         public string ResourceDisplayName { get; set; }
         
         /// <value>
-        /// What resource it refers to. Eg. VMCluster, ExaInfra, etc.
+        /// Type of resource, such as `VMCluster` or `ExaInfra`,
         /// </value>
         [JsonProperty(PropertyName = "resourceType")]
         public string ResourceType { get; set; }
         
         /// <value>
-        /// Compartment name associated the resource.
+        /// Name of the compartment associated with the resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentName")]
         public string CompartmentName { get; set; }
         
         /// <value>
-        /// Compartment Id of the resource.
+        /// Id of the compartment associated with the resource.
         /// </value>
         [JsonProperty(PropertyName = "compartmentId")]
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Resource Anchor name.
+        /// Name of the virtual cloud network (VCN) associated with the resource.
         /// </value>
         [JsonProperty(PropertyName = "vcnName")]
         public string VcnName { get; set; }
         
         /// <value>
-        /// Id of the Virtual Cloud Network associated to the resource.
+        /// Id of the virtual cloud network (VCN) associated with the resource.
         /// </value>
         [JsonProperty(PropertyName = "vcnId")]
         public string VcnId { get; set; }
         
         /// <value>
-        /// Name of the network anchor associated to the resource.
+        /// Name of the network anchor associated with the resource.
         /// </value>
         [JsonProperty(PropertyName = "networkAnchorName")]
         public string NetworkAnchorName { get; set; }
         
         /// <value>
-        /// OCID of the Network Anchor
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network anchor associated with the resource.
         /// </value>
         [JsonProperty(PropertyName = "networkAnchorId")]
         public string NetworkAnchorId { get; set; }
         
         /// <value>
-        /// Resource Id that comes from the Multi Cloud Control Plane
+        /// The resource Id that comes from the Multicloud control plane.
         /// </value>
         [JsonProperty(PropertyName = "cspResourceId")]
         public string CspResourceId { get; set; }
@@ -99,10 +102,16 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// CSP Specific Additional Properties, AzureSubnetId for Azure
+        /// Properties specific to the cloud service provider. For example, AzureSubnetId for Azure.
         /// </value>
         [JsonProperty(PropertyName = "cspAdditionalProperties")]
         public System.Collections.Generic.Dictionary<string, string> CspAdditionalProperties { get; set; }
+        
+        /// <value>
+        /// Additional attributes specific to certain resource types, used to construct a URL for accessing the resource in the OCI console.
+        /// </value>
+        [JsonProperty(PropertyName = "resourceAdditionalProperties")]
+        public System.Collections.Generic.Dictionary<string, System.Object> ResourceAdditionalProperties { get; set; }
         
         /// <value>
         /// The date and time the subscription was updated, in the format defined by
@@ -113,7 +122,7 @@ namespace Oci.MulticloudService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
                 ///
         /// <value>
-        /// The current state of the multicloud resource.
+        /// The current state of the Multicloud resource.
         /// </value>
         ///
         public enum LifecycleStateEnum {
@@ -127,7 +136,7 @@ namespace Oci.MulticloudService.Models
         };
 
         /// <value>
-        /// The current state of the multicloud resource.
+        /// The current state of the Multicloud resource.
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

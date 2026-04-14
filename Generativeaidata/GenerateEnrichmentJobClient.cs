@@ -104,7 +104,7 @@ namespace Oci.GenerativeaidataService
                     ServiceName = "GenerateEnrichmentJob",
                     OperationName = "GenerateEnrichmentJob",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/generative-ai-nl2sql/20260325/EnrichmentJob/GenerateEnrichmentJob",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
