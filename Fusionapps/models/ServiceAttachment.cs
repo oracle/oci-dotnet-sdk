@@ -67,6 +67,8 @@ namespace Oci.FusionappsService.Models
             IntegrationCloud,
             [EnumMember(Value = "ANALYTICS_WAREHOUSE")]
             AnalyticsWarehouse,
+            [EnumMember(Value = "FUSION_DATA_INTELLIGENCE")]
+            FusionDataIntelligence,
             [EnumMember(Value = "VBCS")]
             Vbcs,
             [EnumMember(Value = "VISUAL_BUILDER_STUDIO")]

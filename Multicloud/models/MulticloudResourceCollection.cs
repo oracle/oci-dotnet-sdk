@@ -16,7 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.MulticloudService.Models
 {
     /// <summary>
-    /// Multicloud resource information across clouds.
+    /// Multicloud resources in the indicated Multicloud subscription.
+    /// For more information, see
+    /// [Multicloud Resources](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/list-resources.htm).
+    /// 
     /// </summary>
     public class MulticloudResourceCollection 
     {

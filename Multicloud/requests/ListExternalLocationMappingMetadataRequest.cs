@@ -20,7 +20,7 @@ namespace Oci.MulticloudService.Requests
     {
         
         /// <value>
-        /// The subscription type of the Cloud Service Provider.
+        /// The cloud service provider.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,8 +30,8 @@ namespace Oci.MulticloudService.Requests
         public System.Collections.Generic.List<SubscriptionType> SubscriptionServiceName { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud base compartment in which to list resources. 
-        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a Cloud Service Provider (such as Azure, AWS, or Google Cloud). 
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Multicloud base compartment in which to list resources.
+        /// A Multicloud base compartment is an OCI compartment that maps to a subscription in a cloud service provider (such as Azure or AWS).
         /// 
         /// </value>
         /// <remarks>
@@ -67,6 +67,8 @@ namespace Oci.MulticloudService.Requests
         
         /// <value>
         /// The sort order to use, either ascending (`ASC`) or descending (`DESC`).
+        /// In general, the sort order is `DESC` when sorting by time and `ASC` otherwise.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortOrder")]
         public System.Nullable<SortOrder> SortOrder { get; set; }

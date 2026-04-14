@@ -22,7 +22,7 @@ namespace Oci.FusionappsService.Models
     {
                 ///
         /// <value>
-        /// A string that describes whether the change is applied hot or cold
+        /// A string that describes whether the change is applied hot or cold.
         /// </value>
         ///
         public enum ModeEnum {
@@ -36,14 +36,14 @@ namespace Oci.FusionappsService.Models
         };
 
         /// <value>
-        /// A string that describes whether the change is applied hot or cold
+        /// A string that describes whether the change is applied hot or cold.
         /// </value>
         [JsonProperty(PropertyName = "mode")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ModeEnum> Mode { get; set; }
                 ///
         /// <value>
-        /// patch artifact category
+        /// Patch artifact category.
         /// </value>
         ///
         public enum CategoryEnum {
@@ -59,14 +59,14 @@ namespace Oci.FusionappsService.Models
         };
 
         /// <value>
-        /// patch artifact category
+        /// Patch artifact category.
         /// </value>
         [JsonProperty(PropertyName = "category")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<CategoryEnum> Category { get; set; }
         
         /// <value>
-        /// patch bundle name
+        /// Patch bundle name.
         /// </value>
         [JsonProperty(PropertyName = "artifact")]
         public string Artifact { get; set; }

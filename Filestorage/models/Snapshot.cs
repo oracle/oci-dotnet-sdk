@@ -169,6 +169,17 @@ namespace Oci.FilestorageService.Models
         [JsonProperty(PropertyName = "locks")]
         public System.Collections.Generic.List<ResourceLock> Locks { get; set; }
         
+        [JsonProperty(PropertyName = "lockDurationDetails")]
+        public LockDurationDetails LockDurationDetails { get; set; }
+        
+        /// <value>
+        /// The date and time as per [RFC 3339](https://tools.ietf.org/html/rfc3339) when this snapshot was locked.
+        /// It is a read-only property because the user should not be able to set it, it is set by our service.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "timeLocked")]
+        public System.Nullable<System.DateTime> TimeLocked { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair
         ///  with no predefined name, type, or namespace.

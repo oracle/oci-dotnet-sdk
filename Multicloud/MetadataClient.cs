@@ -127,7 +127,13 @@ namespace Oci.MulticloudService
         }
 
         /// <summary>
-        /// List externalLocation metadata from OCI to the Cloud Service Provider for regions, Physical Availability Zones.
+        /// List mapped partner cloud regions and zones across cloud service providers
+        /// for the specified Multicloud base compartment and subscription service name.
+        /// Each mapping includes the OCI region, logical availability domain, and physical availability domain,
+        /// along with mapped partner cloud details that depend on the partner cloud.
+        /// For example, Azure includes a logical zone while AWS doesn&#39;t.
+        /// For more information, see
+        /// [Cross-Cloud Region-Zone Mapping](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/view-cloud-mapping.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

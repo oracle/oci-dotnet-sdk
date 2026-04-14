@@ -42,8 +42,10 @@ namespace Oci.IotService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// Type of the domain group. LIGHTWEIGHT uses fewer resources and has a higher Recovery Time Objective (RTO), 
-        /// making it suitable for development and testing. STANDARD is recommended for production.
+        /// Type of domain group. DEVELOPMENT uses fewer resources and has a higher Recovery Time Objective (RTO),
+        /// making it suitable for development and testing. PRODUCTION is recommended for production workloads. 
+        /// LIGHTWEIGHT and STANDARD are deprecated aliases for DEVELOPMENT and PRODUCTION respectively and will be removed 
+        /// in a future release.
         /// 
         /// </value>
         ///
@@ -51,6 +53,10 @@ namespace Oci.IotService.Models
             /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
             [EnumMember(Value = null)]
             UnknownEnumValue,
+            [EnumMember(Value = "PRODUCTION")]
+            Production,
+            [EnumMember(Value = "DEVELOPMENT")]
+            Development,
             [EnumMember(Value = "STANDARD")]
             Standard,
             [EnumMember(Value = "LIGHTWEIGHT")]
@@ -58,8 +64,10 @@ namespace Oci.IotService.Models
         };
 
         /// <value>
-        /// Type of the domain group. LIGHTWEIGHT uses fewer resources and has a higher Recovery Time Objective (RTO), 
-        /// making it suitable for development and testing. STANDARD is recommended for production.
+        /// Type of domain group. DEVELOPMENT uses fewer resources and has a higher Recovery Time Objective (RTO),
+        /// making it suitable for development and testing. PRODUCTION is recommended for production workloads. 
+        /// LIGHTWEIGHT and STANDARD are deprecated aliases for DEVELOPMENT and PRODUCTION respectively and will be removed 
+        /// in a future release.
         /// 
         /// </value>
         /// <remarks>

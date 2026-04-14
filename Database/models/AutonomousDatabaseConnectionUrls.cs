@@ -71,5 +71,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "databaseTransformsUrl")]
         public string DatabaseTransformsUrl { get; set; }
         
+        /// <value>
+        /// The URL of the Spatial Studio for the Autonomous AI Database.
+        /// </value>
+        [JsonProperty(PropertyName = "spatialStudioUrl")]
+        public string SpatialStudioUrl { get; set; }
+        
     }
 }

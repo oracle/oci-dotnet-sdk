@@ -70,7 +70,8 @@ namespace Oci.MulticloudService
         }
 
         /// <summary>
-        /// Gets a list of Multicloud Resources.
+        /// Lists activated Multicloud subscriptions in the specified compartment. For more information, see
+        /// [Listing Multicloud Subscriptions](https://docs.cloud.oracle.com/iaas/Content/multicloud-hub/list-subscriptions.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

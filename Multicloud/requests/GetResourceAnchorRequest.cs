@@ -20,7 +20,7 @@ namespace Oci.MulticloudService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the ResourceAnchor.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the resource anchor.
         /// </value>
         /// <remarks>
         /// Required
@@ -30,7 +30,7 @@ namespace Oci.MulticloudService.Requests
         public string ResourceAnchorId { get; set; }
         
         /// <value>
-        /// The subscription service name of the Cloud Service Provider.
+        /// The cloud service provider.
         /// </value>
         /// <remarks>
         /// Required
@@ -60,7 +60,9 @@ namespace Oci.MulticloudService.Requests
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// Whether to fetch and include the compartment name, setting this field to yes may introduce additional latency.
+        /// Whether to fetch and include the compartment name.
+        /// Setting this field to `true` might introduce additional latency.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shouldFetchCompartmentName")]
         public System.Nullable<bool> ShouldFetchCompartmentName { get; set; }

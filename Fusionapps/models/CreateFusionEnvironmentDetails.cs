@@ -84,7 +84,7 @@ namespace Oci.FusionappsService.Models
         public System.Collections.Generic.List<string> AdditionalLanguagePacks { get; set; }
         
         /// <value>
-        /// Enable IPv4/IPv6 dual stack support for the environment.  Setting to true will assign an IPv6 address to the environment in addition to an IPv4 address. Default value will be false if not set
+        /// Enable IPv4/IPv6 dual stack support for the environment (where available). Setting to true will assign an IPv6 address to the environment in addition to an IPv4 address. The default value is false.
         /// </value>
         [JsonProperty(PropertyName = "isIPv6DualStackEnabled")]
         public System.Nullable<bool> IsIPv6DualStackEnabled { get; set; }
@@ -94,6 +94,12 @@ namespace Oci.FusionappsService.Models
         /// </value>
         [JsonProperty(PropertyName = "rules")]
         public System.Collections.Generic.List<Rule> Rules { get; set; }
+        
+        /// <value>
+        /// Additional egress rules that should be applied to the environment. Some standard ports are open for general use; see [Securing Network Access to a Fusion Applications Environment][iaas/Content/fusion-applications/plan-environment.htm#internet-cache]. If access to a non-standard port is required, however, they can be listed here.
+        /// </value>
+        [JsonProperty(PropertyName = "additionalEgressRules")]
+        public System.Collections.Generic.List<AdditionalEgressRule> AdditionalEgressRules { get; set; }
         
         /// <remarks>
         /// Required
