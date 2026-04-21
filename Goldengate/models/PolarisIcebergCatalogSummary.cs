@@ -55,13 +55,9 @@ namespace Oci.GoldengateService.Models
         public string ClientId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the password Oracle GoldenGate uses to connect to Snowflake platform.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret that stores the password Oracle GoldenGate uses to connect to Polaris.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ClientSecretSecretId is required.")]
         [JsonProperty(PropertyName = "clientSecretSecretId")]
         public string ClientSecretSecretId { get; set; }
         

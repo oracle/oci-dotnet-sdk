@@ -50,7 +50,8 @@ namespace Oci.EventsService
             {
                 ServiceName = "EVENTS",
                 ServiceEndpointPrefix = "",
-                ServiceEndpointTemplate = "https://events.{region}.oci.{secondLevelDomain}"
+                ServiceEndpointTemplate = "https://events.{region}.{dualStack?ds.:}oci.{secondLevelDomain}",
+                EndpointServiceName = "events"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
@@ -86,7 +87,8 @@ namespace Oci.EventsService
         public async Task<ChangeRuleCompartmentResponse> ChangeRuleCompartment(ChangeRuleCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called changeRuleCompartment");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/rules/{ruleId}/actions/changeCompartment".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "ruleId", request.RuleId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/rules/{ruleId}/actions/changeCompartment".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -143,7 +145,8 @@ namespace Oci.EventsService
         public async Task<CreateRuleResponse> CreateRule(CreateRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called createRule");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/rules".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/rules".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -199,7 +202,8 @@ namespace Oci.EventsService
         public async Task<DeleteRuleResponse> DeleteRule(DeleteRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteRule");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/rules/{ruleId}".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "ruleId", request.RuleId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/rules/{ruleId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -255,7 +259,8 @@ namespace Oci.EventsService
         public async Task<GetRuleResponse> GetRule(GetRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getRule");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/rules/{ruleId}".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "ruleId", request.RuleId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/rules/{ruleId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -312,7 +317,8 @@ namespace Oci.EventsService
         public async Task<ListRulesResponse> ListRules(ListRulesRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listRules");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/rules".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "compartmentId", request.CompartmentId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/rules".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -369,7 +375,8 @@ namespace Oci.EventsService
         public async Task<UpdateRuleResponse> UpdateRule(UpdateRuleRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateRule");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/rules/{ruleId}".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "ruleId", request.RuleId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/rules/{ruleId}".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");

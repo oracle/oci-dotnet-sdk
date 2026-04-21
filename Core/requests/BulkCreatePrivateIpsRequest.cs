@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// Create private IPs details.
+        /// Details used to create secondary private IPs.
         /// </value>
         /// <remarks>
         /// Required

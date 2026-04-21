@@ -104,7 +104,7 @@ namespace Oci.ContainerregistryService
                     ServiceName = "ContainerRegistry",
                     OperationName = "GetAccessToken",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/container-registry/20180419/AccessToken/GetAccessToken",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

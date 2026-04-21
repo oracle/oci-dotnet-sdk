@@ -40,12 +40,15 @@ namespace Oci.GoldengateService.Models
         /// See documentation: https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PropertiesSecretId is required.")]
         [JsonProperty(PropertyName = "propertiesSecretId")]
         public string PropertiesSecretId { get; set; }
+        
+        /// <value>
+        /// The base64 encoded content of the configuration file containing additional properties for the REST catalog.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "properties")]
+        public string Properties { get; set; }
         
         [JsonProperty(PropertyName = "catalogType")]
         private readonly string catalogType = "REST";

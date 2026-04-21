@@ -39,6 +39,13 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "propertiesSecretId")]
         public string PropertiesSecretId { get; set; }
         
+        /// <value>
+        /// The base64 encoded content of the configuration file containing additional properties for the REST catalog.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "properties")]
+        public string Properties { get; set; }
+        
         [JsonProperty(PropertyName = "catalogType")]
         private readonly string catalogType = "REST";
     }

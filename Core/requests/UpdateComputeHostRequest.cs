@@ -14,9 +14,9 @@ using Oci.CoreService.Models;
 namespace Oci.CoreService.Requests
 {
     /// <example>
-    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/UpdateComputeHosts.cs.html">here</a> to see an example of how to use UpdateComputeHosts request.
+    /// Click <a href="https://docs.cloud.oracle.com/en-us/iaas/tools/dot-net-examples/latest/core/UpdateComputeHost.cs.html">here</a> to see an example of how to use UpdateComputeHost request.
     /// </example>
-    public class UpdateComputeHostsRequest : Oci.Common.IOciRequest
+    public class UpdateComputeHostRequest : Oci.Common.IOciRequest
     {
         
         /// <value>
@@ -36,9 +36,9 @@ namespace Oci.CoreService.Requests
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "UpdateComputeHostsDetails is required.")]
+        [Required(ErrorMessage = "UpdateComputeHostDetails is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public UpdateComputeHostsDetails UpdateComputeHostsDetails { get; set; }
+        public UpdateComputeHostDetails UpdateComputeHostDetails { get; set; }
         
         /// <value>
         /// For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match`

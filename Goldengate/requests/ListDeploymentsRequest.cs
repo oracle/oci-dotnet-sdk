@@ -55,11 +55,11 @@ namespace Oci.GoldengateService.Requests
         public string AssignableConnectionId { get; set; }
         
         /// <value>
-        /// A filter to return only the resources that match the 'lifecycleState' given.
+        /// A filter to return only the deployments having the 'lifecycleState' given.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
-        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        public System.Nullable<Deployment.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
         /// A filter to return only the resources that match the 'lifecycleSubState' given.

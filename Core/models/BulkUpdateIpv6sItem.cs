@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Secondary IPv6 object to update as part of bulk update.
+    /// A secondary IPv6 object to update as part of a bulk update.
     /// </summary>
     public class BulkUpdateIpv6sItem 
     {
@@ -48,7 +48,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
         /// <value>
-        /// The OCID of the IPv6.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPv6 object.
         /// 
         /// </value>
         /// <remarks>

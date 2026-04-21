@@ -57,10 +57,6 @@ namespace Oci.GoldengateService.Models
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the Secret Access Key is stored.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "SecretAccessKeySecretId is required.")]
         [JsonProperty(PropertyName = "secretAccessKeySecretId")]
         public string SecretAccessKeySecretId { get; set; }
         

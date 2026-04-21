@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Bulk Secondary IPv4 addresses detach object.
+    /// An object used to detatch Secondary IPv4 addresses with a bulk operation.
     /// </summary>
     public class BulkDetachPrivateIpsDetails 
     {
@@ -29,7 +29,7 @@ namespace Oci.CoreService.Models
         public string VnicId { get; set; }
         
         /// <value>
-        /// Secondary IPv4 addresses to detached.
+        /// Secondary IPv4 addresses to detach.
         /// 
         /// </value>
         /// <remarks>

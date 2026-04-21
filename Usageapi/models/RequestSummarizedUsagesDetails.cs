@@ -103,6 +103,7 @@ namespace Oci.UsageapiService.Models
         /// Credit - Query the credit adjustments data.
         /// ExpiredCredit - Query the expired credits data.
         /// AllCredit - Query the credit adjustments and expired credit.
+        /// Usage_Only - Query the only usage data without cost or currency.
         /// 
         /// </value>
         ///
@@ -116,7 +117,9 @@ namespace Oci.UsageapiService.Models
             [EnumMember(Value = "EXPIREDCREDIT")]
             Expiredcredit,
             [EnumMember(Value = "ALLCREDIT")]
-            Allcredit
+            Allcredit,
+            [EnumMember(Value = "USAGE_ONLY")]
+            UsageOnly
         };
 
         /// <value>
@@ -126,6 +129,7 @@ namespace Oci.UsageapiService.Models
         /// Credit - Query the credit adjustments data.
         /// ExpiredCredit - Query the expired credits data.
         /// AllCredit - Query the credit adjustments and expired credit.
+        /// Usage_Only - Query the only usage data without cost or currency.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "queryType")]

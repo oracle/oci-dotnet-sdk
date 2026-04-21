@@ -86,7 +86,11 @@ namespace Oci.FusionappsService.Models
             [EnumMember(Value = "SUBSCRIPTION_RESUME")]
             SubscriptionResume,
             [EnumMember(Value = "SUBSCRIPTION_TERMINATE")]
-            SubscriptionTerminate
+            SubscriptionTerminate,
+            [EnumMember(Value = "CONFIGURE_EMAIL_SUBDOMAIN")]
+            ConfigureEmailSubdomain,
+            [EnumMember(Value = "CONFIGURE_MICROSITE")]
+            ConfigureMicrosite
         };
 
         /// <value>

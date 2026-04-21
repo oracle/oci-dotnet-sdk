@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Bulk Secondary IPv6 addresses creation object.
+    /// Details needed to create secondary IPv6 addresses with a bulk operation.
     /// </summary>
     public class BulkCreateIpv6sDetails 
     {
         
         /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC to assign the IPv6s to. The
-        /// IPv6 will be in the VNIC's subnet.
+        /// IPv6s will be in the VNIC's subnet.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vnicId")]
@@ -38,7 +38,7 @@ namespace Oci.CoreService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// Secondary IPv6 addresses to assign.
+        /// A secondary IPv6 address to assign.
         /// 
         /// </value>
         /// <remarks>

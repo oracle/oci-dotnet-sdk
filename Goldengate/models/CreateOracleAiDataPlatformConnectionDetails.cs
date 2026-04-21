@@ -87,6 +87,23 @@ namespace Oci.GoldengateService.Models
         public string PrivateKeyPassphraseSecretId { get; set; }
         
         /// <value>
+        /// The base64 encoded content of the private key file (PEM file) corresponding to the API key of the fingerprint.
+        /// See documentation: https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm
+        /// Deprecated: This field is deprecated and replaced by \"privateKeyFileSecretId\". This field will be removed after February 15 2026.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateKeyFile")]
+        public string PrivateKeyFile { get; set; }
+        
+        /// <value>
+        /// The passphrase of the private key.
+        /// Deprecated: This field is deprecated and replaced by \"privateKeyPassphraseSecretId\". This field will be removed after February 15 2026.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "privateKeyPassphrase")]
+        public string PrivateKeyPassphrase { get; set; }
+        
+        /// <value>
         /// The fingerprint of the API Key of the user specified by the userId.
         /// See documentation: https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm
         /// 

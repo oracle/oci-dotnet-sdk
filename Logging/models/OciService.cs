@@ -32,7 +32,7 @@ namespace Oci.LoggingService.Models
         public string Service { get; set; }
         
         /// <value>
-        /// The unique identifier of the resource emitting the log.
+        /// The unique identifier of the resource emitting the log. The resource can be updated, and the resource value can vary depending on the OCI service to which the resource belongs to.
         /// </value>
         /// <remarks>
         /// Required
@@ -52,7 +52,7 @@ namespace Oci.LoggingService.Models
         public string Category { get; set; }
         
         /// <value>
-        /// Log category parameters are stored here.
+        /// Log category parameters are stored here. The resource for a service log can't be updated.
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }

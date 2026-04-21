@@ -56,7 +56,7 @@ namespace Oci.GoldengateService.Models
         /// Example: &quot;server1.example.com:9092,server2.example.com:9092&quot;
         /// </value>
         [JsonProperty(PropertyName = "bootstrapServers")]
-        public System.Collections.Generic.List<KafkaBootstrapServer> BootstrapServers { get; set; }
+        public System.Collections.Generic.List<CreateKafkaBootstrapServer> BootstrapServers { get; set; }
         
         /// <value>
         /// Security Type for Kafka.
