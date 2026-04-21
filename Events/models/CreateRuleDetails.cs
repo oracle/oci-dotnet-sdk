@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.EventsService.Models
 {
     /// <summary>
-    /// Object used to create a rule.
+    /// Object used to create an events1.0 rule and events2.0 system rule.
     /// </summary>
     public class CreateRuleDetails 
     {

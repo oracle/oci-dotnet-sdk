@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Bulk Secondary IPv4 addresses update object.
+    /// Details used for a secondary IPv4 address bulk update.
     /// </summary>
     public class BulkUpdatePrivateIpsDetails 
     {
@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         public string VnicId { get; set; }
         
         /// <value>
-        /// Secondary IPv4 addresses to updated.
+        /// A secondary IPv4 address to update.
         /// 
         /// </value>
         /// <remarks>

@@ -212,10 +212,6 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "remainingMemoryInGBs")]
         public System.Nullable<float> RemainingMemoryInGBs { get; set; }
         
-        /// <value>
-        /// A list of total and remaining CPU and memory per capacity bucket.
-        /// 
-        /// </value>
         [JsonProperty(PropertyName = "capacityBins")]
         public System.Collections.Generic.List<CapacityBin> CapacityBins { get; set; }
         

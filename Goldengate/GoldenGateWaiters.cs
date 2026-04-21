@@ -143,7 +143,7 @@ namespace Oci.GoldengateService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetDeploymentRequest, GetDeploymentResponse> ForDeployment(GetDeploymentRequest request, params LifecycleState[] targetStates)
+        public Waiter<GetDeploymentRequest, GetDeploymentResponse> ForDeployment(GetDeploymentRequest request, params Deployment.LifecycleStateEnum[] targetStates)
         {
             return this.ForDeployment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
         }
@@ -155,13 +155,13 @@ namespace Oci.GoldengateService
         /// <param name="config">Wait Configuration</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetDeploymentRequest, GetDeploymentResponse> ForDeployment(GetDeploymentRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        public Waiter<GetDeploymentRequest, GetDeploymentResponse> ForDeployment(GetDeploymentRequest request, WaiterConfiguration config, params Deployment.LifecycleStateEnum[] targetStates)
         {
             var agent = new WaiterAgent<GetDeploymentRequest, GetDeploymentResponse>(
                 request,
                 request => client.GetDeployment(request),
                 response => targetStates.Contains(response.Deployment.LifecycleState.Value),
-                targetStates.Contains(LifecycleState.Deleted)
+                targetStates.Contains(Deployment.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetDeploymentRequest, GetDeploymentResponse>(config, agent);
         }
@@ -171,7 +171,7 @@ namespace Oci.GoldengateService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetDeploymentBackupRequest, GetDeploymentBackupResponse> ForDeploymentBackup(GetDeploymentBackupRequest request, params LifecycleState[] targetStates)
+        public Waiter<GetDeploymentBackupRequest, GetDeploymentBackupResponse> ForDeploymentBackup(GetDeploymentBackupRequest request, params DeploymentBackup.LifecycleStateEnum[] targetStates)
         {
             return this.ForDeploymentBackup(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
         }
@@ -183,13 +183,13 @@ namespace Oci.GoldengateService
         /// <param name="config">Wait Configuration</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetDeploymentBackupRequest, GetDeploymentBackupResponse> ForDeploymentBackup(GetDeploymentBackupRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        public Waiter<GetDeploymentBackupRequest, GetDeploymentBackupResponse> ForDeploymentBackup(GetDeploymentBackupRequest request, WaiterConfiguration config, params DeploymentBackup.LifecycleStateEnum[] targetStates)
         {
             var agent = new WaiterAgent<GetDeploymentBackupRequest, GetDeploymentBackupResponse>(
                 request,
                 request => client.GetDeploymentBackup(request),
                 response => targetStates.Contains(response.DeploymentBackup.LifecycleState.Value),
-                targetStates.Contains(LifecycleState.Deleted)
+                targetStates.Contains(DeploymentBackup.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetDeploymentBackupRequest, GetDeploymentBackupResponse>(config, agent);
         }
@@ -199,7 +199,7 @@ namespace Oci.GoldengateService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetDeploymentUpgradeRequest, GetDeploymentUpgradeResponse> ForDeploymentUpgrade(GetDeploymentUpgradeRequest request, params LifecycleState[] targetStates)
+        public Waiter<GetDeploymentUpgradeRequest, GetDeploymentUpgradeResponse> ForDeploymentUpgrade(GetDeploymentUpgradeRequest request, params DeploymentUpgrade.LifecycleStateEnum[] targetStates)
         {
             return this.ForDeploymentUpgrade(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
         }
@@ -211,13 +211,12 @@ namespace Oci.GoldengateService
         /// <param name="config">Wait Configuration</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
-        public Waiter<GetDeploymentUpgradeRequest, GetDeploymentUpgradeResponse> ForDeploymentUpgrade(GetDeploymentUpgradeRequest request, WaiterConfiguration config, params LifecycleState[] targetStates)
+        public Waiter<GetDeploymentUpgradeRequest, GetDeploymentUpgradeResponse> ForDeploymentUpgrade(GetDeploymentUpgradeRequest request, WaiterConfiguration config, params DeploymentUpgrade.LifecycleStateEnum[] targetStates)
         {
             var agent = new WaiterAgent<GetDeploymentUpgradeRequest, GetDeploymentUpgradeResponse>(
                 request,
                 request => client.GetDeploymentUpgrade(request),
-                response => targetStates.Contains(response.DeploymentUpgrade.LifecycleState.Value),
-                targetStates.Contains(LifecycleState.Deleted)
+                response => targetStates.Contains(response.DeploymentUpgrade.LifecycleState.Value)
             );
             return new Waiter<GetDeploymentUpgradeRequest, GetDeploymentUpgradeResponse>(config, agent);
         }

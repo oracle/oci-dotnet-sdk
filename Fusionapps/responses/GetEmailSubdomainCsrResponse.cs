@@ -8,11 +8,11 @@
 
 
 using System.Runtime.Serialization;
-using Oci.CoreService.Models;
+using Oci.FusionappsService.Models;
 
-namespace Oci.CoreService.Responses
+namespace Oci.FusionappsService.Responses
 {
-    public class GetComputeHostsResponse : Oci.Common.OciResponse
+    public class GetEmailSubdomainCsrResponse : Oci.Common.OciResponse
     {
 
         /// <value>
@@ -32,10 +32,10 @@ namespace Oci.CoreService.Responses
         public string OpcRequestId { get; set; }
 
         /// <value>
-        /// The returned ComputeHost instance.
+        /// The returned MarketingBrandEmailSubdomainCsr instance.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
-        public ComputeHost ComputeHost { get; set; }
+        public MarketingBrandEmailSubdomainCsr MarketingBrandEmailSubdomainCsr { get; set; }
 
     }
 }

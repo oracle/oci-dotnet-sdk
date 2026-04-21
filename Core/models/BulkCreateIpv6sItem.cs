@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Secondary IPv6 object to creation as part of bulk creation .
+    /// Secondary IPv6 object to use as part of bulk IPv6 object creation.
     /// </summary>
     public class BulkCreateIpv6sItem 
     {
@@ -100,7 +100,7 @@ namespace Oci.CoreService.Models
         public string Ipv6SubnetCidr { get; set; }
         
         /// <value>
-        /// Length of cidr range. Optional field to specify flexible cidr.
+        /// Length of the CIDR range. Optional field to specify a flexible CIDR.
         /// </value>
         [JsonProperty(PropertyName = "cidrPrefixLength")]
         public System.Nullable<int> CidrPrefixLength { get; set; }

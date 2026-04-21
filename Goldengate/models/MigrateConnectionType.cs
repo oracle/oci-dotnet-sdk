@@ -13,23 +13,11 @@ using System.Runtime.Serialization;
 namespace Oci.GoldengateService.Models
 {
   /// <summary>
-  /// Possible deploymentUpgrade lifecycle states.
+  /// The Connection migrate type.
     /// 
   /// </summary>
-  public enum DeploymentUpgradeLifecycleState {
-      [EnumMember(Value = "WAITING")]
-      Waiting,
-      [EnumMember(Value = "IN_PROGRESS")]
-      InProgress,
-      [EnumMember(Value = "FAILED")]
-      Failed,
-      [EnumMember(Value = "SUCCEEDED")]
-      Succeeded,
-      [EnumMember(Value = "CANCELING")]
-      Canceling,
-      [EnumMember(Value = "CANCELED")]
-      Canceled,
-      [EnumMember(Value = "NEEDS_ATTENTION")]
-      NeedsAttention
+  public enum MigrateConnectionType {
+      [EnumMember(Value = "SECRET")]
+      Secret
   }
 }

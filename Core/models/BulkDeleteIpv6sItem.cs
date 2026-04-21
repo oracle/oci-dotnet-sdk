@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// secondary ip object to delete as part of bulk deletion .
+    /// A secondary IPv6 object to delete as part of a bulk deletion.
     /// </summary>
     public class BulkDeleteIpv6sItem 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPv6 to be deleted.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPv6 to delete.
         /// </value>
         /// <remarks>
         /// Required

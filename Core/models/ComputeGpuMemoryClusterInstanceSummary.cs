@@ -16,21 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The customer facing GPU memory cluster instance object details.
+    /// The customer facing GPU Memory Cluster instance object details.
     /// 
     /// </summary>
     public class ComputeGpuMemoryClusterInstanceSummary 
     {
         
         /// <value>
-        /// The availability domain of the GPU memory cluster instance.
+        /// The availability domain of the GPU Memory Cluster instance.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availabilityDomain")]
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Customer-unique GPU memory cluster instance
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Customer-unique GPU Memory Cluster instance
         /// 
         /// </value>
         [JsonProperty(PropertyName = "id")]
@@ -45,7 +45,7 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The fault domain the GPU memory cluster instance is running in.
+        /// The fault domain the GPU Memory Cluster instance is running in.
         /// </value>
         [JsonProperty(PropertyName = "faultDomain")]
         public string FaultDomain { get; set; }
@@ -74,7 +74,7 @@ namespace Oci.CoreService.Models
         public string InstanceShape { get; set; }
                 ///
         /// <value>
-        /// The lifecycle state of the GPU memory cluster instance
+        /// The lifecycle state of the GPU Memory Cluster instance
         /// 
         /// </value>
         ///
@@ -107,7 +107,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// The lifecycle state of the GPU memory cluster instance
+        /// The lifecycle state of the GPU Memory Cluster instance
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
@@ -123,7 +123,7 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The date and time the GPU memory cluster instance was created.
+        /// The date and time the GPU Memory Cluster instance was created.
         /// <br/>
         /// Example: 2016-09-15T21:10:29.600Z
         /// </value>

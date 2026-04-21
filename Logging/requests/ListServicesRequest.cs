@@ -20,6 +20,14 @@ namespace Oci.LoggingService.Requests
     {
         
         /// <value>
+        /// Compartment OCID to list resources in. Please see compartmentIdInSubtree
+        ///      for nested compartments traversal.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
+        public string CompartmentId { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about
         /// a particular request, please provide the request ID.
         /// 

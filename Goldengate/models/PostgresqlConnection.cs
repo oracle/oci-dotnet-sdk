@@ -42,10 +42,14 @@ namespace Oci.GoldengateService.Models
             AzurePostgresql,
             [EnumMember(Value = "AZURE_COSMOS_DB_FOR_POSTGRESQL")]
             AzureCosmosDbForPostgresql,
+            [EnumMember(Value = "EDB_POSTGRES_ADVANCED_SERVER")]
+            EdbPostgresAdvancedServer,
             [EnumMember(Value = "GOOGLE_CLOUD_SQL_POSTGRESQL")]
             GoogleCloudSqlPostgresql,
             [EnumMember(Value = "GOOGLE_ALLOY_DB_FOR_POSTGRESQL")]
-            GoogleAlloyDbForPostgresql
+            GoogleAlloyDbForPostgresql,
+            [EnumMember(Value = "YUGABYTE_DB")]
+            YugabyteDb
         };
 
         /// <value>
@@ -166,14 +170,9 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<SslModeEnum> SslMode { get; set; }
         
         /// <value>
-        /// Deprecated: this field will be removed in future versions. Either specify the private IP in the connectionString or host 
-        /// field, or make sure the host name is resolvable in the target VCN.
+        /// This property is not available when creating connections. For existing deprecated connections having this value set, the value cannot be updated; set it to empty.
         /// <br/>
-        /// The private IP address of the connection's endpoint in the customer's VCN, typically a
-        /// database endpoint or a big data endpoint (e.g. Kafka bootstrap server).
-        /// In case the privateIp is provided, the subnetId must also be provided.
-        /// In case the privateIp (and the subnetId) is not provided it is assumed the datasource is publicly accessible.
-        /// In case the connection is accessible only privately, the lack of privateIp will result in not being able to access the connection.
+        /// For deprecated connections created with this field in the past, either the private IP had to be specified in the connectionString or host field, or the host name had to be resolvable in the target VCN.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "privateIp")]

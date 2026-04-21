@@ -119,14 +119,35 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-        
+                ///
         /// <value>
-        /// Possible lifecycle states.
+        /// Possible lifecycle states for a Deployment Upgrade.
+        /// 
+        /// </value>
+        ///
+        public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "WAITING")]
+            Waiting,
+            [EnumMember(Value = "IN_PROGRESS")]
+            InProgress,
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            [EnumMember(Value = "SUCCEEDED")]
+            Succeeded,
+            [EnumMember(Value = "CANCELED")]
+            Canceled
+        };
+
+        /// <value>
+        /// Possible lifecycle states for a Deployment Upgrade.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
         /// Possible GGS lifecycle sub-states.

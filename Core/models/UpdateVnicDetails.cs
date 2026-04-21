@@ -98,6 +98,7 @@ namespace Oci.CoreService.Models
         /// If the VNIC belongs to a VLAN as part of the Oracle Cloud VMware Solution (instead of
         /// belonging to a subnet), the value of the `skipSourceDestCheck` attribute is ignored.
         /// This is because the source/destination check is always disabled for VNICs in a VLAN.
+        /// <br/>
         /// Example: true
         /// </value>
         [JsonProperty(PropertyName = "skipSourceDestCheck")]

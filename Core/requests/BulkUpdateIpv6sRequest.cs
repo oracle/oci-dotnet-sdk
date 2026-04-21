@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// Update IPv6s details.
+        /// Details of the IPv6s to update.
         /// </value>
         /// <remarks>
         /// Required

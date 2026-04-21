@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// Bulk Create Ipv6s.
+        /// Create Ipv6s in bulk.
         /// </value>
         /// <remarks>
         /// Required

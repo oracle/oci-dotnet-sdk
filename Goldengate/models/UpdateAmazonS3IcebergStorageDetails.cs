@@ -53,6 +53,15 @@ namespace Oci.GoldengateService.Models
         public string SecretAccessKeySecretId { get; set; }
         
         /// <value>
+        /// Secret access key to access the Amazon S3 bucket.
+        /// e.g.: \"this-is-not-the-secret\"
+        /// Deprecated: This field is deprecated and replaced by \"secretAccessKeySecretId\". This field will be removed after February 15 2026.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "secretAccessKey")]
+        public string SecretAccessKey { get; set; }
+        
+        /// <value>
         /// The AMAZON region where the S3 bucket is hosted.
         /// e.g.: 'us-east-2'
         /// 

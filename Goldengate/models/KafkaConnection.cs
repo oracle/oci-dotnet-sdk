@@ -37,6 +37,8 @@ namespace Oci.GoldengateService.Models
             AzureEventHubs,
             [EnumMember(Value = "CONFLUENT_KAFKA")]
             ConfluentKafka,
+            [EnumMember(Value = "MICROSOFT_FABRIC_EVENTSTREAM")]
+            MicrosoftFabricEventstream,
             [EnumMember(Value = "OCI_STREAMING")]
             OciStreaming,
             [EnumMember(Value = "OCI_STREAMING_WITH_APACHE_KAFKA")]

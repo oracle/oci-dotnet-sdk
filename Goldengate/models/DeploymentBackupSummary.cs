@@ -109,7 +109,7 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<BackupSourceTypeEnum> BackupSourceType { get; set; }
         
         /// <value>
-        /// Possible lifecycle states.
+        /// Possible lifecycle states for a Deployment Backup.
         /// 
         /// </value>
         /// <remarks>
@@ -118,7 +118,7 @@ namespace Oci.GoldengateService.Models
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        public System.Nullable<DeploymentBackup.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
         /// Describes the object's current state in detail. For example, it can be used to provide

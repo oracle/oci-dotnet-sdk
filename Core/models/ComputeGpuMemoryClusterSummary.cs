@@ -22,7 +22,7 @@ namespace Oci.CoreService.Models
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Customer-unique GPU memory cluster
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Customer-unique GPU Memory Cluster
         /// 
         /// </value>
         /// <remarks>
@@ -33,7 +33,7 @@ namespace Oci.CoreService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the compute GPU memory cluster.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the compute GPU Memory Cluster.
         /// compartment.
         /// 
         /// </value>
@@ -45,7 +45,7 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The availability domain of GPU memory cluster.
+        /// The availability domain of GPU Memory Cluster.
         /// <br/>
         /// Example: Uocm:PHX-AD-1
         /// </value>
@@ -57,7 +57,7 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The current state of the compute GPU memory cluster.
+        /// The current state of the compute GPU Memory Cluster.
         /// </value>
         /// <remarks>
         /// Required

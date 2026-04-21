@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Bulk Secondary IPv4 addresses creation object.
+    /// Details used to create secondary private IPv4 addresses in a bulk operation.
     /// </summary>
     public class BulkCreatePrivateIpsDetails 
     {
@@ -44,7 +44,7 @@ namespace Oci.CoreService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// Secondary IPv4 addresses to assign.
+        /// A secondary IPv4 address to assign.
         /// 
         /// </value>
         /// <remarks>

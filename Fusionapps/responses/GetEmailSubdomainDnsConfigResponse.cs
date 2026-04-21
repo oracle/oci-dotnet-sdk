@@ -8,20 +8,12 @@
 
 
 using System.Runtime.Serialization;
-using Oci.CoreService.Models;
+using Oci.FusionappsService.Models;
 
-namespace Oci.CoreService.Responses
+namespace Oci.FusionappsService.Responses
 {
-    public class UpdateComputeHostsResponse : Oci.Common.OciResponse
+    public class GetEmailSubdomainDnsConfigResponse : Oci.Common.OciResponse
     {
-
-        /// <value>
-        /// For optimistic concurrency control. See `if-match`.
-        /// 
-        /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "etag")]
-        public string Etag { get; set; }
-
 
         /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
@@ -31,17 +23,11 @@ namespace Oci.CoreService.Responses
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
 
-
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the work request.
-        /// Use [GetWorkRequest](https://docs.cloud.oracle.com/api/#/en/workrequests/latest/WorkRequest/GetWorkRequest)
-        /// with this ID to track the status of the request.
-        /// 
+        /// The returned MarketingBrandEmailSubdomainDnsConfig instance.
         /// </value>
-        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-work-request-id")]
-        public string OpcWorkRequestId { get; set; }
-
-
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Body)]
+        public MarketingBrandEmailSubdomainDnsConfig MarketingBrandEmailSubdomainDnsConfig { get; set; }
 
     }
 }

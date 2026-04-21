@@ -34,6 +34,14 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<GoogleCloudStorageConnection.TechnologyTypeEnum> TechnologyType { get; set; }
         
         /// <value>
+        /// A legal URL to connect to Google Cloud Storage including scheme, server name and port (if not the default port).
+        /// Default: https://storage.googleapis.com
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "endpoint")]
+        public string Endpoint { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the content of the service account key file is stored,
         /// which contains the credentials required to use Google Cloud Storage.
         /// Note: When provided, 'serviceAccountKeyFile' field must not be provided.

@@ -46,7 +46,7 @@ namespace Oci.LoggingsearchService
             {
                 ServiceName = "LOGSEARCH",
                 ServiceEndpointPrefix = "",
-                ServiceEndpointTemplate = "https://logging.{region}.oci.{secondLevelDomain}"
+                ServiceEndpointTemplate = "https://logging.{region}.{dualStack?ds.:}oci.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
@@ -81,7 +81,8 @@ namespace Oci.LoggingsearchService
         public async Task<SearchLogsResponse> SearchLogs(SearchLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called searchLogs");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/search".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/search".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");

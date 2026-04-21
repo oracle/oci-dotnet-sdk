@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// Details of secondary IPv4 addresses to deleted.
+        /// Details of the secondary IPv4 addresses to delete.
         /// </value>
         /// <remarks>
         /// Required

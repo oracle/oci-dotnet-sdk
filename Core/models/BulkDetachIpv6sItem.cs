@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Secondary IPv6 object to detach as part of bulk detach operation.
+    /// A secondary IPv6 object to detach as part of a bulk detach operation.
     /// </summary>
     public class BulkDetachIpv6sItem 
     {

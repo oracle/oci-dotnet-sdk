@@ -42,6 +42,23 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "serviceAccountKeyFileSecretId")]
         public string ServiceAccountKeyFileSecretId { get; set; }
         
+        /// <value>
+        /// The base64 encoded content of the service account key file containing
+        /// the credentials required to use Google Cloud Storage.
+        /// Deprecated: This field is deprecated and replaced by \"serviceAccountKeyFileSecretId\". This field will be removed after February 15 2026.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "serviceAccountKeyFile")]
+        public string ServiceAccountKeyFile { get; set; }
+        
+        /// <value>
+        /// A legal URL to connect to Google Cloud Storage including scheme, server name and port (if not the default port).
+        /// Default: https://storage.googleapis.com
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "endpoint")]
+        public string Endpoint { get; set; }
+        
         [JsonProperty(PropertyName = "storageType")]
         private readonly string storageType = "GOOGLE_CLOUD_STORAGE";
     }

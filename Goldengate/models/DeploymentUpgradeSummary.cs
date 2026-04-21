@@ -121,12 +121,12 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Possible lifecycle states.
+        /// Possible lifecycle states for a Deployment Upgrade.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        public System.Nullable<DeploymentUpgrade.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
         /// Possible GGS lifecycle sub-states.

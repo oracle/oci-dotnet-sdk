@@ -722,7 +722,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Create new IPv6s for a VNIC or Subnet.
+        /// Create new IPv6s in bulk for a VNIC or subnet.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -836,7 +836,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Unassigns and deletes IPv6s for a VNIC.
+        /// Unassign and delete IPv6s for a VNIC in bulk.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -893,7 +893,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Unassigns and deletes secondary private IPv4s for a VNIC.
+        /// Unassign and delete secondary private IPv4s for a VNIC.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1010,7 +1010,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// detach the specified IPv6s.
+        /// Detach the specified IPv6s.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1067,7 +1067,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Unassign the specified PrivateIP address from Virtual Network Interface Card (VNIC). You must specify the PrivateIP [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// Unassign the specified private IP addresses from the Virtual Network Interface Card (VNIC). You must specify the PrivateIP object&#39;s [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1124,7 +1124,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Updates the specified IPv6s.
+        /// Updates the specified IPv6s in bulk.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -1181,7 +1181,7 @@ namespace Oci.CoreService
         }
 
         /// <summary>
-        /// Updates existing secondary Private IPv4s for a VNIC.
+        /// Update existing secondary private IPv4s for a VNIC.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
         /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>

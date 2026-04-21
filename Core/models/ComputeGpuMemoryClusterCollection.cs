@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// A list of compute GPU memory clusters.
+    /// A list of compute GPU Memory Clusters.
     /// 
     /// </summary>
     public class ComputeGpuMemoryClusterCollection 
     {
         
         /// <value>
-        /// The list of compute GPU memory clusters.
+        /// The list of compute GPU Memory Clusters.
         /// </value>
         /// <remarks>
         /// Required

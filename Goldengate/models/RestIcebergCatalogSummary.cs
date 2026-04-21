@@ -40,10 +40,6 @@ namespace Oci.GoldengateService.Models
         /// See documentation: https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "PropertiesSecretId is required.")]
         [JsonProperty(PropertyName = "propertiesSecretId")]
         public string PropertiesSecretId { get; set; }
         

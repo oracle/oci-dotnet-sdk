@@ -16,20 +16,20 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Bulk Secondary IPv6 addresses detach object.
+    /// Details needed to bulk detach secondary IPv6 addresses.
     /// </summary>
     public class BulkDetachIpv6sDetails 
     {
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC of which IPv6s should be detached. The VNIC and IPv6s must be in the same subnet.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC from which multiple IPv6s should be detached. The VNIC and IPv6s must be in the same subnet.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "vnicId")]
         public string VnicId { get; set; }
         
         /// <value>
-        /// Secondary IPv6 addresses to detached.
+        /// A secondary IPv6 address to detach.
         /// 
         /// </value>
         /// <remarks>
