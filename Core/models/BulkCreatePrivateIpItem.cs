@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Secondary private IPv4 address object to create as part of bulk creation.
+    /// An object used to create secondary private IPv4 addresses in a bulk operation.
     /// </summary>
     public class BulkCreatePrivateIpItem 
     {

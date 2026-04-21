@@ -32,7 +32,7 @@ namespace Oci.LoggingService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// List of UnifiedAgentKubernetesScrapeTarget.
+        /// List of UnifiedAgentUrlScrapeTarget.
         /// </value>
         /// <remarks>
         /// Required

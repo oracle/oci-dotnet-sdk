@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The customer facing object includes GPU memory cluster details.
+    /// The customer facing object includes GPU Memory Cluster details.
     /// 
     /// </summary>
     public class CreateComputeGpuMemoryClusterDetails 
     {
         
         /// <value>
-        /// The availability domain of the GPU memory cluster.
+        /// The availability domain of the GPU Memory Cluster.
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +34,7 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the compute GPU memory cluster.
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment that contains the compute GPU Memory Cluster.
         /// compartment.
         /// 
         /// </value>
@@ -75,7 +75,7 @@ namespace Oci.CoreService.Models
         public string InstanceConfigurationId { get; set; }
         
         /// <value>
-        /// The number of instances currently running in the GpuMemoryCluster
+        /// The desired number of instances for the GPU Memory Cluster.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "size")]
@@ -109,6 +109,12 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "gpuMemoryClusterScaleConfig")]
         public CreateComputeGpuMemoryClusterScaleConfig GpuMemoryClusterScaleConfig { get; set; }
+        
+        /// <value>
+        /// Unique list of OCIDs for private IPs (IPv4/IPv6) associated with the GPU Memory Cluster
+        /// </value>
+        [JsonProperty(PropertyName = "privateIpIds")]
+        public System.Collections.Generic.List<string> PrivateIpIds { get; set; }
         
     }
 }

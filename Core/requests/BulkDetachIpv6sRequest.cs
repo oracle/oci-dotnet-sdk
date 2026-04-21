@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// detach IPv6s details.
+        /// Details needed to detach IPv6s in bulk.
         /// </value>
         /// <remarks>
         /// Required

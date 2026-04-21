@@ -122,14 +122,41 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
-        
+                ///
         /// <value>
-        /// Possible lifecycle states.
+        /// Possible lifecycle states for a Deployment.
+        /// 
+        /// </value>
+        ///
+        public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "CREATING")]
+            Creating,
+            [EnumMember(Value = "UPDATING")]
+            Updating,
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            [EnumMember(Value = "DELETING")]
+            Deleting,
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            [EnumMember(Value = "NEEDS_ATTENTION")]
+            NeedsAttention
+        };
+
+        /// <value>
+        /// Possible lifecycle states for a Deployment.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
         /// Possible GGS lifecycle sub-states.
@@ -191,9 +218,18 @@ namespace Oci.GoldengateService.Models
         public string SubnetId { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a public subnet in the customer tenancy.
-        /// Can be provided only for public deployments. If provided, the loadbalancer will be created in this subnet instead of the service tenancy.
-        /// For backward compatibility, this is an optional property. It will become mandatory for public deployments after October 1, 2024.
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of a public subnet in the customer tenancy used to host the public load balancer of the deployment.
+        /// <br/>
+        /// Rules:
+        /// - Create: Mandatory when isPublic is true. Must be a public, regional subnet in the same VCN as subnetId.
+        /// - Update:
+        ///   - For public deployments, this property must be present and is immutable once set (cannot be changed to a different subnet).
+        ///   - Legacy exception: a public deployment created without this property may continue to be updated without providing it; once set, it becomes immutable.
+        /// <br/>
+        /// Validation:
+        /// - Must reference a public subnet.
+        /// - Must be a regional subnet.
+        /// - Must be in the same VCN as subnetId.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "loadBalancerSubnetId")]
@@ -337,19 +373,6 @@ namespace Oci.GoldengateService.Models
         /// </value>
         [JsonProperty(PropertyName = "isLatestVersion")]
         public System.Nullable<bool> IsLatestVersion { get; set; }
-        
-        /// <value>
-        /// Note: Deprecated: Use timeOfNextMaintenance instead, or related upgrade records 
-        /// to check, when deployment will be forced to upgrade to a newer version.
-        /// Old description:
-        /// The date the existing version in use will no longer be considered as usable
-        /// and an upgrade will be required.  This date is typically 6 months after the
-        /// version was released for use by GGS.  The format is defined by
-        /// [RFC3339](https://tools.ietf.org/html/rfc3339), such as `2016-08-25T21:10:29.600Z`.
-        /// 
-        /// </value>
-        [JsonProperty(PropertyName = "timeUpgradeRequired")]
-        public System.Nullable<System.DateTime> TimeUpgradeRequired { get; set; }
         
         /// <value>
         /// The amount of storage being utilized (in bytes)

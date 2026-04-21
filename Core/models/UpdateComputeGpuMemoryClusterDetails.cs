@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Updates compute GPU memory cluster details.
+    /// Updates compute GPU Memory Cluster details.
     /// 
     /// </summary>
     public class UpdateComputeGpuMemoryClusterDetails 
@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         public string InstanceConfigurationId { get; set; }
         
         /// <value>
-        /// The number of instances currently running in the GpuMemoryCluster
+        /// The desired number of instances for the GPU Memory Cluster.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "size")]
@@ -64,6 +64,12 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "gpuMemoryClusterScaleConfig")]
         public UpdateComputeGpuMemoryClusterScaleConfig GpuMemoryClusterScaleConfig { get; set; }
+        
+        /// <value>
+        /// Unique list of OCIDs for private IPs (IPv4/IPv6) associated with the GPU Memory Cluster
+        /// </value>
+        [JsonProperty(PropertyName = "privateIpIds")]
+        public System.Collections.Generic.List<string> PrivateIpIds { get; set; }
         
     }
 }

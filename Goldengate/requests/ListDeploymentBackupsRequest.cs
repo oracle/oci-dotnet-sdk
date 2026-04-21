@@ -41,11 +41,11 @@ namespace Oci.GoldengateService.Requests
         public string DeploymentId { get; set; }
         
         /// <value>
-        /// A filter to return only the resources that match the 'lifecycleState' given.
+        /// A filter to return only the deployment backups having the 'lifecycleState' given.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
-        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        public System.Nullable<DeploymentBackup.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
         /// A filter to return only the resources that match the entire 'displayName' given.

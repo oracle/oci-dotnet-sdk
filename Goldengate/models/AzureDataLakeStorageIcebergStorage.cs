@@ -47,10 +47,6 @@ namespace Oci.GoldengateService.Models
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the account key is stored.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AccountKeySecretId is required.")]
         [JsonProperty(PropertyName = "accountKeySecretId")]
         public string AccountKeySecretId { get; set; }
         

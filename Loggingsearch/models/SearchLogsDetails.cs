@@ -22,7 +22,7 @@ namespace Oci.LoggingsearchService.Models
     {
         
         /// <value>
-        /// Start filter log's date and time, in the format defined by RFC3339.
+        /// Start filter log's date and time, in the format defined by RFC 3339.
         /// 
         /// </value>
         /// <remarks>
@@ -33,7 +33,7 @@ namespace Oci.LoggingsearchService.Models
         public System.Nullable<System.DateTime> TimeStart { get; set; }
         
         /// <value>
-        /// End filter log's date and time, in the format defined by RFC3339.
+        /// End filter log's date and time, in the format defined by RFC 3339.
         /// 
         /// </value>
         /// <remarks>

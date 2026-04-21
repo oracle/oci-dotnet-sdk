@@ -263,5 +263,13 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "secretId")]
         public string SecretId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the connection being
+        /// referenced as the successor resource of the deprecated database registration.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "connectionId")]
+        public string ConnectionId { get; set; }
+        
     }
 }

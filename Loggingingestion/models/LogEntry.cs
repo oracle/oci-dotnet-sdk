@@ -17,7 +17,7 @@ namespace Oci.LoggingingestionService.Models
 {
     /// <summary>
     /// Contains the log content with the associated timestamp and ID. Each
-    /// entry should be less than 1 MB size.
+    /// entry should be less than 1 MB size. Any log data field cannot be more than 10,000 characters. If your data exceeds this limit, the field is truncated during ingestion.
     /// 
     /// </summary>
     public class LogEntry 

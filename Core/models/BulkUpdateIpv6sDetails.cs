@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Bulk Secondary IPv6 addresses update object.
+    /// Address details to update for a Secondary IPv6 object.
     /// </summary>
     public class BulkUpdateIpv6sDetails 
     {
@@ -30,7 +30,7 @@ namespace Oci.CoreService.Models
         public string VnicId { get; set; }
         
         /// <value>
-        /// Secondary IPv6 addresses to updated.
+        /// A secondary IPv6 address to update.
         /// 
         /// </value>
         /// <remarks>

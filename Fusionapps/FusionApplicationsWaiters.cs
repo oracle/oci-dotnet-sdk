@@ -59,6 +59,33 @@ namespace Oci.FusionappsService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetEmailSubdomainRequest, GetEmailSubdomainResponse> ForEmailSubdomain(GetEmailSubdomainRequest request, params EmailSubdomain.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForEmailSubdomain(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetEmailSubdomainRequest, GetEmailSubdomainResponse> ForEmailSubdomain(GetEmailSubdomainRequest request, WaiterConfiguration config, params EmailSubdomain.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetEmailSubdomainRequest, GetEmailSubdomainResponse>(
+                request,
+                request => client.GetEmailSubdomain(request),
+                response => targetStates.Contains(response.EmailSubdomain.LifecycleState.Value)
+            );
+            return new Waiter<GetEmailSubdomainRequest, GetEmailSubdomainResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetFusionEnvironmentRequest, GetFusionEnvironmentResponse> ForFusionEnvironment(GetFusionEnvironmentRequest request, params FusionEnvironment.LifecycleStateEnum[] targetStates)
         {
             return this.ForFusionEnvironment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -108,6 +135,60 @@ namespace Oci.FusionappsService
                 targetStates.Contains(FusionEnvironmentFamily.LifecycleStateEnum.Deleted)
             );
             return new Waiter<GetFusionEnvironmentFamilyRequest, GetFusionEnvironmentFamilyResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMarketingBrandRequest, GetMarketingBrandResponse> ForMarketingBrand(GetMarketingBrandRequest request, params MarketingBrand.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForMarketingBrand(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMarketingBrandRequest, GetMarketingBrandResponse> ForMarketingBrand(GetMarketingBrandRequest request, WaiterConfiguration config, params MarketingBrand.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetMarketingBrandRequest, GetMarketingBrandResponse>(
+                request,
+                request => client.GetMarketingBrand(request),
+                response => targetStates.Contains(response.MarketingBrand.LifecycleState.Value)
+            );
+            return new Waiter<GetMarketingBrandRequest, GetMarketingBrandResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMicrositeRequest, GetMicrositeResponse> ForMicrosite(GetMicrositeRequest request, params Microsite.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForMicrosite(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetMicrositeRequest, GetMicrositeResponse> ForMicrosite(GetMicrositeRequest request, WaiterConfiguration config, params Microsite.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetMicrositeRequest, GetMicrositeResponse>(
+                request,
+                request => client.GetMicrosite(request),
+                response => targetStates.Contains(response.Microsite.LifecycleState.Value)
+            );
+            return new Waiter<GetMicrositeRequest, GetMicrositeResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.

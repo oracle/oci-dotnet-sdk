@@ -22,7 +22,7 @@ namespace Oci.LoggingService.Models
     {
         
         /// <value>
-        /// Log category parameters are stored here.
+        /// Log category parameters are stored here. The resource for a service log can't be updated.
         /// </value>
         [JsonProperty(PropertyName = "parameters")]
         public System.Collections.Generic.Dictionary<string, string> Parameters { get; set; }

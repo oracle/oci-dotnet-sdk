@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// The customer facing object includes GPU memory cluster details.
+    /// The customer facing object includes GPU Memory Cluster details.
     /// 
     /// </summary>
     public class ComputeGpuMemoryCluster 
     {
         
         /// <value>
-        /// The availability domain of the GPU memory cluster.
+        /// The availability domain of the GPU Memory Cluster.
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +34,7 @@ namespace Oci.CoreService.Models
         public string AvailabilityDomain { get; set; }
         
         /// <value>
-        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Customer-unique GPU memory cluster
+        /// The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the Customer-unique GPU Memory Cluster
         /// 
         /// </value>
         /// <remarks>
@@ -67,7 +67,7 @@ namespace Oci.CoreService.Models
         public string CompartmentId { get; set; }
                 ///
         /// <value>
-        /// The lifecycle state of the GPU memory cluster
+        /// The lifecycle state of the GPU Memory Cluster
         /// 
         /// </value>
         ///
@@ -88,7 +88,7 @@ namespace Oci.CoreService.Models
         };
 
         /// <value>
-        /// The lifecycle state of the GPU memory cluster
+        /// The lifecycle state of the GPU Memory Cluster
         /// 
         /// </value>
         /// <remarks>
@@ -118,7 +118,7 @@ namespace Oci.CoreService.Models
         public string ComputeClusterId { get; set; }
         
         /// <value>
-        /// The number of instances currently running in the GpuMemoryCluster
+        /// The size represents the total number of instances in the GPU Memory Cluster, including both running instances and those still in the process of launching.
         /// 
         /// </value>
         /// <remarks>
@@ -130,6 +130,12 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "gpuMemoryClusterScaleConfig")]
         public ComputeGpuMemoryClusterScaleConfig GpuMemoryClusterScaleConfig { get; set; }
+        
+        /// <value>
+        /// Unique list of OCIDs for private IPs (IPv4/IPv6) associated with the GPU Memory Cluster
+        /// </value>
+        [JsonProperty(PropertyName = "privateIpIds")]
+        public System.Collections.Generic.List<string> PrivateIpIds { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a
@@ -165,7 +171,7 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
-        /// The date and time the GPU memory cluster was created.
+        /// The date and time the GPU Memory Cluster was created.
         /// <br/>
         /// Example: 2016-09-15T21:10:29.600Z
         /// </value>

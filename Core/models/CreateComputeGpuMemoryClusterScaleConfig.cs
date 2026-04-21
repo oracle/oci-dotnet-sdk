@@ -41,7 +41,7 @@ namespace Oci.CoreService.Models
         public System.Nullable<bool> IsDownsizeEnabled { get; set; }
         
         /// <value>
-        /// The configured target size for the GPU Memory cluster.
+        /// The configured target size for the GPU Memory Cluster.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "targetSize")]

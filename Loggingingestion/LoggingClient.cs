@@ -46,7 +46,7 @@ namespace Oci.LoggingingestionService
             {
                 ServiceName = "LOGGING",
                 ServiceEndpointPrefix = "",
-                ServiceEndpointTemplate = "https://ingestion.logging.{region}.oci.{secondLevelDomain}"
+                ServiceEndpointTemplate = "https://ingestion.logging.{region}.{dualStack?ds.:}oci.{secondLevelDomain}"
             };
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
@@ -80,7 +80,8 @@ namespace Oci.LoggingingestionService
         public async Task<PutLogsResponse> PutLogs(PutLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called putLogs");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/logs/{logId}/actions/push".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "logId", request.LogId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/logs/{logId}/actions/push".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");

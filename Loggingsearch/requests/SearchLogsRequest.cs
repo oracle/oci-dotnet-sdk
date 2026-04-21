@@ -31,22 +31,23 @@ namespace Oci.LoggingsearchService.Requests
         public SearchLogsDetails SearchLogsDetails { get; set; }
         
         /// <value>
-        /// Unique Oracle-assigned identifier for the request. If you need to contact Oracle about
-        /// a particular request, please provide the request ID.
+        /// Unique Oracle-assigned identifier for the request. The input value can be null but an empty string will return an error. 
+        /// If you need to contact Oracle about a particular request, please provide the request ID.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
         
         /// <value>
-        /// The maximum number of items to return in a response. Pagination is not supported in this API.
+        /// The maximum number of items to return in a response.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]
         public System.Nullable<int> Limit { get; set; }
         
         /// <value>
-        /// For list pagination. The value of the opc-next-page response header from the previous \"Search\" call.
+        /// For list pagination. The value of the opc-next-page response header from the previous \"Search\" call. 
+        /// The input value can be null but an empty string will return an error. 
         /// For important details about how pagination works, see [List Pagination](https://docs.cloud.oracle.com/Content/API/Concepts/usingapi.htm#nine).
         /// 
         /// </value>

@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CoreService.Models
 {
     /// <summary>
-    /// Secondary private IPv4 address object to delete as part of bulk deletion.
+    /// Secondary private IPv4 address object to delete as part of a bulk operation.
     /// </summary>
     public class BulkDeletePrivateIpItem 
     {

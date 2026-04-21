@@ -47,12 +47,17 @@ namespace Oci.GoldengateService.Models
         /// The [OCID](https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm) of the Secret where the account key is stored.
         /// 
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "AccountKeySecretId is required.")]
         [JsonProperty(PropertyName = "accountKeySecretId")]
         public string AccountKeySecretId { get; set; }
+        
+        /// <value>
+        /// Azure storage account key. This property is required when 'authenticationType' is set to 'SHARED_KEY'.
+        /// e.g.: pa3WbhVATzj56xD4DH1VjOUhApRGEGHvOo58eQJVWIzX+j8j4CUVFcTjpIqDSRaSa1Wo2LbWY5at+AStEgLOIQ==
+        /// Deprecated: This field is deprecated and replaced by \"accountKeySecretId\". This field will be removed after February 15 2026.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "accountKey")]
+        public string AccountKey { get; set; }
         
         /// <value>
         /// The Azure Blob Storage endpoint where Iceberg data is stored.

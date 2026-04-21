@@ -107,9 +107,34 @@ namespace Oci.GoldengateService.Models
         [JsonProperty(PropertyName = "backupSourceType")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<BackupSourceTypeEnum> BackupSourceType { get; set; }
-        
+                ///
         /// <value>
-        /// Possible lifecycle states.
+        /// Possible lifecycle states for a Deployment Backup.
+        /// 
+        /// </value>
+        ///
+        public enum LifecycleStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "CREATING")]
+            Creating,
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            [EnumMember(Value = "DELETING")]
+            Deleting,
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            [EnumMember(Value = "CANCELING")]
+            Canceling,
+            [EnumMember(Value = "CANCELED")]
+            Canceled
+        };
+
+        /// <value>
+        /// Possible lifecycle states for a Deployment Backup.
         /// 
         /// </value>
         /// <remarks>
@@ -118,7 +143,7 @@ namespace Oci.GoldengateService.Models
         [Required(ErrorMessage = "LifecycleState is required.")]
         [JsonProperty(PropertyName = "lifecycleState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<LifecycleState> LifecycleState { get; set; }
+        public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
         /// Describes the object's current state in detail. For example, it can be used to provide

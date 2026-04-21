@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// Secondary IPv4 addresses to detach.
+        /// The secondary IPv4 addresses to detach.
         /// </value>
         /// <remarks>
         /// Required

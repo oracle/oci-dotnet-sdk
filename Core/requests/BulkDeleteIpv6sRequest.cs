@@ -20,7 +20,7 @@ namespace Oci.CoreService.Requests
     {
         
         /// <value>
-        /// Delete IPv6s details.
+        /// Details of the IPv6s to delete.
         /// </value>
         /// <remarks>
         /// Required

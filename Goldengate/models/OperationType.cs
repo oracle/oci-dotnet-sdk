@@ -64,12 +64,12 @@ namespace Oci.GoldengateService.Models
       GoldengateConnectionMove,
       [EnumMember(Value = "GOLDENGATE_CONNECTION_REFRESH")]
       GoldengateConnectionRefresh,
+      [EnumMember(Value = "GOLDENGATE_CONNECTION_MIGRATE_SECRETS")]
+      GoldengateConnectionMigrateSecrets,
       [EnumMember(Value = "GOLDENGATE_CONNECTION_ASSIGNMENT_CREATE")]
       GoldengateConnectionAssignmentCreate,
       [EnumMember(Value = "GOLDENGATE_CONNECTION_ASSIGNMENT_DELETE")]
       GoldengateConnectionAssignmentDelete,
-      [EnumMember(Value = "GOLDENGATE_CONNECTION_ASSIGMNENT_DELETE")]
-      GoldengateConnectionAssigmnentDelete,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_DIAGNOSTIC_COLLECT")]
       GoldengateDeploymentDiagnosticCollect,
       [EnumMember(Value = "GOLDENGATE_DEPLOYMENT_WALLET_EXPORT")]

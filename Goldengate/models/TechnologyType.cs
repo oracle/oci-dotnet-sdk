@@ -122,6 +122,8 @@ namespace Oci.GoldengateService.Models
       Db2Zos,
       [EnumMember(Value = "ELASTICSEARCH")]
       Elasticsearch,
+      [EnumMember(Value = "EDB_POSTGRES_ADVANCED_SERVER")]
+      EdbPostgresAdvancedServer,
       [EnumMember(Value = "GOOGLE_ALLOY_DB_FOR_POSTGRESQL")]
       GoogleAlloyDbForPostgresql,
       [EnumMember(Value = "GOOGLE_BIGQUERY")]
@@ -142,6 +144,8 @@ namespace Oci.GoldengateService.Models
       Mariadb,
       [EnumMember(Value = "MICROSOFT_SQLSERVER")]
       MicrosoftSqlserver,
+      [EnumMember(Value = "MICROSOFT_FABRIC_EVENTSTREAM")]
+      MicrosoftFabricEventstream,
       [EnumMember(Value = "MICROSOFT_FABRIC_LAKEHOUSE")]
       MicrosoftFabricLakehouse,
       [EnumMember(Value = "MICROSOFT_FABRIC_MIRROR")]
@@ -163,6 +167,8 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "SINGLESTOREDB_CLOUD")]
       SinglestoredbCloud,
       [EnumMember(Value = "SNOWFLAKE")]
-      Snowflake
+      Snowflake,
+      [EnumMember(Value = "YUGABYTE_DB")]
+      YugabyteDb
   }
 }
