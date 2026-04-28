@@ -132,5 +132,11 @@ namespace Oci.JmsService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "pathContains")]
         public string PathContains { get; set; }
+        
+        /// <value>
+        /// The security status of the Java Runtime.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "jreSecurityStatus")]
+        public System.Nullable<JreSecurityStatus> JreSecurityStatus { get; set; }
     }
 }

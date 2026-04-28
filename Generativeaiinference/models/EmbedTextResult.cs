@@ -38,6 +38,12 @@ namespace Oci.GenerativeaiinferenceService.Models
         public System.Collections.Generic.List<string> Inputs { get; set; }
         
         /// <value>
+        /// The original inputs. Only present if \"isEcho\" is set to true.
+        /// </value>
+        [JsonProperty(PropertyName = "embedContents")]
+        public System.Collections.Generic.List<EmbedContent> EmbedContents { get; set; }
+        
+        /// <value>
         /// The embeddings corresponding to float.
         /// </value>
         /// <remarks>

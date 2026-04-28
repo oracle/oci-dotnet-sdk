@@ -42,6 +42,8 @@ namespace Oci.DatabasemigrationService.Models
       [EnumMember(Value = "COMPLETED")]
       Completed,
       [EnumMember(Value = "FAILED")]
-      Failed
+      Failed,
+      [EnumMember(Value = "SKIPPED")]
+      Skipped
   }
 }

@@ -44,7 +44,9 @@ namespace Oci.BatchService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "COMPUTE")]
-            Compute
+            Compute,
+            [EnumMember(Value = "GROUP")]
+            Group
         };
 
         
@@ -55,7 +57,7 @@ namespace Oci.BatchService.Models
         public System.Collections.Generic.List<string> EntitlementClaims { get; set; }
         
         /// <value>
-        /// A list of tasks from the same job this task depends on referenced by name.
+        /// A list of tasks on which this tasks depends, referenced by name. Dependencies must be within the same parent (job or group task). For tasks within a group task, all dependencies must also be within that same group task.
         /// </value>
         [JsonProperty(PropertyName = "dependencies")]
         public System.Collections.Generic.List<string> Dependencies { get; set; }
@@ -90,6 +92,9 @@ namespace Oci.BatchService.Models
             {
                 case "COMPUTE":
                     obj = new CreateComputeTaskDetails();
+                    break;
+                case "GROUP":
+                    obj = new CreateGroupTaskDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

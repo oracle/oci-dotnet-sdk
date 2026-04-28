@@ -34,10 +34,6 @@ namespace Oci.CloudguardService.Models
         /// <value>
         /// Updates to be applied to detector rules in target detector recipe
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "DetectorRules is required.")]
         [JsonProperty(PropertyName = "detectorRules")]
         public System.Collections.Generic.List<UpdateTargetRecipeDetectorRuleDetails> DetectorRules { get; set; }
         

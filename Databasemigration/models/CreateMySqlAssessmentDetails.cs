@@ -22,6 +22,17 @@ namespace Oci.DatabasemigrationService.Models
     {
         
         /// <value>
+        /// Assessment migration scope.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "MigrationScope is required.")]
+        [JsonProperty(PropertyName = "migrationScope")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<MigrationScopeMySql> MigrationScope { get; set; }
+        
+        /// <value>
         /// Database objects to exclude from migration, cannot be specified alongside 'includeObjects'
         /// </value>
         [JsonProperty(PropertyName = "excludeObjects")]

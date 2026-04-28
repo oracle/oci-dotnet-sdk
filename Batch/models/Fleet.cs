@@ -28,7 +28,9 @@ namespace Oci.BatchService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "SERVICE_MANAGED_FLEET")]
-            ServiceManagedFleet
+            ServiceManagedFleet,
+            [EnumMember(Value = "SERVICE_MANAGED_GPU_FLEET")]
+            ServiceManagedGpuFleet
         };
 
         
@@ -57,6 +59,9 @@ namespace Oci.BatchService.Models
             {
                 case "SERVICE_MANAGED_FLEET":
                     obj = new ServiceManagedFleet();
+                    break;
+                case "SERVICE_MANAGED_GPU_FLEET":
+                    obj = new ServiceManagedGpuFleet();
                     break;
             }
             if (obj != null)

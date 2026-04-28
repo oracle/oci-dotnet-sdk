@@ -32,7 +32,7 @@ namespace Oci.BatchService.Models
         public string ShapeName { get; set; }
         
         /// <value>
-        /// Number of OCPUs required by the shape.
+        /// Number of OCPUs required for the shape.
         /// </value>
         /// <remarks>
         /// Required
@@ -42,7 +42,7 @@ namespace Oci.BatchService.Models
         public System.Nullable<int> Ocpus { get; set; }
         
         /// <value>
-        /// Amount of memory in GBs required by the shape.
+        /// Amount of memory in GBs required for the shape.
         /// </value>
         /// <remarks>
         /// Required
@@ -50,6 +50,12 @@ namespace Oci.BatchService.Models
         [Required(ErrorMessage = "MemoryInGBs is required.")]
         [JsonProperty(PropertyName = "memoryInGBs")]
         public System.Nullable<int> MemoryInGBs { get; set; }
+        
+        /// <value>
+        /// Amount of disk space in GBs required for the shape.
+        /// </value>
+        [JsonProperty(PropertyName = "diskSizeInGBs")]
+        public System.Nullable<int> DiskSizeInGBs { get; set; }
         
     }
 }

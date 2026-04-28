@@ -16,7 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Start policy for continuous query
+    /// DEPRECATED - Start policy for continuous query
     /// </summary>
     [JsonConverter(typeof(ContinuousQueryStartPolicyModelConverter))]
     public class ContinuousQueryStartPolicy 

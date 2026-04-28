@@ -81,6 +81,15 @@ namespace Oci.BatchService.Models
         [Required(ErrorMessage = "MinMemoryInGBs is required.")]
         [JsonProperty(PropertyName = "minMemoryInGBs")]
         public System.Nullable<int> MinMemoryInGBs { get; set; }
+        
+        /// <value>
+        /// The minimum required size of disk space in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "minDiskSizeInGBs")]
+        public System.Nullable<int> MinDiskSizeInGBs { get; set; }
+        
+        [JsonProperty(PropertyName = "extendedInformation")]
+        public BatchTaskProfileExtendedInformation ExtendedInformation { get; set; }
                 ///
         /// <value>
         /// The current state of the batch task profile.

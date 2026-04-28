@@ -42,5 +42,12 @@ namespace Oci.FusionappsService.Models
         [JsonProperty(PropertyName = "developmentLimitAndUsage")]
         public LimitAndUsage DevelopmentLimitAndUsage { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "DemoLimitAndUsage is required.")]
+        [JsonProperty(PropertyName = "demoLimitAndUsage")]
+        public LimitAndUsage DemoLimitAndUsage { get; set; }
+        
     }
 }

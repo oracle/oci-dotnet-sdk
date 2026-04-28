@@ -28,7 +28,9 @@ namespace Oci.BatchService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "SERVICE_MANAGED_FLEET")]
-            ServiceManagedFleet
+            ServiceManagedFleet,
+            [EnumMember(Value = "SERVICE_MANAGED_GPU_FLEET")]
+            ServiceManagedGpuFleet
         };
 
         
@@ -54,6 +56,9 @@ namespace Oci.BatchService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "SERVICE_MANAGED_GPU_FLEET":
+                    obj = new CreateServiceManagedGpuFleetDetails();
+                    break;
                 case "SERVICE_MANAGED_FLEET":
                     obj = new CreateServiceManagedFleetDetails();
                     break;

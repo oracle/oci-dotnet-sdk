@@ -25,7 +25,7 @@ namespace Oci.GenerativeaiService.Models
     {
                 ///
         /// <value>
-        /// Inbound authentication configuration type of network access 
+        /// Inbound authentication configuration type of network access
         /// (IDCS_AUTH_CONFIG).
         /// 
         /// </value>
@@ -39,7 +39,7 @@ namespace Oci.GenerativeaiService.Models
         };
 
         /// <value>
-        /// Inbound authentication configuration type of network access 
+        /// Inbound authentication configuration type of network access
         /// (IDCS_AUTH_CONFIG).
         /// 
         /// </value>

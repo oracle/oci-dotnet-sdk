@@ -52,6 +52,12 @@ namespace Oci.BatchService.Models
         [JsonProperty(PropertyName = "batchTaskEnvironmentId")]
         public string BatchTaskEnvironmentId { get; set; }
         
+        /// <value>
+        /// List of up to 30 most recent execution history entries, from newest to oldest. Be aware that the maximum number of items returned may change in the future.
+        /// </value>
+        [JsonProperty(PropertyName = "mostRecentExecutionHistory")]
+        public System.Collections.Generic.List<BatchTaskExecutionDetails> MostRecentExecutionHistory { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "COMPUTE";
     }

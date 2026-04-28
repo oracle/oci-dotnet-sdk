@@ -61,6 +61,16 @@ namespace Oci.RedisService.Models
       ChangeOciCacheConfigSetCompartment,
       [EnumMember(Value = "CHANGE_OCI_CACHE_USER_COMPARTMENT")]
       ChangeOciCacheUserCompartment,
+      [EnumMember(Value = "CREATE_OCI_CACHE_BACKUP")]
+      CreateOciCacheBackup,
+      [EnumMember(Value = "UPDATE_OCI_CACHE_BACKUP")]
+      UpdateOciCacheBackup,
+      [EnumMember(Value = "DELETE_OCI_CACHE_BACKUP")]
+      DeleteOciCacheBackup,
+      [EnumMember(Value = "MOVE_OCI_CACHE_BACKUP")]
+      MoveOciCacheBackup,
+      [EnumMember(Value = "EXPORT_OCI_CACHE_BACKUP_TO_OS")]
+      ExportOciCacheBackupToOs,
       [EnumMember(Value = "PATCH_OCI_CACHE_CLUSTER")]
       PatchOciCacheCluster,
       [EnumMember(Value = "REPLACE_OCI_CACHE_NODE")]

@@ -36,10 +36,6 @@ namespace Oci.DatabasemigrationService.Models
         /// <value>
         /// Oracle Job Mode
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "JobMode is required.")]
         [JsonProperty(PropertyName = "jobMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobModeOracle> JobMode { get; set; }
