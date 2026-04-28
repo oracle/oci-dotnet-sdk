@@ -122,7 +122,7 @@ namespace Oci.BatchService.Models
         public System.Nullable<LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// A message that describes the current state in more detail. For example,   can be used to provide actionable information for a resource in the Failed state.
+        /// A message that describes the current state in more detail. For example, can be used to provide actionable information for a resource in the Failed state.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lifecycleDetails")]

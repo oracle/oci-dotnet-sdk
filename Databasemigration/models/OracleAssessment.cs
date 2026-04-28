@@ -22,6 +22,17 @@ namespace Oci.DatabasemigrationService.Models
     {
         
         /// <value>
+        /// Assessment migration scope.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "MigrationScope is required.")]
+        [JsonProperty(PropertyName = "migrationScope")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<MigrationScopeOracle> MigrationScope { get; set; }
+        
+        /// <value>
         /// True if CDB should be defined, false otherwise.
         /// </value>
         [JsonProperty(PropertyName = "isCdbSupported")]

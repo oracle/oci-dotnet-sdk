@@ -49,22 +49,23 @@ namespace Oci.BatchService.Models
         /// <value>
         /// The minimum required OCPUs.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "MinOcpus is required.")]
         [JsonProperty(PropertyName = "minOcpus")]
         public System.Nullable<int> MinOcpus { get; set; }
         
         /// <value>
         /// The minimum required memory.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "MinMemoryInGBs is required.")]
         [JsonProperty(PropertyName = "minMemoryInGBs")]
         public System.Nullable<int> MinMemoryInGBs { get; set; }
+        
+        /// <value>
+        /// The minimum required size of disk space in GBs.
+        /// </value>
+        [JsonProperty(PropertyName = "minDiskSizeInGBs")]
+        public System.Nullable<int> MinDiskSizeInGBs { get; set; }
+        
+        [JsonProperty(PropertyName = "extendedInformation")]
+        public CreateBatchTaskProfileExtendedInformationDetails ExtendedInformation { get; set; }
         
         /// <value>
         /// Defined tags for this resource. Each key is predefined and scoped to a namespace.

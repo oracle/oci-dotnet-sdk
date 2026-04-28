@@ -50,8 +50,11 @@ namespace Oci.JmsutilsService
             {
                 ServiceName = "JMSUTILS",
                 ServiceEndpointPrefix = "",
-                ServiceEndpointTemplate = "https://javamanagement-utils.{region}.oci.{secondLevelDomain}"
+                ServiceEndpointTemplate = "https://utils.javamanagement.{region}.{dualStack?ds.:}oci.{secondLevelDomain}",
+                EndpointServiceName = "utils.javamanagement",
+                ServiceUsesDualStackByDefault = true
             };
+            this.EnableDualStackEndpoints(Oci.Common.Utils.EndpointTemplateForOptionsUtils.IsDualStackEnabledForClientDefault(this.service));
 
             ClientConfiguration clientConfigurationToUse = clientConfiguration ?? new ClientConfiguration();
 
@@ -84,7 +87,8 @@ namespace Oci.JmsutilsService
         public async Task<CancelWorkRequestResponse> CancelWorkRequest(CancelWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called cancelWorkRequest");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "workRequestId", request.WorkRequestId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -140,7 +144,8 @@ namespace Oci.JmsutilsService
         public async Task<DeleteJavaMigrationAnalysisResponse> DeleteJavaMigrationAnalysis(DeleteJavaMigrationAnalysisRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deleteJavaMigrationAnalysis");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/javaMigrationAnalysis/{javaMigrationAnalysisId}".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "javaMigrationAnalysisId", request.JavaMigrationAnalysisId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/javaMigrationAnalysis/{javaMigrationAnalysisId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -196,7 +201,8 @@ namespace Oci.JmsutilsService
         public async Task<DeletePerformanceTuningAnalysisResponse> DeletePerformanceTuningAnalysis(DeletePerformanceTuningAnalysisRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called deletePerformanceTuningAnalysis");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/performanceTuningAnalysis/{performanceTuningAnalysisId}".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "performanceTuningAnalysisId", request.PerformanceTuningAnalysisId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/performanceTuningAnalysis/{performanceTuningAnalysisId}".Trim('/')));
             HttpMethod method = new HttpMethod("DELETE");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -253,7 +259,8 @@ namespace Oci.JmsutilsService
         public async Task<GetAnalyzeApplicationsConfigurationResponse> GetAnalyzeApplicationsConfiguration(GetAnalyzeApplicationsConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getAnalyzeApplicationsConfiguration");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/analyzeApplicationsConfiguration".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/analyzeApplicationsConfiguration".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -309,7 +316,8 @@ namespace Oci.JmsutilsService
         public async Task<GetJavaMigrationAnalysisResponse> GetJavaMigrationAnalysis(GetJavaMigrationAnalysisRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getJavaMigrationAnalysis");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/javaMigrationAnalysis/{javaMigrationAnalysisId}".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "javaMigrationAnalysisId", request.JavaMigrationAnalysisId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/javaMigrationAnalysis/{javaMigrationAnalysisId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -365,7 +373,8 @@ namespace Oci.JmsutilsService
         public async Task<GetPerformanceTuningAnalysisResponse> GetPerformanceTuningAnalysis(GetPerformanceTuningAnalysisRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getPerformanceTuningAnalysis");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/performanceTuningAnalysis/{performanceTuningAnalysisId}".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "performanceTuningAnalysisId", request.PerformanceTuningAnalysisId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/performanceTuningAnalysis/{performanceTuningAnalysisId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -422,7 +431,8 @@ namespace Oci.JmsutilsService
         public async Task<GetSubscriptionAcknowledgmentConfigurationResponse> GetSubscriptionAcknowledgmentConfiguration(GetSubscriptionAcknowledgmentConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getSubscriptionAcknowledgmentConfiguration");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/subscriptionAcknowledgmentConfiguration".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/subscriptionAcknowledgmentConfiguration".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -478,7 +488,8 @@ namespace Oci.JmsutilsService
         public async Task<GetWorkRequestResponse> GetWorkRequest(GetWorkRequestRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called getWorkRequest");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "workRequestId", request.WorkRequestId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -535,7 +546,8 @@ namespace Oci.JmsutilsService
         public async Task<ListJavaMigrationAnalysisResponse> ListJavaMigrationAnalysis(ListJavaMigrationAnalysisRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listJavaMigrationAnalysis");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/javaMigrationAnalysis".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/javaMigrationAnalysis".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -592,7 +604,8 @@ namespace Oci.JmsutilsService
         public async Task<ListPerformanceTuningAnalysisResponse> ListPerformanceTuningAnalysis(ListPerformanceTuningAnalysisRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listPerformanceTuningAnalysis");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/performanceTuningAnalysis".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/performanceTuningAnalysis".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -649,7 +662,8 @@ namespace Oci.JmsutilsService
         public async Task<ListWorkItemsResponse> ListWorkItems(ListWorkItemsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listWorkItems");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}/workItems".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "workRequestId", request.WorkRequestId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}/workItems".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -706,7 +720,8 @@ namespace Oci.JmsutilsService
         public async Task<ListWorkRequestErrorsResponse> ListWorkRequestErrors(ListWorkRequestErrorsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listWorkRequestErrors");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}/errors".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "workRequestId", request.WorkRequestId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}/errors".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -763,7 +778,8 @@ namespace Oci.JmsutilsService
         public async Task<ListWorkRequestLogsResponse> ListWorkRequestLogs(ListWorkRequestLogsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listWorkRequestLogs");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}/logs".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "workRequestId", request.WorkRequestId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/workRequests/{workRequestId}/logs".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -820,7 +836,8 @@ namespace Oci.JmsutilsService
         public async Task<ListWorkRequestsResponse> ListWorkRequests(ListWorkRequestsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called listWorkRequests");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/workRequests".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/workRequests".Trim('/')));
             HttpMethod method = new HttpMethod("GET");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -877,7 +894,8 @@ namespace Oci.JmsutilsService
         public async Task<RequestJavaMigrationAnalysisResponse> RequestJavaMigrationAnalysis(RequestJavaMigrationAnalysisRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called requestJavaMigrationAnalysis");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/javaMigrationAnalysis/actions/requestJavaMigrationAnalysis".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/javaMigrationAnalysis/actions/requestJavaMigrationAnalysis".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -934,7 +952,8 @@ namespace Oci.JmsutilsService
         public async Task<RequestPerformanceTuningAnalysisResponse> RequestPerformanceTuningAnalysis(RequestPerformanceTuningAnalysisRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called requestPerformanceTuningAnalysis");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/performanceTuningAnalysis/actions/requestPerformanceTuningAnalysis".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/performanceTuningAnalysis/actions/requestPerformanceTuningAnalysis".Trim('/')));
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -990,7 +1009,8 @@ namespace Oci.JmsutilsService
         public async Task<UpdateAnalyzeApplicationsConfigurationResponse> UpdateAnalyzeApplicationsConfiguration(UpdateAnalyzeApplicationsConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateAnalyzeApplicationsConfiguration");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/analyzeApplicationsConfiguration".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/analyzeApplicationsConfiguration".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");
@@ -1046,7 +1066,8 @@ namespace Oci.JmsutilsService
         public async Task<UpdateSubscriptionAcknowledgmentConfigurationResponse> UpdateSubscriptionAcknowledgmentConfiguration(UpdateSubscriptionAcknowledgmentConfigurationRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
         {
             logger.Trace("Called updateSubscriptionAcknowledgmentConfiguration");
-            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/subscriptionAcknowledgmentConfiguration".Trim('/')));
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> {  };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/subscriptionAcknowledgmentConfiguration".Trim('/')));
             HttpMethod method = new HttpMethod("PUT");
             HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
             requestMessage.Headers.Add("Accept", "application/json");

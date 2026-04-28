@@ -199,6 +199,12 @@ namespace Oci.RedisService.Models
         public System.Collections.Generic.List<string> NsgIds { get; set; }
         
         /// <value>
+        /// The ID of the OCI Cache Backup from which this cluster was created.
+        /// </value>
+        [JsonProperty(PropertyName = "backupId")]
+        public string BackupId { get; set; }
+        
+        /// <value>
         /// Security attributes for redis cluster resource. Each key is predefined and scoped to a namespace.
         /// For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>

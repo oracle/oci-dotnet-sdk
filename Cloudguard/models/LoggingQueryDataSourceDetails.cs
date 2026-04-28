@@ -40,7 +40,7 @@ namespace Oci.CloudguardService.Models
         public System.Nullable<int> IntervalInMinutes { get; set; }
         
         /// <value>
-        /// The integer value that must be exceeded, fall below or equal to (depending on the operator), for the query result to trigger an event
+        /// DEPRECATED - The integer value that must be exceeded, fall below or equal to (depending on the operator), for the query result to trigger an event
         /// </value>
         [JsonProperty(PropertyName = "threshold")]
         public System.Nullable<int> Threshold { get; set; }
@@ -49,7 +49,7 @@ namespace Oci.CloudguardService.Models
         public ContinuousQueryStartPolicy QueryStartTime { get; set; }
         
         /// <value>
-        /// Operator used in data source
+        /// DEPRECATED - Operator used in data source
         /// </value>
         [JsonProperty(PropertyName = "operator")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]

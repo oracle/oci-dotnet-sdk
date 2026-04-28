@@ -34,10 +34,6 @@ namespace Oci.CloudguardService.Models
         /// <value>
         /// List of responder rules to be updated in the target responder recipe
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "ResponderRules is required.")]
         [JsonProperty(PropertyName = "responderRules")]
         public System.Collections.Generic.List<UpdateTargetRecipeResponderRuleDetails> ResponderRules { get; set; }
         

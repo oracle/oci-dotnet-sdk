@@ -85,7 +85,9 @@ namespace Oci.FusionappsService.Models
             [EnumMember(Value = "TEST")]
             Test,
             [EnumMember(Value = "DEVELOPMENT")]
-            Development
+            Development,
+            [EnumMember(Value = "DEMO")]
+            Demo
         };
 
         /// <value>

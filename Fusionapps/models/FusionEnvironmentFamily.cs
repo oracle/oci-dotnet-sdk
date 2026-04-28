@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FusionappsService.Models
 {
     /// <summary>
-    /// Details of a Fusion environment family. An environment family is a logical grouping of environments. The environment family defines a set of characteristics that are shared across the environments to allow consistent management and maintenance across your production, test, and development environments. For more information, see [Planning an Environment Family](https://docs.cloud.oracle.com/iaas/Content/fusion-applications/plan-environment-family.htm).
+    /// Details of a Fusion environment family. An environment family is a logical grouping of environments. The environment family defines a set of characteristics that are shared across the environments to allow consistent management and maintenance across your production, test, development, and demo environments. For more information, see [Planning an Environment Family](https://docs.cloud.oracle.com/iaas/Content/fusion-applications/plan-environment-family.htm).
     /// </summary>
     public class FusionEnvironmentFamily 
     {

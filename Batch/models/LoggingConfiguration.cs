@@ -16,14 +16,14 @@ using Newtonsoft.Json.Linq;
 namespace Oci.BatchService.Models
 {
     /// <summary>
-    /// Logging configuration for batch context.
+    /// Logging configuration of the batch context.
     /// </summary>
     [JsonConverter(typeof(LoggingConfigurationModelConverter))]
     public class LoggingConfiguration 
     {
                 ///
         /// <value>
-        /// Discriminator for sub-entities.
+        /// Type of the logging configuration. Discriminator for sub-entities.
         /// </value>
         ///
         public enum TypeEnum {

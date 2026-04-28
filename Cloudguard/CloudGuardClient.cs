@@ -249,9 +249,9 @@ namespace Oci.CloudguardService
         }
 
         /// <summary>
-        /// Moves the detector recipe (DetectorRecipe resource), 
-        /// identified by detectorRecipeId, from the current compartment to 
-        /// another compartment. When provided, If-Match is checked against 
+        /// Moves the detector recipe (DetectorRecipe resource),
+        /// identified by detectorRecipeId, from the current compartment to
+        /// another compartment. When provided, If-Match is checked against
         /// etag values of the resource.
         /// 
         /// </summary>
@@ -2192,38 +2192,6 @@ namespace Oci.CloudguardService
 
         /// <summary>
         /// Deletes and unregisters the WLP agent for an on-premise resource.
-        /// x-obmcs-splat:
-        /// routing:
-        ///   strategy: route-to-any-ad
-        /// serviceList: [ &#39;cloudguard-cp-SPLAT_ENV&#39; ]
-        /// resources:
-        ///   wlpAgent:
-        ///     serviceResourceName: WlpAgent
-        ///     targetCompartmentId: downstream.getOr404(&#39;cloudguard-cp-SPLAT_ENV&#39;, &#39;GetWlpAgent&#39;, request.resourceId).compartmentId
-        ///     actionKind: delete
-        ///     resourceOcid: request.resourceId
-        ///     reconciliationCanStartAfterSecs: 30
-        ///     permissions: [ \&quot;WLP_AGENT_DELETE\&quot; ]
-        /// authorization:
-        ///   mode: automated
-        ///   check: resources[&#39;wlpAgent&#39;].grantedPermissions.contains(&#39;WLP_AGENT_DELETE&#39;)
-        ///   allowCrossTenancy: true
-        /// tagStore:
-        ///   mode: automated
-        /// maximumAttemptCount: 3
-        /// throttling:
-        ///   perUserLimit:
-        ///     rpsLimit: 15
-        ///   perTenantLimit:
-        ///     rpsLimit: 30
-        /// quotas:
-        ///   mode: automated
-        /// search:
-        ///   mode: backfilling
-        ///   operationResourceName: wlpAgent
-        /// lock:
-        ///   mode: test
-        ///   operationResourceName: wlpAgent
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

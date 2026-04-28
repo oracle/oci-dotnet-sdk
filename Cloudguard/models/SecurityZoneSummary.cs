@@ -91,6 +91,12 @@ namespace Oci.CloudguardService.Models
         public string LifecycleDetails { get; set; }
         
         /// <value>
+        /// Indicates if upon deletion of the security zone the comparment should inherit parent security zone
+        /// </value>
+        [JsonProperty(PropertyName = "isInheritanceAfterDeleteEnabled")]
+        public System.Nullable<bool> IsInheritanceAfterDeleteEnabled { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}Avoid entering confidential information.
         /// </value>

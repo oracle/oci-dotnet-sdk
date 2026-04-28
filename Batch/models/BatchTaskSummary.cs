@@ -53,6 +53,18 @@ namespace Oci.BatchService.Models
         public string Name { get; set; }
         
         /// <value>
+        /// The hierarchical name of the task, which incorporates names of all parent group tasks, separated by \".\" (dot symbol). Maximum nesting depth is 4 levels. Example: groupTaskA.nestedGroupTaskB.thisTaskName
+        /// </value>
+        [JsonProperty(PropertyName = "hierarchicalName")]
+        public string HierarchicalName { get; set; }
+        
+        /// <value>
+        /// The hierarchical name of the group task. Null for top-level tasks.
+        /// </value>
+        [JsonProperty(PropertyName = "groupTaskName")]
+        public string GroupTaskName { get; set; }
+        
+        /// <value>
         /// An optional description that provides additional context next to the displayName.
         /// </value>
         [JsonProperty(PropertyName = "description")]
@@ -97,6 +109,9 @@ namespace Oci.BatchService.Models
             {
                 case "COMPUTE":
                     obj = new ComputeTaskSummary();
+                    break;
+                case "GROUP":
+                    obj = new GroupTaskSummary();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

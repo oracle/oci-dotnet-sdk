@@ -40,10 +40,16 @@ namespace Oci.BatchService.Requests
         public System.Nullable<BatchTask.LifecycleStateEnum> LifecycleState { get; set; }
         
         /// <value>
-        /// The name of the task.
+        /// The hierarchical name of the batch task. Mutually exclusive with the task id query parameter: you can't pass both.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "name")]
         public string Name { get; set; }
+        
+        /// <value>
+        /// The UUID of the batch task. Mutually exclusive with the task name and group task name query parameters: you can't pass both.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "taskId")]
+        public string TaskId { get; set; }
         
         /// <value>
         /// For list pagination. The maximum number of results per page, or items to return in a

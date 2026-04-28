@@ -120,6 +120,15 @@ namespace Oci.RedisService.Models
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SecurityAttributes { get; set; }
         
         /// <value>
+        /// The ID of the OCI Cache Backup from which this cluster was created.Mutually exclusive with 'importFromObjectStorageDetails'.
+        /// </value>
+        [JsonProperty(PropertyName = "backupId")]
+        public string BackupId { get; set; }
+        
+        [JsonProperty(PropertyName = "importFromObjectStorageDetails")]
+        public ImportOciCacheFromObjectStorageDetails ImportFromObjectStorageDetails { get; set; }
+        
+        /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
         /// Example: {&quot;bar-key&quot;: &quot;value&quot;}
         /// </value>

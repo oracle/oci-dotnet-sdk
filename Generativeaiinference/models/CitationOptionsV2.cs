@@ -16,13 +16,13 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiinferenceService.Models
 {
     /// <summary>
-    /// Options for controlling citation generation in RAG flows.
+    /// Options for controlling citation generation.
     /// </summary>
     public class CitationOptionsV2 
     {
                 ///
         /// <value>
-        /// Dictates the approach taken to generating citations as part of the RAG flow. Defaults to \"accurate\".   - \"ACCURATE\": More precise citation generation.   - \"FAST\": Faster but may be less precise.   - \"OFF\": Disables citation generation.   Note: `command-r7b-12-2024` and `command-a-03-2025` only support \"FAST\" and \"OFF\".
+        /// Dictates the approach taken to generating citations.   - \"ACCURATE\": More precise citation generation.   - \"FAST\": Faster but may be less precise.   - \"OFF\": Disables citation generation.
         /// 
         /// </value>
         ///
@@ -36,7 +36,7 @@ namespace Oci.GenerativeaiinferenceService.Models
         };
 
         /// <value>
-        /// Dictates the approach taken to generating citations as part of the RAG flow. Defaults to \"accurate\".   - \"ACCURATE\": More precise citation generation.   - \"FAST\": Faster but may be less precise.   - \"OFF\": Disables citation generation.   Note: `command-r7b-12-2024` and `command-a-03-2025` only support \"FAST\" and \"OFF\".
+        /// Dictates the approach taken to generating citations.   - \"ACCURATE\": More precise citation generation.   - \"FAST\": Faster but may be less precise.   - \"OFF\": Disables citation generation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "mode")]

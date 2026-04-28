@@ -24,12 +24,15 @@ namespace Oci.GenerativeaiinferenceService.Models
         /// <value>
         /// Provide a list of strings or one base64 encoded image with `input_type` setting to `IMAGE`. If text embedding, each string can be words, a phrase, or a paragraph. The maximum length of each string entry in the list is 512 tokens.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "Inputs is required.")]
         [JsonProperty(PropertyName = "inputs")]
         public System.Collections.Generic.List<string> Inputs { get; set; }
+        
+        /// <value>
+        /// An array of text/image inputs to be embedded. Supported for Embed v4 models.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "embedContents")]
+        public System.Collections.Generic.List<EmbedContent> EmbedContents { get; set; }
         
         /// <remarks>
         /// Required

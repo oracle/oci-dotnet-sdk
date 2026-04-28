@@ -21,6 +21,17 @@ namespace Oci.DatabasemigrationService.Models
     public class MySqlAssessmentSummary : AssessmentSummary
     {
         
+        /// <value>
+        /// Assessment migration scope.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "MigrationScope is required.")]
+        [JsonProperty(PropertyName = "migrationScope")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<MigrationScopeMySql> MigrationScope { get; set; }
+        
         [JsonProperty(PropertyName = "databaseCombination")]
         private readonly string databaseCombination = "MYSQL";
     }
