@@ -54,6 +54,12 @@ namespace Oci.BatchService.Requests
         public string Page { get; set; }
         
         /// <value>
+        /// The type of a shape.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "shapeType")]
+        public System.Nullable<ShapeType> ShapeType { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
         /// Oracle about a particular request, please provide the request ID.
         /// The only valid characters for request IDs are letters, numbers,

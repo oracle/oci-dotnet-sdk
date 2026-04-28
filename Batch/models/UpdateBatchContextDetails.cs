@@ -67,5 +67,8 @@ namespace Oci.BatchService.Models
         [JsonProperty(PropertyName = "entitlements")]
         public System.Collections.Generic.Dictionary<string, int> Entitlements { get; set; }
         
+        [JsonProperty(PropertyName = "loggingConfiguration")]
+        public UpdateLoggingConfigurationDetails LoggingConfiguration { get; set; }
+        
     }
 }

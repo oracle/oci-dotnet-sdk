@@ -41,6 +41,12 @@ namespace Oci.BatchService.Models
         [JsonProperty(PropertyName = "logId")]
         public string LogId { get; set; }
         
+        /// <value>
+        /// A switch to enable or disable propagation of job and task events to the customer's logs in OCI logging service.
+        /// </value>
+        [JsonProperty(PropertyName = "isJobTaskEventsPropagationEnabled")]
+        public System.Nullable<bool> IsJobTaskEventsPropagationEnabled { get; set; }
+        
         [JsonProperty(PropertyName = "type")]
         private readonly string type = "OCI_LOGGING";
     }

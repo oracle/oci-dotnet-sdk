@@ -55,7 +55,7 @@ namespace Oci.BatchService.Models
         public string State { get; set; }
         
         /// <value>
-        /// A message that describes the current state of the service manage fleet configuration in more detail.
+        /// A message that describes the current state of the service managed fleet configuration in more detail.
         /// </value>
         [JsonProperty(PropertyName = "details")]
         public string Details { get; set; }

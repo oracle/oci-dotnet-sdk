@@ -14,6 +14,9 @@ namespace Oci.JmsService.Models
 {
   /// <summary>
   /// List of TLS versions to be disabled.
+    /// The following versions are deprecated and won't perform any action if specified in the payload:
+    /// TLS_1_0, TLS_1_1
+    /// 
   /// </summary>
   public enum TlsVersions {
       /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.

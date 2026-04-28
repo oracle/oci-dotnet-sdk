@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.FusionappsService.Models
 {
     /// <summary>
-    /// The limit and usage for a specific environment type, for example, production, development, or test.
+    /// The limit and usage for a specific environment type, for example, production, development, demo or test.
     /// </summary>
     public class LimitAndUsage 
     {

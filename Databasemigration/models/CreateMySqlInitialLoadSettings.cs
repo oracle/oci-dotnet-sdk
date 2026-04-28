@@ -67,10 +67,6 @@ namespace Oci.DatabasemigrationService.Models
         /// <value>
         /// MySql Job Mode
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "JobMode is required.")]
         [JsonProperty(PropertyName = "jobMode")]
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<JobModeMySql> JobMode { get; set; }

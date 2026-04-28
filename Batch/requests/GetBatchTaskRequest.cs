@@ -30,7 +30,7 @@ namespace Oci.BatchService.Requests
         public string BatchJobId { get; set; }
         
         /// <value>
-        /// The name of the batch task.
+        /// The hierarchical name of the batch task. Mutually exclusive with the task id query parameter: you can't pass both.
         /// </value>
         /// <remarks>
         /// Required

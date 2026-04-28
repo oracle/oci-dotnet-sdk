@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.CloudguardService.Models
 {
     /// <summary>
-    /// Start policy that defines the exact start time
+    /// DEPRECATED - Start policy that defines the exact start time
     /// </summary>
     public class AbsoluteTimeStartPolicy : ContinuousQueryStartPolicy
     {

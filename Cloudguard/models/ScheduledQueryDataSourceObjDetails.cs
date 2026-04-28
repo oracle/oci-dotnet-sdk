@@ -34,7 +34,7 @@ namespace Oci.CloudguardService.Models
         public string Description { get; set; }
         
         /// <value>
-        /// Interval in minutes which query is run periodically.
+        /// Interval in seconds which query is run periodically.
         /// </value>
         [JsonProperty(PropertyName = "intervalInSeconds")]
         public System.Nullable<int> IntervalInSeconds { get; set; }

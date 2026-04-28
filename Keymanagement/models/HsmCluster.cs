@@ -157,5 +157,11 @@ namespace Oci.KeymanagementService.Models
         [JsonProperty(PropertyName = "freeformTags")]
         public System.Collections.Generic.Dictionary<string, string> FreeformTags { get; set; }
         
+        [JsonProperty(PropertyName = "auditLogConfig")]
+        public HsmClusterAuditLoggingInfo AuditLogConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "pendingInstructions")]
+        public HsmClusterPendingInstructions PendingInstructions { get; set; }
+        
     }
 }
