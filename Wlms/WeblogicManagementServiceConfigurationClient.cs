@@ -104,7 +104,7 @@ namespace Oci.WlmsService
                     ServiceName = "WeblogicManagementServiceConfiguration",
                     OperationName = "GetConfiguration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/wlms/20241101/Configuration/GetConfiguration",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -161,7 +161,7 @@ namespace Oci.WlmsService
                     ServiceName = "WeblogicManagementServiceConfiguration",
                     OperationName = "UpdateConfiguration",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/wlms/20241101/Configuration/UpdateConfiguration",
+                    ApiReferenceLink = "",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

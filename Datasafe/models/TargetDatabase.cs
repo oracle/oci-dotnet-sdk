@@ -113,6 +113,12 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
+        /// List of enabled features based on granted ORA_DSCS_* roles in target database
+        /// </value>
+        [JsonProperty(PropertyName = "features")]
+        public System.Collections.Generic.List<string> Features { get; set; }
+        
+        /// <value>
         /// The OCIDs of associated resources like database, Data Safe private endpoint, etc.
         /// </value>
         [JsonProperty(PropertyName = "peerTargetDatabases")]

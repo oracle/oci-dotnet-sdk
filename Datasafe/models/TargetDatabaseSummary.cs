@@ -113,6 +113,12 @@ namespace Oci.DatasafeService.Models
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
+        /// List of enabled features based on granted ORA_DSCS_* roles in target database
+        /// </value>
+        [JsonProperty(PropertyName = "features")]
+        public System.Collections.Generic.List<string> Features { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm)
         /// <br/>
         /// Example: {&quot;Department&quot;: &quot;Finance&quot;}

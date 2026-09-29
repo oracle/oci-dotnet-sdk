@@ -17,7 +17,7 @@ namespace Oci.DatasafeService.Models
 {
     /// <summary>
     /// Criteria to determine whether a target database should be included in the target database group.
-    /// If the database satisfies any of compartments, targetDatabaseIds, freeformTags, definedTags or systemTags criteria then it qualifies for inclusion in the target database group.
+    /// If the database satisfies any of compartments, targetDatabaseIds, freeformTags, definedTags, freeformTagsIn or systemTags criteria then it qualifies for inclusion in the target database group.
     /// 
     /// </summary>
     public class Include 
@@ -49,6 +49,18 @@ namespace Oci.DatasafeService.Models
         /// </value>
         [JsonProperty(PropertyName = "definedTags")]
         public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> DefinedTags { get; set; }
+        
+        /// <value>
+        /// Map of freeform tag filters. Each key maps to an array of strings. Target database matches the key if it's tag value equals any of the values in the array.
+        /// </value>
+        [JsonProperty(PropertyName = "freeformTagsIn")]
+        public System.Collections.Generic.Dictionary<string, System.Object> FreeformTagsIn { get; set; }
+        
+        /// <value>
+        /// Map of system tag filters. Target database matches when for each specified namespace.key and the tag value equals any of the values in the array.
+        /// </value>
+        [JsonProperty(PropertyName = "systemTags")]
+        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<string, System.Object>> SystemTags { get; set; }
         
     }
 }

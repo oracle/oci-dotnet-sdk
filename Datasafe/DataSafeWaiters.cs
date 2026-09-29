@@ -613,6 +613,33 @@ namespace Oci.DatasafeService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetRegistrationPolicyRequest, GetRegistrationPolicyResponse> ForRegistrationPolicy(GetRegistrationPolicyRequest request, params RegistrationPolicy.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForRegistrationPolicy(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetRegistrationPolicyRequest, GetRegistrationPolicyResponse> ForRegistrationPolicy(GetRegistrationPolicyRequest request, WaiterConfiguration config, params RegistrationPolicy.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetRegistrationPolicyRequest, GetRegistrationPolicyResponse>(
+                request,
+                request => client.GetRegistrationPolicy(request),
+                response => targetStates.Contains(response.RegistrationPolicy.LifecycleState.Value)
+            );
+            return new Waiter<GetRegistrationPolicyRequest, GetRegistrationPolicyResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetReportRequest, GetReportResponse> ForReport(GetReportRequest request, params ReportLifecycleState[] targetStates)
         {
             return this.ForReport(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -1080,6 +1107,89 @@ namespace Oci.DatasafeService
                 targetStates.Contains(SqlFirewallPolicyLifecycleState.Deleted)
             );
             return new Waiter<GetSqlFirewallPolicyRequest, GetSqlFirewallPolicyResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSubsettingPolicyRequest, GetSubsettingPolicyResponse> ForSubsettingPolicy(GetSubsettingPolicyRequest request, params SubsettingPolicy.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSubsettingPolicy(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSubsettingPolicyRequest, GetSubsettingPolicyResponse> ForSubsettingPolicy(GetSubsettingPolicyRequest request, WaiterConfiguration config, params SubsettingPolicy.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSubsettingPolicyRequest, GetSubsettingPolicyResponse>(
+                request,
+                request => client.GetSubsettingPolicy(request),
+                response => targetStates.Contains(response.SubsettingPolicy.LifecycleState.Value),
+                targetStates.Contains(SubsettingPolicy.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetSubsettingPolicyRequest, GetSubsettingPolicyResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSubsettingPolicyHealthReportRequest, GetSubsettingPolicyHealthReportResponse> ForSubsettingPolicyHealthReport(GetSubsettingPolicyHealthReportRequest request, params SubsettingPolicyHealthReport.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSubsettingPolicyHealthReport(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSubsettingPolicyHealthReportRequest, GetSubsettingPolicyHealthReportResponse> ForSubsettingPolicyHealthReport(GetSubsettingPolicyHealthReportRequest request, WaiterConfiguration config, params SubsettingPolicyHealthReport.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSubsettingPolicyHealthReportRequest, GetSubsettingPolicyHealthReportResponse>(
+                request,
+                request => client.GetSubsettingPolicyHealthReport(request),
+                response => targetStates.Contains(response.SubsettingPolicyHealthReport.LifecycleState.Value)
+            );
+            return new Waiter<GetSubsettingPolicyHealthReportRequest, GetSubsettingPolicyHealthReportResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSubsettingReportRequest, GetSubsettingReportResponse> ForSubsettingReport(GetSubsettingReportRequest request, params SubsettingReport.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForSubsettingReport(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetSubsettingReportRequest, GetSubsettingReportResponse> ForSubsettingReport(GetSubsettingReportRequest request, WaiterConfiguration config, params SubsettingReport.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetSubsettingReportRequest, GetSubsettingReportResponse>(
+                request,
+                request => client.GetSubsettingReport(request),
+                response => targetStates.Contains(response.SubsettingReport.LifecycleState.Value),
+                targetStates.Contains(SubsettingReport.LifecycleStateEnum.Deleted)
+            );
+            return new Waiter<GetSubsettingReportRequest, GetSubsettingReportResponse>(config, agent);
         }
         /// <summary>
         /// Creates a waiter using default wait configuration.
