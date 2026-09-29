@@ -62,6 +62,12 @@ namespace Oci.DatasafeService.Models
         public string MaskingPolicyId { get; set; }
         
         /// <value>
+        /// The OCID of the subsetting report associated with this masking report
+        /// </value>
+        [JsonProperty(PropertyName = "subsettingReportId")]
+        public string SubsettingReportId { get; set; }
+        
+        /// <value>
         /// The OCID of the target database masked.
         /// </value>
         /// <remarks>

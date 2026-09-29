@@ -420,7 +420,51 @@ namespace Oci.DatasafeService.Models
             [EnumMember(Value = "DELETE_ATTRIBUTE_SET")]
             DeleteAttributeSet,
             [EnumMember(Value = "CHANGE_ATTRIBUTE_SET_COMPARTMENT")]
-            ChangeAttributeSetCompartment
+            ChangeAttributeSetCompartment,
+            [EnumMember(Value = "CREATE_REGISTRATION_POLICY")]
+            CreateRegistrationPolicy,
+            [EnumMember(Value = "UPDATE_REGISTRATION_POLICY")]
+            UpdateRegistrationPolicy,
+            [EnumMember(Value = "DELETE_REGISTRATION_POLICY")]
+            DeleteRegistrationPolicy,
+            [EnumMember(Value = "CHANGE_REGISTRATION_POLICY_COMPARTMENT")]
+            ChangeRegistrationPolicyCompartment,
+            [EnumMember(Value = "CREATE_SUBSETTING_POLICY")]
+            CreateSubsettingPolicy,
+            [EnumMember(Value = "UPDATE_SUBSETTING_POLICY")]
+            UpdateSubsettingPolicy,
+            [EnumMember(Value = "DELETE_SUBSETTING_POLICY")]
+            DeleteSubsettingPolicy,
+            [EnumMember(Value = "CREATE_SUBSETTING_RULE")]
+            CreateSubsettingRule,
+            [EnumMember(Value = "UPDATE_SUBSETTING_RULE")]
+            UpdateSubsettingRule,
+            [EnumMember(Value = "PATCH_SUBSETTING_RULES")]
+            PatchSubsettingRules,
+            [EnumMember(Value = "DELETE_SUBSETTING_RULE")]
+            DeleteSubsettingRule,
+            [EnumMember(Value = "SUBSETTING_JOB")]
+            SubsettingJob,
+            [EnumMember(Value = "DELETE_SUBSETTING_REPORT")]
+            DeleteSubsettingReport,
+            [EnumMember(Value = "SUBSETTING_POLICY_GENERATE_HEALTH_REPORT")]
+            SubsettingPolicyGenerateHealthReport,
+            [EnumMember(Value = "SUBSETTING_POLICY_DELETE_HEALTH_REPORT")]
+            SubsettingPolicyDeleteHealthReport,
+            [EnumMember(Value = "UPLOAD_SUBSETTING_POLICY")]
+            UploadSubsettingPolicy,
+            [EnumMember(Value = "EXPORT_SUBSETTING_POLICY")]
+            ExportSubsettingPolicy,
+            [EnumMember(Value = "GENERATE_SUBSETTING_REPORT")]
+            GenerateSubsettingReport,
+            [EnumMember(Value = "CREATE_SUBSETTING_SCHEMA_RELATION")]
+            CreateSubsettingSchemaRelation,
+            [EnumMember(Value = "DELETE_SUBSETTING_SCHEMA_RELATION")]
+            DeleteSubsettingSchemaRelation,
+            [EnumMember(Value = "UPDATE_PROC_CHAIN_OBJ")]
+            UpdateProcChainObj,
+            [EnumMember(Value = "ESTIMATE_SUBSETTING_TABLE_SIZES")]
+            EstimateSubsettingTableSizes
         };
 
         /// <value>
