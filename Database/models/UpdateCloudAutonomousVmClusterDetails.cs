@@ -54,6 +54,19 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "totalContainerDatabases")]
         public System.Nullable<int> TotalContainerDatabases { get; set; }
+        
+        /// <value>
+        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
+        public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
+        
+        /// <value>
+        /// The new value of percentage of ECPU memory allocated for SGA(System Global Area).
+        /// </value>
+        [JsonProperty(PropertyName = "sgaPercentage")]
+        public System.Nullable<float> SgaPercentage { get; set; }
                 ///
         /// <value>
         /// The Oracle license model that applies to the Oracle Autonomous AI Database. Bring your own license (BYOL) allows you to apply your current on-premises Oracle software licenses to equivalent, highly automated Oracle services in the cloud.

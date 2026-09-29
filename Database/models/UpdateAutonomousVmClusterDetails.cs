@@ -80,6 +80,19 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> TotalContainerDatabases { get; set; }
         
         /// <value>
+        /// The amount of memory (in GBs) to be enabled per OCPU or ECPU.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "memoryPerOracleComputeUnitInGBs")]
+        public System.Nullable<int> MemoryPerOracleComputeUnitInGBs { get; set; }
+        
+        /// <value>
+        /// The new value of percentage of ECPU memory allocated for SGA(System Global Area).
+        /// </value>
+        [JsonProperty(PropertyName = "sgaPercentage")]
+        public System.Nullable<float> SgaPercentage { get; set; }
+        
+        /// <value>
         /// The time zone to use for the Autonomous VM cluster. For details, see [DB System Time Zones](https://docs.oracle.com/iaas/Content/Database/References/timezones.htm).
         /// </value>
         [JsonProperty(PropertyName = "timeZone")]

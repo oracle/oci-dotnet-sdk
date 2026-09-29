@@ -28,6 +28,22 @@ namespace Oci.CoreService.Models
         public string DisplayName { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG attachment's DRG NAT policy.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "drgNatPolicyId")]
+        public string DrgNatPolicyId { get; set; }
+        
+        /// <value>
+        /// By default, only translated DrgNatRule CIDRs are imported into the DrgRouteTable to prevent
+        /// routing complications. Enable this option to also preserve original CIDRs. The original source CIDRs is not advertised if this value is set to false, else it is advertised.
+        /// default: `false`
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "doesPreserveOriginalRoutesWithNat")]
+        public System.Nullable<bool> DoesPreserveOriginalRoutesWithNat { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table that is assigned to this attachment.
         /// <br/>
         /// The DRG route table manages traffic inside the DRG.

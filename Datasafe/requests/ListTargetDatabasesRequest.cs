@@ -36,6 +36,12 @@ namespace Oci.DatasafeService.Requests
         public string AssociatedResourceId { get; set; }
         
         /// <value>
+        /// A filter to return target databases filtered by the enablementResourceOcid column (always a DbaasDatabase OCID).
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "enablementResourceOcid")]
+        public string EnablementResourceOcid { get; set; }
+        
+        /// <value>
         /// A filter to return the target database that matches the specified OCID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "targetDatabaseId")]
