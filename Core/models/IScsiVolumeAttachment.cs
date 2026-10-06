@@ -91,8 +91,7 @@ namespace Oci.CoreService.Models
         public System.Collections.Generic.List<MultipathDevice> MultipathDevices { get; set; }
         
         /// <value>
-        /// Refer the top-level definition of encryptionInTransitType.
-        /// The default value is NONE.
+        /// Deprecated. Use `isEncryptionInTransitEnabled` instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "encryptionInTransitType")]

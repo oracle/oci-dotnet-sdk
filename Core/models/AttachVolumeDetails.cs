@@ -105,6 +105,9 @@ namespace Oci.CoreService.Models
                 case "iscsi":
                     obj = new AttachIScsiVolumeDetails();
                     break;
+                case "nvme":
+                    obj = new AttachNvmeVolumeDetails();
+                    break;
                 case "paravirtualized":
                     obj = new AttachParavirtualizedVolumeDetails();
                     break;

@@ -25,6 +25,15 @@ namespace Oci.GenerativeaiService.Models
         public InboundAuthConfig InboundAuthConfig { get; set; }
         
         /// <value>
+        /// A list of hosted application path patterns that can be accessed without
+        /// inbound authentication. Values can be exact paths such as `/health` or `/callback`,
+        /// or wildcard paths such as `/assets/*` or `/public/*`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "publicAccessPathPatterns")]
+        public System.Collections.Generic.List<string> PublicAccessPathPatterns { get; set; }
+        
+        /// <value>
         /// A user-friendly name. Does not have to be unique, and it's changeable.
         /// </value>
         [JsonProperty(PropertyName = "displayName")]
