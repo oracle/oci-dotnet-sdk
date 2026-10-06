@@ -135,15 +135,20 @@ namespace Oci.CoreService.Models
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Whether in-transit encryption for the boot volume's paravirtualized attachment is enabled or not.
+        /// Deprecated. Use `isEncryptionInTransitEnabled` instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
         
         /// <value>
-        /// Refer the top-level definition of encryptionInTransitType.
-        /// The default value is NONE.
+        /// Specifies whether in-transit encryption is enabled for the boot volume's attachment.
+        /// </value>
+        [JsonProperty(PropertyName = "isEncryptionInTransitEnabled")]
+        public System.Nullable<bool> IsEncryptionInTransitEnabled { get; set; }
+        
+        /// <value>
+        /// Deprecated. Use `isEncryptionInTransitEnabled` instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "encryptionInTransitType")]

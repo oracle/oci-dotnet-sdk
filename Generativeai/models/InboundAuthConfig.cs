@@ -33,7 +33,9 @@ namespace Oci.GenerativeaiService.Models
             [EnumMember(Value = null)]
             UnknownEnumValue,
             [EnumMember(Value = "IDCS_AUTH_CONFIG")]
-            IdcsAuthConfig
+            IdcsAuthConfig,
+            [EnumMember(Value = "IDCS_SESSION_AUTH_CONFIG")]
+            IdcsSessionAuthConfig
         };
 
         /// <value>

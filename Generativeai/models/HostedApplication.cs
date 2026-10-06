@@ -29,6 +29,23 @@ namespace Oci.GenerativeaiService.Models
         public InboundAuthConfig InboundAuthConfig { get; set; }
         
         /// <value>
+        /// Fully qualified domain name for invoking the hosted application over the dual-stack endpoint.
+        /// This value is output-only and is present only after the service has generated an application DNS label.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "applicationEndpoint")]
+        public string ApplicationEndpoint { get; set; }
+        
+        /// <value>
+        /// A list of hosted application path patterns that can be accessed without
+        /// inbound authentication. Values can be exact paths such as `/health` or `/callback`,
+        /// or wildcard paths such as `/assets/*` or `/public/*`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "publicAccessPathPatterns")]
+        public System.Collections.Generic.List<string> PublicAccessPathPatterns { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the hosted application.
         /// </value>
         /// <remarks>

@@ -186,6 +186,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "platformConfigOptions")]
         public ShapePlatformConfigOptions PlatformConfigOptions { get; set; }
         
+        [JsonProperty(PropertyName = "bsNvmeAttachmentsConfig")]
+        public BsNvmeAttachmentsConfig BsNvmeAttachmentsConfig { get; set; }
+        
         /// <value>
         /// Whether billing continues when the instances that use this shape are in the stopped state.
         /// 

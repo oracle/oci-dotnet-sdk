@@ -85,6 +85,9 @@ namespace Oci.CoreService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "nvme":
+                    obj = new LaunchAttachNvmeVolumeDetails();
+                    break;
                 case "paravirtualized":
                     obj = new LaunchAttachParavirtualizedVolumeDetails();
                     break;

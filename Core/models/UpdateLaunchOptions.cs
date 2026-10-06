@@ -27,6 +27,7 @@ namespace Oci.CoreService.Models
         /// * `ISCSI` - ISCSI attached block storage device.
         /// * `PARAVIRTUALIZED` - Paravirtualized disk. This is the default for boot volumes and remote block
         /// storage volumes on platform images.
+        /// * `NVME` - NVMe attached remote block storage device.
         /// <br/>
         /// Before you change the boot volume attachment type, detach all block volumes and VNICs except for
         /// the boot volume and the primary VNIC.
@@ -43,7 +44,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "ISCSI")]
             Iscsi,
             [EnumMember(Value = "PARAVIRTUALIZED")]
-            Paravirtualized
+            Paravirtualized,
+            [EnumMember(Value = "NVME")]
+            Nvme
         };
 
         /// <value>
@@ -51,6 +54,7 @@ namespace Oci.CoreService.Models
         /// * `ISCSI` - ISCSI attached block storage device.
         /// * `PARAVIRTUALIZED` - Paravirtualized disk. This is the default for boot volumes and remote block
         /// storage volumes on platform images.
+        /// * `NVME` - NVMe attached remote block storage device.
         /// <br/>
         /// Before you change the boot volume attachment type, detach all block volumes and VNICs except for
         /// the boot volume and the primary VNIC.

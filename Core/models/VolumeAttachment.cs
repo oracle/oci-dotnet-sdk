@@ -153,11 +153,17 @@ namespace Oci.CoreService.Models
         public string VolumeId { get; set; }
         
         /// <value>
-        /// Whether in-transit encryption for the data volume's paravirtualized attachment is enabled or not.
+        /// Deprecated. Use `isEncryptionInTransitEnabled` instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
+        
+        /// <value>
+        /// Whether in-transit encryption for the data volume's attachment is enabled or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isEncryptionInTransitEnabled")]
+        public System.Nullable<bool> IsEncryptionInTransitEnabled { get; set; }
         
         /// <value>
         /// Whether the Iscsi or Paravirtualized attachment is multipath or not, it is not applicable to NVMe attachment.
@@ -233,6 +239,9 @@ namespace Oci.CoreService.Models
                     break;
                 case "emulated":
                     obj = new EmulatedVolumeAttachment();
+                    break;
+                case "nvme":
+                    obj = new NvmeVolumeAttachment();
                     break;
                 case "paravirtualized":
                     obj = new ParavirtualizedVolumeAttachment();
