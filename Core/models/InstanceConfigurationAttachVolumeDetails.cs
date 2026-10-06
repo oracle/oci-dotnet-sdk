@@ -82,6 +82,9 @@ namespace Oci.CoreService.Models
                 case "paravirtualized":
                     obj = new InstanceConfigurationParavirtualizedAttachVolumeDetails();
                     break;
+                case "nvme":
+                    obj = new InstanceConfigurationNvmeAttachVolumeDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

@@ -32,6 +32,7 @@ namespace Oci.CoreService.Models
         /// volumes on platform images.
         /// * `PARAVIRTUALIZED` - Paravirtualized disk. This is the default for boot volumes and remote block
         /// storage volumes on platform images.
+        /// * `NVME` - NVMe attached remote block storage device.
         /// 
         /// </value>
         ///
@@ -48,7 +49,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "VFIO")]
             Vfio,
             [EnumMember(Value = "PARAVIRTUALIZED")]
-            Paravirtualized
+            Paravirtualized,
+            [EnumMember(Value = "NVME")]
+            Nvme
         };
 
         /// <value>
@@ -60,6 +63,7 @@ namespace Oci.CoreService.Models
         /// volumes on platform images.
         /// * `PARAVIRTUALIZED` - Paravirtualized disk. This is the default for boot volumes and remote block
         /// storage volumes on platform images.
+        /// * `NVME` - NVMe attached remote block storage device.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bootVolumeType")]
@@ -143,6 +147,7 @@ namespace Oci.CoreService.Models
         /// volumes on platform images.
         /// * `PARAVIRTUALIZED` - Paravirtualized disk. This is the default for boot volumes and remote block
         /// storage volumes on platform images.
+        ///   * `NVME` - NVMe attached remote block storage device.
         /// 
         /// </value>
         ///
@@ -159,7 +164,9 @@ namespace Oci.CoreService.Models
             [EnumMember(Value = "VFIO")]
             Vfio,
             [EnumMember(Value = "PARAVIRTUALIZED")]
-            Paravirtualized
+            Paravirtualized,
+            [EnumMember(Value = "NVME")]
+            Nvme
         };
 
         /// <value>
@@ -171,6 +178,7 @@ namespace Oci.CoreService.Models
         /// volumes on platform images.
         /// * `PARAVIRTUALIZED` - Paravirtualized disk. This is the default for boot volumes and remote block
         /// storage volumes on platform images.
+        ///   * `NVME` - NVMe attached remote block storage device.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "remoteDataVolumeType")]
@@ -178,12 +186,17 @@ namespace Oci.CoreService.Models
         public System.Nullable<RemoteDataVolumeTypeEnum> RemoteDataVolumeType { get; set; }
         
         /// <value>
-        /// Deprecated. Instead use `isPvEncryptionInTransitEnabled` in
-        /// {@link #instanceConfigurationLaunchInstanceDetails(InstanceConfigurationLaunchInstanceDetailsRequest) instanceConfigurationLaunchInstanceDetails}.
+        /// Deprecated. Use `isEncryptionInTransitEnabled` instead.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isPvEncryptionInTransitEnabled")]
         public System.Nullable<bool> IsPvEncryptionInTransitEnabled { get; set; }
+        
+        /// <value>
+        /// Whether in-transit encryption for the data volume's attachment is enabled or not.
+        /// </value>
+        [JsonProperty(PropertyName = "isEncryptionInTransitEnabled")]
+        public System.Nullable<bool> IsEncryptionInTransitEnabled { get; set; }
         
         /// <value>
         /// Whether to enable consistent volume naming feature. Defaults to false.

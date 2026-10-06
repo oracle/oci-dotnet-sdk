@@ -17,8 +17,10 @@ namespace Oci.GenerativeaiService.Models
 {
     /// <summary>
     /// Oracle Identity Cloud Service (IDCS) configuration used
-    /// when inboundAuthConfigType is set to IDCS_AUTH_CONFIG.
-    /// This object must be specified when inboundAuthConfigType is IDCS_AUTH_CONFIG.
+    /// when inboundAuthConfigType is set to IDCS_AUTH_CONFIG or IDCS_SESSION_AUTH_CONFIG.
+    /// This object must be specified when inboundAuthConfigType is IDCS_AUTH_CONFIG or IDCS_SESSION_AUTH_CONFIG.
+    /// When inboundAuthConfigType is IDCS_SESSION_AUTH_CONFIG, this configuration supports
+    /// OAuth 2.1 Authorization Code flow with PKCE.
     /// 
     /// </summary>
     public class IdcsAuthConfig 
@@ -49,6 +51,18 @@ namespace Oci.GenerativeaiService.Models
         /// </value>
         [JsonProperty(PropertyName = "audience")]
         public string Audience { get; set; }
+        
+        /// <value>
+        /// Optional OAuth client ID for the IDCS application. Applicable only when inboundAuthConfigType is IDCS_SESSION_AUTH_CONFIG.
+        /// </value>
+        [JsonProperty(PropertyName = "clientId")]
+        public string ClientId { get; set; }
+        
+        /// <value>
+        /// Optional OCI Vault secret OCID containing the OAuth client secret. Applicable only when inboundAuthConfigType is IDCS_SESSION_AUTH_CONFIG.
+        /// </value>
+        [JsonProperty(PropertyName = "clientSecretVaultId")]
+        public string ClientSecretVaultId { get; set; }
         
     }
 }
