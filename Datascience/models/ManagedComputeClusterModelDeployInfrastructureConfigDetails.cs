@@ -31,6 +31,10 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "computeTargetId")]
         public string ComputeTargetId { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ModelDeploymentResourceConfiguration is required.")]
         [JsonProperty(PropertyName = "modelDeploymentResourceConfiguration")]
         public ManagedComputeClusterModelDeploymentResourceConfiguration ModelDeploymentResourceConfiguration { get; set; }
         

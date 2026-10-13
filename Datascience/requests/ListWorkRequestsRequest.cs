@@ -153,7 +153,11 @@ namespace Oci.DatascienceService.Requests
             [EnumMember(Value = "MODEL_GROUP_DELETE")]
             ModelGroupDelete,
             [EnumMember(Value = "MODEL_GROUP_VERSION_HISTORY_DELETE")]
-            ModelGroupVersionHistoryDelete
+            ModelGroupVersionHistoryDelete,
+            [EnumMember(Value = "CREATE_MODEL_ARTIFACT_SIGNATURE")]
+            CreateModelArtifactSignature,
+            [EnumMember(Value = "VERIFY_MODEL_ARTIFACT_SIGNATURE")]
+            VerifyModelArtifactSignature
         };
 
         /// <value>

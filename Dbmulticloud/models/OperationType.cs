@@ -130,6 +130,14 @@ namespace Oci.DbmulticloudService.Models
       [EnumMember(Value = "REFRESH_REPLICATE_RESOURCE")]
       RefreshReplicateResource,
       [EnumMember(Value = "REPLICATE")]
-      Replicate
+      Replicate,
+      [EnumMember(Value = "CREATE_AWS_KEY_POOL")]
+      CreateAwsKeyPool,
+      [EnumMember(Value = "DELETE_AWS_KEY_POOL")]
+      DeleteAwsKeyPool,
+      [EnumMember(Value = "UPDATE_AWS_KEY_POOL")]
+      UpdateAwsKeyPool,
+      [EnumMember(Value = "MOVE_AWS_KEY_POOL")]
+      MoveAwsKeyPool
   }
 }

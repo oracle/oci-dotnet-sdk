@@ -578,5 +578,8 @@ namespace Oci.OpensearchService.Models
         [JsonProperty(PropertyName = "certificateConfig")]
         public CertificateConfig CertificateConfig { get; set; }
         
+        [JsonProperty(PropertyName = "remoteReindexTrustConfig")]
+        public RemoteReindexTrustConfig RemoteReindexTrustConfig { get; set; }
+        
     }
 }

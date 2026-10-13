@@ -31,6 +31,12 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "modelId")]
         public string ModelId { get; set; }
         
+        /// <value>
+        /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a model artifact signature.
+        /// </value>
+        [JsonProperty(PropertyName = "modelArtifactSignatureId")]
+        public string ModelArtifactSignatureId { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

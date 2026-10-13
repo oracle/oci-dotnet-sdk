@@ -56,36 +56,48 @@ namespace Oci.DatabaseService.Models
         
         /// <value>
         /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the backup destination.
+        /// Not applicable for Autonomous Container Databases on Cloud Autonomous VM Cluster.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
         
         /// <value>
         /// For a RECOVERY_APPLIANCE backup destination, the Virtual Private Catalog (VPC) user that is used to access the Recovery Appliance.
+        /// Not applicable for Autonomous Container Databases on Cloud Autonomous VM Cluster.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "vpcUser")]
         public string VpcUser { get; set; }
         
         /// <value>
         /// For a RECOVERY_APPLIANCE backup destination, the password for the VPC user that is used to access the Recovery Appliance.
+        /// Not applicable for Autonomous Container Databases on Cloud Autonomous VM Cluster.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "vpcPassword")]
         public string VpcPassword { get; set; }
         
         /// <value>
         /// Indicates whether Zero Data Loss functionality is enabled for a Recovery Appliance backup destination in an Autonomous Container Database. When enabled, the database automatically ships all redo logs in real-time to the Recovery Appliance for a Zero Data Loss recovery setup (sub-second RPO). Defaults to `TRUE` if no value is given.
+        /// Not applicable for Autonomous Container Databases on Cloud Autonomous VM Cluster.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "isZeroDataLossEnabled")]
         public System.Nullable<bool> IsZeroDataLossEnabled { get; set; }
         
         /// <value>
         /// Proxy URL to connect to object store.
+        /// Not applicable for Autonomous Container Databases on Cloud Autonomous VM Cluster.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "internetProxy")]
         public string InternetProxy { get; set; }
         
         /// <value>
         /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DBRS policy used for backup.
+        /// Not applicable for Autonomous Container Databases on Cloud Autonomous VM Cluster and Autonomous VM Cluster.
+        /// 
         /// </value>
         [JsonProperty(PropertyName = "dbrsPolicyId")]
         public string DbrsPolicyId { get; set; }

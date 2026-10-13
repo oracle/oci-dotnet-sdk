@@ -179,5 +179,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "vmClusterId")]
         public string VmClusterId { get; set; }
         
+        [JsonProperty(PropertyName = "dataSafeRegistrationDetails")]
+        public DataSafeRegistrationRequestDetails DataSafeRegistrationDetails { get; set; }
+        
     }
 }

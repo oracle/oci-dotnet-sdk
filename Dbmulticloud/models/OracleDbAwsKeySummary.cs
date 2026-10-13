@@ -47,6 +47,24 @@ namespace Oci.DbmulticloudService.Models
         public string OracleDbConnectorId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB AWS Key Pool resource.
+        /// </value>
+        [JsonProperty(PropertyName = "oracleDbAwsKeyPoolId")]
+        public string OracleDbAwsKeyPoolId { get; set; }
+        
+        /// <value>
+        /// Indicates whether the Oracle AWS Key resource is currently in use.
+        /// </value>
+        [JsonProperty(PropertyName = "isOracleAwsKeyUsed")]
+        public System.Nullable<bool> IsOracleAwsKeyUsed { get; set; }
+        
+        /// <value>
+        /// The number of active references to the Oracle AWS Key resource.
+        /// </value>
+        [JsonProperty(PropertyName = "refCount")]
+        public System.Nullable<int> RefCount { get; set; }
+        
+        /// <value>
         /// Amazon resource name of AWS Key.
         /// </value>
         [JsonProperty(PropertyName = "awsKeyArn")]

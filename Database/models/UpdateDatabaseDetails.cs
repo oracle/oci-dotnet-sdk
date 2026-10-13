@@ -167,5 +167,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "autoFailoverConfiguration")]
         public AutoFailoverConfiguration AutoFailoverConfiguration { get; set; }
         
+        [JsonProperty(PropertyName = "dataSafeRegistrationDetails")]
+        public DataSafeRegistrationRequestDetails DataSafeRegistrationDetails { get; set; }
+        
     }
 }

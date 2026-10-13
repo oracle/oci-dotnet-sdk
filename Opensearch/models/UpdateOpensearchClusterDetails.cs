@@ -55,6 +55,9 @@ namespace Oci.OpensearchService.Models
         [JsonProperty(PropertyName = "securityMasterUserPasswordHash")]
         public string SecurityMasterUserPasswordHash { get; set; }
         
+        [JsonProperty(PropertyName = "securityMasterUserAuthDetails")]
+        public SecurityUserAuthenticationDetails SecurityMasterUserAuthDetails { get; set; }
+        
         [JsonProperty(PropertyName = "securitySamlConfig")]
         public SecuritySamlConfig SecuritySamlConfig { get; set; }
         
@@ -84,6 +87,9 @@ namespace Oci.OpensearchService.Models
         
         [JsonProperty(PropertyName = "certificateConfig")]
         public CertificateConfig CertificateConfig { get; set; }
+        
+        [JsonProperty(PropertyName = "remoteReindexTrustConfig")]
+        public RemoteReindexTrustConfig RemoteReindexTrustConfig { get; set; }
         
         /// <value>
         /// Simple key-value pair that is applied without any predefined name, type or scope. Exists for cross-compatibility only.
