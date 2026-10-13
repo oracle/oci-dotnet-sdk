@@ -17,7 +17,6 @@ namespace Oci.DatabaseService.Models
 {
     /// <summary>
     /// The Oracle Grid Infrastructure (GI) version.
-    /// <br/>
     /// To use any of the API operations, you must be authorized in an IAM policy. If you're not authorized, talk to an administrator. If you're an administrator who needs to write policies to give users access, see [Getting Started with Policies](https://docs.oracle.com/iaas/Content/Identity/Concepts/policygetstarted.htm).
     /// 
     /// </summary>
@@ -33,6 +32,12 @@ namespace Oci.DatabaseService.Models
         [Required(ErrorMessage = "Version is required.")]
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
+        
+        /// <value>
+        /// True when selecting or applying this DB, Grid Infrastructure, or operating system software version requires older-version acknowledgment.
+        /// </value>
+        [JsonProperty(PropertyName = "isOlderVersionAcknowledgmentRequired")]
+        public System.Nullable<bool> IsOlderVersionAcknowledgmentRequired { get; set; }
         
     }
 }

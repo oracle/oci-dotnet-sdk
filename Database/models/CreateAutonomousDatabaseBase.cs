@@ -287,7 +287,7 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsPreviewVersionWithServiceTermsAccepted { get; set; }
         
         /// <value>
-        /// Indicates if auto scaling is enabled for the Autonomous AI Database CPU core count. The default value is `TRUE`.
+        /// Indicates if auto scaling is enabled for the Autonomous AI Database CPU core count. The default value is `FALSE`.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isAutoScalingEnabled")]
@@ -451,6 +451,8 @@ namespace Oci.DatabaseService.Models
         /// When you specify 23ai for dbversion, the system will provision a 23ai database, but the UI will display it as 26ai.
         /// When you specify 26ai for dbversion, the system will provision and display a 26ai database as expected.
         /// For new databases, it is recommended to use either 19c or 26ai.
+        /// <br/>
+        /// The default database version is the Oracle-recommended version. You can retrieve the default DB version by calling the {@link #listAutonomousDbVersions(ListAutonomousDbVersionsRequest) listAutonomousDbVersions} operation.
         /// <br/>
         /// **Note** Starting December 2026, 23ai will not be supported as a valid value for this parameter.
         /// 

@@ -309,6 +309,34 @@ namespace Oci.DatascienceService
         /// <param name="request">Request to send.</param>
         /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetModelArtifactSignatureRequest, GetModelArtifactSignatureResponse> ForModelArtifactSignature(GetModelArtifactSignatureRequest request, params ArtifactSignatureLifecycleState[] targetStates)
+        {
+            return this.ForModelArtifactSignature(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetModelArtifactSignatureRequest, GetModelArtifactSignatureResponse> ForModelArtifactSignature(GetModelArtifactSignatureRequest request, WaiterConfiguration config, params ArtifactSignatureLifecycleState[] targetStates)
+        {
+            var agent = new WaiterAgent<GetModelArtifactSignatureRequest, GetModelArtifactSignatureResponse>(
+                request,
+                request => client.GetModelArtifactSignature(request),
+                response => targetStates.Contains(response.ModelArtifactSignature.LifecycleState.Value),
+                targetStates.Contains(ArtifactSignatureLifecycleState.Deleted)
+            );
+            return new Waiter<GetModelArtifactSignatureRequest, GetModelArtifactSignatureResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<GetModelDeploymentRequest, GetModelDeploymentResponse> ForModelDeployment(GetModelDeploymentRequest request, params ModelDeploymentLifecycleState[] targetStates)
         {
             return this.ForModelDeployment(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);

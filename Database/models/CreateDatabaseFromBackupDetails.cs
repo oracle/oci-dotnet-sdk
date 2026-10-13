@@ -109,5 +109,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "recoveryApplianceVpcPassword")]
         public string RecoveryApplianceVpcPassword { get; set; }
         
+        [JsonProperty(PropertyName = "dataSafeRegistrationDetails")]
+        public DataSafeRegistrationRequestDetails DataSafeRegistrationDetails { get; set; }
+        
     }
 }

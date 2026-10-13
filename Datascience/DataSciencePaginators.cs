@@ -687,6 +687,55 @@ namespace Oci.DatascienceService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListModelArtifactSignatures operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListModelArtifactSignaturesResponse> ListModelArtifactSignaturesResponseEnumerator(ListModelArtifactSignaturesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListModelArtifactSignaturesRequest, ListModelArtifactSignaturesResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListModelArtifactSignatures(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the ModelArtifactSignatureSummary objects
+        /// contained in responses from the ListModelArtifactSignatures operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ModelArtifactSignatureSummary> ListModelArtifactSignaturesRecordEnumerator(ListModelArtifactSignaturesRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListModelArtifactSignaturesRequest, ListModelArtifactSignaturesResponse, ModelArtifactSignatureSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListModelArtifactSignatures(request, retryConfiguration, cancellationToken),
+                response => response.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListModelDeploymentModelStates operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>

@@ -78,6 +78,12 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<VersionPreferenceEnum> VersionPreference { get; set; }
         
+        /// <value>
+        /// If true, the caller acknowledges selecting or applying an older DB, Grid Infrastructure, or operating system software version that is outside the latest default version window.
+        /// </value>
+        [JsonProperty(PropertyName = "isOlderVersionAcknowledged")]
+        public System.Nullable<bool> IsOlderVersionAcknowledged { get; set; }
+        
         [JsonProperty(PropertyName = "source")]
         private readonly string source = "VERSION_SERIES";
     }

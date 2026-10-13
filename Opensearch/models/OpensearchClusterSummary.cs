@@ -148,5 +148,8 @@ namespace Oci.OpensearchService.Models
         [JsonProperty(PropertyName = "loadBalancerConfig")]
         public LoadBalancerConfig LoadBalancerConfig { get; set; }
         
+        [JsonProperty(PropertyName = "remoteReindexTrustConfig")]
+        public RemoteReindexTrustConfig RemoteReindexTrustConfig { get; set; }
+        
     }
 }

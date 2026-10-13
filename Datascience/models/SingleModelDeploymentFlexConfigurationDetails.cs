@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// The single model model deployment flex configuration details.
+    /// The configuration details for a single-model deployment with flexible, decoupled infrastructure and model configuration.
     /// </summary>
     public class SingleModelDeploymentFlexConfigurationDetails : ModelDeploymentConfigurationDetails
     {

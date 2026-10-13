@@ -99,6 +99,12 @@ namespace Oci.DatabaseService.Models
         public string PatchSet { get; set; }
         
         /// <value>
+        /// If true, the caller acknowledges selecting or applying an older DB, Grid Infrastructure, or operating system software version that is outside the latest default version window.
+        /// </value>
+        [JsonProperty(PropertyName = "isOlderVersionAcknowledged")]
+        public System.Nullable<bool> IsOlderVersionAcknowledged { get; set; }
+        
+        /// <value>
         /// List of one-off patches for Database Homes.
         /// </value>
         [JsonProperty(PropertyName = "databaseSoftwareImageOneOffPatches")]

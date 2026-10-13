@@ -55,6 +55,12 @@ namespace Oci.DbmulticloudService.Requests
         public string OracleDbAwsConnectorId { get; set; }
         
         /// <value>
+        /// A filter to return only resources that match the given OCID](/Content/General/Concepts/identifiers.htm) of the Oracle DB AWS Key Pool resource.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "oracleDbAwsKeyPoolId")]
+        public string OracleDbAwsKeyPoolId { get; set; }
+        
+        /// <value>
         /// The maximum number of items to return.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "limit")]

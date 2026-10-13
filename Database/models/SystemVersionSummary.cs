@@ -47,5 +47,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "systemVersions")]
         public System.Collections.Generic.List<string> SystemVersions { get; set; }
         
+        /// <value>
+        /// Compatible Exadata system versions with their individual older-version acknowledgment requirements.
+        /// </value>
+        [JsonProperty(PropertyName = "systemVersionDetails")]
+        public System.Collections.Generic.List<SystemVersionMinorVersionSummary> SystemVersionDetails { get; set; }
+        
     }
 }

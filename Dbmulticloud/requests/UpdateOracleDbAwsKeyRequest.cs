@@ -55,5 +55,12 @@ namespace Oci.DbmulticloudService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        /// <value>
+        /// If true, removes the key from its key pool even when it is currently in use; otherwise the request is rejected.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isForceDeleteFromKeyPool")]
+        public System.Nullable<bool> IsForceDeleteFromKeyPool { get; set; }
     }
 }

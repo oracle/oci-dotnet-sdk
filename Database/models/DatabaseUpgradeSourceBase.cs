@@ -42,6 +42,12 @@ namespace Oci.DatabaseService.Models
 
         
         /// <value>
+        /// If true, the caller acknowledges selecting or applying an older DB, Grid Infrastructure, or operating system software version that is outside the latest default version window.
+        /// </value>
+        [JsonProperty(PropertyName = "isOlderVersionAcknowledged")]
+        public System.Nullable<bool> IsOlderVersionAcknowledged { get; set; }
+        
+        /// <value>
         /// Additional upgrade options supported by DBUA(Database Upgrade Assistant).
         /// Example: &quot;-upgradeTimezone false -keepEvents&quot;
         /// </value>

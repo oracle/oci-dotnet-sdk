@@ -31,6 +31,12 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "awsEncryptionKeyId")]
         public string AwsEncryptionKeyId { get; set; }
         
+        /// <value>
+        /// Provide the key pool OCID of a registered AWS key.
+        /// </value>
+        [JsonProperty(PropertyName = "awsEncryptionKeyPoolId")]
+        public string AwsEncryptionKeyPoolId { get; set; }
+        
         [JsonProperty(PropertyName = "providerType")]
         private readonly string providerType = "AWS";
     }

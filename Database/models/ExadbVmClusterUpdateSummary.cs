@@ -171,5 +171,11 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
         
+        /// <value>
+        /// True when selecting or applying this DB, Grid Infrastructure, or operating system software version requires older-version acknowledgment.
+        /// </value>
+        [JsonProperty(PropertyName = "isOlderVersionAcknowledgmentRequired")]
+        public System.Nullable<bool> IsOlderVersionAcknowledgmentRequired { get; set; }
+        
     }
 }

@@ -16,7 +16,8 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpensearchService.Models
 {
     /// <summary>
-    /// The configuration to update on an existing OpenSearch cluster pipeline. You can only edit capacity limits and pipeline configurations. You can't edit its network settings.
+    /// The configuration to update on an existing OpenSearch cluster pipeline.
+    /// You can only edit capacity limits and pipeline configurations. You can't edit its network settings.
     /// 
     /// </summary>
     public class UpdateOpensearchClusterPipelineDetails 
