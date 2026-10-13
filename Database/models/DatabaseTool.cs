@@ -44,7 +44,9 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "MONGODB_API")]
             MongodbApi,
             [EnumMember(Value = "SPATIAL_STUDIO")]
-            SpatialStudio
+            SpatialStudio,
+            [EnumMember(Value = "ESSBASE")]
+            Essbase
         };
 
         /// <value>

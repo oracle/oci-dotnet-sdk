@@ -47,6 +47,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> SupportsPdb { get; set; }
         
         /// <value>
+        /// True when selecting or applying this DB, Grid Infrastructure, or operating system software version requires older-version acknowledgment.
+        /// </value>
+        [JsonProperty(PropertyName = "isOlderVersionAcknowledgmentRequired")]
+        public System.Nullable<bool> IsOlderVersionAcknowledgmentRequired { get; set; }
+        
+        /// <value>
         /// True if this version of the Oracle Database software is the preview version.
         /// </value>
         [JsonProperty(PropertyName = "isPreviewDbVersion")]

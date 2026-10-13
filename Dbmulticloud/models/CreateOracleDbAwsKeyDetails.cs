@@ -43,6 +43,12 @@ namespace Oci.DbmulticloudService.Models
         public string OracleDbConnectorId { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Oracle DB AWS Key Pool resource.
+        /// </value>
+        [JsonProperty(PropertyName = "oracleDbAwsKeyPoolId")]
+        public string OracleDbAwsKeyPoolId { get; set; }
+        
+        /// <value>
         /// Oracle DB AWS Key resource name.
         /// </value>
         /// <remarks>

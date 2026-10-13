@@ -95,6 +95,12 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<bool> IsDesupportedVersion { get; set; }
         
         /// <value>
+        /// If true, the caller acknowledges selecting or applying an older DB, Grid Infrastructure, or operating system software version that is outside the latest default version window.
+        /// </value>
+        [JsonProperty(PropertyName = "isOlderVersionAcknowledged")]
+        public System.Nullable<bool> IsOlderVersionAcknowledged { get; set; }
+        
+        /// <value>
         /// Indicates whether unified autiding is enabled or not. Set to True to enable unified auditing on respective DBHome.
         /// </value>
         [JsonProperty(PropertyName = "isUnifiedAuditingEnabled")]

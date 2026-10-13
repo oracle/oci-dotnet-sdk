@@ -185,6 +185,62 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
+        /// Moves the AWS Key Pool resource into a different compartment. When provided, &#39;If-Match&#39; is checked against &#39;ETag&#39; values of the resource.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dbmulticloud/ChangeOracleDbAwsKeyPoolCompartment.cs.html">here</a> to see an example of how to use ChangeOracleDbAwsKeyPoolCompartment API.</example>
+        public async Task<ChangeOracleDbAwsKeyPoolCompartmentResponse> ChangeOracleDbAwsKeyPoolCompartment(ChangeOracleDbAwsKeyPoolCompartmentRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called changeOracleDbAwsKeyPoolCompartment");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/oracleDbAwsKeyPool/{oracleDbAwsKeyPoolId}/actions/changeCompartment".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DbMulticloudAwsProvider",
+                    OperationName = "ChangeOracleDbAwsKeyPoolCompartment",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAwsKeyPool/ChangeOracleDbAwsKeyPoolCompartment",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ChangeOracleDbAwsKeyPoolCompartmentResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ChangeOracleDbAwsKeyPoolCompartment failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Creates Oracle DB AWS Identity Connector resource.
         /// 
         /// </summary>
@@ -294,6 +350,63 @@ namespace Oci.DbmulticloudService
             catch (Exception e)
             {
                 logger.Error($"CreateOracleDbAwsKey failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Create DB AWS Key Pool resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dbmulticloud/CreateOracleDbAwsKeyPool.cs.html">here</a> to see an example of how to use CreateOracleDbAwsKeyPool API.</example>
+        public async Task<CreateOracleDbAwsKeyPoolResponse> CreateOracleDbAwsKeyPool(CreateOracleDbAwsKeyPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called createOracleDbAwsKeyPool");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/oracleDbAwsKeyPool".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DbMulticloudAwsProvider",
+                    OperationName = "CreateOracleDbAwsKeyPool",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAwsKeyPool/CreateOracleDbAwsKeyPool",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<CreateOracleDbAwsKeyPoolResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateOracleDbAwsKeyPool failed with error: {e.Message}");
                 throw;
             }
         }
@@ -413,6 +526,63 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
+        /// Delete AWS Key Pool resource.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dbmulticloud/DeleteOracleDbAwsKeyPool.cs.html">here</a> to see an example of how to use DeleteOracleDbAwsKeyPool API.</example>
+        public async Task<DeleteOracleDbAwsKeyPoolResponse> DeleteOracleDbAwsKeyPool(DeleteOracleDbAwsKeyPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called deleteOracleDbAwsKeyPool");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/oracleDbAwsKeyPool/{oracleDbAwsKeyPoolId}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DbMulticloudAwsProvider",
+                    OperationName = "DeleteOracleDbAwsKeyPool",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAwsKeyPool/DeleteOracleDbAwsKeyPool",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<DeleteOracleDbAwsKeyPoolResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteOracleDbAwsKeyPool failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Retrieves detailed information about a Oracle DB AWS Identity Connector resource by specifying its unique resource [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
@@ -527,6 +697,63 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
+        /// Retrieves detailed information about a Oracle AWS Key Pool resource by specifying its unique resource [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dbmulticloud/GetOracleDbAwsKeyPool.cs.html">here</a> to see an example of how to use GetOracleDbAwsKeyPool API.</example>
+        public async Task<GetOracleDbAwsKeyPoolResponse> GetOracleDbAwsKeyPool(GetOracleDbAwsKeyPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getOracleDbAwsKeyPool");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/oracleDbAwsKeyPool/{oracleDbAwsKeyPoolId}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DbMulticloudAwsProvider",
+                    OperationName = "GetOracleDbAwsKeyPool",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAwsKeyPool/GetOracleDbAwsKeyPool",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetOracleDbAwsKeyPoolResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetOracleDbAwsKeyPool failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Lists all Oracle DB AWS Identity Connectors based on the specified filters.
         /// 
         /// </summary>
@@ -579,6 +806,63 @@ namespace Oci.DbmulticloudService
             catch (Exception e)
             {
                 logger.Error($"ListOracleDbAwsIdentityConnectors failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists all DB AWS Key Pools based on the specified filters.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dbmulticloud/ListOracleDbAwsKeyPools.cs.html">here</a> to see an example of how to use ListOracleDbAwsKeyPools API.</example>
+        public async Task<ListOracleDbAwsKeyPoolsResponse> ListOracleDbAwsKeyPools(ListOracleDbAwsKeyPoolsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listOracleDbAwsKeyPools");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/oracleDbAwsKeyPool".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DbMulticloudAwsProvider",
+                    OperationName = "ListOracleDbAwsKeyPools",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAwsKeyPool/ListOracleDbAwsKeyPools",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListOracleDbAwsKeyPoolsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListOracleDbAwsKeyPools failed with error: {e.Message}");
                 throw;
             }
         }
@@ -812,6 +1096,63 @@ namespace Oci.DbmulticloudService
         }
 
         /// <summary>
+        /// Replicate Oracle AWS Key Pool resource to target region.
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dbmulticloud/ReplicateOracleDbAwsKeyPool.cs.html">here</a> to see an example of how to use ReplicateOracleDbAwsKeyPool API.</example>
+        public async Task<ReplicateOracleDbAwsKeyPoolResponse> ReplicateOracleDbAwsKeyPool(ReplicateOracleDbAwsKeyPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called replicateOracleDbAwsKeyPool");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/oracleDbAwsKeyPool/{oracleDbAwsKeyPoolId}/actions/replicate".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DbMulticloudAwsProvider",
+                    OperationName = "ReplicateOracleDbAwsKeyPool",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAwsKeyPool/ReplicateOracleDbAwsKeyPool",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ReplicateOracleDbAwsKeyPoolResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ReplicateOracleDbAwsKeyPool failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Modifies the existing Oracle DB AWS Identity Connector resource for a given [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
         /// 
         /// </summary>
@@ -921,6 +1262,63 @@ namespace Oci.DbmulticloudService
             catch (Exception e)
             {
                 logger.Error($"UpdateOracleDbAwsKey failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Modifies the existing Oracle AWS Key Pool Details for a given [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+        /// 
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/dbmulticloud/UpdateOracleDbAwsKeyPool.cs.html">here</a> to see an example of how to use UpdateOracleDbAwsKeyPool API.</example>
+        public async Task<UpdateOracleDbAwsKeyPoolResponse> UpdateOracleDbAwsKeyPool(UpdateOracleDbAwsKeyPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called updateOracleDbAwsKeyPool");
+            Uri uri = new Uri(this.restClient.GetEndpoint(), System.IO.Path.Combine(basePathWithoutHost, "/oracleDbAwsKeyPool/{oracleDbAwsKeyPoolId}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "DbMulticloudAwsProvider",
+                    OperationName = "UpdateOracleDbAwsKeyPool",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/database-multicloud-integrations/20240501/OracleDbAwsKeyPool/UpdateOracleDbAwsKeyPool",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<UpdateOracleDbAwsKeyPoolResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateOracleDbAwsKeyPool failed with error: {e.Message}");
                 throw;
             }
         }

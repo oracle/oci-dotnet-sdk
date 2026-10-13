@@ -317,6 +317,32 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "patchVersion")]
         public string PatchVersion { get; set; }
+                ///
+        /// <value>
+        /// The Data Safe status of the database.
+        /// </value>
+        ///
+        public enum DataSafeStateEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "ENABLED")]
+            Enabled,
+            [EnumMember(Value = "DISABLED")]
+            Disabled,
+            [EnumMember(Value = "FAILED")]
+            Failed
+        };
+
+        /// <value>
+        /// The Data Safe status of the database.
+        /// </value>
+        [JsonProperty(PropertyName = "dataSafeState")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<DataSafeStateEnum> DataSafeState { get; set; }
+        
+        [JsonProperty(PropertyName = "dataSafeRegistrationDetails")]
+        public DataSafeRegistrationDetails DataSafeRegistrationDetails { get; set; }
         
     }
 }

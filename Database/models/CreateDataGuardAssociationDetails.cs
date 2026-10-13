@@ -32,6 +32,12 @@ namespace Oci.DatabaseService.Models
         public string DatabaseSoftwareImageId { get; set; }
         
         /// <value>
+        /// If true, the caller acknowledges selecting or applying an older DB, Grid Infrastructure, or operating system software version that is outside the latest default version window.
+        /// </value>
+        [JsonProperty(PropertyName = "isOlderVersionAcknowledged")]
+        public System.Nullable<bool> IsOlderVersionAcknowledged { get; set; }
+        
+        /// <value>
         /// A strong password for the `SYS`, `SYSTEM`, and `PDB Admin` users to apply during standby creation.
         /// <br/>
         /// The password must contain no fewer than nine characters and include:

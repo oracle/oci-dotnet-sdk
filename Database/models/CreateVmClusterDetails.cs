@@ -185,6 +185,12 @@ namespace Oci.DatabaseService.Models
         public string GiVersion { get; set; }
         
         /// <value>
+        /// If true, the caller acknowledges selecting or applying an older DB, Grid Infrastructure, or operating system software version that is outside the latest default version window.
+        /// </value>
+        [JsonProperty(PropertyName = "isOlderVersionAcknowledged")]
+        public System.Nullable<bool> IsOlderVersionAcknowledged { get; set; }
+        
+        /// <value>
         /// The list of Db server.
         /// </value>
         [JsonProperty(PropertyName = "dbServers")]
