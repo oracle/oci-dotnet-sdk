@@ -16,49 +16,49 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Subscribed service commitment details
+    /// Subscribed service commitment details.
     /// 
     /// </summary>
     public class CommitmentService 
     {
         
         /// <value>
-        /// Commitment start date
+        /// Commitment start date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStart")]
         public System.Nullable<System.DateTime> TimeStart { get; set; }
         
         /// <value>
-        /// Commitment end date
+        /// Commitment end date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeEnd")]
         public System.Nullable<System.DateTime> TimeEnd { get; set; }
         
         /// <value>
-        /// Commitment quantity
+        /// Commitment quantity.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "quantity")]
         public string Quantity { get; set; }
         
         /// <value>
-        /// Commitment available amount
+        /// Commitment available amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availableAmount")]
         public string AvailableAmount { get; set; }
         
         /// <value>
-        /// Commitment line net amount
+        /// Commitment line net amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "lineNetAmount")]
         public string LineNetAmount { get; set; }
         
         /// <value>
-        /// Funded Allocation line value
+        /// Funded allocation line value.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "fundedAllocationValue")]

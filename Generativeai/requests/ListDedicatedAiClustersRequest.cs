@@ -96,6 +96,12 @@ namespace Oci.GenerativeaiService.Requests
         public System.Nullable<SortByEnum> SortBy { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the capacity reservation.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "capacityReservationId")]
+        public string CapacityReservationId { get; set; }
+        
+        /// <value>
         /// Unique Oracle-assigned identifier for the request. If you need to contact
         /// Oracle about a particular request, please provide the request ID.
         /// The only valid characters for request IDs are letters, numbers,

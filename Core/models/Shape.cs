@@ -244,6 +244,24 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "isFlexible")]
         public System.Nullable<bool> IsFlexible { get; set; }
+                ///
+        ///
+        public enum SupportedResourceManagementEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "DYNAMIC")]
+            Dynamic,
+            [EnumMember(Value = "STATIC")]
+            Static
+        };
+
+        /// <value>
+        /// The resource management modes supported by this shape.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "supportedResourceManagement", ItemConverterType = typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Collections.Generic.List<SupportedResourceManagementEnum> SupportedResourceManagement { get; set; }
         
         /// <value>
         /// The list of compatible shapes that this shape can be changed to. For more information,

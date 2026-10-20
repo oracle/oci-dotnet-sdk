@@ -70,7 +70,7 @@ namespace Oci.OnesubscriptionService
         }
 
         /// <summary>
-        /// API that returns data for the list of subscription ids returned from Organizations API
+        /// Returns data for the list of subscription IDs returned from the Organizations API.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

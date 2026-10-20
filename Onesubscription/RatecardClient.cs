@@ -70,8 +70,8 @@ namespace Oci.OnesubscriptionService
         }
 
         /// <summary>
-        /// List API that returns all ratecards for given Subscription Id and Account ID (if provided) and
-        /// for a particular date range
+        /// Returns all rate cards for a given subscription ID and account ID (if provided), and
+        /// for a particular date range.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

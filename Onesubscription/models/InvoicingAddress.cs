@@ -54,21 +54,21 @@ namespace Oci.OnesubscriptionService.Models
         public System.Nullable<bool> IsShipTo { get; set; }
         
         /// <value>
-        /// Bill to site use Id.
+        /// Bill to site use ID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "billSiteUseId")]
         public System.Nullable<long> BillSiteUseId { get; set; }
         
         /// <value>
-        /// Service to site use Id.
+        /// Service to site use ID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "service2SiteUseId")]
         public System.Nullable<long> Service2SiteUseId { get; set; }
         
         /// <value>
-        /// TCA customer account site Id.
+        /// TCA (Trading Community Architecture) customer account site ID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "tcaCustAcctSiteId")]

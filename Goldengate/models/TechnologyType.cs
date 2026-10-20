@@ -66,6 +66,8 @@ namespace Oci.GoldengateService.Models
       OracleAutonomousDatabaseAtAws,
       [EnumMember(Value = "ORACLE_AI_DATA_PLATFORM")]
       OracleAiDataPlatform,
+      [EnumMember(Value = "ORACLE_AI_DATA_PLATFORM_ENGINE")]
+      OracleAiDataPlatformEngine,
       [EnumMember(Value = "ORACLE_NOSQL")]
       OracleNosql,
       [EnumMember(Value = "ORACLE_REST_DATA_SERVICES")]
@@ -122,6 +124,8 @@ namespace Oci.GoldengateService.Models
       ConfluentSchemaRegistry,
       [EnumMember(Value = "DATABRICKS")]
       Databricks,
+      [EnumMember(Value = "DATABRICKS_ENGINE")]
+      DatabricksEngine,
       [EnumMember(Value = "DB2_I")]
       Db2I,
       [EnumMember(Value = "DB2_ZOS")]
@@ -166,6 +170,8 @@ namespace Oci.GoldengateService.Models
       MysqlHeatwaveOnAzure,
       [EnumMember(Value = "MYSQL_HEATWAVE_ON_AWS")]
       MysqlHeatwaveOnAws,
+      [EnumMember(Value = "APACHE_SPARK")]
+      ApacheSpark,
       [EnumMember(Value = "POSTGRESQL_SERVER")]
       PostgresqlServer,
       [EnumMember(Value = "REDIS")]
@@ -178,6 +184,14 @@ namespace Oci.GoldengateService.Models
       Snowflake,
       [EnumMember(Value = "YUGABYTE_DB")]
       YugabyteDb,
+      [EnumMember(Value = "OCI_GENERATIVE_AI")]
+      OciGenerativeAi,
+      [EnumMember(Value = "GEMINI")]
+      Gemini,
+      [EnumMember(Value = "OPEN_AI")]
+      OpenAi,
+      [EnumMember(Value = "VOYAGE_AI")]
+      VoyageAi,
       [EnumMember(Value = "AI_MODEL")]
       AiModel
   }

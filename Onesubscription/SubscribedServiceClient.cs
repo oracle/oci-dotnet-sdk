@@ -70,7 +70,7 @@ namespace Oci.OnesubscriptionService
         }
 
         /// <summary>
-        /// This API returns the subscribed service details corresponding to the id provided
+        /// Returns the subscribed service details corresponding to the provided ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -127,7 +127,7 @@ namespace Oci.OnesubscriptionService
         }
 
         /// <summary>
-        /// This list API returns all subscribed services for given Subscription ID
+        /// Returns all subscribed services for a given Subscription ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

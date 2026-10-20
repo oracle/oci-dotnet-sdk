@@ -88,6 +88,9 @@ namespace Oci.DisasterrecoveryService.Models
                 case "INTEGRATION_INSTANCE":
                     obj = new DrProtectionGroupMemberIntegrationInstance();
                     break;
+                case "POSTGRESQL_DB_SYSTEM":
+                    obj = new DrProtectionGroupMemberPostgresqlDbSystem();
+                    break;
                 case "COMPUTE_INSTANCE_MOVABLE":
                     obj = new DrProtectionGroupMemberComputeInstanceMovable();
                     break;

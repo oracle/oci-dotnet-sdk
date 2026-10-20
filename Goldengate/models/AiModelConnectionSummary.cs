@@ -62,6 +62,16 @@ namespace Oci.GoldengateService.Models
         public System.Nullable<ProviderTypeEnum> ProviderType { get; set; }
         
         /// <value>
+        /// Optional identifier of the AI Provider Connection backing this AI Model Connection.
+        /// When provided, it must reference an existing Active connection of type `AI_PROVIDER`.
+        /// When `providerId` is set, `providerType` and `authDetails` must not be provided on the AI Model Connection, because provider metadata is resolved from the referenced AI Provider Connection.
+        /// When `providerId` is not set, the AI Model Connection must provide inline provider metadata using `providerType` and `authDetails`.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "providerId")]
+        public string ProviderId { get; set; }
+        
+        /// <value>
         /// AI model identifier.
         /// 
         /// </value>

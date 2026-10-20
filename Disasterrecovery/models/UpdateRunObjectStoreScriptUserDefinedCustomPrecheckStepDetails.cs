@@ -48,6 +48,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// The entire path and arguments for the script that is stored in object store, or inside a compressed archive in object store.
+        /// <br/>
         /// Example: /usr/bin/python3.7 scripts/start_server.py --port 8080 --env &quot;production&quot; --max-connections 200 --log-level &quot;INFO&quot;
         /// </value>
         [JsonProperty(PropertyName = "scriptCommand")]
@@ -55,6 +56,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// The user ID on the instance that will be used to execute the script specified in 'scriptCommand'.
+        /// <br/>
         /// Example: opc
         /// </value>
         [JsonProperty(PropertyName = "runAsUser")]

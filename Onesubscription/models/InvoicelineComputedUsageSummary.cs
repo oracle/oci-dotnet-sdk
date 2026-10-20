@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Computed Usage Summary object
+    /// Computed usage summary object.
     /// 
     /// </summary>
     public class InvoicelineComputedUsageSummary 
@@ -33,7 +33,7 @@ namespace Oci.OnesubscriptionService.Models
         public InvoicingProduct Product { get; set; }
         
         /// <value>
-        /// Total Quantity that was used for computation
+        /// Total quantity that was used for computation.
         /// 
         /// </value>
         /// <remarks>
@@ -44,7 +44,7 @@ namespace Oci.OnesubscriptionService.Models
         public System.Double Quantity { get; set; }
         
         /// <value>
-        /// Net Unit Price for the product in consideration, price actual.
+        /// Net unit price for the product in consideration, price actual.
         /// 
         /// </value>
         /// <remarks>
@@ -55,7 +55,7 @@ namespace Oci.OnesubscriptionService.Models
         public System.Double NetUnitPrice { get; set; }
         
         /// <value>
-        /// Metered Service date.
+        /// Metered service date.
         /// 
         /// </value>
         /// <remarks>
@@ -66,7 +66,7 @@ namespace Oci.OnesubscriptionService.Models
         public System.Nullable<System.DateTime> TimeMeteredOn { get; set; }
                 ///
         /// <value>
-        /// Usage compute type in SPM.
+        /// Usage compute type in SPM (Subscription Plan Management).
         /// 
         /// </value>
         ///
@@ -99,7 +99,7 @@ namespace Oci.OnesubscriptionService.Models
         };
 
         /// <value>
-        /// Usage compute type in SPM.
+        /// Usage compute type in SPM (Subscription Plan Management).
         /// 
         /// </value>
         /// <remarks>
@@ -111,14 +111,14 @@ namespace Oci.OnesubscriptionService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
-        /// Sum of Usage/Service Billing Line net Amount
+        /// Sum of usage/service billing line net amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "cost")]
         public System.Double Cost { get; set; }
         
         /// <value>
-        /// Computed Line Amount rounded.
+        /// Computed rounded line amount.
         /// 
         /// </value>
         /// <remarks>

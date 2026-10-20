@@ -16,28 +16,28 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Rate Card Tier details
+    /// Rate card tier details.
     /// 
     /// </summary>
     public class RateCardTier 
     {
         
         /// <value>
-        /// Rate card tier quantity range
+        /// Rate card tier quantity range.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "upToQuantity")]
         public string UpToQuantity { get; set; }
         
         /// <value>
-        /// Rate card tier net unit price
+        /// Rate card tier net unit price.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "netUnitPrice")]
         public string NetUnitPrice { get; set; }
         
         /// <value>
-        /// Rate card tier overage price
+        /// Rate card tier overage price.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "overagePrice")]

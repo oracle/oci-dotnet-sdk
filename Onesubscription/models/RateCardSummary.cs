@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Rate Card Summary
+    /// Rate card summary.
     /// 
     /// </summary>
     public class RateCardSummary 
     {
         
         /// <value>
-        /// SPM internal Subscribed Service ID
+        /// SPM (Subscription Plan Management) internal subscribed service ID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "subscribedServiceId")]
@@ -37,21 +37,21 @@ namespace Oci.OnesubscriptionService.Models
         public RateCardProduct Product { get; set; }
         
         /// <value>
-        /// Rate card start date
+        /// Rate card start date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStart")]
         public System.Nullable<System.DateTime> TimeStart { get; set; }
         
         /// <value>
-        /// Rate card end date
+        /// Rate card end date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeEnd")]
         public System.Nullable<System.DateTime> TimeEnd { get; set; }
         
         /// <value>
-        /// Rate card net unit price
+        /// Rate card net unit price.
         /// 
         /// </value>
         /// <remarks>
@@ -62,14 +62,14 @@ namespace Oci.OnesubscriptionService.Models
         public string NetUnitPrice { get; set; }
         
         /// <value>
-        /// Rate card discretionary discount percentage
+        /// Rate card discretionary discount percentage.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "discretionaryDiscountPercentage")]
         public string DiscretionaryDiscountPercentage { get; set; }
         
         /// <value>
-        /// Rate card overage price
+        /// Rate card overage price.
         /// 
         /// </value>
         /// <remarks>
@@ -80,7 +80,7 @@ namespace Oci.OnesubscriptionService.Models
         public string OveragePrice { get; set; }
         
         /// <value>
-        /// Rate card price tier flag
+        /// Rate card price tier parameter.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isTier")]
@@ -90,7 +90,7 @@ namespace Oci.OnesubscriptionService.Models
         public SubscriptionCurrency Currency { get; set; }
         
         /// <value>
-        /// List of tiered rate card prices
+        /// List of tiered rate card prices.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "rateCardTiers")]

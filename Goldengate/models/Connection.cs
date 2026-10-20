@@ -335,6 +335,9 @@ namespace Oci.GoldengateService.Models
                 case "MICROSOFT_SQLSERVER":
                     obj = new MicrosoftSqlserverConnection();
                     break;
+                case "AI_PROVIDER":
+                    obj = new AiProviderConnection();
+                    break;
                 case "ICEBERG":
                     obj = new IcebergConnection();
                     break;
@@ -353,8 +356,14 @@ namespace Oci.GoldengateService.Models
                 case "JAVA_MESSAGE_SERVICE":
                     obj = new JavaMessageServiceConnection();
                     break;
+                case "SPARK":
+                    obj = new SparkConnection();
+                    break;
                 case "SNOWFLAKE":
                     obj = new SnowflakeConnection();
+                    break;
+                case "DATABRICKS_ENGINE":
+                    obj = new DatabricksEngineConnection();
                     break;
                 case "GOLDENGATE":
                     obj = new GoldenGateConnection();
@@ -373,6 +382,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "GOOGLE_CLOUD_STORAGE":
                     obj = new GoogleCloudStorageConnection();
+                    break;
+                case "ORACLE_AI_DATA_PLATFORM_ENGINE":
+                    obj = new OracleAiDataPlatformEngineConnection();
                     break;
                 case "ORACLE_AI_DATA_PLATFORM":
                     obj = new OracleAiDataPlatformConnection();

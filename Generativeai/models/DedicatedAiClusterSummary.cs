@@ -133,6 +133,12 @@ namespace Oci.GenerativeaiService.Models
         [JsonConverter(typeof(StringEnumConverter))]
         public System.Nullable<DedicatedAiCluster.UnitShapeEnum> UnitShape { get; set; }
         
+        /// <value>
+        /// The OCID of the capacity reservation.
+        /// </value>
+        [JsonProperty(PropertyName = "capacityReservationId")]
+        public string CapacityReservationId { get; set; }
+        
         [JsonProperty(PropertyName = "capacity")]
         public DedicatedAiClusterCapacity Capacity { get; set; }
         

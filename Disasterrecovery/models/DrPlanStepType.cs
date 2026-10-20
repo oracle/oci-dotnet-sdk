@@ -136,6 +136,10 @@ namespace Oci.DisasterrecoveryService.Models
     /// - MYSQL_DB_SYSTEM_START_DRILL - A DR plan step to perform a HeatWave MySQL DB System start drill.
     /// - MYSQL_DB_SYSTEM_STOP_DRILL_PRECHECK - A precheck step for validating HeatWave MySQL DB System stop drill.
     /// - MYSQL_DB_SYSTEM_STOP_DRILL - A DR plan step to perform a HeatWave MySQL DB System stop drill.
+    /// - POSTGRESQL_DB_SYSTEM_SWITCHOVER_PRECHECK - A precheck step for validating OCI Database with PostgreSQL switchover.
+    /// - POSTGRESQL_DB_SYSTEM_SWITCHOVER - A DR plan step to perform an OCI Database with PostgreSQL switchover.
+    /// - POSTGRESQL_DB_SYSTEM_FAILOVER_PRECHECK - A precheck step for validating OCI Database with PostgreSQL failover.
+    /// - POSTGRESQL_DB_SYSTEM_FAILOVER - A DR plan step to perform an OCI Database with PostgreSQL failover.
     /// - INTEGRATION_INSTANCE_SWITCHOVER_PRECHECK - A precheck step for validating an integration instance (OIC) for switchover.
     /// - INTEGRATION_INSTANCE_SWITCHOVER - A DR plan step to perform a switchover operation for an integration instance (OIC).
     /// - INTEGRATION_INSTANCE_FAILOVER_PRECHECK -A precheck step for validating an integration instance (OIC) for failover.
@@ -390,6 +394,14 @@ namespace Oci.DisasterrecoveryService.Models
       MysqlDbSystemStopDrillPrecheck,
       [EnumMember(Value = "MYSQL_DB_SYSTEM_STOP_DRILL")]
       MysqlDbSystemStopDrill,
+      [EnumMember(Value = "POSTGRESQL_DB_SYSTEM_SWITCHOVER_PRECHECK")]
+      PostgresqlDbSystemSwitchoverPrecheck,
+      [EnumMember(Value = "POSTGRESQL_DB_SYSTEM_SWITCHOVER")]
+      PostgresqlDbSystemSwitchover,
+      [EnumMember(Value = "POSTGRESQL_DB_SYSTEM_FAILOVER_PRECHECK")]
+      PostgresqlDbSystemFailoverPrecheck,
+      [EnumMember(Value = "POSTGRESQL_DB_SYSTEM_FAILOVER")]
+      PostgresqlDbSystemFailover,
       [EnumMember(Value = "INTEGRATION_INSTANCE_SWITCHOVER_PRECHECK")]
       IntegrationInstanceSwitchoverPrecheck,
       [EnumMember(Value = "INTEGRATION_INSTANCE_SWITCHOVER")]

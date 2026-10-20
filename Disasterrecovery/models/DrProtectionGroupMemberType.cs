@@ -26,6 +26,7 @@ namespace Oci.DisasterrecoveryService.Models
     /// - NETWORK_LOAD_BALANCER - A network load balancer.
     /// - FILE_SYSTEM - A file system.
     /// - MYSQL_DB_SYSTEM - A HeatWave MySQL DB system.
+    /// - POSTGRESQL_DB_SYSTEM - OCI Database with PostgreSQL.
     /// - INTEGRATION_INSTANCE - An integration instance (OIC).
     /// 
   /// </summary>
@@ -59,6 +60,8 @@ namespace Oci.DisasterrecoveryService.Models
       ObjectStorageBucket,
       [EnumMember(Value = "MYSQL_DB_SYSTEM")]
       MysqlDbSystem,
+      [EnumMember(Value = "POSTGRESQL_DB_SYSTEM")]
+      PostgresqlDbSystem,
       [EnumMember(Value = "INTEGRATION_INSTANCE")]
       IntegrationInstance
   }

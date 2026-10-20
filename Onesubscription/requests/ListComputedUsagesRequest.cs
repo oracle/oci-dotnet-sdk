@@ -30,7 +30,7 @@ namespace Oci.OnesubscriptionService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Subscription Id is an identifier associated to the service used for filter the Computed Usage in SPM.
+        /// Subscription ID is an identifier associated with the service, used for filtering the computed usage in SPM.
         /// 
         /// </value>
         /// <remarks>
@@ -41,7 +41,7 @@ namespace Oci.OnesubscriptionService.Requests
         public string SubscriptionId { get; set; }
         
         /// <value>
-        /// Initial date to filter Computed Usage data in SPM. In the case of non aggregated data the time period between of fromDate and toDate , expressed in RFC 3339 timestamp format.
+        /// Initial date to filter computed usage data in SPM. For non-aggregated data, the time period between fromDate and toDate, expressed in RFC 3339 timestamp format.
         /// 
         /// </value>
         /// <remarks>
@@ -52,7 +52,7 @@ namespace Oci.OnesubscriptionService.Requests
         public System.Nullable<System.DateTime> TimeFrom { get; set; }
         
         /// <value>
-        /// Final date to filter Computed Usage data in SPM, expressed in RFC 3339 timestamp format.
+        /// Final date to filter computed usage data in SPM, expressed in RFC 3339 timestamp format.
         /// 
         /// </value>
         /// <remarks>
@@ -63,14 +63,14 @@ namespace Oci.OnesubscriptionService.Requests
         public System.Nullable<System.DateTime> TimeTo { get; set; }
         
         /// <value>
-        /// Product part number for subscribed service line, called parent product.
+        /// Product part number for the subscribed service line, called the parent product.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "parentProduct")]
         public string ParentProduct { get; set; }
         
         /// <value>
-        /// Product part number for Computed Usage .
+        /// Product part number for the computed usage.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "computedProduct")]

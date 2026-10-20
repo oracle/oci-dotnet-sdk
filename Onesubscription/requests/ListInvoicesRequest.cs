@@ -30,7 +30,7 @@ namespace Oci.OnesubscriptionService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// AR Unique identifier for an invoice .
+        /// Accounts receivable unique identifier for an invoice.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,14 +40,14 @@ namespace Oci.OnesubscriptionService.Requests
         public string ArCustomerTransactionId { get; set; }
         
         /// <value>
-        /// Initial date to filter Invoice data in SPM.
+        /// Initial date to filter invoice data in SPM (Subscription Plan Management).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeFrom")]
         public System.Nullable<System.DateTime> TimeFrom { get; set; }
         
         /// <value>
-        /// Final date to filter Invoice data in SPM.
+        /// Final date to filter invoice data in SPM (Subscription Plan Management).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeTo")]
@@ -110,8 +110,8 @@ namespace Oci.OnesubscriptionService.Requests
         
         /// <value>
         /// Partial response refers to an optimization technique offered
-        /// by the RESTful web APIs to return only the information 
-        /// (fields) required by the client. This parameter is used to control what fields to
+        /// by the RESTful web APIs, to return only the information 
+        /// (fields) required by the client. This parameter controls which fields to
         /// return.
         /// 
         /// </value>

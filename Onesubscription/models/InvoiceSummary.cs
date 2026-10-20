@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Invoice details
+    /// Invoice details.
     /// 
     /// </summary>
     public class InvoiceSummary 
     {
         
         /// <value>
-        /// SPM Document Number is an functional identifier for invoice in SPM
+        /// SPM (Subscription Plan Management) document number is a functional identifier for invoicing in SPM.
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +34,7 @@ namespace Oci.OnesubscriptionService.Models
         public string SpmInvoiceNumber { get; set; }
         
         /// <value>
-        /// AR Invoice Numbers comma separated under one invoice
+        /// Accounts receivable invoice numbers, comma-separated under one invoice.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "arInvoices")]
@@ -62,7 +62,7 @@ namespace Oci.OnesubscriptionService.Models
         public InvoicingAddress BillToAddress { get; set; }
         
         /// <value>
-        /// Payment Method
+        /// Payment method.
         /// 
         /// </value>
         /// <remarks>
@@ -80,7 +80,7 @@ namespace Oci.OnesubscriptionService.Models
         public InvoicingPaymentTerm PaymentTerm { get; set; }
         
         /// <value>
-        /// Receipt Method of Payment Mode
+        /// Receipt method of payment mode.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "receiptMethod")]
@@ -101,7 +101,7 @@ namespace Oci.OnesubscriptionService.Models
         public InvoicingOrganization Organization { get; set; }
         
         /// <value>
-        /// Document Type in SPM like SPM Invoice,SPM Credit Memo etc.,
+        /// Document type in SPM, such as SPM Invoice, SPM Credit Memo, and so on.
         /// 
         /// </value>
         /// <remarks>
@@ -112,7 +112,7 @@ namespace Oci.OnesubscriptionService.Models
         public string Type { get; set; }
         
         /// <value>
-        /// Document Status in SPM which depicts current state of invoice
+        /// Document status in SPM, which depicts the current invoice state.
         /// 
         /// </value>
         /// <remarks>
@@ -134,7 +134,7 @@ namespace Oci.OnesubscriptionService.Models
         public string SubscriptionNumber { get; set; }
         
         /// <value>
-        /// Invoice Date
+        /// Invoice date.
         /// 
         /// </value>
         /// <remarks>
@@ -145,35 +145,35 @@ namespace Oci.OnesubscriptionService.Models
         public System.Nullable<System.DateTime> TimeInvoiceDate { get; set; }
         
         /// <value>
-        /// SPM Invocie creation date
+        /// SPM invocie creation date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// User that executed SPM Invoice process
+        /// User that executed the SPM invoice process.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "createdBy")]
         public string CreatedBy { get; set; }
         
         /// <value>
-        /// SPM Invoice updated date
+        /// SPM invoice updated date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// User that updated SPM Invoice
+        /// User that updated the SPM invoice.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "updatedBy")]
         public string UpdatedBy { get; set; }
         
         /// <value>
-        /// Invoice Lines under particular invoice.
+        /// Invoice lines under a particular invoice.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "invoiceLines")]

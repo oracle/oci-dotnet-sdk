@@ -23,7 +23,7 @@ namespace Oci.OnesubscriptionService.Models
     {
         
         /// <value>
-        /// Commercial name also called customer name.
+        /// Commercial name, also referred to as customer name.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "name")]
@@ -37,21 +37,21 @@ namespace Oci.OnesubscriptionService.Models
         public string NamePhonetic { get; set; }
         
         /// <value>
-        /// TCA customer account number.
+        /// TCA (Trading Community Architecture) customer account number.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "tcaCustomerAccountNumber")]
         public string TcaCustomerAccountNumber { get; set; }
         
         /// <value>
-        /// The business partner is part of the public sector or not.
+        /// Specifies whether or not the business partner is part of the public sector.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isPublicSector")]
         public System.Nullable<bool> IsPublicSector { get; set; }
         
         /// <value>
-        /// The business partner is chain customer or not.
+        /// Specifies whether or not the business partner is a chain customer.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isChainCustomer")]

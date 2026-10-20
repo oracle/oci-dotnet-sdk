@@ -23,6 +23,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// The OKE namespace where the config map resides.
+        /// <br/>
         /// Example: namespace_string_5
         /// </value>
         /// <remarks>
@@ -34,6 +35,7 @@ namespace Oci.DisasterrecoveryService.Models
         
         /// <value>
         /// The name of the config map containing resource modification details.
+        /// <br/>
         /// Example: resource-modifier
         /// </value>
         /// <remarks>
