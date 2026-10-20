@@ -16,28 +16,28 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Subscription summary
+    /// Subscription summary.
     /// 
     /// </summary>
     public class SubscriptionSummary 
     {
         
         /// <value>
-        /// Status of the plan
+        /// Plan status.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
         
         /// <value>
-        /// Represents the date when the first service of the subscription was activated
+        /// The date when the first service of the subscription was activated.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStart")]
         public System.Nullable<System.DateTime> TimeStart { get; set; }
         
         /// <value>
-        /// Represents the date when the last service of the subscription ends
+        /// The date when the last service of the subscription ends.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeEnd")]
@@ -47,28 +47,28 @@ namespace Oci.OnesubscriptionService.Models
         public SubscriptionCurrency Currency { get; set; }
         
         /// <value>
-        /// Customer friendly service name provided by PRG
+        /// Customer-friendly service name provided by the PRG (Product Release Group).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
         
         /// <value>
-        /// Hold reason of the plan
+        /// Hold reason of the plan.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "holdReason")]
         public string HoldReason { get; set; }
         
         /// <value>
-        /// Represents the date of the hold release
+        /// The date of the hold release.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeHoldReleaseEta")]
         public System.Nullable<System.DateTime> TimeHoldReleaseEta { get; set; }
         
         /// <value>
-        /// List of Subscribed Services of the plan 
+        /// List of plan's subscribed services. 
         /// 
         /// </value>
         [JsonProperty(PropertyName = "subscribedServices")]

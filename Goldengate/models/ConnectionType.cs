@@ -50,6 +50,8 @@ namespace Oci.GoldengateService.Models
       Hdfs,
       [EnumMember(Value = "ORACLE_AI_DATA_PLATFORM")]
       OracleAiDataPlatform,
+      [EnumMember(Value = "ORACLE_AI_DATA_PLATFORM_ENGINE")]
+      OracleAiDataPlatformEngine,
       [EnumMember(Value = "ORACLE_NOSQL")]
       OracleNosql,
       [EnumMember(Value = "MONGODB")]
@@ -72,12 +74,18 @@ namespace Oci.GoldengateService.Models
       GoogleBigquery,
       [EnumMember(Value = "DATABRICKS")]
       Databricks,
+      [EnumMember(Value = "DATABRICKS_ENGINE")]
+      DatabricksEngine,
       [EnumMember(Value = "GOOGLE_PUBSUB")]
       GooglePubsub,
       [EnumMember(Value = "MICROSOFT_FABRIC")]
       MicrosoftFabric,
+      [EnumMember(Value = "SPARK")]
+      Spark,
       [EnumMember(Value = "ICEBERG")]
       Iceberg,
+      [EnumMember(Value = "AI_PROVIDER")]
+      AiProvider,
       [EnumMember(Value = "AI_MODEL")]
       AiModel
   }

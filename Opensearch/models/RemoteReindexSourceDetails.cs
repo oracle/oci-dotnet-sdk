@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OpensearchService.Models
 {
     /// <summary>
-    /// Connection and certificate details for a remote cluster.
+    /// Connection and CA bundle trust details for a remote cluster.
     /// </summary>
     public class RemoteReindexSourceDetails 
     {
@@ -38,14 +38,14 @@ namespace Oci.OpensearchService.Models
         public string EndpointResolutionIp { get; set; }
         
         /// <value>
-        /// OCID of the certificate or CA chain used to verify the remote cluster's HTTPS certificate.
+        /// OCID of the OCI Certificates service CA bundle containing the trusted CA certificates used to verify the remote cluster's HTTPS certificate.
         /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
-        [Required(ErrorMessage = "CertificateId is required.")]
-        [JsonProperty(PropertyName = "certificateId")]
-        public string CertificateId { get; set; }
+        [Required(ErrorMessage = "CaBundleId is required.")]
+        [JsonProperty(PropertyName = "caBundleId")]
+        public string CaBundleId { get; set; }
         
     }
 }

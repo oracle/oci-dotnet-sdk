@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GoldengateService.Models
 {
     /// <summary>
-    /// Deployment Details for updating an OggDeployment
+    /// Deployment Details for updating an OggDeployment.
     /// 
     /// </summary>
     public class UpdateOggDeploymentDetails 

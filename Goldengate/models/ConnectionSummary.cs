@@ -319,6 +319,9 @@ namespace Oci.GoldengateService.Models
                 case "GOOGLE_PUBSUB":
                     obj = new GooglePubSubConnectionSummary();
                     break;
+                case "ORACLE_AI_DATA_PLATFORM_ENGINE":
+                    obj = new OracleAiDataPlatformEngineConnectionSummary();
+                    break;
                 case "GOOGLE_CLOUD_STORAGE":
                     obj = new GoogleCloudStorageConnectionSummary();
                     break;
@@ -337,8 +340,14 @@ namespace Oci.GoldengateService.Models
                 case "REDIS":
                     obj = new RedisConnectionSummary();
                     break;
+                case "SPARK":
+                    obj = new SparkConnectionSummary();
+                    break;
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new AzureDataLakeStorageConnectionSummary();
+                    break;
+                case "AI_PROVIDER":
+                    obj = new AiProviderConnectionSummary();
                     break;
                 case "GOOGLE_BIGQUERY":
                     obj = new GoogleBigQueryConnectionSummary();
@@ -369,6 +378,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "HDFS":
                     obj = new HdfsConnectionSummary();
+                    break;
+                case "DATABRICKS_ENGINE":
+                    obj = new DatabricksEngineConnectionSummary();
                     break;
             }
             if (obj != null)

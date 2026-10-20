@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Product description
+    /// Product description.
     /// 
     /// </summary>
     public class ComputedUsageProduct 
     {
         
         /// <value>
-        /// Product part number
+        /// Product part number.
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +34,7 @@ namespace Oci.OnesubscriptionService.Models
         public string PartNumber { get; set; }
         
         /// <value>
-        /// Product name
+        /// Product name.
         /// 
         /// </value>
         /// <remarks>
@@ -45,35 +45,35 @@ namespace Oci.OnesubscriptionService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Unit of Measure
+        /// Unit of measure.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "unitOfMeasure")]
         public string UnitOfMeasure { get; set; }
         
         /// <value>
-        /// Product provisioning group
+        /// Product provisioning group.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "provisioningGroup")]
         public string ProvisioningGroup { get; set; }
         
         /// <value>
-        /// Metered service billing category
+        /// Metered service billing category.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "billingCategory")]
         public string BillingCategory { get; set; }
         
         /// <value>
-        /// Product category
+        /// Product category.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "productCategory")]
         public string ProductCategory { get; set; }
         
         /// <value>
-        /// Rate card part type of Product
+        /// Rate card part type of product.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "ucmRateCardPartType")]

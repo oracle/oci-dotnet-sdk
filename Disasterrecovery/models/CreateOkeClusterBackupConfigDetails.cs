@@ -83,9 +83,10 @@ namespace Oci.DisasterrecoveryService.Models
         public string BackupSchedule { get; set; }
         
         /// <value>
-        /// Controls the behaviour of image replication across regions.
-        /// Image replication is enabled by default for DR Protection Groups with a primary role.
-        /// This property applies to the OKE cluster member in primary region.
+        /// Controls the behavior of image replication across regions. 
+        /// Image replication is enabled by default for DR Protection Groups. 
+        /// This setting applies to the OKE cluster member in the primary region, and to the standby region 
+        /// only if the image replication secret is stored in a vault instead of using the default secret.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "replicateImages")]

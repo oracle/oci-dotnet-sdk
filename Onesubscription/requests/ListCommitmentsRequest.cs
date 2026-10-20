@@ -20,7 +20,7 @@ namespace Oci.OnesubscriptionService.Requests
     {
         
         /// <value>
-        /// This param is used to get the commitments for a particular subscribed service
+        /// Obtains the commitments for a particular subscribed service.
         /// 
         /// </value>
         /// <remarks>

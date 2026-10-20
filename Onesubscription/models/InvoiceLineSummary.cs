@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Invoice Line
+    /// Invoice line.
     /// 
     /// </summary>
     public class InvoiceLineSummary 
     {
         
         /// <value>
-        /// SPM Invoice Line internal identifier
+        /// SPM (Subscription Plan Management) invoice line internal identifier.
         /// 
         /// </value>
         /// <remarks>
@@ -41,14 +41,14 @@ namespace Oci.OnesubscriptionService.Models
         public InvoicingProduct Product { get; set; }
         
         /// <value>
-        /// AR Invoice Number for Invoice Line
+        /// Accounts receivable invoice number for invoice line.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "arInvoiceNumber")]
         public string ArInvoiceNumber { get; set; }
         
         /// <value>
-        /// Data Center Attribute.
+        /// Data center attribute.
         /// 
         /// </value>
         /// <remarks>
@@ -59,7 +59,7 @@ namespace Oci.OnesubscriptionService.Models
         public string DataCenter { get; set; }
         
         /// <value>
-        /// Usage start time
+        /// Usage start time.
         /// 
         /// </value>
         /// <remarks>
@@ -70,7 +70,7 @@ namespace Oci.OnesubscriptionService.Models
         public System.Nullable<System.DateTime> TimeStart { get; set; }
         
         /// <value>
-        /// Usage end time
+        /// Usage end time.
         /// 
         /// </value>
         /// <remarks>

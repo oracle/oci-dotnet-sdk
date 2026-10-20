@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Subscribed Service commitment summary
+    /// Subscribed service commitment summary.
     /// 
     /// </summary>
     public class CommitmentSummary 
     {
         
         /// <value>
-        /// SPM internal Commitment ID
+        /// SPM (Subscription Plan Management) internal commitment ID.
         /// 
         /// </value>
         /// <remarks>
@@ -34,49 +34,49 @@ namespace Oci.OnesubscriptionService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// SPM internal Subscribed Service ID
+        /// SPM internal subscribed service ID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "subscribedServiceId")]
         public string SubscribedServiceId { get; set; }
         
         /// <value>
-        /// Commitment start date
+        /// Commitment start date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStart")]
         public System.Nullable<System.DateTime> TimeStart { get; set; }
         
         /// <value>
-        /// Commitment end date
+        /// Commitment end date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeEnd")]
         public System.Nullable<System.DateTime> TimeEnd { get; set; }
         
         /// <value>
-        /// Commitment quantity
+        /// Commitment quantity.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "quantity")]
         public string Quantity { get; set; }
         
         /// <value>
-        /// Commitment used amount
+        /// Commitment used amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "usedAmount")]
         public string UsedAmount { get; set; }
         
         /// <value>
-        /// Commitment available amount
+        /// Commitment available amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availableAmount")]
         public string AvailableAmount { get; set; }
         
         /// <value>
-        /// Funded Allocation line value
+        /// Funded allocation line value.
         /// Example: 12000.00
         /// </value>
         [JsonProperty(PropertyName = "fundedAllocationValue")]

@@ -329,6 +329,8 @@ namespace Oci.GenerativeaiService.Models
             H200X4,
             [EnumMember(Value = "H200_X8")]
             H200X8,
+            [EnumMember(Value = "OAI_H100_X4")]
+            OaiH100X4,
             [EnumMember(Value = "OAI_A10_X2")]
             OaiA10X2,
             [EnumMember(Value = "OAI_H100_X1")]
@@ -415,6 +417,12 @@ namespace Oci.GenerativeaiService.Models
         [JsonProperty(PropertyName = "unitShape")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<UnitShapeEnum> UnitShape { get; set; }
+        
+        /// <value>
+        /// The OCID of the capacity reservation.
+        /// </value>
+        [JsonProperty(PropertyName = "capacityReservationId")]
+        public string CapacityReservationId { get; set; }
         
         [JsonProperty(PropertyName = "capacity")]
         public DedicatedAiClusterCapacity Capacity { get; set; }

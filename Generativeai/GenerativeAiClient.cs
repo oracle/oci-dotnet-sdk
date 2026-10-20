@@ -1569,6 +1569,63 @@ namespace Oci.GenerativeaiService
         }
 
         /// <summary>
+        /// Creates a named MANAGED or CUSTOM pool. MANAGED uses the service-provided python-3.11 runtime and requires containerImage to be omitted. CUSTOM requires a digest-pinned containerImage. Project-wide shape capacity limits include named pools of both types and reserved default pools. Type, image, shape and name are immutable. The CP atomically persists CREATING and a Work Request, then its workflow prepares an immutable pool-owned template and applies the pool configuration. Each MANAGED pool has a distinct template based on the service runtime configuration, isolated from other pools of the same shape. ACTIVE means configuration was applied and verified; it does not require ready members, a successful image boot or available cluster capacity. Zero capacity pauses idle prewarming. An ACTIVE named pool can still create Sandboxes through cold fallback when its applied template is available. Retry identity and configuration are persisted atomically. Within the 24-hour retry-token validity period, the same token and input identify the original pool id, including after name reuse. A retry never creates or selects a replacement pool. A retry after the original pool is deleted returns 409; changed input with the same token conflicts. Reserved default names cannot be reused for either type.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/generativeai/CreateSandboxWarmPool.cs.html">here</a> to see an example of how to use CreateSandboxWarmPool API.</example>
+        public async Task<CreateSandboxWarmPoolResponse> CreateSandboxWarmPool(CreateSandboxWarmPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called createSandboxWarmPool");
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "projectId", request.ProjectId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/generativeAiProjects/{projectId}/sandboxWarmPools".Trim('/')));
+            HttpMethod method = new HttpMethod("POST");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "GenerativeAi",
+                    OperationName = "CreateSandboxWarmPool",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/generative-ai/20231130/SandboxWarmPool/CreateSandboxWarmPool",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<CreateSandboxWarmPoolResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"CreateSandboxWarmPool failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Creates a SemanticStore.
         /// 
         /// </summary>
@@ -2498,6 +2555,63 @@ namespace Oci.GenerativeaiService
         }
 
         /// <summary>
+        /// Deletes a named MANAGED or CUSTOM pool through a CP Work Request. Reserved MANAGED default entries cannot be deleted and return 409. CP persists DELETING and closes admission as the new configuration propagates, drains idle members and deletes the pool resource. The management response does not promise immediate global admission closure or completed cleanup. Already-adopted customer Sandboxes survive and retain required template dependencies. Get and List continue to show DELETING until pool cleanup completes. The CP then records DELETED and releases the name. Name reuse always allocates a new id and materialized names. Retained templates may outlive the pool while customer Sandboxes still depend on them. A repeated delete during DELETING returns the existing Work Request. A missing name returns 404. After name reuse, the path identifies the new pool; use the original if-match ETag to prevent deleting it. Conflicting operations return 409 and stale if-match returns 412.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/generativeai/DeleteSandboxWarmPool.cs.html">here</a> to see an example of how to use DeleteSandboxWarmPool API.</example>
+        public async Task<DeleteSandboxWarmPoolResponse> DeleteSandboxWarmPool(DeleteSandboxWarmPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called deleteSandboxWarmPool");
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "projectId", request.ProjectId }, { "name", request.Name } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/generativeAiProjects/{projectId}/sandboxWarmPools/{name}".Trim('/')));
+            HttpMethod method = new HttpMethod("DELETE");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "GenerativeAi",
+                    OperationName = "DeleteSandboxWarmPool",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/generative-ai/20231130/SandboxWarmPool/DeleteSandboxWarmPool",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<DeleteSandboxWarmPoolResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"DeleteSandboxWarmPool failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Deletes a semanticStore.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3297,6 +3411,63 @@ namespace Oci.GenerativeaiService
         }
 
         /// <summary>
+        /// Gets authoritative CP configuration and management lifecycle for the current pool incarnation, including DELETING until pool cleanup completes. Returns 404 after deletion completes unless the name has been reused for a new id. A best-effort runtime observation may report ready idle capacity. A runtime read failure returns UNAVAILABLE without failing the configuration read. ACTIVE does not imply runtime capacity is ready. The configuration ETag excludes runtime changes; it must not be used to suppress runtime observations with a conditional not-modified response.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/generativeai/GetSandboxWarmPool.cs.html">here</a> to see an example of how to use GetSandboxWarmPool API.</example>
+        public async Task<GetSandboxWarmPoolResponse> GetSandboxWarmPool(GetSandboxWarmPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called getSandboxWarmPool");
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "projectId", request.ProjectId }, { "name", request.Name } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/generativeAiProjects/{projectId}/sandboxWarmPools/{name}".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "GenerativeAi",
+                    OperationName = "GetSandboxWarmPool",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/generative-ai/20231130/SandboxWarmPool/GetSandboxWarmPool",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<GetSandboxWarmPoolResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"GetSandboxWarmPool failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Gets information about a semanticStore.
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -3691,6 +3862,63 @@ namespace Oci.GenerativeaiService
             catch (Exception e)
             {
                 logger.Error($"ListDedicatedAiClusters failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists the allocatable GPUs for launching dedicated AI clusters tied to a specific capacity reservation id.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/generativeai/ListDedicatedAiClustersAllocatableGpus.cs.html">here</a> to see an example of how to use ListDedicatedAiClustersAllocatableGpus API.</example>
+        public async Task<ListDedicatedAiClustersAllocatableGpusResponse> ListDedicatedAiClustersAllocatableGpus(ListDedicatedAiClustersAllocatableGpusRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listDedicatedAiClustersAllocatableGpus");
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "compartmentId", request.CompartmentId }, { "capacityReservationId", request.CapacityReservationId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/dedicatedAiClusters/allocatableGpus".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "GenerativeAi",
+                    OperationName = "ListDedicatedAiClustersAllocatableGpus",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/generative-ai/20231130/AllocatableGpuCollection/ListDedicatedAiClustersAllocatableGpus",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListDedicatedAiClustersAllocatableGpusResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListDedicatedAiClustersAllocatableGpus failed with error: {e.Message}");
                 throw;
             }
         }
@@ -4321,6 +4549,63 @@ namespace Oci.GenerativeaiService
             catch (Exception e)
             {
                 logger.Error($"ListRoutingProfiles failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lists named MANAGED and CUSTOM pools for Sandbox-enabled Projects, including zero targets and in-progress management operations. Reserved defaults can be resized but cannot be created or deleted by customers. DELETED resources are excluded. Responses include CP management lifecycle but do not perform runtime reads or return ready capacity.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/generativeai/ListSandboxWarmPools.cs.html">here</a> to see an example of how to use ListSandboxWarmPools API.</example>
+        public async Task<ListSandboxWarmPoolsResponse> ListSandboxWarmPools(ListSandboxWarmPoolsRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called listSandboxWarmPools");
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "projectId", request.ProjectId } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/generativeAiProjects/{projectId}/sandboxWarmPools".Trim('/')));
+            HttpMethod method = new HttpMethod("GET");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "GenerativeAi",
+                    OperationName = "ListSandboxWarmPools",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/generative-ai/20231130/SandboxWarmPoolCollection/ListSandboxWarmPools",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<ListSandboxWarmPoolsResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"ListSandboxWarmPools failed with error: {e.Message}");
                 throw;
             }
         }
@@ -5519,6 +5804,63 @@ namespace Oci.GenerativeaiService
             catch (Exception e)
             {
                 logger.Error($"UpdateRoutingProfile failed with error: {e.Message}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Only desiredCapacity may change. If desiredCapacity is omitted, the current desired capacity is preserved. An empty update object is allowed; an explicit null value for desiredCapacity is not allowed. Named MANAGED and CUSTOM pools and reserved MANAGED defaults can be resized. Default-pool updates use the existing Project configuration workflow; no separate desired configuration is created for those entries. CP persists UPDATING and a Work Request, applies the desired replica count, then returns the pool to ACTIVE after verifying the configuration. The workflow does not wait for ready members. Zero pauses idle prewarming. Once the pool is ACTIVE, named-pool Sandbox creation can still cold-start from its available applied template when no eligible warm member is available, regardless of the capacity target. Already-admitted Sandboxes continue. Unnamed Sandbox creation retains its existing behavior. Concurrent management operations return 409. If provided, if-match must match the current configuration ETag; otherwise this operation returns 412.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send. Required.</param>
+        /// <param name="retryConfiguration">The retry configuration that will be used by to send this request. Optional.</param>
+        /// <param name="cancellationToken">The cancellation token to cancel this operation. Optional.</param>
+        /// <param name="completionOption">The completion option for this operation. Optional.</param>
+        /// <returns>A response object containing details about the completed operation</returns>
+        /// <example>Click <a href="https://docs.oracle.com/en-us/iaas/tools/dot-net-examples/latest/generativeai/UpdateSandboxWarmPool.cs.html">here</a> to see an example of how to use UpdateSandboxWarmPool API.</example>
+        public async Task<UpdateSandboxWarmPoolResponse> UpdateSandboxWarmPool(UpdateSandboxWarmPoolRequest request, RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default, HttpCompletionOption completionOption = HttpCompletionOption.ResponseContentRead)
+        {
+            logger.Trace("Called updateSandboxWarmPool");
+            var requiredParametersDictionary = new System.Collections.Generic.Dictionary<string, object> { { "projectId", request.ProjectId }, { "name", request.Name } };
+            Uri uri = new Uri(PopulateServiceParametersInEndpointTemplate(this.restClient, requiredParametersDictionary), System.IO.Path.Combine(basePathWithoutHost, "/generativeAiProjects/{projectId}/sandboxWarmPools/{name}".Trim('/')));
+            HttpMethod method = new HttpMethod("PUT");
+            HttpRequestMessage requestMessage = Converter.ToHttpRequestMessage(uri, method, request);
+            requestMessage.Headers.Add("Accept", "application/json");
+            GenericRetrier retryingClient = Retrier.GetPreferredRetrier(retryConfiguration, this.retryConfiguration);
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                if (retryingClient != null)
+                {
+                    responseMessage = await retryingClient.MakeRetryingCall(this.restClient.HttpSend, requestMessage, completionOption, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    responseMessage = await this.restClient.HttpSend(requestMessage, completionOption: completionOption).ConfigureAwait(false);
+                }
+                stopWatch.Stop();
+                ApiDetails apiDetails = new ApiDetails
+                {
+                    ServiceName = "GenerativeAi",
+                    OperationName = "UpdateSandboxWarmPool",
+                    RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/generative-ai/20231130/SandboxWarmPool/UpdateSandboxWarmPool",
+                    UserAgent = this.GetUserAgent()
+                };
+                this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
+                logger.Debug($"Total Latency for this API call is: {stopWatch.ElapsedMilliseconds} ms");
+                return Converter.FromHttpResponseMessage<UpdateSandboxWarmPoolResponse>(responseMessage);
+            }
+            catch (OciException e)
+            {
+                logger.Error(e);
+                throw;
+            }
+            catch (Exception e)
+            {
+                logger.Error($"UpdateSandboxWarmPool failed with error: {e.Message}");
                 throw;
             }
         }

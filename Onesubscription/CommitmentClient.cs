@@ -70,7 +70,7 @@ namespace Oci.OnesubscriptionService
         }
 
         /// <summary>
-        /// This API returns the commitment details corresponding to the id provided
+        /// Returns the commitment details corresponding to the provided ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -127,7 +127,7 @@ namespace Oci.OnesubscriptionService
         }
 
         /// <summary>
-        /// This list API returns all commitments for a particular Subscribed Service
+        /// Returns all commitments for a particular subscribed service.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

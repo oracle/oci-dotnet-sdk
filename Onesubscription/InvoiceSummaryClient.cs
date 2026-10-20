@@ -70,7 +70,7 @@ namespace Oci.OnesubscriptionService
         }
 
         /// <summary>
-        /// This is a collection API which returns a list of Invoiced Computed Usages for given Invoiceline id.
+        /// Collection API that returns a list of invoiced computed usages for the given invoice line ID.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -127,7 +127,7 @@ namespace Oci.OnesubscriptionService
         }
 
         /// <summary>
-        /// This is a collection API which returns a list of Invoices for given filters.
+        /// Collection API that returns a list of invoices according to the given filters.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

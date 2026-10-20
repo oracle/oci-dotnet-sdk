@@ -21,6 +21,9 @@ namespace Oci.DisasterrecoveryService.Models
     public class UpdateDrProtectionGroupMemberComputeInstanceMovableDetails : UpdateDrProtectionGroupMemberDetails
     {
         
+        [JsonProperty(PropertyName = "drDrillProperties")]
+        public UpdateDrProtectionGroupMemberComputeInstanceDrillPropertiesDetails DrDrillProperties { get; set; }
+        
         /// <value>
         /// A flag indicating if the compute instance should be moved to the same fault domain in the destination region. 
         /// The compute instance launch will fail if this flag is set to true and capacity is not available in the 

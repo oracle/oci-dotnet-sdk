@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Subscribed Service summary
+    /// Subscribed service summary.
     /// 
     /// </summary>
     public class SubscriptionSubscribedService 
     {
         
         /// <value>
-        /// SPM internal Subscribed Service ID
+        /// SPM (Subscription Plan Management) internal subscribed service ID.
         /// 
         /// </value>
         /// <remarks>
@@ -37,165 +37,172 @@ namespace Oci.OnesubscriptionService.Models
         public SubscriptionProduct Product { get; set; }
         
         /// <value>
-        /// Subscribed service quantity
+        /// Subscribed service quantity.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "quantity")]
         public string Quantity { get; set; }
         
         /// <value>
-        /// Subscribed service status
+        /// Subscribed service status.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
         
         /// <value>
-        /// Subscribed service operation type
+        /// Subscribed service operation type.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "operationType")]
         public string OperationType { get; set; }
         
         /// <value>
-        /// Subscribed service net unit price
+        /// Subscribed service net unit price.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "netUnitPrice")]
         public string NetUnitPrice { get; set; }
         
         /// <value>
-        /// Subscribed service used amount
+        /// Subscribed service used amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "usedAmount")]
         public string UsedAmount { get; set; }
         
         /// <value>
-        /// Subscribed sercice available or remaining amount
+        /// Subscribed sercice available or remaining amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "availableAmount")]
         public string AvailableAmount { get; set; }
         
         /// <value>
-        /// Funded Allocation line value
+        /// Funded allocation line value.
         /// Example: 12000.00
         /// </value>
         [JsonProperty(PropertyName = "fundedAllocationValue")]
         public string FundedAllocationValue { get; set; }
         
         /// <value>
-        /// This field contains the name of the partner to which the subscription belongs - depending on which the invoicing may differ
+        /// The name of the partner to which the subscription belongs, however depending on which subscription, the invoicing can differ.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "partnerTransactionType")]
         public string PartnerTransactionType { get; set; }
         
         /// <value>
-        /// Term value in Months
+        /// Term value in months.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "termValue")]
         public System.Nullable<long> TermValue { get; set; }
         
         /// <value>
-        /// Term value UOM
+        /// Term value UOM (Unit of Measure).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "termValueUom")]
         public string TermValueUom { get; set; }
         
         /// <value>
-        /// Booking Opportunity Number of Subscribed Service
+        /// Booking opportunity number of subscribed service.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "bookingOptyNumber")]
         public string BookingOptyNumber { get; set; }
         
         /// <value>
-        /// Subscribed service total value
+        /// Subscribed service total value.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "totalValue")]
         public string TotalValue { get; set; }
         
         /// <value>
-        /// Subscribed service Promotion Amount
+        /// Subscribed service promotion amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "originalPromoAmount")]
         public string OriginalPromoAmount { get; set; }
         
         /// <value>
-        /// Sales Order Number associated to the subscribed service
+        /// Sales order number associated with the subscribed service.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "orderNumber")]
         public System.Nullable<long> OrderNumber { get; set; }
         
         /// <value>
-        /// Subscribed service data center region
+        /// Subscribed service data center region.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dataCenterRegion")]
         public string DataCenterRegion { get; set; }
         
         /// <value>
-        /// Subscribed service pricing model
+        /// Subscribed service pricing model.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "pricingModel")]
         public string PricingModel { get; set; }
         
         /// <value>
-        /// Subscribed service program type
+        /// Subscribed service program type.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "programType")]
         public string ProgramType { get; set; }
         
         /// <value>
-        /// Subscribed service promotion type
+        /// Subscribed service promotion type.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "promoType")]
         public string PromoType { get; set; }
         
         /// <value>
-        /// Subscribed service CSI number
+        /// Subscribed service CSI (Customer Service Identifier) number.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "csi")]
         public System.Nullable<long> Csi { get; set; }
         
         /// <value>
-        /// Subscribed service intent to pay flag
+        /// Subscribed service intent to pay parameter.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isIntentToPay")]
         public System.Nullable<bool> IsIntentToPay { get; set; }
         
         /// <value>
-        /// Subscribed service start date
+        /// Subscribed service start date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStart")]
         public System.Nullable<System.DateTime> TimeStart { get; set; }
         
         /// <value>
-        /// Subscribed service end date
+        /// Subscribed service end date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeEnd")]
         public System.Nullable<System.DateTime> TimeEnd { get; set; }
         
         /// <value>
-        /// List of Commitment services of a line 
+        /// List of commitment services of a line.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "commitmentServices")]
         public System.Collections.Generic.List<CommitmentService> CommitmentServices { get; set; }
+        
+        /// <value>
+        /// List of Associated Subscriptions
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "associatedSubscriptions")]
+        public System.Collections.Generic.List<AssociatedSubscriptions> AssociatedSubscriptions { get; set; }
         
     }
 }

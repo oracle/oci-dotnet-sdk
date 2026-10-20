@@ -30,7 +30,7 @@ namespace Oci.OnesubscriptionService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Username.
+        /// User name.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "username")]
@@ -58,7 +58,7 @@ namespace Oci.OnesubscriptionService.Models
         public string Email { get; set; }
         
         /// <value>
-        /// TCA contact ID.
+        /// TCA (Trading Community Architecture) contact ID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "tcaContactId")]

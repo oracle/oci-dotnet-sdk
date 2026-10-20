@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Computed Usage Aggregation object
+    /// Computed usage aggregation object.
     /// 
     /// </summary>
     public class ComputedUsageAggregation 
     {
         
         /// <value>
-        /// Total Quantity that was used for computation
+        /// Total quantity that was used for computation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "quantity")]
@@ -33,35 +33,35 @@ namespace Oci.OnesubscriptionService.Models
         public ComputedUsageProduct Product { get; set; }
         
         /// <value>
-        /// Data Center Attribute as sent by MQS to SPM.
+        /// Data center attribute as sent by the meterering system to SPM (Subscription Plan Management).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dataCenter")]
         public string DataCenter { get; set; }
         
         /// <value>
-        /// Metered Service date , expressed in RFC 3339 timestamp format.
+        /// Metered service date, expressed in RFC 3339 timestamp format.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeMeteredOn")]
         public System.Nullable<System.DateTime> TimeMeteredOn { get; set; }
         
         /// <value>
-        /// Net Unit Price for the product in consideration.
+        /// Net unit price for the product in consideration.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "netUnitPrice")]
         public string NetUnitPrice { get; set; }
         
         /// <value>
-        /// Sum of Computed Line Amount unrounded
+        /// Sum of unrounded computed line amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "costUnrounded")]
         public string CostUnrounded { get; set; }
         
         /// <value>
-        /// Sum of Computed Line Amount rounded
+        /// Sum of rounded computed line amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "cost")]

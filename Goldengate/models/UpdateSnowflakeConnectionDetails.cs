@@ -51,6 +51,10 @@ namespace Oci.GoldengateService.Models
         /// Deprecated: This field is deprecated and replaced by \"passwordSecretId\".
         /// This change follows the GoldenGate \"Plain Text Fields in Connections\" deprecation:
         /// https://docs.oracle.com/en-us/iaas/Content/servicechanges.htm#servicechanges_topic-GoldenGate
+        /// Snowflake is phasing out password authentication for legacy service users.
+        /// Oracle GoldenGate Snowflake connections will support only key-pair authentication.
+        /// See the Snowflake documentation for details:
+        /// https://docs.snowflake.com/en/user-guide/security-mfa-rollout
         /// 
         /// </value>
         [Oci.Common.Utils.Sensitive]
@@ -60,6 +64,10 @@ namespace Oci.GoldengateService.Models
         /// <value>
         /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Secret that stores the password Oracle GoldenGate uses to connect to Snowflake platform.
         /// Note: When provided, 'password' field must not be provided.
+        /// Deprecated: Snowflake is phasing out password authentication for legacy service users.
+        /// Oracle GoldenGate Snowflake connections will support only key-pair authentication.
+        /// See the Snowflake documentation for details:
+        /// https://docs.snowflake.com/en/user-guide/security-mfa-rollout
         /// 
         /// </value>
         [JsonProperty(PropertyName = "passwordSecretId")]

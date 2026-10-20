@@ -181,6 +181,9 @@ namespace Oci.GoldengateService.Models
                 case "AMAZON_REDSHIFT":
                     obj = new UpdateAmazonRedshiftConnectionDetails();
                     break;
+                case "SPARK":
+                    obj = new UpdateSparkConnectionDetails();
+                    break;
                 case "OCI_OBJECT_STORAGE":
                     obj = new UpdateOciObjectStorageConnectionDetails();
                     break;
@@ -220,6 +223,12 @@ namespace Oci.GoldengateService.Models
                 case "KAFKA":
                     obj = new UpdateKafkaConnectionDetails();
                     break;
+                case "AI_PROVIDER":
+                    obj = new UpdateAiProviderConnectionDetails();
+                    break;
+                case "DATABRICKS_ENGINE":
+                    obj = new UpdateDatabricksEngineConnectionDetails();
+                    break;
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new UpdateAzureDataLakeStorageConnectionDetails();
                     break;
@@ -255,6 +264,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "GENERIC":
                     obj = new UpdateGenericConnectionDetails();
+                    break;
+                case "ORACLE_AI_DATA_PLATFORM_ENGINE":
+                    obj = new UpdateOracleAiDataPlatformEngineConnectionDetails();
                     break;
                 case "AZURE_SYNAPSE_ANALYTICS":
                     obj = new UpdateAzureSynapseConnectionDetails();

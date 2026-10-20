@@ -220,6 +220,9 @@ namespace Oci.GoldengateService.Models
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new CreateAzureDataLakeStorageConnectionDetails();
                     break;
+                case "ORACLE_AI_DATA_PLATFORM_ENGINE":
+                    obj = new CreateOracleAiDataPlatformEngineConnectionDetails();
+                    break;
                 case "GOOGLE_PUBSUB":
                     obj = new CreateGooglePubSubConnectionDetails();
                     break;
@@ -228,6 +231,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "OCI_OBJECT_STORAGE":
                     obj = new CreateOciObjectStorageConnectionDetails();
+                    break;
+                case "AI_PROVIDER":
+                    obj = new CreateAiProviderConnectionDetails();
                     break;
                 case "REDIS":
                     obj = new CreateRedisConnectionDetails();
@@ -240,6 +246,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "KAFKA":
                     obj = new CreateKafkaConnectionDetails();
+                    break;
+                case "SPARK":
+                    obj = new CreateSparkConnectionDetails();
                     break;
                 case "ORACLE_NOSQL":
                     obj = new CreateOracleNosqlConnectionDetails();
@@ -276,6 +285,9 @@ namespace Oci.GoldengateService.Models
                     break;
                 case "AZURE_SYNAPSE_ANALYTICS":
                     obj = new CreateAzureSynapseConnectionDetails();
+                    break;
+                case "DATABRICKS_ENGINE":
+                    obj = new CreateDatabricksEngineConnectionDetails();
                     break;
                 case "ICEBERG":
                     obj = new CreateIcebergConnectionDetails();
