@@ -30,25 +30,25 @@ namespace Oci.OnesubscriptionService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// The Plan Number
+        /// The plan number.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "planNumber")]
         public string PlanNumber { get; set; }
         
         /// <value>
-        /// Line level Subscription Id
+        /// Line level subscription ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscriptionId")]
         public string SubscriptionId { get; set; }
         
         /// <value>
-        /// Buyer Email Id
+        /// Buyer email ID.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "buyerEmail")]
         public string BuyerEmail { get; set; }
         
         /// <value>
-        /// Boolean value to decide whether commitment services will be shown
+        /// Boolean value to determine whether commitment services are shown.
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isCommitInfoRequired")]
         public System.Nullable<bool> IsCommitInfoRequired { get; set; }

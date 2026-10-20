@@ -44,6 +44,12 @@ namespace Oci.GenerativeaiService.Models
       [EnumMember(Value = "TEXT_TO_AUDIO")]
       TextToAudio,
       [EnumMember(Value = "TEXT_TO_VIDEO")]
-      TextToVideo
+      TextToVideo,
+      [EnumMember(Value = "AUDIO_TEXT_TO_TEXT")]
+      AudioTextToText,
+      [EnumMember(Value = "AUDIO_TRANSLATION")]
+      AudioTranslation,
+      [EnumMember(Value = "VIDEO_TEXT_TO_TEXT")]
+      VideoTextToText
   }
 }

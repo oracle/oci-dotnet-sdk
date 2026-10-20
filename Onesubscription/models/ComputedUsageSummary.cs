@@ -16,28 +16,28 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Computed Usage Summary object
+    /// Computed usage summary object.
     /// 
     /// </summary>
     public class ComputedUsageSummary 
     {
         
         /// <value>
-        /// Computed Usage created time, expressed in RFC 3339 timestamp format.
+        /// Computed usage created time, expressed in RFC 3339 timestamp format.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// Computed Usage updated time, expressed in RFC 3339 timestamp format.
+        /// Computed usage updated time, expressed in RFC 3339 timestamp format.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// Subscribed service line parent id
+        /// Subscribed service line parent ID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "parentSubscribedServiceId")]
@@ -47,56 +47,56 @@ namespace Oci.OnesubscriptionService.Models
         public ComputedUsageProduct ParentProduct { get; set; }
         
         /// <value>
-        /// Subscription plan number
+        /// Subscription plan number.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "planNumber")]
         public string PlanNumber { get; set; }
         
         /// <value>
-        /// Currency code
+        /// Currency code.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "currencyCode")]
         public string CurrencyCode { get; set; }
         
         /// <value>
-        /// References the tier in the ratecard for that usage (OCI will be using the same reference to cross-reference for correctness on the usage csv report), comes from Entity OBSCNTR_IPT_PRODUCTTIER.
+        /// References the tier in the rate card for the associated usage (OCI uses the same reference to cross-reference for correctness in CSV Usage Reports), obtained from the OBSCNTR_IPT_PRODUCTTIER entity.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "rateCardTierdId")]
         public string RateCardTierdId { get; set; }
         
         /// <value>
-        /// Ratecard Id at subscribed service level
+        /// Rate card ID at the subscribed service level.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "rateCardId")]
         public string RateCardId { get; set; }
         
         /// <value>
-        /// SPM Internal compute records source .
+        /// SPM (Subscription Plan Management) internal compute records source.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "computeSource")]
         public string ComputeSource { get; set; }
         
         /// <value>
-        /// Data Center Attribute as sent by MQS to SPM.
+        /// Data center attribute as sent by the meterering system to SPM.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "dataCenter")]
         public string DataCenter { get; set; }
         
         /// <value>
-        /// MQS Identfier send to SPM , SPM does not transform this attribute and is received as is.
+        /// The meterering system identfier sent to SPM. SPM does not transform this attribute and is received as-is.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "mqsMessageId")]
         public string MqsMessageId { get; set; }
         
         /// <value>
-        /// SPM Internal computed usage Id , 32 character string
+        /// SPM internal computed usage ID, which is a 32-character string.
         /// 
         /// </value>
         /// <remarks>
@@ -107,35 +107,35 @@ namespace Oci.OnesubscriptionService.Models
         public string ComputedUsageId { get; set; }
         
         /// <value>
-        /// Total Quantity that was used for computation
+        /// Total quantity that was used for computation.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "quantity")]
         public string Quantity { get; set; }
         
         /// <value>
-        /// SPM Internal usage Line number identifier in SPM coming from Metered Services entity.
+        /// SPM internal usage line number identifier in SPM, originating from the metered services entity.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "usageNumber")]
         public string UsageNumber { get; set; }
         
         /// <value>
-        /// SPM Internal Original usage Line number identifier in SPM coming from Metered Services entity.
+        /// SPM internal original usage Line number identifier in SPM, originating from the metered services entity.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "originalUsageNumber")]
         public string OriginalUsageNumber { get; set; }
         
         /// <value>
-        /// Subscribed service commitmentId.
+        /// Subscribed service commitment ID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "commitmentServiceId")]
         public string CommitmentServiceId { get; set; }
         
         /// <value>
-        /// Invoicing status for the aggregated compute usage
+        /// Invoicing status for the aggregated compute usage.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isInvoiced")]
@@ -191,35 +191,35 @@ namespace Oci.OnesubscriptionService.Models
         public System.Nullable<TypeEnum> Type { get; set; }
         
         /// <value>
-        /// Usae computation date, expressed in RFC 3339 timestamp format.
+        /// Usage computation date, expressed in RFC 3339 timestamp format.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeOfArrival")]
         public System.Nullable<System.DateTime> TimeOfArrival { get; set; }
         
         /// <value>
-        /// Metered Service date, expressed in RFC 3339 timestamp format.
+        /// Metered service date, expressed in RFC 3339 timestamp format.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeMeteredOn")]
         public System.Nullable<System.DateTime> TimeMeteredOn { get; set; }
         
         /// <value>
-        /// Net Unit Price for the product in consideration, price actual.
+        /// Net unit price for the product in consideration, price actual.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "netUnitPrice")]
         public string NetUnitPrice { get; set; }
         
         /// <value>
-        /// Computed Line Amount rounded.
+        /// Computed rounded line amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "costRounded")]
         public string CostRounded { get; set; }
         
         /// <value>
-        /// Computed Line Amount not rounded
+        /// Computed unrounded line amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "cost")]
@@ -229,7 +229,7 @@ namespace Oci.OnesubscriptionService.Models
         public ComputedUsageProduct Product { get; set; }
         
         /// <value>
-        /// Unit of Messure
+        /// Unit of measure.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "unitOfMeasure")]

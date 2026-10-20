@@ -47,6 +47,9 @@ namespace Oci.DisasterrecoveryService.Models
         [JsonProperty(PropertyName = "vnicMappings")]
         public System.Collections.Generic.List<ComputeInstanceMovableVnicMapping> VnicMappings { get; set; }
         
+        [JsonProperty(PropertyName = "drDrillProperties")]
+        public DrProtectionGroupMemberComputeInstanceDrillProperties DrDrillProperties { get; set; }
+        
         /// <value>
         /// The OCID of a compartment in the destination region in which the compute instance
         /// should be launched.

@@ -20,7 +20,8 @@ namespace Oci.OnesubscriptionService.Requests
     {
         
         /// <value>
-        /// Line level Subscription Id
+        /// Line-level subscription ID.
+        /// 
         /// </value>
         /// <remarks>
         /// Required
@@ -40,19 +41,22 @@ namespace Oci.OnesubscriptionService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// This param is used to get the rate card(s) whose effective start date starts on or after a particular date
+        /// Gets the rate cards whose effective start date starts on or after a particular date.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeFrom")]
         public System.Nullable<System.DateTime> TimeFrom { get; set; }
         
         /// <value>
-        /// This param is used to get the rate card(s) whose effective end date ends on or before a particular date
+        /// Gets the rate cards whose effective end date ends on or before a particular date.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "timeTo")]
         public System.Nullable<System.DateTime> TimeTo { get; set; }
         
         /// <value>
-        /// This param is used to get the rate card(s) filterd by the partNumber
+        /// Gets the rate cards filterd by the part number.
+        /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "partNumber")]
         public string PartNumber { get; set; }

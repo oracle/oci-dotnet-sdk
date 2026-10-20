@@ -20,7 +20,7 @@ namespace Oci.OnesubscriptionService.Requests
     {
         
         /// <value>
-        /// The Computed Usage Id
+        /// The computed usage ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -41,8 +41,8 @@ namespace Oci.OnesubscriptionService.Requests
         
         /// <value>
         /// Partial response refers to an optimization technique offered
-        /// by the RESTful web APIs to return only the information 
-        /// (fields) required by the client. This parameter is used to control what fields to
+        /// by the RESTful web APIs, to return only the information 
+        /// (fields) required by the client. This parameter controls which fields to
         /// return.
         /// 
         /// </value>

@@ -30,7 +30,7 @@ namespace Oci.OnesubscriptionService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Invoice Line Identifier - Primary Key SPM
+        /// Invoice line identifier - Primary Key SPM (Subscription Plan Management).
         /// 
         /// </value>
         /// <remarks>
@@ -62,7 +62,7 @@ namespace Oci.OnesubscriptionService.Requests
         
         ///
         /// <value>
-        /// The field to sort by Invoiced Computed Usages. You can provide one sort order (`sortOrder`).
+        /// The field to sort by invoiced computed usages. You can provide one sort order (`sortOrder`).
         /// 
         /// </value>
         ///
@@ -74,7 +74,7 @@ namespace Oci.OnesubscriptionService.Requests
         };
 
         /// <value>
-        /// The field to sort by Invoiced Computed Usages. You can provide one sort order (`sortOrder`).
+        /// The field to sort by invoiced computed usages. You can provide one sort order (`sortOrder`).
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "sortBy")]
@@ -97,8 +97,8 @@ namespace Oci.OnesubscriptionService.Requests
         
         /// <value>
         /// Partial response refers to an optimization technique offered
-        /// by the RESTful web APIs to return only the information 
-        /// (fields) required by the client. This parameter is used to control what fields to
+        /// by the RESTful web APIs, to return only the information 
+        /// (fields) required by the client. This parameter controls which fields to
         /// return.
         /// 
         /// </value>

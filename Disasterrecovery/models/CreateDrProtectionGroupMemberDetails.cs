@@ -99,6 +99,9 @@ namespace Oci.DisasterrecoveryService.Models
                 case "OKE_CLUSTER":
                     obj = new CreateDrProtectionGroupMemberOkeClusterDetails();
                     break;
+                case "POSTGRESQL_DB_SYSTEM":
+                    obj = new CreateDrProtectionGroupMemberPostgresqlDbSystemDetails();
+                    break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);
             return obj;

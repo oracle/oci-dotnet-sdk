@@ -20,7 +20,7 @@ namespace Oci.OnesubscriptionService.Requests
     {
         
         /// <value>
-        /// The Commitment Id
+        /// The commitment ID.
         /// </value>
         /// <remarks>
         /// Required

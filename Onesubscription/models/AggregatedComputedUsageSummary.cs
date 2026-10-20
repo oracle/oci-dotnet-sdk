@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Subscribed Service Contract details
+    /// Subscribed service contract details.
     /// 
     /// </summary>
     public class AggregatedComputedUsageSummary 
     {
         
         /// <value>
-        /// Subscription Id is an identifier associated to the service used for filter the Computed Usage in SPM
+        /// Subscription ID is an identifier associated with the service used for filtering the computed usage in SPM (Subscription Plan Management).
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +34,7 @@ namespace Oci.OnesubscriptionService.Models
         public string SubscriptionId { get; set; }
         
         /// <value>
-        /// Subscribed service line parent id
+        /// Subscribed service line parent ID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "parentSubscribedServiceId")]
@@ -65,21 +65,21 @@ namespace Oci.OnesubscriptionService.Models
         public string PlanNumber { get; set; }
         
         /// <value>
-        /// Currency code
+        /// Currency code.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "currencyCode")]
         public string CurrencyCode { get; set; }
         
         /// <value>
-        /// Inernal SPM Ratecard Id at line level
+        /// Inernal SPM rate card ID at line level.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "rateCardId")]
         public string RateCardId { get; set; }
                 ///
         /// <value>
-        /// Subscribed services pricing model
+        /// Subscribed services pricing model.
         /// 
         /// </value>
         ///
@@ -100,7 +100,7 @@ namespace Oci.OnesubscriptionService.Models
         };
 
         /// <value>
-        /// Subscribed services pricing model
+        /// Subscribed services pricing model.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "pricingModel")]

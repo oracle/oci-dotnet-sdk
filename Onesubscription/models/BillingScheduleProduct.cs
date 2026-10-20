@@ -16,13 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Product description
+    /// Product description.
+    /// 
     /// </summary>
     public class BillingScheduleProduct 
     {
         
         /// <value>
-        /// Indicates the associated AR Invoice Number
+        /// Indicates the associated accounts receivable invoice number.
         /// 
         /// </value>
         /// <remarks>
@@ -33,7 +34,7 @@ namespace Oci.OnesubscriptionService.Models
         public string PartNumber { get; set; }
         
         /// <value>
-        /// Product name
+        /// Product name.
         /// 
         /// </value>
         /// <remarks>

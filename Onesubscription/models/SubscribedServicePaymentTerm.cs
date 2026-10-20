@@ -16,63 +16,63 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Payment Term details
+    /// Payment term details.
     /// 
     /// </summary>
     public class SubscribedServicePaymentTerm 
     {
         
         /// <value>
-        /// Payment Term name
+        /// Payment term name.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// Payment Term value
+        /// Payment term value.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
         
         /// <value>
-        /// Payment term Description
+        /// Payment term description.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
         /// <value>
-        /// Payment term active flag
+        /// Payment term active parameter.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "isActive")]
         public System.Nullable<bool> IsActive { get; set; }
         
         /// <value>
-        /// Payment term last update date
+        /// Payment term last update date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeCreated")]
         public System.Nullable<System.DateTime> TimeCreated { get; set; }
         
         /// <value>
-        /// User that created the Payment term
+        /// User that created the payment term.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "createdBy")]
         public string CreatedBy { get; set; }
         
         /// <value>
-        /// Payment term last update date
+        /// Payment term last update date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeUpdated")]
         public System.Nullable<System.DateTime> TimeUpdated { get; set; }
         
         /// <value>
-        /// User that updated the Payment term
+        /// User that updated the payment term.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "updatedBy")]

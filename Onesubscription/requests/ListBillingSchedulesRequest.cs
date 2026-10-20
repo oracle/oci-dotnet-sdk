@@ -30,7 +30,7 @@ namespace Oci.OnesubscriptionService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// This param is used to get only the billing schedules for a particular Subscription Id
+        /// This parameter gets the billing schedules for a particular subscription ID.
         /// 
         /// </value>
         /// <remarks>
@@ -41,7 +41,7 @@ namespace Oci.OnesubscriptionService.Requests
         public string SubscriptionId { get; set; }
         
         /// <value>
-        /// This param is used to get only the billing schedules for a particular Subscribed Service
+        /// This parameter gets the billing schedules for a particular subscribed service.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "subscribedServiceId")]

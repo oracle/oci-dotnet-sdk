@@ -30,7 +30,7 @@ namespace Oci.OnesubscriptionService.Requests
         public string CompartmentId { get; set; }
         
         /// <value>
-        /// Line level Subscription Id
+        /// Line level subscription ID.
         /// </value>
         /// <remarks>
         /// Required
@@ -40,14 +40,14 @@ namespace Oci.OnesubscriptionService.Requests
         public string SubscriptionId { get; set; }
         
         /// <value>
-        /// Order Line identifier at subscribed service level . This identifier is originated in Order Management module. Default is null.
+        /// Order line identifier at subscribed service level. This identifier originates from the order management module. Default is null.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "orderLineId")]
         public System.Nullable<long> OrderLineId { get; set; }
         
         /// <value>
-        /// This param is used to filter subscribed services based on its status
+        /// This parameter filters subscribed services based on its status.
         /// 
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "status")]

@@ -55,6 +55,12 @@ namespace Oci.GenerativeaiService.Models
       UpdatePrivateEndpoint,
       [EnumMember(Value = "MOVE_PRIVATE_ENDPOINT")]
       MovePrivateEndpoint,
+      [EnumMember(Value = "CREATE_SANDBOX_WARM_POOL")]
+      CreateSandboxWarmPool,
+      [EnumMember(Value = "UPDATE_SANDBOX_WARM_POOL")]
+      UpdateSandboxWarmPool,
+      [EnumMember(Value = "DELETE_SANDBOX_WARM_POOL")]
+      DeleteSandboxWarmPool,
       [EnumMember(Value = "CREATE_VECTOR_STORE_CONNECTOR")]
       CreateVectorStoreConnector,
       [EnumMember(Value = "UPDATE_VECTOR_STORE_CONNECTOR")]

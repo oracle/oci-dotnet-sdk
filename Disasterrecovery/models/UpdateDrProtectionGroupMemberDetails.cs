@@ -84,6 +84,9 @@ namespace Oci.DisasterrecoveryService.Models
                 case "DATABASE":
                     obj = new UpdateDrProtectionGroupMemberDatabaseDetails();
                     break;
+                case "POSTGRESQL_DB_SYSTEM":
+                    obj = new UpdateDrProtectionGroupMemberPostgresqlDbSystemDetails();
+                    break;
                 case "OKE_CLUSTER":
                     obj = new UpdateDrProtectionGroupMemberOkeClusterDetails();
                     break;

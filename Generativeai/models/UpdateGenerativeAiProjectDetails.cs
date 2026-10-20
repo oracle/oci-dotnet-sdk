@@ -42,6 +42,9 @@ namespace Oci.GenerativeaiService.Models
         [JsonProperty(PropertyName = "shortTermMemoryOptimizationConfig")]
         public ShortTermMemoryOptimizationConfig ShortTermMemoryOptimizationConfig { get; set; }
         
+        [JsonProperty(PropertyName = "sandboxConfig")]
+        public SandboxConfig SandboxConfig { get; set; }
+        
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).

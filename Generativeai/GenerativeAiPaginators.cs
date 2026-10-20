@@ -148,6 +148,55 @@ namespace Oci.GenerativeaiService
         }
 
         /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListDedicatedAiClustersAllocatableGpus operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListDedicatedAiClustersAllocatableGpusResponse> ListDedicatedAiClustersAllocatableGpusResponseEnumerator(ListDedicatedAiClustersAllocatableGpusRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListDedicatedAiClustersAllocatableGpusRequest, ListDedicatedAiClustersAllocatableGpusResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListDedicatedAiClustersAllocatableGpus(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the AllocatableGpuSummary objects
+        /// contained in responses from the ListDedicatedAiClustersAllocatableGpus operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<AllocatableGpuSummary> ListDedicatedAiClustersAllocatableGpusRecordEnumerator(ListDedicatedAiClustersAllocatableGpusRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListDedicatedAiClustersAllocatableGpusRequest, ListDedicatedAiClustersAllocatableGpusResponse, AllocatableGpuSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListDedicatedAiClustersAllocatableGpus(request, retryConfiguration, cancellationToken),
+                response => response.AllocatableGpuCollection.Items
+            );
+        }
+
+        /// <summary>
         /// Creates a new enumerable which will iterate over the responses received from the ListEndpoints operation. This enumerable
         /// will fetch more data from the server as needed.
         /// </summary>
@@ -683,6 +732,55 @@ namespace Oci.GenerativeaiService
                 },
                 request => client.ListRoutingProfiles(request, retryConfiguration, cancellationToken),
                 response => response.RoutingProfileCollection.Items
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the responses received from the ListSandboxWarmPools operation. This enumerable
+        /// will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<ListSandboxWarmPoolsResponse> ListSandboxWarmPoolsResponseEnumerator(ListSandboxWarmPoolsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseEnumerable<ListSandboxWarmPoolsRequest, ListSandboxWarmPoolsResponse>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListSandboxWarmPools(request, retryConfiguration, cancellationToken)
+            );
+        }
+
+        /// <summary>
+        /// Creates a new enumerable which will iterate over the SandboxWarmPoolSummary objects
+        /// contained in responses from the ListSandboxWarmPools operation. This enumerable will fetch more data from the server as needed.
+        /// </summary>
+        /// <param name="request">The request object containing the details to send</param>
+        /// <param name="retryConfiguration">The configuration for retrying, may be null</param>
+        /// <param name="cancellationToken">The cancellation token object</param>
+        /// <returns>The enumerator, which supports a simple iteration over a collection of a specified type</returns>
+        public IEnumerable<SandboxWarmPoolSummary> ListSandboxWarmPoolsRecordEnumerator(ListSandboxWarmPoolsRequest request, Common.Retry.RetryConfiguration retryConfiguration = null, CancellationToken cancellationToken = default)
+        {
+            return new Common.Utils.ResponseRecordEnumerable<ListSandboxWarmPoolsRequest, ListSandboxWarmPoolsResponse, SandboxWarmPoolSummary>(
+                response => response.OpcNextPage,
+                input =>
+                {
+                    if (!string.IsNullOrEmpty(input))
+                    {
+                        request.Page = input;
+                    }
+                    return request;
+                },
+                request => client.ListSandboxWarmPools(request, retryConfiguration, cancellationToken),
+                response => response.SandboxWarmPoolCollection.Items
             );
         }
 

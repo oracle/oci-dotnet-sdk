@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Organization details
+    /// Organization details.
     /// 
     /// </summary>
     public class InvoicingOrganization 
     {
         
         /// <value>
-        /// Organization name
+        /// Organization name.
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +34,7 @@ namespace Oci.OnesubscriptionService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Organization ID
+        /// Organization ID.
         /// 
         /// </value>
         /// <remarks>

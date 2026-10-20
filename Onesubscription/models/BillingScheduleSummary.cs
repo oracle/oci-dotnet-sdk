@@ -16,42 +16,42 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Billing schedule details related to Subscription Id
+    /// Billing schedule details related to subscription ID.
     /// 
     /// </summary>
     public class BillingScheduleSummary 
     {
         
         /// <value>
-        /// SPM internal Subscribed Service ID
+        /// SPM (Subscription Plan Management) internal subscribed service ID.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "subscribedServiceId")]
         public string SubscribedServiceId { get; set; }
         
         /// <value>
-        /// Billing schedule start date
+        /// Billing schedule start date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStart")]
         public System.Nullable<System.DateTime> TimeStart { get; set; }
         
         /// <value>
-        /// Billing schedule end date
+        /// Billing schedule end date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeEnd")]
         public System.Nullable<System.DateTime> TimeEnd { get; set; }
         
         /// <value>
-        /// Billing schedule invoicing date
+        /// Billing schedule invoicing date.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeInvoicing")]
         public System.Nullable<System.DateTime> TimeInvoicing { get; set; }
                 ///
         /// <value>
-        /// Billing schedule invoice status
+        /// Billing schedule invoice status.
         /// 
         /// </value>
         ///
@@ -66,7 +66,7 @@ namespace Oci.OnesubscriptionService.Models
         };
 
         /// <value>
-        /// Billing schedule invoice status
+        /// Billing schedule invoice status.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "invoiceStatus")]
@@ -74,49 +74,49 @@ namespace Oci.OnesubscriptionService.Models
         public System.Nullable<InvoiceStatusEnum> InvoiceStatus { get; set; }
         
         /// <value>
-        /// Billing schedule quantity
+        /// Billing schedule quantity.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "quantity")]
         public string Quantity { get; set; }
         
         /// <value>
-        /// Billing schedule net unit price
+        /// Billing schedule net unit price.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "netUnitPrice")]
         public string NetUnitPrice { get; set; }
         
         /// <value>
-        /// Billing schedule line net amount
+        /// Billing schedule line net amount.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "amount")]
         public string Amount { get; set; }
         
         /// <value>
-        /// Billing frequency
+        /// Billing frequency.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "billingFrequency")]
         public string BillingFrequency { get; set; }
         
         /// <value>
-        /// Indicates the associated AR Invoice Number
+        /// Indicates the associated accounts receivable invoice number.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "arInvoiceNumber")]
         public string ArInvoiceNumber { get; set; }
         
         /// <value>
-        /// Indicates the associated AR Customer transaction id a unique identifier existing on AR.
+        /// Indicates the associated accounts receivable customer transaction ID, which is a unique identifier existing on the accounts receivable.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "arCustomerTransactionId")]
         public string ArCustomerTransactionId { get; set; }
         
         /// <value>
-        /// Order number associated with the Subscribed Service
+        /// Order number associated with the subscribed service.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "orderNumber")]

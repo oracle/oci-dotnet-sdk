@@ -160,10 +160,6 @@ namespace Oci.PsqlService.Models
         /// <value>
         /// The size of the backup, in gigabytes.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "BackupSize is required.")]
         [JsonProperty(PropertyName = "backupSize")]
         public System.Nullable<int> BackupSize { get; set; }
         

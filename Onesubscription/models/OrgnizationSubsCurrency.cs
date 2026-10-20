@@ -16,21 +16,21 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Currency details
+    /// Currency details.
     /// 
     /// </summary>
     public class OrgnizationSubsCurrency 
     {
         
         /// <value>
-        /// Currency name
+        /// Currency name.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
         
         /// <value>
-        /// Currency Code
+        /// Currency code.
         /// 
         /// </value>
         /// <remarks>
@@ -41,7 +41,7 @@ namespace Oci.OnesubscriptionService.Models
         public string IsoCode { get; set; }
         
         /// <value>
-        /// Standard Precision of the Currency
+        /// Standard precision of the currency.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "stdPrecision")]

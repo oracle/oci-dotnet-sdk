@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Product description
+    /// Product description.
     /// 
     /// </summary>
     public class SubscriptionProduct 
     {
         
         /// <value>
-        /// Product part numner
+        /// Product part number.
         /// 
         /// </value>
         /// <remarks>
@@ -34,7 +34,7 @@ namespace Oci.OnesubscriptionService.Models
         public string PartNumber { get; set; }
         
         /// <value>
-        /// Product name
+        /// Product name.
         /// 
         /// </value>
         /// <remarks>
@@ -45,7 +45,7 @@ namespace Oci.OnesubscriptionService.Models
         public string Name { get; set; }
         
         /// <value>
-        /// Unit of measure
+        /// Unit of measure.
         /// 
         /// </value>
         /// <remarks>
@@ -56,7 +56,7 @@ namespace Oci.OnesubscriptionService.Models
         public string UnitOfMeasure { get; set; }
         
         /// <value>
-        /// Product provisioning group
+        /// Product provisioning group.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "provisioningGroup")]

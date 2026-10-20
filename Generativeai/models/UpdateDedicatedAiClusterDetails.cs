@@ -16,7 +16,7 @@ using Newtonsoft.Json.Converters;
 namespace Oci.GenerativeaiService.Models
 {
     /// <summary>
-    /// The data to update a dedicated AI cluster.
+    /// The data to update a dedicated AI cluster. Properties not defined by this schema are rejected.
     /// </summary>
     public class UpdateDedicatedAiClusterDetails 
     {

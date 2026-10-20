@@ -65,7 +65,7 @@ namespace Oci.OnesubscriptionService.Models
         public string Region { get; set; }
         
         /// <value>
-        /// Region.
+        /// TCA (Trading Community Architecture) location identifier.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "tcaLocationId")]

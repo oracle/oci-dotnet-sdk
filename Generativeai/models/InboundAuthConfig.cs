@@ -17,7 +17,13 @@ namespace Oci.GenerativeaiService.Models
 {
     /// <summary>
     /// The inbound authentication configuration for the Hosted Application.
-    /// When unspecified, the service applies the default inbound authentication configuration type.
+    /// Specify the authentication type when creating an application. Omitting this object
+    /// from an update leaves the current authentication configuration unchanged.
+    /// Set inboundAuthConfigType to NO_AUTH_CONFIG to explicitly disable platform-managed
+    /// caller authentication for this application. This mode requires no separate tenancy enrollment.
+    /// The application is responsible for authenticating and authorizing its callers.
+    /// TLS, the configured public or private endpoint, service limits, and IAM authorization
+    /// for management operations still apply. Omit idcsConfig when selecting NO_AUTH_CONFIG.
     /// 
     /// </summary>
     public class InboundAuthConfig 
@@ -35,7 +41,9 @@ namespace Oci.GenerativeaiService.Models
             [EnumMember(Value = "IDCS_AUTH_CONFIG")]
             IdcsAuthConfig,
             [EnumMember(Value = "IDCS_SESSION_AUTH_CONFIG")]
-            IdcsSessionAuthConfig
+            IdcsSessionAuthConfig,
+            [EnumMember(Value = "NO_AUTH_CONFIG")]
+            NoAuthConfig
         };
 
         /// <value>

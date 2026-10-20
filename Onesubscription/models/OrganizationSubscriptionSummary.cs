@@ -16,14 +16,14 @@ using Newtonsoft.Json.Converters;
 namespace Oci.OnesubscriptionService.Models
 {
     /// <summary>
-    /// Subscription summary
+    /// Subscription summary.
     /// 
     /// </summary>
     public class OrganizationSubscriptionSummary 
     {
         
         /// <value>
-        /// SPM internal Subscription ID
+        /// SPM (Subscription Plan Management) internal subscription ID.
         /// 
         /// </value>
         /// <remarks>
@@ -34,35 +34,35 @@ namespace Oci.OnesubscriptionService.Models
         public string Id { get; set; }
         
         /// <value>
-        /// Customer friendly service name provided by PRG
+        /// Customer-friendly service name provided by the PRG (Product Release Group).
         /// 
         /// </value>
         [JsonProperty(PropertyName = "serviceName")]
         public string ServiceName { get; set; }
         
         /// <value>
-        /// Subscription Type i.e. IAAS,SAAS,PAAS
+        /// Subscription type, whether IaaS, SaaS, PaaS.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
         
         /// <value>
-        /// Status of the plan
+        /// Plan status.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
         
         /// <value>
-        /// Represents the date when the first service of the subscription was activated
+        /// The date when the first service of the subscription was activated.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeStart")]
         public System.Nullable<System.DateTime> TimeStart { get; set; }
         
         /// <value>
-        /// Represents the date when the last service of the subscription ends
+        /// The date when the last service of the subscription ends.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "timeEnd")]
@@ -72,7 +72,7 @@ namespace Oci.OnesubscriptionService.Models
         public OrgnizationSubsCurrency Currency { get; set; }
         
         /// <value>
-        /// Total aggregate TCLV of all lines for the subscription including expired, active, and signed
+        /// Total aggregate TCLV of all lines for the subscription, including expired, active, and signed.
         /// 
         /// </value>
         [JsonProperty(PropertyName = "totalValue")]
