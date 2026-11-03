@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 151.0.0 - 2026-11-03
+### Added
+ - Support for pull-through caching of container images in the Container Registry service
+ - Support for multi-region container repositories in the Container Registry service
+ - Support for top-level container repositories in the Container Registry service
+ - Support for a global endpoint for US multi-region access in the Container Registry service
+ - Support for filtering container repositories by repository type and top-level status in the Container Registry service
+ - Support for listing-level usage reporting within SaaS private offers and subscriptions in the Service Enablement Lifecycle Framework service
+ - Support for partially succeeded work requests and filtering by this status in the Data Science service 
+
+ ### Breaking Changes
+ - Usage submissions now require a listing ID, including the ListingId column in batch CSV uploads, in the Service Enablement Lifecycle Framework service
+ - The property OpcWorkRequestId was removed from UpdateModelArtifactSignatureResponse in the Data Science service
+
 ## 150.0.0 - 2026-10-20
 ### Added
  - Support for the OCI Public Safety and Security service

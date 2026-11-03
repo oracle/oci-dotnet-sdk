@@ -54,6 +54,19 @@ namespace Oci.ArtifactsService.Models
         public string Id { get; set; }
         
         /// <value>
+        /// The type of container repository. This determines the repository behavior and required settings.
+        /// </value>
+        [JsonProperty(PropertyName = "repositoryType")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public System.Nullable<ContainerRepository.RepositoryTypeEnum> RepositoryType { get; set; }
+        
+        /// <value>
+        /// Whether the repository is top-level. A top-level repository reserves its name in namespace as a prefix and allows images to be hosted under child paths of that prefix.
+        /// </value>
+        [JsonProperty(PropertyName = "isTopLevel")]
+        public System.Nullable<bool> IsTopLevel { get; set; }
+        
+        /// <value>
         /// Total number of images.
         /// </value>
         /// <remarks>
