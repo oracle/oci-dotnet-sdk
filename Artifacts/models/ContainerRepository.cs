@@ -178,6 +178,62 @@ namespace Oci.ArtifactsService.Models
         [Required(ErrorMessage = "Namespace is required.")]
         [JsonProperty(PropertyName = "namespace")]
         public string Namespace { get; set; }
+                ///
+        /// <value>
+        /// The type of container repository. This determines the repository behavior and required settings.
+        /// </value>
+        ///
+        public enum RepositoryTypeEnum {
+            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+            [EnumMember(Value = null)]
+            UnknownEnumValue,
+            [EnumMember(Value = "STANDARD")]
+            Standard,
+            [EnumMember(Value = "PULL_THROUGH")]
+            PullThrough,
+            [EnumMember(Value = "MULTI_REGION")]
+            MultiRegion
+        };
+
+        /// <value>
+        /// The type of container repository. This determines the repository behavior and required settings.
+        /// </value>
+        [JsonProperty(PropertyName = "repositoryType")]
+        [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
+        public System.Nullable<RepositoryTypeEnum> RepositoryType { get; set; }
+        
+        /// <value>
+        /// Whether the repository is top-level. A top-level repository reserves its name in namespace as a prefix and allows images to be hosted under child paths of that prefix.
+        /// </value>
+        [JsonProperty(PropertyName = "isTopLevel")]
+        public System.Nullable<bool> IsTopLevel { get; set; }
+        
+        /// <value>
+        /// The upstream registry URL for a pull-through cache repository.
+        /// </value>
+        [JsonProperty(PropertyName = "upstreamUrl")]
+        public string UpstreamUrl { get; set; }
+        
+        /// <value>
+        /// The upstream registry username for a pull-through cache repository.
+        /// </value>
+        [JsonProperty(PropertyName = "upstreamUsername")]
+        public string UpstreamUsername { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the OCI Vault secret that contains the upstream registry password as base64 encoded string for a pull-through cache repository.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "upstreamSecretId")]
+        public string UpstreamSecretId { get; set; }
+        
+        /// <value>
+        /// List of peer regions that define the multi-region group. Peer regions must be specified using canonical region names (for example, us-phoenix-1).
+        /// The peer set must match a supported multi-region endpoint group and MUST include the local OCIR region where the repository is created.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "multiRegionPeers")]
+        public System.Collections.Generic.List<string> MultiRegionPeers { get; set; }
         
         /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no

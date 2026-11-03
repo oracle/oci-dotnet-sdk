@@ -55,6 +55,20 @@ namespace Oci.ArtifactsService.Requests
         public string DisplayName { get; set; }
         
         /// <value>
+        /// A filter to return only resources that match the given repository type exactly.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "repositoryType")]
+        public string RepositoryType { get; set; }
+        
+        /// <value>
+        /// A filter to return resources that match the isTopLevel value.
+        /// 
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "isTopLevel")]
+        public System.Nullable<bool> IsTopLevel { get; set; }
+        
+        /// <value>
         /// A filter to return resources that match the isPublic value.
         /// 
         /// </value>
