@@ -180,6 +180,8 @@ namespace Oci.DatascienceService.Requests
             Failed,
             [EnumMember(Value = "SUCCEEDED")]
             Succeeded,
+            [EnumMember(Value = "PARTIALLY_SUCCEEDED")]
+            PartiallySucceeded,
             [EnumMember(Value = "CANCELING")]
             Canceling,
             [EnumMember(Value = "CANCELED")]

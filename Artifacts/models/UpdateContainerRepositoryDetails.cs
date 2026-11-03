@@ -33,6 +33,19 @@ namespace Oci.ArtifactsService.Models
         [JsonProperty(PropertyName = "isPublic")]
         public System.Nullable<bool> IsPublic { get; set; }
         
+        /// <value>
+        /// The upstream registry username for a pull-through cache repository.
+        /// </value>
+        [JsonProperty(PropertyName = "upstreamUsername")]
+        public string UpstreamUsername { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the OCI Vault secret that contains the upstream registry password as base64 encoded string for a pull-through cache repository
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "upstreamSecretId")]
+        public string UpstreamSecretId { get; set; }
+        
         [JsonProperty(PropertyName = "readme")]
         public ContainerRepositoryReadme Readme { get; set; }
         

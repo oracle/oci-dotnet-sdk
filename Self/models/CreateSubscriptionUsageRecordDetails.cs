@@ -42,6 +42,16 @@ namespace Oci.SelfService.Models
         [Required(ErrorMessage = "MarketplaceOfferId is required.")]
         [JsonProperty(PropertyName = "marketplaceOfferId")]
         public string MarketplaceOfferId { get; set; }
+        
+        /// <value>
+        /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the listing that generated this usage.
+        /// </value>
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "ListingId is required.")]
+        [JsonProperty(PropertyName = "listingId")]
+        public string ListingId { get; set; }
                 ///
         /// <value>
         /// The billing type this usage record applies to.
