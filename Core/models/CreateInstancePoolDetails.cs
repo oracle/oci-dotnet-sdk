@@ -19,6 +19,8 @@ namespace Oci.CoreService.Models
     /// The data to create an instance pool.
     /// For a GMC-enabled resource pool, the referenced instance configuration must be a GMC configuration and
     /// the placement configuration must identify the availability domain and compute cluster for the pool.
+    /// Optionally include `overridePolicy` to define availability domain-scoped
+    /// launch overrides for future launches. Existing pool members are not modified.
     /// 
     /// </summary>
     public class CreateInstancePoolDetails 
@@ -108,6 +110,9 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "loadBalancers")]
         public System.Collections.Generic.List<AttachLoadBalancerDetails> LoadBalancers { get; set; }
+        
+        [JsonProperty(PropertyName = "overridePolicy")]
+        public InstancePoolLaunchOverridePolicy OverridePolicy { get; set; }
         
         /// <value>
         /// A user-friendly formatter for the instance pool's instances. Instance displaynames follow the format.

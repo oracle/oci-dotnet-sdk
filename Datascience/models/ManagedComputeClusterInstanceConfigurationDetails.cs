@@ -46,5 +46,8 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "instanceShapeDetails")]
         public ManagedComputeClusterInstanceShapeDetails InstanceShapeDetails { get; set; }
         
+        [JsonProperty(PropertyName = "networkConfigurationDetails")]
+        public ManagedComputeClusterNetworkConfigurationDetails NetworkConfigurationDetails { get; set; }
+        
     }
 }

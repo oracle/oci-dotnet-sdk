@@ -109,7 +109,7 @@ namespace Oci.CcdoffersService
                     ServiceName = "CcdOffers",
                     OperationName = "GetCcdOffer",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdOffer/GetCcdOffer",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -167,7 +167,7 @@ namespace Oci.CcdoffersService
                     ServiceName = "CcdOffers",
                     OperationName = "ListCcdOffers",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdOfferCollection/ListCcdOffers",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

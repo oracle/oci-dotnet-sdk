@@ -109,7 +109,7 @@ namespace Oci.CcdoffersService
                     ServiceName = "CcdCommitments",
                     OperationName = "CreateCcdCommitment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdCommitment/CreateCcdCommitment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -165,7 +165,7 @@ namespace Oci.CcdoffersService
                     ServiceName = "CcdCommitments",
                     OperationName = "DeleteCcdCommitment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdCommitment/DeleteCcdCommitment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -221,7 +221,7 @@ namespace Oci.CcdoffersService
                     ServiceName = "CcdCommitments",
                     OperationName = "GetCcdCommitment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdCommitment/GetCcdCommitment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -277,7 +277,7 @@ namespace Oci.CcdoffersService
                     ServiceName = "CcdCommitments",
                     OperationName = "ListCcdCommitments",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdCommitmentCollection/ListCcdCommitments",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
@@ -333,7 +333,7 @@ namespace Oci.CcdoffersService
                     ServiceName = "CcdCommitments",
                     OperationName = "UpdateCcdCommitment",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/ccd-offers/20240601/CcdCommitment/UpdateCcdCommitment",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);
