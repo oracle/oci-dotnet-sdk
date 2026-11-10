@@ -279,6 +279,8 @@ namespace Oci.CoreService.Models
             UnknownEnumValue,
             [EnumMember(Value = "SCHEDULED")]
             Scheduled,
+            [EnumMember(Value = "QUEUED")]
+            Queued,
             [EnumMember(Value = "STARTED")]
             Started,
             [EnumMember(Value = "PROCESSING")]

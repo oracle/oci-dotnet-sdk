@@ -525,6 +525,8 @@ namespace Oci.CoreService
         /// To determine whether capacity is available for a specific shape before you create an instance pool,
         /// use the {@link #createComputeCapacityReport(CreateComputeCapacityReportRequest) createComputeCapacityReport}
         /// operation.
+        /// You can optionally include &#x60;overridePolicy&#x60; to define availability domain-scoped
+        /// launch overrides for future launches. Existing pool members are not modified.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>
@@ -2003,6 +2005,10 @@ namespace Oci.CoreService
         /// Update the specified instance pool.
         /// &lt;br/&gt;
         /// The OCID of the instance pool remains the same.
+        /// &lt;br/&gt;
+        /// If &#x60;overridePolicy&#x60; is omitted, the stored policy remains unchanged.
+        /// Provide a non-null &#x60;overridePolicy&#x60; to replace the stored policy as a whole.
+        /// Provide &#x60;null&#x60; to clear the stored policy for future launches.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

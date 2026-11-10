@@ -114,6 +114,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "availabilityDomains")]
         public System.Collections.Generic.List<string> AvailabilityDomains { get; set; }
         
+        [JsonProperty(PropertyName = "overridePolicy")]
+        public InstancePoolLaunchOverridePolicy OverridePolicy { get; set; }
+        
         /// <value>
         /// The number of instances that should be in the instance pool.
         /// </value>

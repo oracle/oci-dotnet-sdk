@@ -35,6 +35,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "scalingPolicy")]
         public ManagedComputeClusterWorkloadScalingPolicy ScalingPolicy { get; set; }
         
+        [JsonProperty(PropertyName = "networkConfiguration")]
+        public ManagedComputeClusterModelDeploymentNetworkConfiguration NetworkConfiguration { get; set; }
+        
         [JsonProperty(PropertyName = "infrastructureType")]
         private readonly string infrastructureType = "MANAGED_COMPUTE_CLUSTER";
     }

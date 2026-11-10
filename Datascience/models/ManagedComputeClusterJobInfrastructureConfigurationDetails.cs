@@ -38,6 +38,9 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "resourceConfiguration")]
         public ManagedComputeClusterJobResourceConfiguration ResourceConfiguration { get; set; }
         
+        [JsonProperty(PropertyName = "networkConfiguration")]
+        public ManagedComputeClusterJobNetworkConfiguration NetworkConfiguration { get; set; }
+        
         [JsonProperty(PropertyName = "jobInfrastructureType")]
         private readonly string jobInfrastructureType = "MANAGED_COMPUTE_CLUSTER";
     }
