@@ -37,6 +37,15 @@ namespace Oci.FleetsoftwareupdateService.Models
             ExadbStack
         };
 
+        
+        /// <value>
+        /// Indicates whether the customer acknowledged the risk of selecting an older eligible software version
+        /// for this Exadata Fleet Update Cycle. This value is used for downstream
+        /// Database service APIs that requires older-version acknowledgement.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isOlderVersionAcknowledged")]
+        public System.Nullable<bool> IsOlderVersionAcknowledged { get; set; }
                 ///
         /// <value>
         /// Goal home policy to use when Staging the Goal Version during patching.

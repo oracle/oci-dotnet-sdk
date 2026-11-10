@@ -99,6 +99,12 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "displayName")]
         public string DisplayName { get; set; }
         
+        /// <value>
+        /// Retention period in days for job run.
+        /// </value>
+        [JsonProperty(PropertyName = "jobRunRetentionPeriodInDaysOverride")]
+        public System.Nullable<int> JobRunRetentionPeriodInDaysOverride { get; set; }
+        
         /// <remarks>
         /// Required
         /// </remarks>

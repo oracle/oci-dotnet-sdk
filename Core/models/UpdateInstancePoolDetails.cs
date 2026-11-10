@@ -17,6 +17,10 @@ namespace Oci.CoreService.Models
 {
     /// <summary>
     /// The data to update an instance pool.
+    /// If `overridePolicy` is omitted, the stored launch override policy remains unchanged.
+    /// A non-null `overridePolicy` replaces the stored policy as a whole, and `null`
+    /// clears it for future launches.
+    /// 
     /// </summary>
     public class UpdateInstancePoolDetails 
     {
@@ -78,6 +82,9 @@ namespace Oci.CoreService.Models
         /// </value>
         [JsonProperty(PropertyName = "size")]
         public System.Nullable<int> Size { get; set; }
+        
+        [JsonProperty(PropertyName = "overridePolicy")]
+        public InstancePoolLaunchOverridePolicy OverridePolicy { get; set; }
         
         /// <value>
         /// A user-friendly formatter for the instance pool's instances. Instance displaynames follow the format.

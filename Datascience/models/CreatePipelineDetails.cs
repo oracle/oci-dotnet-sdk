@@ -53,6 +53,12 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
         
+        /// <value>
+        /// Retention period in days for pipeline runs.
+        /// </value>
+        [JsonProperty(PropertyName = "pipelineRunRetentionPeriodInDays")]
+        public System.Nullable<int> PipelineRunRetentionPeriodInDays { get; set; }
+        
         [JsonProperty(PropertyName = "configurationDetails")]
         public PipelineConfigurationDetails ConfigurationDetails { get; set; }
         

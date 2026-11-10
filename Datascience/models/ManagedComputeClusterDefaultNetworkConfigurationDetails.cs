@@ -13,13 +13,15 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 
-namespace Oci.CoreService.Models
+namespace Oci.DatascienceService.Models
 {
     /// <summary>
-    /// SPLAT authorization alias for Compute instance operations that use the downstream instances resource kind.
+    /// The default network configuration details
     /// </summary>
-    public class Instances 
+    public class ManagedComputeClusterDefaultNetworkConfigurationDetails : ManagedComputeClusterNetworkConfigurationDetails
     {
         
+        [JsonProperty(PropertyName = "networkType")]
+        private readonly string networkType = "DEFAULT_NETWORK";
     }
 }

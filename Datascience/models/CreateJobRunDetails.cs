@@ -58,6 +58,12 @@ namespace Oci.DatascienceService.Models
         [JsonProperty(PropertyName = "jobId")]
         public string JobId { get; set; }
         
+        /// <value>
+        /// Retention period in days for job run.
+        /// </value>
+        [JsonProperty(PropertyName = "jobRunRetentionPeriodInDaysOverride")]
+        public System.Nullable<int> JobRunRetentionPeriodInDaysOverride { get; set; }
+        
         [JsonProperty(PropertyName = "jobConfigurationOverrideDetails")]
         public JobConfigurationDetails JobConfigurationOverrideDetails { get; set; }
         
