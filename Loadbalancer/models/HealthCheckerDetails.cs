@@ -93,6 +93,49 @@ namespace Oci.LoadbalancerService.Models
         public string ResponseBodyRegex { get; set; }
         
         /// <value>
+        /// You can enable dynamic backend weights for HTTP health checks.
+        /// <br/>
+        /// When enabled, the load balancer reads the `X-Dynamic-Backend-Weight`
+        /// header from each backend's HTTP health check response.
+        /// The load balancer uses that value as the backend's effective weight
+        /// when distributing traffic.
+        /// <br/>
+        /// A valid header value is an integer from `0` through `100`.
+        /// <br/>
+        /// If the backend response does not include this header, or includes an invalid
+        /// value, the load balancer uses `defaultWeight`.
+        /// <br/>
+        /// If omitted during create, the default is `false`.
+        /// <br/>
+        /// For TCP health checks, this field is accepted and stored, but it has no runtime effect.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "isDynamicBackendWeightEnabled")]
+        public System.Nullable<bool> IsDynamicBackendWeightEnabled { get; set; }
+        
+        /// <value>
+        /// You can configure this fallback backend weight when dynamic backend weights
+        /// are enabled and the backend's HTTP health check response does not include a valid
+        /// `X-Dynamic-Backend-Weight` header value.
+        /// <br/>
+        /// This value must be an integer from `1` through `100`.
+        /// <br/>
+        /// Setting `defaultWeight` does not enable dynamic backend weights. To enable
+        /// dynamic backend weights, set `isDynamicBackendWeightEnabled` to `true`.
+        /// If your request includes `defaultWeight`, you must also set
+        /// `isDynamicBackendWeightEnabled` to `true`; otherwise, the request is rejected.
+        /// <br/>
+        /// On create, if dynamic backend weights are enabled and this field is omitted or
+        /// null, the service uses `1`.
+        /// <br/>
+        /// For TCP health checks, this field is accepted and stored, but it has no runtime effect.
+        /// <br/>
+        /// Example: 1
+        /// </value>
+        [JsonProperty(PropertyName = "defaultWeight")]
+        public System.Nullable<int> DefaultWeight { get; set; }
+        
+        /// <value>
         /// Specifies if health checks should always be done using plain text instead of depending on
         /// whether or not the associated backend set is using SSL.
         /// <br/>

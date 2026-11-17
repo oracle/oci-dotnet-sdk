@@ -33,6 +33,13 @@ namespace Oci.OcvpService.Models
         public string EsxiSoftwareVersion { get; set; }
         
         /// <value>
+        /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Capacity Reservation.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "capacityReservationId")]
+        public string CapacityReservationId { get; set; }
+        
+        /// <value>
         /// Initial Fault Domain Host distribution mode for the ESXi host.
         /// 
         /// </value>

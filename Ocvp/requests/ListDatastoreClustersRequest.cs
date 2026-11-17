@@ -20,12 +20,8 @@ namespace Oci.OcvpService.Requests
     {
         
         /// <value>
-        /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+        /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment as optional parameter.
         /// </value>
-        /// <remarks>
-        /// Required
-        /// </remarks>
-        [Required(ErrorMessage = "CompartmentId is required.")]
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "compartmentId")]
         public string CompartmentId { get; set; }
         

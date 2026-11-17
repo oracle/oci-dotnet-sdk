@@ -336,5 +336,12 @@ namespace Oci.LustrefilestorageService.Models
         [JsonProperty(PropertyName = "rootSquashConfiguration")]
         public RootSquashConfiguration RootSquashConfiguration { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "TieringConfiguration is required.")]
+        [JsonProperty(PropertyName = "tieringConfiguration")]
+        public TieringConfiguration TieringConfiguration { get; set; }
+        
     }
 }

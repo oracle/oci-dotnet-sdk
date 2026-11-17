@@ -89,6 +89,8 @@ namespace Oci.OcvpService.Models
       ManagementApplianceDatastoreProvisioning,
       [EnumMember(Value = "MANAGEMENT_APPLIANCE_DATASTORE_DELETE")]
       ManagementApplianceDatastoreDelete,
+      [EnumMember(Value = "MANAGEMENT_APPLIANCE_RENAME_RESOURCE")]
+      ManagementApplianceRenameResource,
       [EnumMember(Value = "CREATE_BYOL")]
       CreateByol,
       [EnumMember(Value = "UPDATE_BYOL")]

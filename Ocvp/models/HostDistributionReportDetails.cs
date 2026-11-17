@@ -21,27 +21,17 @@ namespace Oci.OcvpService.Models
     /// </summary>
     public class HostDistributionReportDetails 
     {
-                ///
-        ///
-        public enum FaultDomainHostDistributionStateEnum {
-            /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
-            [EnumMember(Value = null)]
-            UnknownEnumValue,
-            [EnumMember(Value = "EVENLY_DISTRIBUTED")]
-            EvenlyDistributed,
-            [EnumMember(Value = "UNEVENLY_DISTRIBUTED")]
-            UnevenlyDistributed,
-            [EnumMember(Value = "UNSUPPORTED")]
-            Unsupported
-        };
-
+        
+        /// <value>
+        /// Current Fault Domain distribution state.
+        /// </value>
         /// <remarks>
         /// Required
         /// </remarks>
         [Required(ErrorMessage = "FaultDomainHostDistributionState is required.")]
         [JsonProperty(PropertyName = "faultDomainHostDistributionState")]
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
-        public System.Nullable<FaultDomainHostDistributionStateEnum> FaultDomainHostDistributionState { get; set; }
+        public System.Nullable<FaultDomainHostDistributionState> FaultDomainHostDistributionState { get; set; }
         
     }
 }
