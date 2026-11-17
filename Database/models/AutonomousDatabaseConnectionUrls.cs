@@ -78,6 +78,18 @@ namespace Oci.DatabaseService.Models
         public string EssbaseUrl { get; set; }
         
         /// <value>
+        /// The URL of the Agent-to-Agent (A2A) server for the Autonomous AI Database. Applicable to Autonomous AI Database Serverless only.
+        /// </value>
+        [JsonProperty(PropertyName = "a2aUrl")]
+        public string A2aUrl { get; set; }
+        
+        /// <value>
+        /// The URL of the Model Context Protocol (MCP) server for the Autonomous AI Database. Applicable to Autonomous AI Database Serverless only.
+        /// </value>
+        [JsonProperty(PropertyName = "mcpUrl")]
+        public string McpUrl { get; set; }
+        
+        /// <value>
         /// The URL of the Spatial Studio for the Autonomous AI Database. Applicable to Autonomous AI Database Serverless only.
         /// </value>
         [JsonProperty(PropertyName = "spatialStudioUrl")]

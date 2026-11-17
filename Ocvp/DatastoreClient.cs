@@ -369,7 +369,8 @@ namespace Oci.OcvpService
 
         /// <summary>
         /// List the Datastores in the specified compartment. The list can be filtered
-        /// by compartment, datastore id, display name and lifecycle state.
+        /// by compartment, datastore id, display name and lifecycle state. Either
+        /// compartmentId or datastoreId must be provided.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

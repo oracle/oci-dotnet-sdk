@@ -229,7 +229,7 @@ namespace Oci.OcvpService
                     ServiceName = "Byol",
                     OperationName = "DeleteByol",
                     RequestEndpoint = $"{method.Method} {requestMessage.RequestUri}",
-                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/BYOL/DeleteByol",
+                    ApiReferenceLink = "https://docs.oracle.com/iaas/api/#/en/vmware/20230701/Byol/DeleteByol",
                     UserAgent = this.GetUserAgent()
                 };
                 this.restClient.CheckHttpResponseMessage(requestMessage, responseMessage, apiDetails);

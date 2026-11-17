@@ -38,7 +38,9 @@ namespace Oci.FusionappsService.Models
             [EnumMember(Value = "PATCH")]
             Patch,
             [EnumMember(Value = "VERTEX")]
-            Vertex
+            Vertex,
+            [EnumMember(Value = "APPLICATION_MIGRATION")]
+            ApplicationMigration
         };
 
                 ///
@@ -104,6 +106,9 @@ namespace Oci.FusionappsService.Models
                     break;
                 case "QUARTERLY_UPGRADE":
                     obj = new UpgradeAction();
+                    break;
+                case "APPLICATION_MIGRATION":
+                    obj = new ApplicationMigrationAction();
                     break;
                 case "VERTEX":
                     obj = new VertexAction();
