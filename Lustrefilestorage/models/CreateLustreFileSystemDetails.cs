@@ -171,5 +171,8 @@ namespace Oci.LustrefilestorageService.Models
         [JsonProperty(PropertyName = "maintenanceWindow")]
         public MaintenanceWindow MaintenanceWindow { get; set; }
         
+        [JsonProperty(PropertyName = "tieringConfiguration")]
+        public TieringConfigurationDetails TieringConfiguration { get; set; }
+        
     }
 }

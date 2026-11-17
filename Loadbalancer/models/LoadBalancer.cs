@@ -116,6 +116,13 @@ namespace Oci.LoadbalancerService.Models
         public System.Collections.Generic.List<IpAddress> IpAddresses { get; set; }
         
         /// <value>
+        /// An array of reservedIP addresses.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "reservedIpAddresses")]
+        public System.Collections.Generic.List<ReservedIP> ReservedIpAddresses { get; set; }
+        
+        /// <value>
         /// A template that determines the total pre-provisioned bandwidth (ingress plus egress).
         /// To get a list of available shapes, use the {@link #listShapes(ListShapesRequest) listShapes}
         /// operation.

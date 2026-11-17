@@ -600,7 +600,8 @@ namespace Oci.OcvpService
 
         /// <summary>
         /// List the Datastore Clusters in the specified compartment. The list can be filtered
-        /// by compartment, Datastore Cluster, Display name and Lifecycle state
+        /// by compartment, Datastore Cluster, Display name and Lifecycle state. Either
+        /// compartmentId or datastoreClusterId must be provided.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

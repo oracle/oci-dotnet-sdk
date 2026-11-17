@@ -16,6 +16,9 @@ namespace Oci.OcvpService.Models
   /// Current ESXi host Fault Domain distribution state.
   /// </summary>
   public enum FaultDomainHostDistributionState {
+      /// This value is used if a service returns a value for this enum that is not recognized by this version of the SDK.
+      [EnumMember(Value = null)]
+      UnknownEnumValue,
       [EnumMember(Value = "EVENLY_DISTRIBUTED")]
       EvenlyDistributed,
       [EnumMember(Value = "UNEVENLY_DISTRIBUTED")]

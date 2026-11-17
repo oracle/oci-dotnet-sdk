@@ -59,6 +59,10 @@ namespace Oci.LoadbalancerService.Models
         [JsonProperty(PropertyName = "conditions")]
         public System.Collections.Generic.List<RuleCondition> Conditions { get; set; }
         
+        /// <remarks>
+        /// Required
+        /// </remarks>
+        [Required(ErrorMessage = "RedirectUri is required.")]
         [JsonProperty(PropertyName = "redirectUri")]
         public RedirectUri RedirectUri { get; set; }
         

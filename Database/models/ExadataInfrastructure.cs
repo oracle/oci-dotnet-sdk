@@ -471,5 +471,8 @@ namespace Oci.DatabaseService.Models
         [JsonConverter(typeof(Oci.Common.Utils.ResponseEnumConverter))]
         public System.Nullable<ComputeModelEnum> ComputeModel { get; set; }
         
+        [JsonProperty(PropertyName = "sslInspectionConfiguration")]
+        public SslInspectionConfiguration SslInspectionConfiguration { get; set; }
+        
     }
 }

@@ -46,7 +46,11 @@ namespace Oci.DatabaseService.Models
             [EnumMember(Value = "SPATIAL_STUDIO")]
             SpatialStudio,
             [EnumMember(Value = "ESSBASE")]
-            Essbase
+            Essbase,
+            [EnumMember(Value = "A2A")]
+            A2A,
+            [EnumMember(Value = "MCP")]
+            Mcp
         };
 
         /// <value>
@@ -77,6 +81,12 @@ namespace Oci.DatabaseService.Models
         /// </value>
         [JsonProperty(PropertyName = "maxIdleTimeInMinutes")]
         public System.Nullable<int> MaxIdleTimeInMinutes { get; set; }
+        
+        /// <value>
+        /// Specifies the estimated number of concurrent user sessions (range 1\u201364 for Graph, 1\u2013256 for OML, default 1). applies only to OML and Graph tools\u2014not applicable to DLA, Data Transforms, or Spatial.
+        /// </value>
+        [JsonProperty(PropertyName = "estimatedConcurrentSessions")]
+        public System.Nullable<int> EstimatedConcurrentSessions { get; set; }
         
     }
 }

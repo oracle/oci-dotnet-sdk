@@ -52,6 +52,25 @@ namespace Oci.OcvpService.Models
         public string BillingDonorHostId { get; set; }
         
         /// <value>
+        /// The version of VMware software that Oracle Cloud VMware Solution installed on the ESXi host. To get a list of the available versions, use
+        /// {@link #listSupportedVmwareSoftwareVersions(ListSupportedVmwareSoftwareVersionsRequest) listSupportedVmwareSoftwareVersions}.
+        /// **Note:** This API will not perform VMware software version upgrade. Make sure the version provided is the actual version installed on the ESXi host.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "vmwareSoftwareVersion")]
+        public string VmwareSoftwareVersion { get; set; }
+        
+        /// <value>
+        /// The version of ESXi software that Oracle Cloud VMware Solution installed on the ESXi host.
+        /// To get a list of the available versions, use
+        /// {@link #listSupportedVmwareSoftwareVersions(ListSupportedVmwareSoftwareVersionsRequest) listSupportedVmwareSoftwareVersions}.
+        /// **Note:** This API will not perform ESXi software version upgrade. Make sure the version provided is the actual version installed on the ESXi host.
+        /// 
+        /// </value>
+        [JsonProperty(PropertyName = "esxiSoftwareVersion")]
+        public string EsxiSoftwareVersion { get; set; }
+        
+        /// <value>
         /// The [OCID](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Byol Allocation for VCF (VMware Cloud Foundation) deployment.
         /// 
         /// </value>
