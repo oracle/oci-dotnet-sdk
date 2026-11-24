@@ -28,6 +28,8 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "DATA_TRANSFORMS")]
       DataTransforms,
       [EnumMember(Value = "DATA_VERIFICATION")]
-      DataVerification
+      DataVerification,
+      [EnumMember(Value = "DATA_CATALOG")]
+      DataCatalog
   }
 }

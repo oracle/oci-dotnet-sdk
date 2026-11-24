@@ -10,7 +10,7 @@
     <RootNamespace>Oci.IotService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Iot</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Iot</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Iot Service</Description>
   </PropertyGroup>
   <ItemGroup>

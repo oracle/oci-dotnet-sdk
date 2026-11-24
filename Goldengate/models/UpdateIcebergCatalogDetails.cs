@@ -58,6 +58,9 @@ namespace Oci.GoldengateService.Models
                 case "HADOOP":
                     obj = new UpdateHadoopIcebergCatalogDetails();
                     break;
+                case "OADC":
+                    obj = new UpdateOracleAiDataCatalogIcebergCatalogDetails();
+                    break;
                 case "GLUE":
                     obj = new UpdateGlueIcebergCatalogDetails();
                     break;

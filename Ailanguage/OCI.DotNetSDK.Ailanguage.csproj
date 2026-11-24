@@ -10,7 +10,7 @@
     <RootNamespace>Oci.AilanguageService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Ailanguage</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Ailanguage</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Ai Language Service</Description>
   </PropertyGroup>
   <ItemGroup>

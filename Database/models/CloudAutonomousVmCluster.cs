@@ -565,5 +565,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "sgaPercentage")]
         public System.Nullable<float> SgaPercentage { get; set; }
         
+        [JsonProperty(PropertyName = "keyManagementSystemDetails")]
+        public KeyManagementSystemDetails KeyManagementSystemDetails { get; set; }
+        
     }
 }

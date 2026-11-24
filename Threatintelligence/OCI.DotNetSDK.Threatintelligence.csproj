@@ -10,7 +10,7 @@
     <RootNamespace>Oci.ThreatintelligenceService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Threatintelligence</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Threatintelligence</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Threat Intelligence Service</Description>
   </PropertyGroup>
   <ItemGroup>

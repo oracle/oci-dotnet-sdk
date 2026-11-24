@@ -10,7 +10,7 @@
     <RootNamespace>Oci.WafService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Waf</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Waf</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Waf Service</Description>
   </PropertyGroup>
   <ItemGroup>

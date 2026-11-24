@@ -214,6 +214,9 @@ namespace Oci.GoldengateService.Models
                 case "SNOWFLAKE":
                     obj = new UpdateSnowflakeConnectionDetails();
                     break;
+                case "ORACLE_AI_DATA_CATALOG_STORAGE":
+                    obj = new UpdateOracleAiDataCatalogStorageConnectionDetails();
+                    break;
                 case "HDFS":
                     obj = new UpdateHdfsConnectionDetails();
                     break;

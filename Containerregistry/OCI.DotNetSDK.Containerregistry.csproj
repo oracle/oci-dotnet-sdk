@@ -10,7 +10,7 @@
     <RootNamespace>Oci.ContainerregistryService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Containerregistry</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Containerregistry</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Container Registry Service</Description>
   </PropertyGroup>
   <ItemGroup>

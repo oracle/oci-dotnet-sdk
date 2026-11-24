@@ -528,7 +528,7 @@ namespace Oci.GoldengateService
         }
 
         /// <summary>
-        /// Associate a GoldanGate connection with a different subscription.
+        /// Associate a GoldenGate connection with a different subscription.
         /// 
         /// </summary>
         /// <param name="request">The request object containing the details to send. Required.</param>

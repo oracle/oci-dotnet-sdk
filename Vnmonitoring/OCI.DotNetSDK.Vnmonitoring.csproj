@@ -10,7 +10,7 @@
     <RootNamespace>Oci.VnmonitoringService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Vnmonitoring</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Vnmonitoring</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Vn Monitoring Service</Description>
   </PropertyGroup>
   <ItemGroup>

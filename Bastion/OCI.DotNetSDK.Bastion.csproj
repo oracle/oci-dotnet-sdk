@@ -10,7 +10,7 @@
     <RootNamespace>Oci.BastionService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Bastion</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Bastion</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Bastion Service</Description>
   </PropertyGroup>
   <ItemGroup>

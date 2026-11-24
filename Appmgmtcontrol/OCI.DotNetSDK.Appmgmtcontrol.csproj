@@ -10,7 +10,7 @@
     <RootNamespace>Oci.AppmgmtcontrolService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Appmgmtcontrol</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Appmgmtcontrol</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Appmgmt Control Service</Description>
   </PropertyGroup>
   <ItemGroup>

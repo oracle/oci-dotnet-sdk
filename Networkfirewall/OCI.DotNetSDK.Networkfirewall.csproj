@@ -10,7 +10,7 @@
     <RootNamespace>Oci.NetworkfirewallService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Networkfirewall</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Networkfirewall</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Network Firewall Service</Description>
   </PropertyGroup>
   <ItemGroup>

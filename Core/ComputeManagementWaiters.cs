@@ -70,6 +70,42 @@ namespace Oci.CoreService
         /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CancelInstancePoolRefreshRequest, CancelInstancePoolRefreshResponse> ForCancelInstancePoolRefresh(CancelInstancePoolRefreshRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForCancelInstancePoolRefresh(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<CancelInstancePoolRefreshRequest, CancelInstancePoolRefreshResponse> ForCancelInstancePoolRefresh(CancelInstancePoolRefreshRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<CancelInstancePoolRefreshRequest, CancelInstancePoolRefreshResponse>(() =>
+            {
+                var response = client.CancelInstancePoolRefresh(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<CreateClusterNetworkRequest, CreateClusterNetworkResponse> ForCreateClusterNetwork(CreateClusterNetworkRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
         {
             return this.ForCreateClusterNetwork(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
@@ -250,6 +286,33 @@ namespace Oci.CoreService
         /// Creates a waiter using default wait configuration.
         /// </summary>
         /// <param name="request">Request to send.</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetInstancePoolRefreshRequest, GetInstancePoolRefreshResponse> ForInstancePoolRefresh(GetInstancePoolRefreshRequest request, params InstancePoolRefresh.LifecycleStateEnum[] targetStates)
+        {
+            return this.ForInstancePoolRefresh(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<GetInstancePoolRefreshRequest, GetInstancePoolRefreshResponse> ForInstancePoolRefresh(GetInstancePoolRefreshRequest request, WaiterConfiguration config, params InstancePoolRefresh.LifecycleStateEnum[] targetStates)
+        {
+            var agent = new WaiterAgent<GetInstancePoolRefreshRequest, GetInstancePoolRefreshResponse>(
+                request,
+                request => client.GetInstancePoolRefresh(request),
+                response => targetStates.Contains(response.InstancePoolRefresh.LifecycleState.Value)
+            );
+            return new Waiter<GetInstancePoolRefreshRequest, GetInstancePoolRefreshResponse>(config, agent);
+        }
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
         /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
         /// <returns>a new Oci.common.Waiter instance</returns>
         public Waiter<LaunchInstanceConfigurationRequest, LaunchInstanceConfigurationResponse> ForLaunchInstanceConfiguration(LaunchInstanceConfigurationRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
@@ -269,6 +332,42 @@ namespace Oci.CoreService
             return new Waiter<LaunchInstanceConfigurationRequest, LaunchInstanceConfigurationResponse>(() =>
             {
                 var response = client.LaunchInstanceConfiguration(request).Result;
+                if (response.OpcWorkRequestId == null)
+                {
+                    return response;
+                }
+                var getWorkRequestRequest = new Oci.WorkrequestsService.Requests.GetWorkRequestRequest
+                {
+                    WorkRequestId = response.OpcWorkRequestId
+                };
+                workRequestClient.Waiters.ForWorkRequest(getWorkRequestRequest, config, targetStates).Execute();
+                return response;
+            });
+        }
+        
+        /// <summary>
+        /// Creates a waiter using default wait configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="statuses">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RefreshInstancePoolRequest, RefreshInstancePoolResponse> ForRefreshInstancePool(RefreshInstancePoolRequest request, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return this.ForRefreshInstancePool(request, WaiterConfiguration.DefaultWaiterConfiguration, targetStates);
+        }
+
+        /// <summary>
+        /// Creates a waiter using the provided configuration.
+        /// </summary>
+        /// <param name="request">Request to send.</param>
+        /// <param name="config">Wait Configuration</param>
+        /// <param name="targetStates">Desired resource states. If multiple states are provided then the waiter will return once the resource reaches any of the provided states</param>
+        /// <returns>a new Oci.common.Waiter instance</returns>
+        public Waiter<RefreshInstancePoolRequest, RefreshInstancePoolResponse> ForRefreshInstancePool(RefreshInstancePoolRequest request, WaiterConfiguration config, params WorkrequestsService.Models.WorkRequest.StatusEnum[] targetStates)
+        {
+            return new Waiter<RefreshInstancePoolRequest, RefreshInstancePoolResponse>(() =>
+            {
+                var response = client.RefreshInstancePool(request).Result;
                 if (response.OpcWorkRequestId == null)
                 {
                     return response;

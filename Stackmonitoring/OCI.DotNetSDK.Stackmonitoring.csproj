@@ -10,7 +10,7 @@
     <RootNamespace>Oci.StackmonitoringService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Stackmonitoring</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Stackmonitoring</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Stack Monitoring Service</Description>
   </PropertyGroup>
   <ItemGroup>

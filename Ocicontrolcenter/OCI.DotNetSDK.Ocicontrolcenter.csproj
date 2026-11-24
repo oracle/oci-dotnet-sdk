@@ -10,7 +10,7 @@
     <RootNamespace>Oci.OcicontrolcenterService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Ocicontrolcenter</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Ocicontrolcenter</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Oci Control Center Service</Description>
   </PropertyGroup>
   <ItemGroup>

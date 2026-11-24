@@ -10,7 +10,7 @@
     <RootNamespace>Oci.WlmsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Wlms</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Wlms</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Wlms Service</Description>
   </PropertyGroup>
   <ItemGroup>

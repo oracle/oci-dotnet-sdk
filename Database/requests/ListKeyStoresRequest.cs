@@ -47,5 +47,23 @@ namespace Oci.DatabaseService.Requests
         /// </value>
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Header, "opc-request-id")]
         public string OpcRequestId { get; set; }
+        
+        ///
+        /// <value>
+        /// A filter to return only resources that match the key store type given. The match is not case sensitive.
+        /// </value>
+        ///
+        public enum KeyStoreTypeEnum {
+            [EnumMember(Value = "ORACLE_KEY_VAULT")]
+            OracleKeyVault,
+            [EnumMember(Value = "THALES")]
+            Thales
+        };
+
+        /// <value>
+        /// A filter to return only resources that match the key store type given. The match is not case sensitive.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "keyStoreType")]
+        public System.Nullable<KeyStoreTypeEnum> KeyStoreType { get; set; }
     }
 }

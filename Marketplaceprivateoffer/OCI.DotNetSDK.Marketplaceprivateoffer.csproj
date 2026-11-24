@@ -10,7 +10,7 @@
     <RootNamespace>Oci.MarketplaceprivateofferService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Marketplaceprivateoffer</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Marketplaceprivateoffer</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Marketplace Private Offer Service</Description>
   </PropertyGroup>
   <ItemGroup>
