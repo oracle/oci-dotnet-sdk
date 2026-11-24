@@ -10,7 +10,7 @@
     <RootNamespace>Oci.VisualbuilderService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Visualbuilder</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Visualbuilder</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Visual Builder Service</Description>
   </PropertyGroup>
   <ItemGroup>

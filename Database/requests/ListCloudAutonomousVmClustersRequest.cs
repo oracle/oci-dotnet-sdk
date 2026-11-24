@@ -91,6 +91,26 @@ namespace Oci.DatabaseService.Requests
         [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "lifecycleState")]
         public System.Nullable<CloudAutonomousVmClusterSummary.LifecycleStateEnum> LifecycleState { get; set; }
         
+        ///
+        /// <value>
+        /// A filter to return only resources that match the given kms exactly.
+        /// </value>
+        ///
+        public enum KmsTypeEnum {
+            [EnumMember(Value = "ORACLE_KEY_VAULT")]
+            OracleKeyVault,
+            [EnumMember(Value = "THALES")]
+            Thales,
+            [EnumMember(Value = "OCI_VAULT")]
+            OciVault
+        };
+
+        /// <value>
+        /// A filter to return only resources that match the given kms exactly.
+        /// </value>
+        [Oci.Common.Http.HttpConverter(Oci.Common.Http.TargetEnum.Query, "kmsType")]
+        public System.Nullable<KmsTypeEnum> KmsType { get; set; }
+        
         /// <value>
         /// A filter to return only resources that match the given availability domain exactly.
         /// </value>

@@ -17,15 +17,9 @@ namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
     /// Create Migration resource parameters.
-    /// Deprecated: The parent-level Oracle migration configuration properties on this model are deprecated.
-    /// Use `migrationSettings` instead.
-    /// 
     /// </summary>
     public class CreateOracleMigrationDetails : CreateMigrationDetails
     {
-        
-        [JsonProperty(PropertyName = "migrationSettings")]
-        public CreateOracleMigrationSettings MigrationSettings { get; set; }
         
         [JsonProperty(PropertyName = "dataTransferMediumDetails")]
         public CreateOracleDataTransferMediumDetails DataTransferMediumDetails { get; set; }

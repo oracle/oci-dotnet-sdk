@@ -10,7 +10,7 @@
     <RootNamespace>Oci.ServicemanagerproxyService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Servicemanagerproxy</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Servicemanagerproxy</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Service Manager Proxy Service</Description>
   </PropertyGroup>
   <ItemGroup>

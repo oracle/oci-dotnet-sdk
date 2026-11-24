@@ -10,7 +10,7 @@
     <RootNamespace>Oci.ComputecloudatcustomerService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Computecloudatcustomer</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Computecloudatcustomer</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Compute Cloud At Customer Service</Description>
   </PropertyGroup>
   <ItemGroup>

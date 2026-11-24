@@ -10,7 +10,7 @@
     <RootNamespace>Oci.GdpService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Gdp</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Gdp</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Gdp Service</Description>
   </PropertyGroup>
   <ItemGroup>

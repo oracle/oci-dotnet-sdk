@@ -10,7 +10,7 @@
     <RootNamespace>Oci.BatchService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Batch</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Batch</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Batch Service</Description>
   </PropertyGroup>
   <ItemGroup>

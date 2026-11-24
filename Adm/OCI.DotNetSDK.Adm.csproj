@@ -10,7 +10,7 @@
     <RootNamespace>Oci.AdmService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Adm</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Adm</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Adm Service</Description>
   </PropertyGroup>
   <ItemGroup>

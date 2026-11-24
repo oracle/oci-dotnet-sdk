@@ -10,7 +10,7 @@
     <RootNamespace>Oci.OnesubscriptionService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Onesubscription</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Onesubscription</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Onesubscription Service</Description>
   </PropertyGroup>
   <ItemGroup>

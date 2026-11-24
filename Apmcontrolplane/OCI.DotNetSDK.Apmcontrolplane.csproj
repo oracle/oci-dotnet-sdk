@@ -10,7 +10,7 @@
     <RootNamespace>Oci.ApmcontrolplaneService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Apmcontrolplane</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Apmcontrolplane</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Apm Control Plane Service</Description>
   </PropertyGroup>
   <ItemGroup>

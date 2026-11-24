@@ -10,7 +10,7 @@
     <RootNamespace>Oci.OciproductcatalogService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Ociproductcatalog</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Ociproductcatalog</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Oci Product Catalog Service</Description>
   </PropertyGroup>
   <ItemGroup>

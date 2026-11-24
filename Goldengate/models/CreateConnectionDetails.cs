@@ -220,6 +220,9 @@ namespace Oci.GoldengateService.Models
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new CreateAzureDataLakeStorageConnectionDetails();
                     break;
+                case "ORACLE_AI_DATA_CATALOG_STORAGE":
+                    obj = new CreateOracleAiDataCatalogStorageConnectionDetails();
+                    break;
                 case "ORACLE_AI_DATA_PLATFORM_ENGINE":
                     obj = new CreateOracleAiDataPlatformEngineConnectionDetails();
                     break;

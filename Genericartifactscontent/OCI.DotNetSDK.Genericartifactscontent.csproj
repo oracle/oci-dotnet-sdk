@@ -10,7 +10,7 @@
     <RootNamespace>Oci.GenericartifactscontentService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Genericartifactscontent</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Genericartifactscontent</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Generic Artifacts Content Service</Description>
   </PropertyGroup>
   <ItemGroup>

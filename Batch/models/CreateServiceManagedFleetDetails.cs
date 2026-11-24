@@ -21,6 +21,9 @@ namespace Oci.BatchService.Models
     public class CreateServiceManagedFleetDetails : CreateFleetDetails
     {
         
+        [JsonProperty(PropertyName = "reservation")]
+        public CreateReservationDetails Reservation { get; set; }
+        
         /// <value>
         /// Name of the service managed fleet.
         /// </value>

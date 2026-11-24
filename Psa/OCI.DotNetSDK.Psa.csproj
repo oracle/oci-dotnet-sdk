@@ -10,7 +10,7 @@
     <RootNamespace>Oci.PsaService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Psa</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Psa</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Psa Service</Description>
   </PropertyGroup>
   <ItemGroup>

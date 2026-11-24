@@ -10,7 +10,7 @@
     <RootNamespace>Oci.AidataplatformService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Aidataplatform</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Aidataplatform</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Ai Data Platform Service</Description>
   </PropertyGroup>
   <ItemGroup>

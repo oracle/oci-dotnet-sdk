@@ -10,7 +10,7 @@
     <RootNamespace>Oci.QueueService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Queue</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Queue</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Queue Service</Description>
   </PropertyGroup>
   <ItemGroup>

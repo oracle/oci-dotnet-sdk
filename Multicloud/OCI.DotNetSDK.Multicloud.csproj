@@ -10,7 +10,7 @@
     <RootNamespace>Oci.MulticloudService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Multicloud</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Multicloud</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Multicloud Service</Description>
   </PropertyGroup>
   <ItemGroup>

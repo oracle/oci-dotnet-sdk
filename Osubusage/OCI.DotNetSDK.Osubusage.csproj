@@ -10,7 +10,7 @@
     <RootNamespace>Oci.OsubusageService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Osubusage</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Osubusage</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Osub Usage Service</Description>
   </PropertyGroup>
   <ItemGroup>

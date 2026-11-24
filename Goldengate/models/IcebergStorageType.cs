@@ -21,6 +21,7 @@ namespace Oci.GoldengateService.Models
     /// * NESSIE: AMAZON_S3, GOOGLE_CLOUD_STORAGE, or AZURE_DATA_LAKE_STORAGE.
     /// * POLARIS: AMAZON_S3, GOOGLE_CLOUD_STORAGE, or AZURE_DATA_LAKE_STORAGE.
     /// * REST: AMAZON_S3, GOOGLE_CLOUD_STORAGE, AZURE_DATA_LAKE_STORAGE, or NONE.
+    /// * OADC: OCI_OBJECT_STORAGE_ACCESS_KEY, AZURE_STORAGE, or ZFS.
     /// 
   /// </summary>
   public enum IcebergStorageType {
@@ -36,6 +37,12 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "NONE")]
       None,
       [EnumMember(Value = "OCI_OBJECT_STORAGE_S3_API")]
-      OciObjectStorageS3Api
+      OciObjectStorageS3Api,
+      [EnumMember(Value = "OCI_OBJECT_STORAGE_ACCESS_KEY")]
+      OciObjectStorageAccessKey,
+      [EnumMember(Value = "AZURE_STORAGE")]
+      AzureStorage,
+      [EnumMember(Value = "ZFS")]
+      Zfs
   }
 }

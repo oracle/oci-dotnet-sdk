@@ -22,6 +22,8 @@ namespace Oci.GoldengateService.Models
       UnknownEnumValue,
       [EnumMember(Value = "GROUP_TO_ROLE")]
       GroupToRole,
+      [EnumMember(Value = "GROUP_TO_ROLE_REQUIRED")]
+      GroupToRoleRequired,
       [EnumMember(Value = "BACKUP_RESTORE")]
       BackupRestore,
       [EnumMember(Value = "COPY_BACKUP")]

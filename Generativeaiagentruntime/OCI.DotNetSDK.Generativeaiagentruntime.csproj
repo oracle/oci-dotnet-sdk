@@ -10,7 +10,7 @@
     <RootNamespace>Oci.GenerativeaiagentruntimeService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Generativeaiagentruntime</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Generativeaiagentruntime</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Generative Ai Agent Runtime Service</Description>
   </PropertyGroup>
   <ItemGroup>

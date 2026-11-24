@@ -10,7 +10,7 @@
     <RootNamespace>Oci.CapacitymanagementService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Capacitymanagement</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Capacitymanagement</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Capacity Management Service</Description>
   </PropertyGroup>
   <ItemGroup>

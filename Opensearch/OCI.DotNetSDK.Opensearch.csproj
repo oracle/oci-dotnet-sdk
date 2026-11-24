@@ -10,7 +10,7 @@
     <RootNamespace>Oci.OpensearchService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Opensearch</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Opensearch</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Opensearch Service</Description>
   </PropertyGroup>
   <ItemGroup>

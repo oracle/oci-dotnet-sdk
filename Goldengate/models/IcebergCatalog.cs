@@ -56,6 +56,9 @@ namespace Oci.GoldengateService.Models
                 case "REST":
                     obj = new RestIcebergCatalog();
                     break;
+                case "OADC":
+                    obj = new OracleAiDataCatalogIcebergCatalog();
+                    break;
                 case "NESSIE":
                     obj = new NessieIcebergCatalog();
                     break;

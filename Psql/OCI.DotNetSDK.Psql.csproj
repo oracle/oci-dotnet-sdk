@@ -10,7 +10,7 @@
     <RootNamespace>Oci.PsqlService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Psql</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Psql</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Psql Service</Description>
   </PropertyGroup>
   <ItemGroup>

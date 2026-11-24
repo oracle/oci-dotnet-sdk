@@ -10,7 +10,7 @@
     <RootNamespace>Oci.DatabasemanagementService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Databasemanagement</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Databasemanagement</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Database Management Service</Description>
   </PropertyGroup>
   <ItemGroup>

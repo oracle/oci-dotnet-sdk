@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a [Changelog](http://keepachangelog.com/).
 
+## 154.0.0 - 2026-11-24
+### Added
+ - Support for keystore configuration on Autonomous VM clusters on Exadata Cloud@Customer and Cloud Exadata Infrastructure in the Database service
+ - Support for Thales external keystores for Autonomous Container Databases in the Database service
+ - Support for Oracle AI Data Catalog in the GoldenGate service
+ - Support for global service manager scaling work requests in the Globally Distributed Database service
+ - Support for instance pool refreshes, including progress tracking, cancellation, and launch-before-termination maintenance policies in the Compute service
+ - Support for Azure Blob Storage and Google Cloud Storage as dump-transfer media during Oracle logical migrations in the Database Migration service
+ - Support for compute capacity reservations in service-managed fleets in the Batch service   
+
+### Breaking Changes
+ - The property `MigrationSettings` was removed from the models `CreateOracleMigrationDetails`, `UpdateOracleMigrationDetails`, `OracleCloneMigrationDetails`, `OracleMigration`, and `OracleMigrationSummary` in the Database Migration service
+ - The Oracle migration settings model classes, including their create, update, clone, and summary variants, and the enum `OracleMigrationMethods` were removed from the Database Migration service
+ - The numeric value of `Nfs` changed from `3` to `5` in the nested `TypeEnum` enums of `CreateOracleDataTransferMediumDetails`, `OracleDataTransferMediumDetails`, and `UpdateOracleDataTransferMediumDetails` in the Database Migration service
+ - The numeric values of some existing `OperationType` enum members have changed in the Globally Distributed Database service
+ - The numeric values of some existing members of the `ConnectionType`, `SupportedCapabilities`, and `TechnologyType` enums have changed in the GoldenGate service
+
 ## 153.0.0 - 2026-11-17
 ### Added
  - Support for customer-reserved capacity during rolling upgrades in the VMware Solution service

@@ -10,7 +10,7 @@
     <RootNamespace>Oci.OsuborganizationsubscriptionService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Osuborganizationsubscription</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Osuborganizationsubscription</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Osub Organization Subscription Service</Description>
   </PropertyGroup>
   <ItemGroup>

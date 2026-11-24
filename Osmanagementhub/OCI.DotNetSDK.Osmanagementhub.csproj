@@ -10,7 +10,7 @@
     <RootNamespace>Oci.OsmanagementhubService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Osmanagementhub</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Osmanagementhub</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Os Management Hub Service</Description>
   </PropertyGroup>
   <ItemGroup>

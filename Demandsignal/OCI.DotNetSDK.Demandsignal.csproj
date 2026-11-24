@@ -10,7 +10,7 @@
     <RootNamespace>Oci.DemandsignalService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Demandsignal</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Demandsignal</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Demand Signal Service</Description>
   </PropertyGroup>
   <ItemGroup>

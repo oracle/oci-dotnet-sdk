@@ -46,14 +46,23 @@ namespace Oci.GoldengateService.Models
             var discriminator = jsonObject["storageType"].Value<string>();
             switch (discriminator)
             {
+                case "ZFS":
+                    obj = new CreateZfsIcebergStorageDetails();
+                    break;
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new CreateAzureDataLakeStorageIcebergStorageDetails();
                     break;
                 case "NONE":
                     obj = new CreateNoIcebergStorageDetails();
                     break;
+                case "AZURE_STORAGE":
+                    obj = new CreateAzureStorageIcebergStorageDetails();
+                    break;
                 case "GOOGLE_CLOUD_STORAGE":
                     obj = new CreateGoogleCloudStorageIcebergStorageDetails();
+                    break;
+                case "OCI_OBJECT_STORAGE_ACCESS_KEY":
+                    obj = new CreateOciObjectStorageAccessKeyIcebergStorageDetails();
                     break;
                 case "AMAZON_S3":
                     obj = new CreateAmazonS3IcebergStorageDetails();

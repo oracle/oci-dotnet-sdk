@@ -17,6 +17,9 @@ namespace Oci.CoreService.Models
 {
     /// <summary>
     /// The data to update an instance pool.
+    /// If `instanceMaintenancePolicy` is omitted, the stored maintenance policy remains unchanged.
+    /// A non-null `instanceMaintenancePolicy` replaces the stored policy as a whole, and `null`
+    /// clears it.
     /// If `overridePolicy` is omitted, the stored launch override policy remains unchanged.
     /// A non-null `overridePolicy` replaces the stored policy as a whole, and `null`
     /// clears it for future launches.
@@ -104,6 +107,9 @@ namespace Oci.CoreService.Models
         
         [JsonProperty(PropertyName = "lifecycleManagement")]
         public InstancePoolLifecycleManagementDetails LifecycleManagement { get; set; }
+        
+        [JsonProperty(PropertyName = "instanceMaintenancePolicy")]
+        public InstancePoolMaintenancePolicyDetails InstanceMaintenancePolicy { get; set; }
         
     }
 }

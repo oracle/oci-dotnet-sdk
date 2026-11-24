@@ -10,7 +10,7 @@
     <RootNamespace>Oci.SelfService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Self</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Self</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Self Service</Description>
   </PropertyGroup>
   <ItemGroup>

@@ -117,6 +117,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "overridePolicy")]
         public InstancePoolLaunchOverridePolicy OverridePolicy { get; set; }
         
+        [JsonProperty(PropertyName = "instanceMaintenancePolicy")]
+        public InstancePoolMaintenancePolicyDetails InstanceMaintenancePolicy { get; set; }
+        
         /// <value>
         /// The number of instances that should be in the instance pool.
         /// </value>

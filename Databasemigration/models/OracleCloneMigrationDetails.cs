@@ -16,16 +16,10 @@ using Newtonsoft.Json.Converters;
 namespace Oci.DatabasemigrationService.Models
 {
     /// <summary>
-    /// Oracle Clone Migration details.
-    /// Deprecated: The parent-level Oracle clone configuration properties on this model are deprecated.
-    /// Use `migrationSettings` instead.
-    /// 
+    /// Oracle Clone Migration Summary
     /// </summary>
     public class OracleCloneMigrationDetails : CloneMigrationDetails
     {
-        
-        [JsonProperty(PropertyName = "migrationSettings")]
-        public CloneOracleMigrationSettings MigrationSettings { get; set; }
         
         /// <value>
         /// The OCID of the resource being referenced.

@@ -10,7 +10,7 @@
     <RootNamespace>Oci.ApmsyntheticsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Apmsynthetics</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Apmsynthetics</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Apm Synthetics Service</Description>
   </PropertyGroup>
   <ItemGroup>

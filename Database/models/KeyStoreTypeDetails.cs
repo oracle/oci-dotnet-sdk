@@ -28,7 +28,9 @@ namespace Oci.DatabaseService.Models
         ///
         public enum TypeEnum {
             [EnumMember(Value = "ORACLE_KEY_VAULT")]
-            OracleKeyVault
+            OracleKeyVault,
+            [EnumMember(Value = "THALES")]
+            Thales
         };
 
         
@@ -57,6 +59,9 @@ namespace Oci.DatabaseService.Models
             {
                 case "ORACLE_KEY_VAULT":
                     obj = new KeyStoreTypeFromOracleKeyVaultDetails();
+                    break;
+                case "THALES":
+                    obj = new KeyStoreTypeFromThalesDetails();
                     break;
             }
             if (obj != null)
