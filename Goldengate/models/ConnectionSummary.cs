@@ -343,6 +343,9 @@ namespace Oci.GoldengateService.Models
                 case "SPARK":
                     obj = new SparkConnectionSummary();
                     break;
+                case "ORACLE_AI_DATA_CATALOG_STORAGE":
+                    obj = new OracleAiDataCatalogStorageConnectionSummary();
+                    break;
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new AzureDataLakeStorageConnectionSummary();
                     break;

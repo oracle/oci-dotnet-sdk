@@ -10,7 +10,7 @@
     <RootNamespace>Oci.MarketplacepublisherService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Marketplacepublisher</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Marketplacepublisher</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Marketplace Publisher Service</Description>
   </PropertyGroup>
   <ItemGroup>

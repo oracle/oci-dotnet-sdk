@@ -29,6 +29,8 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "POLARIS")]
       Polaris,
       [EnumMember(Value = "REST")]
-      Rest
+      Rest,
+      [EnumMember(Value = "OADC")]
+      Oadc
   }
 }

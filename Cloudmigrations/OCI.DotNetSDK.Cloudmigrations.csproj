@@ -10,7 +10,7 @@
     <RootNamespace>Oci.CloudmigrationsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Cloudmigrations</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Cloudmigrations</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Cloud Migrations Service</Description>
   </PropertyGroup>
   <ItemGroup>

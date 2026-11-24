@@ -10,7 +10,7 @@
     <RootNamespace>Oci.JmsjavadownloadsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Jmsjavadownloads</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Jmsjavadownloads</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Jms Java Downloads Service</Description>
   </PropertyGroup>
   <ItemGroup>

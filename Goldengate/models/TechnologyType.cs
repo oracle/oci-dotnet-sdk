@@ -68,6 +68,8 @@ namespace Oci.GoldengateService.Models
       OracleAiDataPlatform,
       [EnumMember(Value = "ORACLE_AI_DATA_PLATFORM_ENGINE")]
       OracleAiDataPlatformEngine,
+      [EnumMember(Value = "ORACLE_AI_DATA_CATALOG_STORAGE")]
+      OracleAiDataCatalogStorage,
       [EnumMember(Value = "ORACLE_NOSQL")]
       OracleNosql,
       [EnumMember(Value = "ORACLE_REST_DATA_SERVICES")]

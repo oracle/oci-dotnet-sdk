@@ -21,6 +21,9 @@ namespace Oci.BatchService.Models
     public class ServiceManagedGpuFleet : Fleet
     {
         
+        [JsonProperty(PropertyName = "reservation")]
+        public Reservation Reservation { get; set; }
+        
         /// <value>
         /// Name of the service managed GPU fleet.
         /// </value>

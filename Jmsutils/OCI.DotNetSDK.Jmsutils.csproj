@@ -10,7 +10,7 @@
     <RootNamespace>Oci.JmsutilsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Jmsutils</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Jmsutils</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Jms Utils Service</Description>
   </PropertyGroup>
   <ItemGroup>

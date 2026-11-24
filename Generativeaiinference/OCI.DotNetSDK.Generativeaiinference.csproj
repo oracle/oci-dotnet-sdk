@@ -10,7 +10,7 @@
     <RootNamespace>Oci.GenerativeaiinferenceService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Generativeaiinference</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Generativeaiinference</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Generative Ai Inference Service</Description>
   </PropertyGroup>
   <ItemGroup>

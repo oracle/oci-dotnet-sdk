@@ -35,6 +35,8 @@ namespace Oci.DistributeddatabaseService.Models
       ChangeDistributedDbCompartment,
       [EnumMember(Value = "CONFIGURE_DISTRIBUTED_DB_GSMS")]
       ConfigureDistributedDbGsms,
+      [EnumMember(Value = "SCALE_DISTRIBUTED_DB_GSMS")]
+      ScaleDistributedDbGsms,
       [EnumMember(Value = "CONFIGURE_DISTRIBUTED_DB_SHARDING")]
       ConfigureDistributedDbSharding,
       [EnumMember(Value = "ROTATE_DISTRIBUTED_DB_PASSWORDS")]

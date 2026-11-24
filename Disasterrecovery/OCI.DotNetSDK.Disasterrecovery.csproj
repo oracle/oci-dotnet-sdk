@@ -10,7 +10,7 @@
     <RootNamespace>Oci.DisasterrecoveryService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Disasterrecovery</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Disasterrecovery</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Disaster Recovery Service</Description>
   </PropertyGroup>
   <ItemGroup>

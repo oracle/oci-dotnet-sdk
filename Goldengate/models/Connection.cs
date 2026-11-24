@@ -347,6 +347,9 @@ namespace Oci.GoldengateService.Models
                 case "AZURE_SYNAPSE_ANALYTICS":
                     obj = new AzureSynapseConnection();
                     break;
+                case "ORACLE_AI_DATA_CATALOG_STORAGE":
+                    obj = new OracleAiDataCatalogStorageConnection();
+                    break;
                 case "MICROSOFT_FABRIC":
                     obj = new MicrosoftFabricConnection();
                     break;

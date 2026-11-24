@@ -10,7 +10,7 @@
     <RootNamespace>Oci.CostadService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Costad</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Costad</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Costad Service</Description>
   </PropertyGroup>
   <ItemGroup>

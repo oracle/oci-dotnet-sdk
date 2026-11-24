@@ -455,5 +455,8 @@ namespace Oci.DatabaseService.Models
         [JsonProperty(PropertyName = "maxAcdsLowestScaledValue")]
         public System.Nullable<int> MaxAcdsLowestScaledValue { get; set; }
         
+        [JsonProperty(PropertyName = "keyManagementSystemDetails")]
+        public KeyManagementSystemDetails KeyManagementSystemDetails { get; set; }
+        
     }
 }

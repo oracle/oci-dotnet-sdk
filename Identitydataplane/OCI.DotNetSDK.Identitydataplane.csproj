@@ -10,7 +10,7 @@
     <RootNamespace>Oci.IdentitydataplaneService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Identitydataplane</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Identitydataplane</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Identity Data Plane Service</Description>
   </PropertyGroup>
   <ItemGroup>

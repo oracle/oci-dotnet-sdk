@@ -10,7 +10,7 @@
     <RootNamespace>Oci.VbsinstService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Vbsinst</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Vbsinst</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Vbs Inst Service</Description>
   </PropertyGroup>
   <ItemGroup>

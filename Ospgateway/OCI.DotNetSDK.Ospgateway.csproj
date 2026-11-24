@@ -10,7 +10,7 @@
     <RootNamespace>Oci.OspgatewayService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Ospgateway</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Ospgateway</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Osp Gateway Service</Description>
   </PropertyGroup>
   <ItemGroup>

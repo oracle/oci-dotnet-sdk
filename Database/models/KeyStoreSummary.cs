@@ -117,6 +117,18 @@ namespace Oci.DatabaseService.Models
         public System.Nullable<int> AssociatedLongTermBackupCount { get; set; }
         
         /// <value>
+        /// List of Autonomous VM Clusters associated with the key store.
+        /// </value>
+        [JsonProperty(PropertyName = "associatedAutonomousVmClusters")]
+        public System.Collections.Generic.List<KeyStoreAssociatedAutonomousVmClusterDetails> AssociatedAutonomousVmClusters { get; set; }
+        
+        /// <value>
+        /// List of Cloud Autonomous VM Clusters associated with the key store.
+        /// </value>
+        [JsonProperty(PropertyName = "associatedCloudAutonomousVmClusters")]
+        public System.Collections.Generic.List<KeyStoreAssociatedCloudAutonomousVmClusterDetails> AssociatedCloudAutonomousVmClusters { get; set; }
+        
+        /// <value>
         /// Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace.
         /// For more information, see [Resource Tags](https://docs.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
         /// <br/>

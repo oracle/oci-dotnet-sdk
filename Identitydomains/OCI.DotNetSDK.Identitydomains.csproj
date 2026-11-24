@@ -10,7 +10,7 @@
     <RootNamespace>Oci.IdentitydomainsService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Identitydomains</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Identitydomains</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Identity Domains Service</Description>
   </PropertyGroup>
   <ItemGroup>

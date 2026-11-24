@@ -10,7 +10,7 @@
     <RootNamespace>Oci.DelegateaccesscontrolService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Delegateaccesscontrol</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Delegateaccesscontrol</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Delegate Access Control Service</Description>
   </PropertyGroup>
   <ItemGroup>

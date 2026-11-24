@@ -33,6 +33,10 @@ namespace Oci.DatabasemigrationService.Models
             ObjectStorage,
             [EnumMember(Value = "AWS_S3")]
             AwsS3,
+            [EnumMember(Value = "AZURE_BLOB")]
+            AzureBlob,
+            [EnumMember(Value = "GCS")]
+            Gcs,
             [EnumMember(Value = "NFS")]
             Nfs
         };
@@ -61,6 +65,9 @@ namespace Oci.DatabasemigrationService.Models
             var discriminator = jsonObject["type"].Value<string>();
             switch (discriminator)
             {
+                case "GCS":
+                    obj = new OracleGcsDataTransferMediumDetails();
+                    break;
                 case "DBLINK":
                     obj = new OracleDbLinkDataTransferMediumDetails();
                     break;
@@ -72,6 +79,9 @@ namespace Oci.DatabasemigrationService.Models
                     break;
                 case "NFS":
                     obj = new OracleNfsDataTransferMediumDetails();
+                    break;
+                case "AZURE_BLOB":
+                    obj = new OracleAzureBlobDataTransferMediumDetails();
                     break;
             }
             if (obj != null)

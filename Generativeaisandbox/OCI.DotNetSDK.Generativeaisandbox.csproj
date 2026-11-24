@@ -10,7 +10,7 @@
     <RootNamespace>Oci.GenerativeaisandboxService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Generativeaisandbox</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Generativeaisandbox</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Generative Ai Sandbox Service</Description>
   </PropertyGroup>
   <ItemGroup>

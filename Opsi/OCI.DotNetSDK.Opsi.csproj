@@ -10,7 +10,7 @@
     <RootNamespace>Oci.OpsiService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Opsi</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Opsi</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Opsi Service</Description>
   </PropertyGroup>
   <ItemGroup>

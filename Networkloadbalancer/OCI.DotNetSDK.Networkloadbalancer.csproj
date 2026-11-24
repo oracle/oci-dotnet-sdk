@@ -10,7 +10,7 @@
     <RootNamespace>Oci.NetworkloadbalancerService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Networkloadbalancer</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Networkloadbalancer</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Network Load Balancer Service</Description>
   </PropertyGroup>
   <ItemGroup>

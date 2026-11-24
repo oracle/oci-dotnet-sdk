@@ -46,6 +46,9 @@ namespace Oci.GoldengateService.Models
             var discriminator = jsonObject["catalogType"].Value<string>();
             switch (discriminator)
             {
+                case "OADC":
+                    obj = new CreateOracleAiDataCatalogIcebergCatalogDetails();
+                    break;
                 case "POLARIS":
                     obj = new CreatePolarisIcebergCatalogDetails();
                     break;

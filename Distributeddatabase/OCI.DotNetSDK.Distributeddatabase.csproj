@@ -10,7 +10,7 @@
     <RootNamespace>Oci.DistributeddatabaseService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Distributeddatabase</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Distributeddatabase</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Distributed Database Service</Description>
   </PropertyGroup>
   <ItemGroup>

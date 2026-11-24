@@ -43,6 +43,8 @@ namespace Oci.GoldengateService.Models
       [EnumMember(Value = "VERIDATA_SERVER")]
       VeridataServer,
       [EnumMember(Value = "VERIDATA_AGENT")]
-      VeridataAgent
+      VeridataAgent,
+      [EnumMember(Value = "AI_DATA_CATALOG")]
+      AiDataCatalog
   }
 }

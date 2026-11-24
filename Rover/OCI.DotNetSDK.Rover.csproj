@@ -10,7 +10,7 @@
     <RootNamespace>Oci.RoverService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Rover</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Rover</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Rover Service</Description>
   </PropertyGroup>
   <ItemGroup>

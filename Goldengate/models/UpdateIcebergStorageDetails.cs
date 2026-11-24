@@ -58,8 +58,17 @@ namespace Oci.GoldengateService.Models
                 case "GOOGLE_CLOUD_STORAGE":
                     obj = new UpdateGoogleCloudStorageIcebergStorageDetails();
                     break;
+                case "OCI_OBJECT_STORAGE_ACCESS_KEY":
+                    obj = new UpdateOciObjectStorageAccessKeyIcebergStorageDetails();
+                    break;
                 case "AZURE_DATA_LAKE_STORAGE":
                     obj = new UpdateAzureDataLakeStorageIcebergStorageDetails();
+                    break;
+                case "AZURE_STORAGE":
+                    obj = new UpdateAzureStorageIcebergStorageDetails();
+                    break;
+                case "ZFS":
+                    obj = new UpdateZfsIcebergStorageDetails();
                     break;
             }
             serializer.Populate(jsonObject.CreateReader(), obj);

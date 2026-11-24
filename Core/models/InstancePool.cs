@@ -204,6 +204,9 @@ namespace Oci.CoreService.Models
         [JsonProperty(PropertyName = "lifecycleManagement")]
         public InstancePoolLifecycleManagementDetails LifecycleManagement { get; set; }
         
+        [JsonProperty(PropertyName = "instanceMaintenancePolicy")]
+        public InstancePoolMaintenancePolicyDetails InstanceMaintenancePolicy { get; set; }
+        
         /// <value>
         /// Count of instance in running state associated to the Instance Pool.
         /// </value>

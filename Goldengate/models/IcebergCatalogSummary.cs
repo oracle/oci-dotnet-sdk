@@ -62,6 +62,9 @@ namespace Oci.GoldengateService.Models
                 case "HADOOP":
                     obj = new HadoopIcebergCatalogSummary();
                     break;
+                case "OADC":
+                    obj = new OracleAiDataCatalogIcebergCatalogSummary();
+                    break;
             }
             if (obj != null)
             {

@@ -10,7 +10,7 @@
     <RootNamespace>Oci.DatabasetoolsruntimeService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Databasetoolsruntime</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Databasetoolsruntime</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Database Tools Runtime Service</Description>
   </PropertyGroup>
   <ItemGroup>

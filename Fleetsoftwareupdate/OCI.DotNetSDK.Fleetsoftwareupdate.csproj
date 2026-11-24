@@ -10,7 +10,7 @@
     <RootNamespace>Oci.FleetsoftwareupdateService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Fleetsoftwareupdate</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Fleetsoftwareupdate</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Fleet Software Update Service</Description>
   </PropertyGroup>
   <ItemGroup>

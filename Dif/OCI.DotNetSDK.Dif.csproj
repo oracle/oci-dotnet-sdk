@@ -10,7 +10,7 @@
     <RootNamespace>Oci.DifService</RootNamespace>
     <Authors>Oracle Cloud Infrastructure</Authors>
     <Company>Oracle</Company>
-    <PackageTags>Oracle;OCI;Oracle Cloud;OracleCloud;oci-sdk;OracleCloudInfrastructure;Dif</PackageTags>
+    <PackageTags>Oracle;OCI;OracleCloud;oci-sdk;OracleCloudInfrastructure;Dif</PackageTags>
     <Description>Oracle Cloud Infrastructure Cloud Dif Service</Description>
   </PropertyGroup>
   <ItemGroup>
